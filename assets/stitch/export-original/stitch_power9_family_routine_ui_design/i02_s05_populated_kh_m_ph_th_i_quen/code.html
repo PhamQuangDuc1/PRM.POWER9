@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_stack" name="shell-type"/>
+<title>I01-S05 Khám phá thói quen</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        min-height: max(884px, 100dvh);
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#1E5AA8',
+            'primary-dark': '#004287',
+            'primary-light': '#EAF2FC',
+            'surface': '#F5F8FD',
+            'surface-card': '#FFFFFF',
+            'on-surface': '#152C46',
+            'on-surface-variant': '#4C627A',
+            'border-subtle': '#E1E8F2',
+            'tag-bg': '#EDF3FB'
+          },
+          borderRadius: {
+            'DEFAULT': '0.25rem',
+            'lg': '0.5rem',
+            'xl': '0.75rem',
+            'full': '9999px'
+          },
+          spacing: {
+            'gutter': '16px',
+            'margin': '16px',
+            'space-xs': '4px',
+            'space-sm': '8px',
+            'space-md': '12px',
+            'space-lg': '16px',
+            'space-xl': '24px'
+          },
+          fontFamily: {
+            'display': ['Be Vietnam Pro'],
+            'body-lg': ['Be Vietnam Pro'],
+            'body-md': ['Be Vietnam Pro'],
+            'body-sm': ['Be Vietnam Pro'],
+            'label-lg': ['Be Vietnam Pro'],
+            'label-md': ['Be Vietnam Pro'],
+            'label-sm': ['Be Vietnam Pro'],
+            'headline-md': ['Be Vietnam Pro'],
+            'headline-sm': ['Be Vietnam Pro']
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 pt-safe bg-[#F5F8FD]/90 backdrop-blur-xl border-b border-border-subtle shadow-[0_1px_6px_rgba(30,90,168,0.04)]">
+<div class="h-16 px-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<button aria-label="Quay lại" class="h-10 px-2 flex items-center gap-1 rounded-full text-primary hover:bg-primary-light active:bg-primary-light/80 transition-colors" onclick="history.back()">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+<span class="text-sm font-semibold pr-1">Quay lại</span>
+</button>
+<h1 class="font-headline-md text-[18px] sm:text-[20px] font-semibold text-on-surface tracking-tight line-clamp-1 ml-1">Khám phá thói quen</h1>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Tùy chọn" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-primary-light transition-colors">
+<span class="material-symbols-outlined text-[22px]">more_vert</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-white text-[18px]">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 w-full pt-16 pb-safe px-margin bg-surface"><div class="flex flex-col w-full pb-space-2xl">
+<!-- Search Input Area -->
+<div class="mt-space-md mb-space-lg flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="habit-search">Tìm kiếm hoạt động</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-secondary text-[22px] pointer-events-none">search</span>
+<input class="w-full h-[52px] pl-[44px] pr-space-md rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-secondary/70 font-body-md text-body-md outline-none shadow-sm focus:ring-2 focus:ring-primary-container transition-all" id="habit-search" placeholder="Nhập tên thói quen, ví dụ: thở, đi bộ..." type="search" value=""/>
+</div>
+</div>
+<!-- Time Filter Chips Horizontal Scroll -->
+<div class="flex items-center gap-space-sm overflow-x-auto no-scrollbar py-space-xs -mx-margin px-margin mb-space-lg">
+<!-- Chip: Tất cả -->
+<button class="h-[38px] px-space-md rounded-lg bg-surface-container-lowest text-secondary font-label-md text-label-md shadow-sm shrink-0 flex items-center justify-center transition-all active:scale-95" type="button">
+      Tất cả
+    </button>
+<!-- Chip: 5 phút (Selected State) -->
+<button class="h-[38px] px-space-md rounded-lg bg-surface-container-low text-primary font-label-md text-label-md shadow-sm shrink-0 flex items-center gap-1.5 transition-all font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check</span>
+<span>5 phút</span>
+</button>
+<!-- Chip: 10 phút -->
+<button class="h-[38px] px-space-md rounded-lg bg-surface-container-lowest text-secondary font-label-md text-label-md shadow-sm shrink-0 flex items-center justify-center transition-all active:scale-95" type="button">
+      10 phút
+    </button>
+<!-- Chip: 15+ phút -->
+<button class="h-[38px] px-space-md rounded-lg bg-surface-container-lowest text-secondary font-label-md text-label-md shadow-sm shrink-0 flex items-center justify-center transition-all active:scale-95" type="button">
+      15+ phút
+    </button>
+</div>
+<!-- Results Count Label & Friendly Visual Encouragement -->
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md text-label-md text-secondary">Gợi ý phù hợp (3 thói quen)</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium bg-surface-container-low px-space-sm py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">spa</span>
+      Dễ thực hiện
+    </span>
+</div>
+<!-- Populated Habit Cards List -->
+<div class="flex flex-col gap-space-md">
+<!-- Item 1: Thở chậm -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden transition-all hover:shadow-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">air</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Thở chậm</h2>
+<span class="inline-flex items-center gap-1 bg-surface-container-low text-primary px-2 py-0.5 rounded-md font-label-sm text-label-sm font-semibold shrink-0">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+              5 phút
+            </span>
+</div>
+<span class="inline-block mt-0.5 font-label-sm text-label-sm text-primary font-medium">Thư giãn tinh thần</span>
+<p class="font-body-md text-body-md text-secondary line-clamp-1 mt-1">Điều hòa nhịp tim, xoa dịu căng thẳng và lấy lại sự tập trung tức thì.</p>
+</div>
+</div>
+<div class="pt-space-xs flex justify-end">
+<button class="h-10 px-space-lg rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1 transition-all active:scale-95 hover:bg-surface-container" type="button">
+<span>Xem chi tiết</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Item 2: Gọi hỏi thăm người thân -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden transition-all hover:shadow-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">call</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Gọi hỏi thăm người thân</h2>
+<span class="inline-flex items-center gap-1 bg-surface-container-low text-primary px-2 py-0.5 rounded-md font-label-sm text-label-sm font-semibold shrink-0">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+              5 phút
+            </span>
+</div>
+<span class="inline-block mt-0.5 font-label-sm text-label-sm text-primary font-medium">Kết nối gia đình</span>
+<p class="font-body-md text-body-md text-secondary line-clamp-1 mt-1">Gửi lời quan tâm giản dị tới ông bà hoặc cha mẹ để gắn kết tình thân.</p>
+</div>
+</div>
+<div class="pt-space-xs flex justify-end">
+<button class="h-10 px-space-lg rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1 transition-all active:scale-95 hover:bg-surface-container" type="button">
+<span>Xem chi tiết</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Item 3: Uống một cốc nước ấm -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden transition-all hover:shadow-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">water_full</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Uống một cốc nước ấm</h2>
+<span class="inline-flex items-center gap-1 bg-surface-container-low text-primary px-2 py-0.5 rounded-md font-label-sm text-label-sm font-semibold shrink-0">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+              3 phút
+            </span>
+</div>
+<span class="inline-block mt-0.5 font-label-sm text-label-sm text-primary font-medium">Sức khỏe thể chất</span>
+<p class="font-body-md text-body-md text-secondary line-clamp-1 mt-1">Cung cấp độ ẩm cần thiết, đánh thức quá trình trao đổi chất của cơ thể.</p>
+</div>
+</div>
+<div class="pt-space-xs flex justify-end">
+<button class="h-10 px-space-lg rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1 transition-all active:scale-95 hover:bg-surface-container" type="button">
+<span>Xem chi tiết</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Warm Reassuring Footer Banner -->
+<div class="mt-space-xl p-space-lg bg-surface-container-low rounded-xl flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Bắt đầu từng bước nhỏ</span>
+<span class="font-body-sm text-body-sm text-secondary">Chỉ cần 3 đến 5 phút mỗi ngày để duy trì nhịp sống khỏe cùng gia đình.</span>
+</div>
+</div>
+</div></main>
+</body></html>

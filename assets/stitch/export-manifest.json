@@ -1,0 +1,305 @@
+{
+  "archive_sha256": "6a7c966deaeff506d293cdc901c9eab34b3267ef45f577af68dbab15909448a3",
+  "entry_count": 118,
+  "screen_count": 37,
+  "screens": [
+    {
+      "folder": "family_routine_blue_calm",
+      "html": null,
+      "png": null,
+      "html_sha256": null
+    },
+    {
+      "folder": "i01_s01_h_m_nay",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s01_h_m_nay/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s01_h_m_nay/screen.png",
+      "html_sha256": "175b76305bd676c23f460e8ff05abe67c45a4299c47ff37cf7e090d00f895e97"
+    },
+    {
+      "folder": "i01_s02_n_u_ng",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s02_n_u_ng/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s02_n_u_ng/screen.png",
+      "html_sha256": "20791978412e2e8dfe37d6aab392dbfd5c17edacb8f1c79ebe0432c6ead562aa"
+    },
+    {
+      "folder": "i01_s03_th_gi_n",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s03_th_gi_n/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s03_th_gi_n/screen.png",
+      "html_sha256": "9383d0e325aed450cc579425230a81c0c503cb659a3ef8d772430e2cae632675"
+    },
+    {
+      "folder": "i01_s04_k_t_n_i",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s04_k_t_n_i/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s04_k_t_n_i/screen.png",
+      "html_sha256": "0a6fa8cf542172e25f95411945e775e85f290863adde7777f71baae4a4e7cd98"
+    },
+    {
+      "folder": "i01_s05_kh_m_ph_th_i_quen_1",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s05_kh_m_ph_th_i_quen_1/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s05_kh_m_ph_th_i_quen_1/screen.png",
+      "html_sha256": "67e38aaa6ec735a84646b51d729889ab9b47046ab21478de2197f54f92cd2ce4"
+    },
+    {
+      "folder": "i01_s05_kh_m_ph_th_i_quen_2",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s05_kh_m_ph_th_i_quen_2/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s05_kh_m_ph_th_i_quen_2/screen.png",
+      "html_sha256": "25526ab0a0169b0827c3ef5104050dc10b6dfed880c0b4f7c6964b3686fc4d00"
+    },
+    {
+      "folder": "i01_s06_chi_ti_t_th_i_quen_1",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s06_chi_ti_t_th_i_quen_1/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s06_chi_ti_t_th_i_quen_1/screen.png",
+      "html_sha256": "5064a20a440475bb1f238d090edba4481e08edd02fa56ebdf5e01c182daf802d"
+    },
+    {
+      "folder": "i01_s06_chi_ti_t_th_i_quen_2",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s06_chi_ti_t_th_i_quen_2/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s06_chi_ti_t_th_i_quen_2/screen.png",
+      "html_sha256": "46564c84d46bf2e9abcac4063df3e5a139849a11e89ec90102596b1a0389f9cb"
+    },
+    {
+      "folder": "i01_s07_l_ch_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s07_l_ch_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s07_l_ch_th_i_quen/screen.png",
+      "html_sha256": "d3d78393793a90932a2339ebeb13bfcc6f4607c65de61374687d048627e7d3bc"
+    },
+    {
+      "folder": "i01_s08_l_ch_s_v_ti_n",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s08_l_ch_s_v_ti_n/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s08_l_ch_s_v_ti_n/screen.png",
+      "html_sha256": "ab9ab7523b7df109df09bc3ac46a4a0976e2cf89c441b0e1b642b6db4820a973"
+    },
+    {
+      "folder": "i02_s05_empty_kh_m_ph_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s05_empty_kh_m_ph_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s05_empty_kh_m_ph_th_i_quen/screen.png",
+      "html_sha256": "2a30293c33357d33c70f78f85a5a59bff8f9d0ede52752ada3643cf73e4e3283"
+    },
+    {
+      "folder": "i02_s05_populated_kh_m_ph_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s05_populated_kh_m_ph_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s05_populated_kh_m_ph_th_i_quen/screen.png",
+      "html_sha256": "7c24a7296fc813d55f3febaff1d1a724f1d6af13adb343c491bb4bf3c05ce80e"
+    },
+    {
+      "folder": "i02_s07_error_l_ch_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s07_error_l_ch_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s07_error_l_ch_th_i_quen/screen.png",
+      "html_sha256": "b9ed3017a66276e69a809dc063f0076598b0b763d04bf1900449d776692cbd62"
+    },
+    {
+      "folder": "i02_s07_saving_l_ch_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s07_saving_l_ch_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s07_saving_l_ch_th_i_quen/screen.png",
+      "html_sha256": "a354889325968b8bf38d252f700f6f5af8436f0b4a06b0217345fc49dc64d00b"
+    },
+    {
+      "folder": "i02_s07_valid_l_ch_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s07_valid_l_ch_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s07_valid_l_ch_th_i_quen/screen.png",
+      "html_sha256": "b90d1964a607329e5bdca84124f63d8bf4a2fe120c5922cd904a3a07009baa30"
+    },
+    {
+      "folder": "i02_s07_validation_l_ch_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s07_validation_l_ch_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s07_validation_l_ch_th_i_quen/screen.png",
+      "html_sha256": "22a67275635ee955844a0a273d3e8595a97118f9c78171e7a8ff2dd70d94bea8"
+    },
+    {
+      "folder": "i02_s08_empty_l_ch_s_v_ti_n",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s08_empty_l_ch_s_v_ti_n/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s08_empty_l_ch_s_v_ti_n/screen.png",
+      "html_sha256": "bc95f5cde9ce2f4d85202eb8ec7c13f579345381c2cecd649f5803719888fee5"
+    },
+    {
+      "folder": "i02_s08_populated_l_ch_s_v_ti_n",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s08_populated_l_ch_s_v_ti_n/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s08_populated_l_ch_s_v_ti_n/screen.png",
+      "html_sha256": "41983a1bd12f478496bbff22dc899f2ba4f41bcabbd6ad952be334e778b0dbb7"
+    },
+    {
+      "folder": "i03_s06_existing_th_m",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i03_s06_existing_th_m/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i03_s06_existing_th_m/screen.png",
+      "html_sha256": "cabedda09f2d06858495f87eb7808bb10c0c54e8e6e9a2f91f51b40ef37de8ad"
+    },
+    {
+      "folder": "i03_s06_new_ch_a_th_m",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i03_s06_new_ch_a_th_m/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i03_s06_new_ch_a_th_m/screen.png",
+      "html_sha256": "441c0fbfe80a2d4b5e883f252b3f58369e86f22cf3716e75742b9eaa8fd7e954"
+    },
+    {
+      "folder": "power9_family_routine",
+      "html": null,
+      "png": null,
+      "html_sha256": null
+    },
+    {
+      "folder": "power9_structural_wireframe",
+      "html": null,
+      "png": null,
+      "html_sha256": null
+    },
+    {
+      "folder": "s01_h_m_nay",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/s01_h_m_nay/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/s01_h_m_nay/screen.png",
+      "html_sha256": "6fc478d58121c829e5ee0ab92d20630637a548412e64fc4e135ae075aa2d6539"
+    },
+    {
+      "folder": "s05_kh_m_ph_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/s05_kh_m_ph_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/s05_kh_m_ph_th_i_quen/screen.png",
+      "html_sha256": "ff35e4ed68135e324122b26b196d72181b8032ed9cb7b0864f935f80ebe9ac51"
+    },
+    {
+      "folder": "s06_chi_ti_t_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/s06_chi_ti_t_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/s06_chi_ti_t_th_i_quen/screen.png",
+      "html_sha256": "69933cd4624a82af046d993433a218700e9a53b2010f31098dac3d955471773b"
+    },
+    {
+      "folder": "s07_l_ch_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/s07_l_ch_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/s07_l_ch_th_i_quen/screen.png",
+      "html_sha256": "7e5ffd25aa5fb215ab74b21fedd35d21ad82d8fe5d2e9c8fe90a631b7aba0571"
+    },
+    {
+      "folder": "w00_s01_h_m_nay",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s01_h_m_nay/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s01_h_m_nay/screen.png",
+      "html_sha256": "8ee9d2f19d448492cb2917cd41321e5d28f9cae3a6e18ef2c2d53444697bd81f"
+    },
+    {
+      "folder": "w00_s02_n_u_ng",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s02_n_u_ng/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s02_n_u_ng/screen.png",
+      "html_sha256": "200bb9ddd95f93cf73c05cc12f1ef412b2e25a3ec326498ca2e57d528a8316f0"
+    },
+    {
+      "folder": "w00_s03_th_gi_n",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s03_th_gi_n/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s03_th_gi_n/screen.png",
+      "html_sha256": "029f0b83bea0ac9dec181aca4be80aebce85ec9c7690a1c7f7aeabb76987e6da"
+    },
+    {
+      "folder": "w00_s04_k_t_n_i",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s04_k_t_n_i/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s04_k_t_n_i/screen.png",
+      "html_sha256": "de8e1c2b6c52493dbc897299fb491b3a66e6c99b077c195856ff4656ee961a22"
+    },
+    {
+      "folder": "w00_s05_kh_m_ph_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s05_kh_m_ph_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s05_kh_m_ph_th_i_quen/screen.png",
+      "html_sha256": "165b7bd94cec60e4e3ed7e8d008d730e9a1e05b5b6334f3f9ecbc89f8cda273b"
+    },
+    {
+      "folder": "w00_s06_chi_ti_t_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s06_chi_ti_t_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s06_chi_ti_t_th_i_quen/screen.png",
+      "html_sha256": "d7960baa14fcbe53d3c1bba5f82f23157ace3be0b4b9d2803afd712b2b71618c"
+    },
+    {
+      "folder": "w00_s07_l_ch_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s07_l_ch_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s07_l_ch_th_i_quen/screen.png",
+      "html_sha256": "5adb9d1beeebfb8fe05ee578a9d9d6cbc735866b5f15638722b631e757c9ec54"
+    },
+    {
+      "folder": "w00_s08_l_ch_s_v_ti_n",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s08_l_ch_s_v_ti_n/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w00_s08_l_ch_s_v_ti_n/screen.png",
+      "html_sha256": "078c73ad712e9d9a5f8363c04081bbf26d0add8d0600f0d00fee8e2de9c7b2f5"
+    },
+    {
+      "folder": "w01_s05_kh_m_ph_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w01_s05_kh_m_ph_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w01_s05_kh_m_ph_th_i_quen/screen.png",
+      "html_sha256": "a3ed6cc45de2baf45a1d57c089745c03d946fa48f448fc9707229d77d6e0dd7c"
+    },
+    {
+      "folder": "w01_s06_chi_ti_t_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w01_s06_chi_ti_t_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w01_s06_chi_ti_t_th_i_quen/screen.png",
+      "html_sha256": "4d2f6dcc827f3143af0ecad266eb8f74ca6129538587d5b850cfb1e9514ef78e"
+    },
+    {
+      "folder": "w01_s07_l_ch_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w01_s07_l_ch_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w01_s07_l_ch_th_i_quen/screen.png",
+      "html_sha256": "b8bf8ac10bdc08d41a9d18591c3f0ff0f0365457ed0ba8f7f44b89c2962df710"
+    },
+    {
+      "folder": "w01_s08_l_ch_s_v_ti_n",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w01_s08_l_ch_s_v_ti_n/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w01_s08_l_ch_s_v_ti_n/screen.png",
+      "html_sha256": "6b50208de78da55e3832ebdb2591085413a5d364feb2d76bee3aca0c18d3e1f3"
+    },
+    {
+      "folder": "w01_tr_ng_th_i_ph_h_p_tho_i",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w01_tr_ng_th_i_ph_h_p_tho_i/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/w01_tr_ng_th_i_ph_h_p_tho_i/screen.png",
+      "html_sha256": "2d1b3ef6a99cf5aaaef361137a942f907d2cd32c673256ee8dfabe47654d71c9"
+    }
+  ],
+  "asset_count": 40,
+  "brief_count": 3,
+  "selected_final": {
+    "S01": {
+      "folder": "i01_s01_h_m_nay",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s01_h_m_nay/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s01_h_m_nay/screen.png",
+      "html_sha256": "175b76305bd676c23f460e8ff05abe67c45a4299c47ff37cf7e090d00f895e97"
+    },
+    "S02": {
+      "folder": "i01_s02_n_u_ng",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s02_n_u_ng/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s02_n_u_ng/screen.png",
+      "html_sha256": "20791978412e2e8dfe37d6aab392dbfd5c17edacb8f1c79ebe0432c6ead562aa"
+    },
+    "S03": {
+      "folder": "i01_s03_th_gi_n",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s03_th_gi_n/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s03_th_gi_n/screen.png",
+      "html_sha256": "9383d0e325aed450cc579425230a81c0c503cb659a3ef8d772430e2cae632675"
+    },
+    "S04": {
+      "folder": "i01_s04_k_t_n_i",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s04_k_t_n_i/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i01_s04_k_t_n_i/screen.png",
+      "html_sha256": "0a6fa8cf542172e25f95411945e775e85f290863adde7777f71baae4a4e7cd98"
+    },
+    "S05": {
+      "folder": "i02_s05_populated_kh_m_ph_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s05_populated_kh_m_ph_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s05_populated_kh_m_ph_th_i_quen/screen.png",
+      "html_sha256": "7c24a7296fc813d55f3febaff1d1a724f1d6af13adb343c491bb4bf3c05ce80e"
+    },
+    "S06-new": {
+      "folder": "i03_s06_new_ch_a_th_m",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i03_s06_new_ch_a_th_m/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i03_s06_new_ch_a_th_m/screen.png",
+      "html_sha256": "441c0fbfe80a2d4b5e883f252b3f58369e86f22cf3716e75742b9eaa8fd7e954"
+    },
+    "S06-existing": {
+      "folder": "i03_s06_existing_th_m",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i03_s06_existing_th_m/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i03_s06_existing_th_m/screen.png",
+      "html_sha256": "cabedda09f2d06858495f87eb7808bb10c0c54e8e6e9a2f91f51b40ef37de8ad"
+    },
+    "S07": {
+      "folder": "i02_s07_valid_l_ch_th_i_quen",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s07_valid_l_ch_th_i_quen/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s07_valid_l_ch_th_i_quen/screen.png",
+      "html_sha256": "b90d1964a607329e5bdca84124f63d8bf4a2fe120c5922cd904a3a07009baa30"
+    },
+    "S08": {
+      "folder": "i02_s08_populated_l_ch_s_v_ti_n",
+      "html": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s08_populated_l_ch_s_v_ti_n/code.html",
+      "png": "assets/stitch/export-original/stitch_power9_family_routine_ui_design/i02_s08_populated_l_ch_s_v_ti_n/screen.png",
+      "html_sha256": "41983a1bd12f478496bbff22dc899f2ba4f41bcabbd6ad952be334e778b0dbb7"
+    }
+  }
+}

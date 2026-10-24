@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_stack" name="shell-type"/>
+<title>I01-S05 Khám phá thói quen</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        min-height: max(884px, 100dvh);
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#1E5AA8',
+            'primary-dark': '#004287',
+            'primary-light': '#EAF2FC',
+            'surface': '#F5F8FD',
+            'surface-card': '#FFFFFF',
+            'on-surface': '#152C46',
+            'on-surface-variant': '#4C627A',
+            'border-subtle': '#E1E8F2',
+            'tag-bg': '#EDF3FB'
+          },
+          borderRadius: {
+            'DEFAULT': '0.25rem',
+            'lg': '0.5rem',
+            'xl': '0.75rem',
+            'full': '9999px'
+          },
+          spacing: {
+            'gutter': '16px',
+            'margin': '16px',
+            'space-xs': '4px',
+            'space-sm': '8px',
+            'space-md': '12px',
+            'space-lg': '16px',
+            'space-xl': '24px'
+          },
+          fontFamily: {
+            'display': ['Be Vietnam Pro'],
+            'body-lg': ['Be Vietnam Pro'],
+            'body-md': ['Be Vietnam Pro'],
+            'body-sm': ['Be Vietnam Pro'],
+            'label-lg': ['Be Vietnam Pro'],
+            'label-md': ['Be Vietnam Pro'],
+            'label-sm': ['Be Vietnam Pro'],
+            'headline-md': ['Be Vietnam Pro'],
+            'headline-sm': ['Be Vietnam Pro']
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 pt-safe bg-[#F5F8FD]/90 backdrop-blur-xl border-b border-border-subtle shadow-[0_1px_6px_rgba(30,90,168,0.04)]">
+<div class="h-16 px-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<button aria-label="Quay lại" class="h-10 px-2 flex items-center gap-1 rounded-full text-primary hover:bg-primary-light active:bg-primary-light/80 transition-colors" onclick="history.back()">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+<span class="text-sm font-semibold pr-1">Quay lại</span>
+</button>
+<h1 class="font-headline-md text-[18px] sm:text-[20px] font-semibold text-on-surface tracking-tight line-clamp-1 ml-1">Khám phá thói quen</h1>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Tùy chọn" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-primary-light transition-colors">
+<span class="material-symbols-outlined text-[22px]">more_vert</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-white text-[18px]">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 w-full pt-16 pb-safe px-margin bg-surface"><div class="flex flex-col w-full pb-space-2xl">
+<!-- Search Field Module -->
+<section class="w-full pt-space-md pb-space-sm">
+<div class="relative flex items-center w-full h-[52px] bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(21,44,70,0.04)] px-space-md">
+<span aria-hidden="true" class="material-symbols-outlined text-outline text-[22px] select-none">search</span>
+<input aria-label="Tìm kiếm thói quen" class="flex-1 w-full bg-transparent border-0 focus:outline-none focus:ring-0 text-on-surface font-body-md text-body-md px-space-sm placeholder:text-outline" id="search-input" placeholder="Tìm kiếm thói quen..." type="text" value="thở sâu 30 phút"/>
+<button aria-label="Xóa từ khóa tìm kiếm" class="min-w-[48px] min-h-[48px] -mr-space-sm flex items-center justify-center rounded-full text-outline hover:text-on-surface hover:bg-surface-container-low active:bg-surface-container transition-colors" id="btn-clear-search">
+<span class="material-symbols-outlined text-[20px]">cancel</span>
+</button>
+</div>
+</section>
+<!-- Filter Chips Horizontal Scroll -->
+<section class="w-full py-space-sm">
+<div class="flex items-center gap-space-sm overflow-x-auto no-scrollbar py-0.5">
+<!-- Active 5 mins filter chip -->
+<button aria-pressed="true" class="flex-shrink-0 h-[36px] min-w-[48px] px-space-md rounded-lg bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" id="chip-5m">
+<span>5 phút</span>
+<span class="material-symbols-outlined text-[16px] text-primary">close</span>
+</button>
+<!-- Inactive Quick Filter Chips -->
+<button class="flex-shrink-0 h-[36px] min-w-[48px] px-space-md rounded-lg bg-surface-container-lowest text-secondary font-label-md text-label-md shadow-[0_1px_3px_rgba(21,44,70,0.03)] hover:bg-surface-container-low transition-colors">
+        10 phút
+      </button>
+<button class="flex-shrink-0 h-[36px] min-w-[48px] px-space-md rounded-lg bg-surface-container-lowest text-secondary font-label-md text-label-md shadow-[0_1px_3px_rgba(21,44,70,0.03)] hover:bg-surface-container-low transition-colors">
+        Buổi sáng
+      </button>
+<button class="flex-shrink-0 h-[36px] min-w-[48px] px-space-md rounded-lg bg-surface-container-lowest text-secondary font-label-md text-label-md shadow-[0_1px_3px_rgba(21,44,70,0.03)] hover:bg-surface-container-low transition-colors">
+        Trước khi ngủ
+      </button>
+<button class="flex-shrink-0 h-[36px] min-w-[48px] px-space-md rounded-lg bg-surface-container-lowest text-secondary font-label-md text-label-md shadow-[0_1px_3px_rgba(21,44,70,0.03)] hover:bg-surface-container-low transition-colors">
+        Cho trẻ em
+      </button>
+</div>
+</section>
+<!-- Empty State Delight Card -->
+<section class="w-full mt-space-lg flex flex-col items-center justify-center">
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-[0_2px_12px_rgba(21,44,70,0.05)] p-space-xl flex flex-col items-center text-center">
+<!-- Visual Illustration / Icon with calm layering -->
+<div class="relative w-28 h-28 flex items-center justify-center my-space-sm">
+<!-- Ambient decorative pulse rings -->
+<div class="absolute inset-0 rounded-full bg-surface-container-low scale-110 opacity-70 animate-pulse"></div>
+<div class="absolute w-20 h-20 rounded-full bg-surface-container-high opacity-80"></div>
+<!-- Foreground Soft Magnifier Badge with sparkles -->
+<div class="relative z-10 w-16 h-16 rounded-full bg-primary-container flex items-center justify-center shadow-[0_4px_16px_rgba(30,90,168,0.2)]">
+<span class="material-symbols-outlined text-on-primary text-[32px] select-none">search_off</span>
+</div>
+<!-- Subtle floating accent icons -->
+<div class="absolute top-1 right-2 w-6 h-6 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-[14px]">psychology_alt</span>
+</div>
+<div class="absolute bottom-2 left-2 w-6 h-6 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-[14px]">schedule</span>
+</div>
+</div>
+<!-- Main Feedback Copy -->
+<h2 class="mt-space-md text-on-surface font-headline-sm text-headline-sm">
+        Không tìm thấy thói quen phù hợp
+      </h2>
+<p class="mt-space-sm text-secondary font-body-md text-body-md max-w-[280px]">
+        Thử tìm một cụm từ đơn giản hơn hoặc đặt lại bộ lọc để xem toàn bộ danh mục thói quen gia đình.
+      </p>
+<!-- Active Filter Pill Preview -->
+<div class="mt-space-md inline-flex items-center gap-1.5 py-1 px- space-md bg-surface-container-low rounded-full">
+<span class="material-symbols-outlined text-outline text-[16px]">filter_alt</span>
+<span class="text-secondary font-label-sm text-label-sm">Đang lọc: “5 phút” • “thở sâu 30 phút”</span>
+</div>
+<!-- Call to Action Primary Button (>= 48px touch target, 52px height) -->
+<div class="w-full mt-space-xl">
+<button class="w-full h-[52px] min-h-[48px] rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-sm shadow-[0_2px_8px_rgba(30,90,168,0.25)] hover:opacity-95 active:scale-[0.99] transition-all" id="btn-reset-filters" type="button">
+<span class="material-symbols-outlined text-[20px]">restart_alt</span>
+<span>Xóa bộ lọc</span>
+</button>
+</div>
+</div>
+<!-- Suggested Explorations micro-block for reassurance -->
+<div class="w-full mt-space-lg px-space-xs flex flex-col items-center">
+<span class="text-secondary font-label-sm text-label-sm mb-space-sm">Gợi ý tìm kiếm phổ biến</span>
+<div class="flex flex-wrap justify-center gap-space-sm">
+<button class="suggestion-chip px-space-md py-1 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm hover:bg-surface-container active:scale-95 transition-transform">
+          Đọc sách 15 phút
+        </button>
+<button class="suggestion-chip px-space-md py-1 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm hover:bg-surface-container active:scale-95 transition-transform">
+          Uống nước buổi sáng
+        </button>
+<button class="suggestion-chip px-space-md py-1 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm hover:bg-surface-container active:scale-95 transition-transform">
+          Đi dạo cùng con
+        </button>
+</div>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    const searchInput = document.getElementById('search-input');
+    const clearBtn = document.getElementById('btn-clear-search');
+    const resetBtn = document.getElementById('btn-reset-filters');
+    const chip5m = document.getElementById('chip-5m');
+    const suggestionChips = document.querySelectorAll('.suggestion-chip');
+
+    // Clear Search Input micro-interaction
+    if (clearBtn && searchInput) {
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchInput.focus();
+      });
+    }
+
+    // Reset Filters button interaction
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        if (chip5m) {
+          chip5m.classList.remove('bg-surface-container-high', 'text-primary');
+          chip5m.classList.add('bg-surface-container-lowest', 'text-secondary');
+          const closeIcon = chip5m.querySelector('.material-symbols-outlined');
+          if (closeIcon) closeIcon.remove();
+        }
+      });
+    }
+
+    // Click suggestion chips to fill search
+    suggestionChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        if (searchInput) {
+          searchInput.value = chip.textContent.trim();
+          searchInput.focus();
+        }
+      });
+    });
+  })();
+</script></main>
+</body></html>
