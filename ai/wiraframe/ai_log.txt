@@ -1,0 +1,20 @@
+Generate a low-fidelity mobile app wireframe. Use a strict grayscale color palette (white, light gray, dark gray, black) with no gradients or vibrant colors. Focus entirely on layout, spacing, and structural hierarchy. Use crossed boxes for image placeholders, simple rectangles for buttons, and basic wireframe iconography. Always include a bottom navigation bar with 4 standard tabs: Home, Eat, Mind, Tribe.
+Create the Home Dashboard wireframe. 
+- Top section: A prominent rectangular card with a text placeholder for "Today's Ikigai" and a simple text input line.
+- Middle section: A 2x2 grid of square cards for daily tracking (Move, 80% Full, Downshift, Moai). Each card should have a simple placeholder for a circular progress ring or a status icon.
+- Bottom section: A list of 2 upcoming notifications (e.g., "Time to stretch").
+- Ensure a clean, grid-based wireframe aesthetic.
+Create the Nutrition screen wireframe.
+- Header text: "Hara Hachi Bu Tracker".
+- Centerpiece: A large, thick vertical slider or circular dial taking up the upper half of the screen, marked from 0 to 100. Boldly highlight the 80 mark.
+- Middle section: A horizontal scrolling container showing 3 skeleton cards for "Plant-based recipes". Each card has a square image placeholder and two skeleton text lines.
+- Bottom section: A segmented horizontal bar tracking "Meat meals limit (x/5)".
+Create the Downshift screen wireframe.
+- Centerpiece: A large empty circle in the middle representing a countdown timer.
+- Below the timer: A row of three pill-shaped toggle buttons labeled "Nap", "Reflect", and "Gratitude".
+- Bottom section: A large, empty rectangular text area with a subtle border for journaling, featuring placeholder text "Write your thoughts...".
+- Keep the layout highly minimalist with maximum white space.
+Create the Moai (Community) screen wireframe.
+- Top section: 5 circular avatar placeholders (circles with an 'X' inside) arranged in a row, representing the core friend group.
+- Middle section: A large rectangular card showing "Group Progress" with a placeholder for a multi-layered bar chart or overlapping circles.
+- Bottom section: A standard chat interface layout. Show 3 skeleton message bubbles (alternating left and right) and a text input field at the bottom with a 'send' icon placeholder.
