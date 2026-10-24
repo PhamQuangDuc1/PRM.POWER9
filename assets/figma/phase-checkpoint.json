@@ -1,0 +1,417 @@
+{
+  "fileKey": "xqBod46IwxD7E9thJZLWqr",
+  "sessionId": "16f0cac8-4722-4aa0-994f-d1e1e3d12419",
+  "phase1": {
+    "tokens": 29,
+    "textStyles": 4,
+    "effectStyles": 2,
+    "componentSets": 9,
+    "variants": 30,
+    "mainScreens": 8,
+    "otherFrames": 16,
+    "instances": 144,
+    "screens": {
+      "S01": {
+        "id": "35:2",
+        "width": 360,
+        "height": 800
+      },
+      "S02": {
+        "id": "35:48",
+        "width": 360,
+        "height": 800
+      },
+      "S03": {
+        "id": "35:83",
+        "width": 360,
+        "height": 800
+      },
+      "S04": {
+        "id": "35:114",
+        "width": 360,
+        "height": 800
+      },
+      "S05": {
+        "id": "35:156",
+        "width": 360,
+        "height": 800
+      },
+      "S06": {
+        "id": "35:189",
+        "width": 360,
+        "height": 800
+      },
+      "S07": {
+        "id": "35:206",
+        "width": 360,
+        "height": 800
+      },
+      "S08": {
+        "id": "35:233",
+        "width": 360,
+        "height": 800
+      },
+      "S06-existing": {
+        "id": "35:265",
+        "width": 360,
+        "height": 800
+      },
+      "S05-empty": {
+        "id": "35:288",
+        "width": 360,
+        "height": 800
+      },
+      "S07-validation": {
+        "id": "35:312",
+        "width": 360,
+        "height": 800
+      },
+      "S07-saving": {
+        "id": "35:338",
+        "width": 360,
+        "height": 800
+      },
+      "S07-error": {
+        "id": "35:360",
+        "width": 360,
+        "height": 800
+      },
+      "S07-edit": {
+        "id": "35:386",
+        "width": 360,
+        "height": 800
+      },
+      "S07-edit21": {
+        "id": "35:413",
+        "width": 360,
+        "height": 800
+      },
+      "S07-saving-edit": {
+        "id": "35:440",
+        "width": 360,
+        "height": 800
+      },
+      "S08-empty": {
+        "id": "35:462",
+        "width": 360,
+        "height": 800
+      },
+      "S01-completed": {
+        "id": "35:479",
+        "width": 360,
+        "height": 800
+      },
+      "S01-added": {
+        "id": "35:526",
+        "width": 360,
+        "height": 800
+      },
+      "S01-rescheduled": {
+        "id": "35:573",
+        "width": 360,
+        "height": 800
+      },
+      "S03-active": {
+        "id": "35:620",
+        "width": 360,
+        "height": 800
+      },
+      "S03-paused": {
+        "id": "35:650",
+        "width": 360,
+        "height": 800
+      },
+      "O01": {
+        "id": "35:679",
+        "width": 328,
+        "height": 276
+      },
+      "O02": {
+        "id": "35:689",
+        "width": 328,
+        "height": 276
+      }
+    },
+    "components": {
+      "P9/Button": {
+        "id": "34:18",
+        "variants": [
+          {
+            "id": "34:2",
+            "name": "kind=Primary, state=Default",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:4",
+            "name": "kind=Primary, state=Pressed",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:6",
+            "name": "kind=Primary, state=Disabled",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:8",
+            "name": "kind=Primary, state=Loading",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:10",
+            "name": "kind=Secondary, state=Default",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:12",
+            "name": "kind=Secondary, state=Pressed",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:14",
+            "name": "kind=Secondary, state=Disabled",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:16",
+            "name": "kind=Secondary, state=Loading",
+            "width": 328,
+            "height": 52
+          }
+        ]
+      },
+      "P9/TextField": {
+        "id": "34:35",
+        "variants": [
+          {
+            "id": "34:19",
+            "name": "state=Default",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:22",
+            "name": "state=Focused",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:25",
+            "name": "state=Filled",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:28",
+            "name": "state=Error",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:32",
+            "name": "state=Disabled",
+            "width": 328,
+            "height": 52
+          }
+        ]
+      },
+      "P9/Card": {
+        "id": "34:46",
+        "variants": [
+          {
+            "id": "34:36",
+            "name": "state=Default",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:41",
+            "name": "state=Pressed",
+            "width": 328,
+            "height": 52
+          }
+        ]
+      },
+      "P9/Navigation": {
+        "id": "34:99",
+        "variants": [
+          {
+            "id": "34:47",
+            "name": "selected=0",
+            "width": 360,
+            "height": 76
+          },
+          {
+            "id": "34:60",
+            "name": "selected=1",
+            "width": 360,
+            "height": 76
+          },
+          {
+            "id": "34:73",
+            "name": "selected=2",
+            "width": 360,
+            "height": 76
+          },
+          {
+            "id": "34:86",
+            "name": "selected=3",
+            "width": 360,
+            "height": 76
+          }
+        ]
+      },
+      "P9/AppBar": {
+        "id": "34:112",
+        "variants": [
+          {
+            "id": "34:100",
+            "name": "variant=Default",
+            "width": 360,
+            "height": 64
+          },
+          {
+            "id": "34:106",
+            "name": "variant=WithActions",
+            "width": 360,
+            "height": 64
+          }
+        ]
+      },
+      "P9/Dialog": {
+        "id": "34:127",
+        "variants": [
+          {
+            "id": "34:113",
+            "name": "variant=Confirmation",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:120",
+            "name": "variant=Destructive",
+            "width": 328,
+            "height": 52
+          }
+        ]
+      },
+      "P9/Loading": {
+        "id": "34:138",
+        "variants": [
+          {
+            "id": "34:128",
+            "name": "variant=Screen",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:132",
+            "name": "variant=List",
+            "width": 328,
+            "height": 52
+          }
+        ]
+      },
+      "P9/Empty": {
+        "id": "34:154",
+        "variants": [
+          {
+            "id": "34:139",
+            "name": "context=Discover",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:144",
+            "name": "context=History",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:149",
+            "name": "context=Today",
+            "width": 328,
+            "height": 52
+          }
+        ]
+      },
+      "P9/Error": {
+        "id": "34:165",
+        "variants": [
+          {
+            "id": "34:155",
+            "name": "context=Screen",
+            "width": 328,
+            "height": 52
+          },
+          {
+            "id": "34:160",
+            "name": "context=Form",
+            "width": 328,
+            "height": 52
+          }
+        ]
+      }
+    }
+  },
+  "phase2": {
+    "wireframes": {
+      "S01": {
+        "id": "37:2",
+        "width": 360,
+        "height": 800
+      },
+      "S02": {
+        "id": "37:47",
+        "width": 360,
+        "height": 800
+      },
+      "S03": {
+        "id": "37:81",
+        "width": 360,
+        "height": 800
+      },
+      "S04": {
+        "id": "37:111",
+        "width": 360,
+        "height": 800
+      },
+      "S05": {
+        "id": "37:152",
+        "width": 360,
+        "height": 800
+      },
+      "S06": {
+        "id": "37:185",
+        "width": 360,
+        "height": 800
+      },
+      "S07": {
+        "id": "37:202",
+        "width": 360,
+        "height": 800
+      },
+      "S08": {
+        "id": "37:229",
+        "width": 360,
+        "height": 800
+      }
+    },
+    "flowsFrame": "37:261",
+    "flowCount": 3,
+    "prototypeBuilt": false,
+    "responsiveChecked": false
+  },
+  "blocked": {
+    "code": "FIGMA_MCP_STARTER_RATE_LIMIT",
+    "operation": "Gom Final UI thành section 8 màn chính + states phụ",
+    "operationExecuted": false,
+    "script": "scripts/figma/06-organize-final-ui.js"
+  }
+}
