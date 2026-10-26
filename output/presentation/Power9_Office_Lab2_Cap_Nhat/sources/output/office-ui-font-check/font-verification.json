@@ -1,0 +1,90 @@
+[
+  {
+    "id": "S01",
+    "before": {
+      "body": "\"Be Vietnam Pro, Roboto, sans-serif\"",
+      "heading": "\"Be Vietnam Pro, Roboto, sans-serif\"",
+      "loaded": [
+        "Material Symbols Outlined"
+      ],
+      "rendered": [
+        {
+          "familyName": "Times New Roman",
+          "postScriptName": "TimesNewRomanPS-BoldMT",
+          "isCustomFont": false,
+          "glyphCount": 21
+        }
+      ]
+    },
+    "after": {
+      "body": "\"Be Vietnam Pro\", Roboto, sans-serif",
+      "heading": "\"Be Vietnam Pro\", Roboto, sans-serif",
+      "loaded": [
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Material Symbols Outlined"
+      ],
+      "rendered": [
+        {
+          "familyName": "Be Vietnam Pro",
+          "postScriptName": "BeVietnamPro-Bold",
+          "isCustomFont": true,
+          "glyphCount": 19
+        }
+      ]
+    },
+    "failures": [],
+    "scope": "Local DOM verification only; original HTML and Stitch canvas unchanged."
+  },
+  {
+    "id": "S07",
+    "before": {
+      "body": "\"Be Vietnam Pro, Roboto, sans-serif\"",
+      "heading": "\"Be Vietnam Pro, Roboto, sans-serif\"",
+      "loaded": [
+        "Material Symbols Outlined"
+      ],
+      "rendered": [
+        {
+          "familyName": "Times New Roman",
+          "postScriptName": "TimesNewRomanPS-BoldMT",
+          "isCustomFont": false,
+          "glyphCount": 14
+        }
+      ]
+    },
+    "after": {
+      "body": "\"Be Vietnam Pro\", Roboto, sans-serif",
+      "heading": "\"Be Vietnam Pro\", Roboto, sans-serif",
+      "loaded": [
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Be Vietnam Pro",
+        "Material Symbols Outlined"
+      ],
+      "rendered": [
+        {
+          "familyName": "Be Vietnam Pro SemiBold",
+          "postScriptName": "BeVietnamPro-SemiBold",
+          "isCustomFont": true,
+          "glyphCount": 14
+        }
+      ]
+    },
+    "failures": [],
+    "scope": "Local DOM verification only; original HTML and Stitch canvas unchanged."
+  }
+]

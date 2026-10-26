@@ -1,0 +1,45 @@
+{
+  "sha256": "9095c9a513414b7eb8f9b313028ce9fd4a8ca7adbf06cb39e4add8c50fbe7d31",
+  "screens": [
+    {
+      "folder": "office_oi02_s01_h_m_nay",
+      "html": "assets/stitch/office-handoff-final/main/export-original/stitch_power9_office_routine_wireframe/office_oi02_s01_h_m_nay/code.html"
+    },
+    {
+      "folder": "office_oi02_s02_n_u_ng",
+      "html": "assets/stitch/office-handoff-final/main/export-original/stitch_power9_office_routine_wireframe/office_oi02_s02_n_u_ng/code.html"
+    },
+    {
+      "folder": "office_oi02_s03_th_gi_n",
+      "html": "assets/stitch/office-handoff-final/main/export-original/stitch_power9_office_routine_wireframe/office_oi02_s03_th_gi_n/code.html"
+    },
+    {
+      "folder": "office_oi02_s04_k_t_n_i",
+      "html": "assets/stitch/office-handoff-final/main/export-original/stitch_power9_office_routine_wireframe/office_oi02_s04_k_t_n_i/code.html"
+    },
+    {
+      "folder": "office_oi02_s05_kh_m_ph",
+      "html": "assets/stitch/office-handoff-final/main/export-original/stitch_power9_office_routine_wireframe/office_oi02_s05_kh_m_ph/code.html"
+    },
+    {
+      "folder": "office_oi02_s06_chi_ti_t_th_i_quen",
+      "html": "assets/stitch/office-handoff-final/main/export-original/stitch_power9_office_routine_wireframe/office_oi02_s06_chi_ti_t_th_i_quen/code.html"
+    },
+    {
+      "folder": "office_oi02_s07_l_ch_th_i_quen",
+      "html": "assets/stitch/office-handoff-final/main/export-original/stitch_power9_office_routine_wireframe/office_oi02_s07_l_ch_th_i_quen/code.html"
+    },
+    {
+      "folder": "office_oi02_s08_ti_n",
+      "html": "assets/stitch/office-handoff-final/main/export-original/stitch_power9_office_routine_wireframe/office_oi02_s08_ti_n/code.html"
+    },
+    {
+      "folder": "office_oi02_s09_g_c_l_m_vi_c",
+      "html": "assets/stitch/office-handoff-final/main/export-original/stitch_power9_office_routine_wireframe/office_oi02_s09_g_c_l_m_vi_c/code.html"
+    },
+    {
+      "folder": "office_oi02_s10_ng_ph_c_h_i",
+      "html": "assets/stitch/office-handoff-final/main/export-original/stitch_power9_office_routine_wireframe/office_oi02_s10_ng_ph_c_h_i/code.html"
+    }
+  ]
+}

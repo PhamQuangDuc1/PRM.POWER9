@@ -1,0 +1,92 @@
+[
+  [
+    "S01 Hôm nay",
+    "Scaffold, AppBar64, vùng cuộn664, Navigation72. Content lề16, gap16; progress và danh sách Card.",
+    "AppBar/home; Navigation/home; Card/default,done; Button/filled,outline.",
+    "Gốc1/3; sau thêm1/4; check-in2/3; sau phiên2/4; đổi lịch18:00; sau xóa0/3.",
+    "Chạm Checkin ghi nhận; Hoàn tác phục hồi. Khám phá và Tiến độ là lối tắt; chạm Tổng kết mở existing detail.",
+    "Tab Hôm nay; S05/S08 từ lối tắt; existing S06 từ hoạt động. Sau lưu hoặc ghi nhận quay về đúng snapshot nguồn.",
+    "Nội dung có thể dài hơn viewport, phải cuộn để tới CTA; không giảm cỡ chữ hoặc đè Navigation. Thay tổng/giờ chỉ sau thành công."
+  ],
+  [
+    "S02 Ăn uống",
+    "AppBar64, content cuộn664, Navigation72. Tiêu đề, mô tả, hướng dẫn3bước, CTA và xem tiến độ.",
+    "AppBar/home; Navigation/eat; content cards; Button/filled,outline.",
+    "Default và snapshot sau ghi nhận bữa trưa; Loading/Error/Empty cấp màn là mở rộng triển khai, chưa có đầy đủ snapshot.",
+    "Đã thực hiện tạo occurrence hoàn thành; Xem tiến độ mở lịch sử. Chặn ghi trùng trong app thực.",
+    "Tab Ăn uống; ghi nhận mở S08 có bản ghi bữa trưa; Back quay nguồn.",
+    "Giữ từng bước dễ đọc, body16/24; không suy ra dinh dưỡng hoặc dữ liệu sức khỏe từ check-in."
+  ],
+  [
+    "S03 Thư giãn",
+    "AppBar64, content664, Navigation72. Nhóm, tên, hướng dẫn, timer, trạng thái và các CTA.",
+    "AppBar/home; Navigation/mind; Button/default; Dialog/confirmation.",
+    "Idle03:00; active/paused02:15; finished00:00; early end ghi45giây; overlay active và paused riêng.",
+    "Start, pause, resume, end, record. Rời phiên mở overlay; Ở lại đóng đúng nguồn; bỏ phiên không tạo bản ghi.",
+    "Tab Thư giãn; ghi nhận tới S08 với tổng2/4; Back tới Home sau phiên. Nhánh early-end có Home/history45giây riêng.",
+    "Prototype dùng snapshot. Flutter phải dựa monotonic clock/elapsed time, xử lý app background và pause. Không ghi đủ3phút khi kết thúc sớm."
+  ],
+  [
+    "S04 Kết nối",
+    "AppBar64, content664, Navigation72. Mô tả ngắn,2activity Card, ghi chú tự nguyện.",
+    "AppBar/home; Navigation/tribe; Card/default,pressed.",
+    "Danh sách đi bộ và trò chuyện; chi tiết/lịch có dữ liệu riêng cho từng hoạt động.",
+    "Chạm thẻ mở đúng chi tiết. Ứng dụng không tự gửi lời mời hoặc thông tin cho đồng nghiệp.",
+    "Tab Kết nối; đi bộ hoặc trò chuyện tới template S06 và S07.",
+    "Card và nhãn có vùng bấm lớn; không dùng cùng tên đi bộ cho hoạt động trò chuyện. Tự nguyện là nội dung bắt buộc."
+  ],
+  [
+    "S05 Khám phá",
+    "AppBar64, vùng cuộn736. TextField,3filter48, tiêu đề nhóm và9DiscoverGroup. Lề16; mỗi nhóm Auto Layout.",
+    "AppBar/back; TextField/filled; DiscoverGroup18variants; Card; Empty/discover.",
+    "Tất cả;≤5ẩn hoạt động10phút;≤10; từng nhóm Collapsed/Expanded; empty và reset.",
+    "Chạm Header mở/thu gọn; thẻ/mũi tên vào detail. Filter áp dụng thời lượng. Prototype tìm kiếm dùng trạng thái mẫu, không phải gõ tự do.",
+    "Từ S01; chi tiết đi bộ theo nguồn All/≤5/≤10. Back giữ filter, expanded state và vị trí cuộn; Reset về danh sách.",
+    "Header≥48; body16,label14; card dài wrap. Trên412content rộng380. Semantics trong app phải thông báo expanded/collapsed. Không để arrow nhỏ là vùng bấm duy nhất."
+  ],
+  [
+    "S06 Chi tiết thói quen",
+    "AppBar64, content736. Nhóm, tên, thời lượng, mục đích,3bước, ghi chú và CTA.",
+    "AppBar/back; Card; Button/filled. Template new/existing, dữ liệu theo activityId.",
+    "New chọn lịch; existing Tổng kết có Đổi lịch;9nhóm có hoạt động/tên/thời lượng riêng.",
+    "New mở lịch; existing mở edit. Không đổi nút thêm thành hoàn thành rồi tự phục hồi thay cho điều hướng thật.",
+    "Từ S05 hoặc S04; existing từ S01. Back về đúng nguồn, giữ query/filter. Hủy form quay về detail tương ứng.",
+    "Tên hoạt động có thể2–3dòng, không ellipsis khi quyết định lịch. Nội dung hướng dẫn cuộn, CTA không thu nhỏ."
+  ],
+  [
+    "S07 Lịch thói quen",
+    "AppBar64; content736cuộn. Card hoạt động, ngày, nhắc, giờ24h, quiet hours, feedback, nút Lưu/Hủy.",
+    "AppBar/back; TextField/filled,error; Button/default,loading; Error/form.",
+    "Create12:00; edit18:00; validation, saving, error, retry; ngủ21:30. Cùng một tác vụ giữ cùng tên/ngày/giờ.",
+    "Bật nhắc cần giờ hợp lệ; tắt nhắc không bắt giờ. Lưu bất đồng bộ; chặn gửi lặp. Lỗi giữ draft. Hủy không ghi.",
+    "S06 hoặc S10 vào; thành công về Home giờ mới hoặc màn ngủ; Hủy/Back về nguồn. F03 lỗi vẫn giữ17:30trên Home.",
+    "App thực cần keyboard inset, scroll tới lỗi đầu, focus và nhãn. Prototype chọn giờ là snapshot, chưa có time picker thật.18:00–08:00chỉ hạn chế thông báo, không cấm lưu lịch."
+  ],
+  [
+    "S08 Tiến độ",
+    "AppBar64; content736. Ngày, progress, nhóm đã/chưa hoàn thành, cards, privacy và action.",
+    "AppBar/back; Card/default,done; Empty/history; Dialog/destructive; Button/text.",
+    "1/3gốc;1/4sau thêm;2/3check-in;2/4phiên;45giâyearly;0/3empty sau xóa;18:00sau đổi.",
+    "Xem lại; Undo; Xóa bản ghi mở overlay. Giữ lại đóng không đổi dữ liệu; Xóa chỉ xóa completion, không xóa lịch.",
+    "Từ Home hoặc ghi nhận. Back về nguồn đúng snapshot. Empty Khám phá mở S05.",
+    "Mẫu dữ liệu phải khớp Home. Phân biệt empty history với không có lịch. Tiến độ riêng tư, không xếp hạng hoặc điểm sức khỏe."
+  ],
+  [
+    "S09 Góc làm việc",
+    "AppBar64, content736. Nhóm, mô tả,3mục checklist và CTA.",
+    "AppBar/back; Card/checklist; Button/filled.",
+    "Default và Đã ghi nhận kiểm tra.",
+    "Kiểm tra màn hình, tư thế và bàn/lối đi; CTA phản hồi đã kiểm tra.",
+    "Từ mục liên quan trong nhóm tư thế/không gian; Back về Khám phá.",
+    "Tính một activity occurrence; không tự tính hoàn thành hai nhóm. App thực cần toggle semantics; không cảm biến hoặc chẩn đoán."
+  ],
+  [
+    "S10 Ngủ và phục hồi",
+    "AppBar64, content736. Mô tả,2gợi ý, ghi chú và nút chọn giờ.",
+    "AppBar/back; content Card; Button/filled.",
+    "Default, form đúng Chuẩn bị nghỉ tối21:30, xác nhận đã đặt.",
+    "Chọn giờ nhắc mở S07 với dữ liệu của hoạt động này; quiet hours vẫn áp dụng.",
+    "Từ mục liên quan trong nhóm ngủ; Hủy form về S10; Back về Khám phá.",
+    "Không suy ra thời gian ngủ, chất lượng ngủ hay trạng thái đã ngủ đủ. Dùng nhắc do người dùng chủ động đặt."
+  ]
+]

@@ -1,109 +1,52 @@
-# Bản mô tả thiết kế Power9 Family Routine
+# Design System: Power9 Office Routine
 
-## Trạng thái tài liệu
+Brief hiện hành cho Stitch, cập nhật 26/10/2026. Giữ phong cách UI xanh biển hiện có mà người dùng cho biết thầy khá ưng. Đây là đầu vào thiết kế, chưa phải kết quả đã tạo.
 
-Đây là đặc tả hiện hành cho hướng xanh biển. Bản mô tả xanh lá ban đầu được giữ nguyên tại design/versions/DESIGN-V00-green.md để đối chiếu nguồn. Nhóm thiết kế một ứng dụng chung, chọn Linh làm persona chính, ba persona còn lại hỗ trợ kiểm tra thiết kế. Công cụ AI hỗ trợ: Codex và kỹ năng StitchDesign.
+## 1. Visual Theme & Atmosphere
+Ứng dụng di động tiếng Việt cho nhân viên văn phòng 23–45 tuổi. Huy 28, Mai 24 và Linh 39 đều là persona chính ngang nhau theo yêu cầu của thầy. Mật độ 4/10, biến đổi bố cục 2/10, chuyển động 2/10. Gọn, dễ đọc, có thể thao tác giữa giờ làm. Giữ nhịp card, ảnh, header và cách phân cấp của nguồn Stitch xanh biển. Không tạo trang giới thiệu kiểu landing page.
 
-Ảnh V00 chứng minh bốn màn xanh lá ban đầu. Vòng I01 xanh biển và việc kiểm tra accessibility trên giao diện thực tế chưa hoàn thành.
+Chín nhóm nội dung: Move Often, Sit Smart, Eat Well, Sleep Well, Manage Stress, Healthy Space, Social Bonds, Purpose, Work–Life Balance. Trên UI ưu tiên nhãn Việt: Vận động / Tư thế / Ăn uống / Ngủ & phục hồi / Giảm căng thẳng / Không gian / Kết nối / Mục đích / Cân bằng. Chi tiết dùng tên đầy đủ.
 
-## Sản phẩm và người dùng
-
-Power9 giúp chọn, lên lịch và ghi nhận các thói quen ngắn hằng ngày. Persona chính P03: Linh, 36 tuổi, nhân viên hành chính có con nhỏ, thường bị gián đoạn khi dùng Android và chỉ có khoảng nghỉ 5 phút. Mục tiêu UX đề xuất: từ Hôm nay, tìm và thêm một thói quen phù hợp trong dưới 60 giây.
-
-Persona hỗ trợ: P01 Minh cần check-in tối đa 3 thao tác; P02 Huy cần đổi lịch dưới 30 giây; P04 chú Hùng cần chữ dễ đọc, nút có nhãn và hoàn thành hoạt động dưới 30 giây không cần hướng dẫn. Tất cả là persona giả định; các tiêu chí là mục tiêu, chưa phải kết quả đo.
-
-Một ứng dụng chung, không có màn chọn persona và không chia thành bốn ứng dụng.
-
-## Phạm vi màn hình
-
-| Mã | Màn hình | Mục đích |
+## 2. Color Palette & Roles
+| Token | Giá trị | Vai trò |
 | --- | --- | --- |
-| S01 | Hôm nay | Việc hôm nay, thời lượng, giờ nhắc, hoàn thành trực tiếp, mở khám phá/lịch sử |
-| S02 | Ăn uống | Ghi nhận một thói quen ăn uống đơn giản |
-| S03 | Thư giãn | Phiên nghỉ ngắn, thời lượng và điều khiển bắt đầu/kết thúc rõ |
-| S04 | Kết nối | Ghi nhận hoạt động ngoài đời với người thân |
-| S05 | Khám phá thói quen | Lọc theo thời gian và tìm hoạt động ngắn |
-| S06 | Chi tiết thói quen | Thời lượng, hướng dẫn, thêm mới hoặc đổi lịch |
-| S07 | Lịch thói quen | Biểu mẫu ngắn để tạo hoặc sửa lịch |
-| S08 | Lịch sử và tiến độ | Hoạt động đã hoàn thành, ngày ghi nhận, tổng kết tuần đơn giản |
-
-Điều hướng cấp cao: Hôm nay / Ăn uống / Thư giãn / Kết nối. S05–S08 là màn con, có Quay lại và giữ ngữ cảnh nguồn. Không ép thanh điều hướng bốn mục vào mọi biểu mẫu con. Mã màn hình phải khớp giữa prompt, ảnh, critique, Figma, slide và handoff.
-
-Danh sách generic Onboarding/Login/... trong ảnh checklist là bản mẫu cũ; thay bằng bộ S01–S08 của sản phẩm. Không thêm đăng nhập chỉ để đủ tám màn.
-
-## Định hướng thị giác
-
-Giao diện chăm sóc thói quen bằng tiếng Việt, bình tĩnh, rõ và thực dụng. Nền trắng ngả xanh nhẹ, hành động chính xanh biển, thẻ trắng và khoảng trống rõ. Tránh gradient, biểu đồ trang trí, nhãn chữ hoa quá nhỏ và dashboard dày đặc. Mỗi màn có một hành động chính nổi bật theo ngữ cảnh. Toàn bộ nội dung giao diện có dấu, thống nhất “thói quen”, “phút”, “Đã hoàn thành”, “Thử lại”.
-
-## Token ngữ nghĩa đề xuất
-
-Token là giá trị thiết kế dùng chung. Tên kỹ thuật bên dưới giữ nguyên để ánh xạ Figma và Flutter. Chưa có nghĩa các giá trị đã được liên kết trong Figma Variables/styles.
-
-| Token màu | Mã màu | Vai trò |
-| --- | --- | --- |
-| background | #F5F8FD | Nền chính |
-| surface | #FFFFFF | Thẻ và biểu mẫu |
+| background | #F5F8FD | Nền xanh rất nhạt |
+| surface | #FFFFFF | Card/form |
 | text.primary | #152C46 | Chữ chính |
-| text.secondary | #4C627A | Chữ bổ trợ |
-| action.primary | #1E5AA8 | Nút chính, chữ/biểu tượng được chọn |
-| action.onPrimary | #FFFFFF | Chữ trên nút chính |
-| surface.selected | #EAF2FC | Nền mục hoặc bộ lọc được chọn |
-| border.control | #71839A | Viền ô nhập, không dùng cho chữ nội dung |
-| feedback.error | #A7332A | Nhãn và biểu tượng lỗi trên nền trắng |
+| text.secondary | #4C627A | Chữ phụ |
+| action.primary | #1E5AA8 | Nhấn xanh biển, nút chính |
+| action.onPrimary | #FFFFFF | Chữ trên nút xanh |
+| surface.selected | #EAF2FC | Mục đang chọn |
+| border.control | #71839A | Viền điều khiển |
+| feedback.error | #A7332A | Lỗi, đi cùng nhãn/biểu tượng |
 
-Phông chữ: Roboto hoặc Be Vietnam Pro, hỗ trợ tiếng Việt. Tiêu đề lớn 24/32, tiêu đề mục 20/28, nội dung 16/24, nhãn 14/20; cặp số là cỡ chữ/chiều cao dòng. Nội dung tối thiểu 14 sp, ưu tiên 16 sp. Không cố định chiều cao khiến chữ có dấu hoặc nhãn dài bị cắt.
+Đây là token đích kế thừa brief cũ; chưa phải phép lấy mẫu từ ảnh hoặc xác nhận đã bind Figma. Logo nhiều sắc độ là tài sản nhận diện riêng, không dùng các sắc đó tạo thêm màu nhấn chức năng.
 
-Khoảng cách: 4, 8, 12, 16, 24, 32 dp. Lề màn 16 dp, khoảng cách thẻ/nội dung 12–16 dp. Bo góc: ô nhập 8 dp, nút 12 dp, thẻ 16 dp.
+## 3. Typography Rules
+Giữ Be Vietnam Pro của nguồn nếu dùng được, Roboto là fallback cho tiếng Việt. Title 24/32, heading 20/28, body 16/24, label 14/20. Body không dưới 14 sp. Không tự thay bằng font khác để làm mới phong cách. Chữ dài xuống dòng; không cố định chiều cao cắt dấu tiếng Việt.
 
-Độ nổi: mức 0 phẳng; mức 1 bóng nhẹ 0/2/8 với rgba(21,44,70,0.08); mức 2 cho lớp phủ 0/8/24 với rgba(21,44,70,0.16). Thứ bậc vẫn phải rõ khi không nhìn thấy bóng.
+## 4. Component Stylings
+- Button: cao 52, radius 12; một primary theo nhiệm vụ; default/pressed/disabled/loading.
+- Card: radius 16; trắng, phân cấp nhẹ; tên, nhóm, thời lượng, giờ nếu đã đặt. Cả card bấm được phải có pressed.
+- Inputs: label trên ô, lỗi cạnh trường, giữ dữ liệu sau lỗi; default/focused/filled/error/disabled.
+- Navigation: giữ Hôm nay / Ăn uống / Thư giãn / Kết nối; trạng thái chọn có biểu tượng/nhãn ngoài màu.
+- App bar: Home có logo gốc vùng 40×40 và tên app có thể hai dòng; màn con có Back + tiêu đề.
+- Dialog: xác nhận rời phiên và xác nhận xóa; lựa chọn giữ lại/hủy rõ.
+- Loading: skeleton hoặc trạng thái đang lưu không gây nhảy bố cục; error/empty riêng khỏi dữ liệu populated.
+- Logo: assets/brand/power9-logo-3d.png của người dùng, không vẽ lại/recolor/crop. Nếu không đặt được đúng asset trong Stitch, dùng chỗ trống đúng kích thước rồi thay file thật trong Figma.
 
-Vùng chạm tối thiểu 48×48 dp, nút chính cao 52 dp. Màn cơ sở 360×800 dp, kiểm tra thêm rộng 412 dp. Nội dung dài cuộn bên trong, không bị thanh điều hướng hoặc bàn phím che.
+## 5. Layout Principles
+Frame 360×800, kiểm tra thêm 412. Nội dung cuộn trong vùng giữa app bar/navigation. Lề 16; spacing 4/8/12/16/24/32. Radius input 8, button 12, card 16. Elevation surface 0; card 0/2/8 rgba(21,44,70,0.08); overlay 0/8/24 rgba(21,44,70,0.16). Vùng chạm ≥48×48. Auto Layout/constraints, không tràn ngang.
 
-## Tính trước độ tương phản của bảng màu
+10 màn hiện hành: S01 Hôm nay, S02 Ăn uống, S03 Thư giãn, S04 Kết nối, S05 Khám phá, S06 Chi tiết, S07 Lịch, S08 Tiến độ, S09 Góc làm việc, S10 Ngủ & phục hồi. S09/S10 là màn con có Back, không thêm tab chính. Mọi nhóm thói quen truy cập qua S05; không cần 9 màn riêng cho 9 nhóm. Không nhét 9 card vào Home hay 1 viewport. Wireframe nguồn đã nhận ZIP tại assets/stitch/office-final/; xem docs/OFFICE-WIREFRAME-ZIP-AUDIT.md trước khi lên UI.
 
-Các tỉ lệ dưới đây tính từ mã màu đề xuất bằng công thức độ chói tương đối WCAG, làm tròn hai chữ số. Đây chưa phải kết quả đo giao diện Stitch/Figma thực tế.
+## 6. Motion & Interaction
+Phản hồi nhấn nhẹ, chuyển cảnh 120–200 ms khi hữu ích, không loop trang trí. Ưu tiên khả năng tập trung và giảm chuyển động theo persona hơn hiệu ứng mặc định của skill. Chỉ animate opacity/transform. Không dùng animation làm bằng chứng đã hoàn thành tác vụ.
 
-| Màu chữ / nền | Tỉ lệ |
-| --- | --- |
-| #152C46 / #FFFFFF | 14.18:1 |
-| #4C627A / #FFFFFF | 6.30:1 |
-| #FFFFFF / #1E5AA8 | 6.81:1 |
-| #1E5AA8 / #EAF2FC | 6.03:1 |
-| #A7332A / #FFFFFF | 6.67:1 |
-| #4C627A / #F5F8FD | 5.91:1 |
+Home check-in/undo đồng bộ history. S06-new thêm, S06-existing đổi lịch. S07 lưu/hủy/retry có trạng thái riêng, chỉ cập nhật Home khi lưu thành công. Nhắc tùy chọn; thiếu giờ chỉ là lỗi khi bật nhắc. Giờ yên lặng áp dụng cho nhắc tự động; thói quen nghỉ/ngủ vẫn có thể do người dùng chủ động đặt ngoài giờ làm, giao diện giải thích nếu giờ nhắc bị tắt.
 
-Viền #71839A trên trắng: 3.88:1; không dùng màu này cho chữ nội dung cỡ thường. Đo lại màu, độ trong suốt và trạng thái thật trước khi đánh dấu đạt.
+## 7. Anti-Patterns
+Không đổi toàn bộ palette/layout, không gradient neon hoặc bóng phát sáng; không biến logo 3D thành toàn bộ ngôn ngữ giao diện. Không emoji thay icon, không mã kỹ thuật trên UI. Không đánh giá sức khỏe/tuổi thọ, ép 9/9, chat/HR/ranking. Không coi ảnh nguyên màn là editable UI. Không gắn nhãn đã kiểm tra accessibility nếu chưa đo từ output.
 
-## Quy tắc nội dung và tương tác
-
-- Thẻ hiển thị thời lượng bằng chữ: “Thở chậm · 5 phút”; có giờ nhắc nếu đã lên lịch.
-- S01 có nút “Hoàn thành”; phản hồi dùng dấu kiểm + “Đã hoàn thành” và “Hoàn tác”.
-- S05 có “Tất cả”, “5 phút”, “10 phút”; mục được chọn có dấu kiểm hoặc chỉ báo ngoài màu.
-- S06 mới có “Thêm vào hôm nay”; S06 đã thêm có “Đổi lịch”. Không hiển thị hai ngữ cảnh mâu thuẫn.
-- S07 chọn ngày, tùy chọn nhắc giờ và trường giờ. Chỉ bắt buộc giờ khi bật nhắc; lỗi nằm cạnh trường, lưu lỗi giữ dữ liệu.
-- Thành công phải hiện trong nội dung màn đích, không chỉ một thông báo biến mất nhanh.
-- S03 dùng “Bắt đầu”, “Tạm dừng”, “Tiếp tục”, “Kết thúc”. Bộ đếm trong prototype chỉ là minh họa hành vi.
-- S04 ghi nhận kết nối ngoài đời, không mở rộng thành trò chuyện thời gian thực hay giả dữ liệu người dùng thật.
-- S08 có ngày và tiến độ tuần đơn giản; xóa cần xác nhận, hủy giữ dữ liệu.
-- Quay lại biểu mẫu trả đúng ngữ cảnh; không âm thầm lưu thay đổi.
-
-## Hướng dẫn tương tác theo StitchDesign
-
-Điều chỉnh kỹ năng cho ứng dụng này: mật độ 4/10, độ biến đổi bố cục 2/10, chuyển động 2/10. Ưu tiên thói quen sử dụng bị gián đoạn và khả năng đọc; không cần phần giới thiệu kiểu trang quảng cáo.
-
-- Xanh biển #1E5AA8 là màu nhấn trang trí duy nhất; đỏ dành cho lỗi, luôn kèm chữ/biểu tượng.
-- Nhãn ở trên ô nhập, trợ giúp/lỗi bên dưới; tiêu điểm nhập có viền rõ.
-- Nút đang nhấn đổi sắc độ nhẹ; đang tải chặn gửi lặp và giữ ngữ cảnh hành động.
-- Chuyển cảnh 120–200 ms khi phù hợp; không nhấp nháy lặp, chữ chạy hay trì hoãn danh sách. Chế độ giảm chuyển động dùng phản hồi ngay hoặc mờ nhẹ.
-- Khung chờ tải bám hình dạng nội dung; rỗng/lỗi nêu rõ hành động tiếp theo.
-- Không chồng lấp, phát sáng neon, ba cột thẻ chật, phần trăm trang trí hay câu quảng cáo chung chung.
-
-Đây là đặc tả, chưa phải bằng chứng đã triển khai chuyển động hay chế độ giảm chuyển động.
-
-## Trạng thái và phần Figma còn phải làm
-
-Cần tách trạng thái mặc định/có dữ liệu, đang tải, rỗng, lỗi, thành công cạnh màn cha. Hộp thoại và biến thể không tính thêm màn.
-
-Dựng component bằng Auto Layout và biến thể theo chín nhóm: nút, ô nhập, thẻ, điều hướng, thanh tiêu đề, hộp thoại, đang tải, rỗng, lỗi. Liên kết token và dùng instance. Chỉ nhập lớp từ Stitch chưa chứng minh có hệ thống thiết kế.
-
-Ngoài phạm vi: code Flutter, backend, đăng nhập, kho công thức, mạng xã hội, tư vấn y tế, giao diện tối hoặc thiết kế riêng cho máy tính bảng.
+## 8. Trình tự và giới hạn
+Đã nhận ZIP 10 wireframe, giữ nguyên nguồn; đã render/kiểm tra cục bộ tại 360/412. Bước hiện tại: OFFICE-UI01 từ wireframe đã chốt, dùng prompt ai/prompts/OFFICE-UI01-from-final-wireframe.md → review/cải tiến theo bằng chứng → Figma. UI01 chưa chạy, chưa có UI Office hoặc prototype đã kiểm chứng. Không dựng lại wireframe chỉ để sửa lỗi PNG export.

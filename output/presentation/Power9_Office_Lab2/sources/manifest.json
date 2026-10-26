@@ -1,0 +1,242 @@
+[
+  {
+    "file": "sources/ai/ai-design-log.md",
+    "bytes": 3743,
+    "sha256": "860fc07a7a11107c4599a3fec97de356119f2a909e993701e241f2aafac90a80"
+  },
+  {
+    "file": "sources/ai/critiques/OFFICE-3-MAIN-CRITIQUES.md",
+    "bytes": 11419,
+    "sha256": "e532a74c322ac8c6c83a53aca76d5ab3b25532e3be0eae60468476d8aab3e804"
+  },
+  {
+    "file": "sources/ai/critiques/OFFICE-OI02-after-review.md",
+    "bytes": 3261,
+    "sha256": "2892904ea6705163e3c204fe6fb23945f4e777eb6201d5439ee1b3e1167f3dd0"
+  },
+  {
+    "file": "sources/ai/critiques/OFFICE-OI03-expanded-review.md",
+    "bytes": 3760,
+    "sha256": "7c319c476f94e972f845c1ec6e0cbb5391ef24a1319680c0b3c86687c47f2e1e"
+  },
+  {
+    "file": "sources/ai/prompts/OFFICE-OI01-font-root-fix.md",
+    "bytes": 2630,
+    "sha256": "16620b645a5cee2f7ce80390359acfbd854921722a481aea6d165539b14e7a0d"
+  },
+  {
+    "file": "sources/ai/prompts/OFFICE-OI02-content-density.md",
+    "bytes": 5172,
+    "sha256": "63e1f73291ebd120fe1a085c37486f0e643a128b8b10c55c2fbb26a1ff090508"
+  },
+  {
+    "file": "sources/ai/prompts/OFFICE-OI03-task-recovery.md",
+    "bytes": 4971,
+    "sha256": "f3072e2746e58017b058d40a40a2e593c0110e7a7c22d22696bbed5622c3b3b1"
+  },
+  {
+    "file": "sources/ai/prompts/OFFICE-UI01-from-final-wireframe.md",
+    "bytes": 6383,
+    "sha256": "aa4b6879fb25e2c910c7d9839ec5d129e424f30d7e7aa49be9cc2e6082d76530"
+  },
+  {
+    "file": "sources/assets/figma/office-accordion-audit.json",
+    "bytes": 4063,
+    "sha256": "3eec6f5a3311d53b44e386c954d77404636fd63f336845a946fd372cb36e4ad6"
+  },
+  {
+    "file": "sources/assets/figma/office-behavior-audit.json",
+    "bytes": 1433,
+    "sha256": "b6c1915f3c627a861bafbe67c7ca7b72cb96dccbbe086a24332d0edb54d5df1b"
+  },
+  {
+    "file": "sources/assets/figma/office-checkpoint.json",
+    "bytes": 85916,
+    "sha256": "3a60a0b563b96c68edf0de13d33904d8262dc82a3747fd51042f98e86d1d7651"
+  },
+  {
+    "file": "sources/assets/figma/office-library-audit.json",
+    "bytes": 2418,
+    "sha256": "c1bb53c55e697ca95213a8ee4e93a9eeeb97ee7f0c175b5a6214a314a3d12f94"
+  },
+  {
+    "file": "sources/assets/figma/office-six-page-audit.json",
+    "bytes": 3169,
+    "sha256": "7c7a013531b6d593483d2e371c6915d85ca03da906a34cd0801878c3cc066a62"
+  },
+  {
+    "file": "sources/contrast-check.json",
+    "bytes": 467,
+    "sha256": "27d103cdce404d2354864993fc27edb1f8c13ec6e855d19078ee15779a6dc903"
+  },
+  {
+    "file": "sources/design/design-decisions.md",
+    "bytes": 2787,
+    "sha256": "0be374371cf42c943628d1999f2932b1424b92cc15e4a7024f46fa6e4aec99ee"
+  },
+  {
+    "file": "sources/design/DESIGN.md",
+    "bytes": 5887,
+    "sha256": "7828694e6febbe0ac2a2b4f256a27a863922920f4ec0bc8d5732edc90dfbe24a"
+  },
+  {
+    "file": "sources/design/screen-spec.md",
+    "bytes": 3304,
+    "sha256": "32cc7f08135a36320930cdf69552b391451d3d10d6f4c663861533a5fc474fbe"
+  },
+  {
+    "file": "sources/docs/FIGMA-FINAL-AUDIT.md",
+    "bytes": 5088,
+    "sha256": "df22b7026472bb8e1ee4eab1a9fe4591b810d861143c296df224934aabdc781e"
+  },
+  {
+    "file": "sources/docs/SLIDE-3-VONG-PHAN-BIEN.md",
+    "bytes": 12527,
+    "sha256": "5f06b35bfd2ea3df15ae326caf0cbaa5b5cc3121ccaff9d6a6c3b3e62ca989c8"
+  },
+  {
+    "file": "sources/evidence/ACCORDION.png",
+    "bytes": 16169,
+    "sha256": "7657b689bd3ff1bd14704bc3a5db3505accbf9d15b173148377f2796ef1cb1cf"
+  },
+  {
+    "file": "sources/evidence/DELETE-OVERLAY.png",
+    "bytes": 14947,
+    "sha256": "ef06c40983a69c1bdc9abd11663f81d2489d1a9b7b9c16e362abff74cb065fca"
+  },
+  {
+    "file": "sources/evidence/DENSITY-AFTER.png",
+    "bytes": 404077,
+    "sha256": "2901eb57ff8951eac7a725a5129635091283a0fa092b007463723c8287fb6b6a"
+  },
+  {
+    "file": "sources/evidence/DENSITY-BEFORE.png",
+    "bytes": 649632,
+    "sha256": "da2a4384793a6c10e1769d86073f31b5ca6398a95c0dca5abdd3c0002c362bc5"
+  },
+  {
+    "file": "sources/evidence/DESIGN-SYSTEM.png",
+    "bytes": 57836,
+    "sha256": "83ce11a503c5661072f49998b511def2f1bd6185e3ab215e7ff285aaa14f07e7"
+  },
+  {
+    "file": "sources/evidence/ERROR-STITCH-BEFORE.png",
+    "bytes": 220807,
+    "sha256": "125c4bfce9c888bb3a2cad375a889e3cf37cca3e9f8941036fae16d1e9e49444"
+  },
+  {
+    "file": "sources/evidence/ERROR.png",
+    "bytes": 32891,
+    "sha256": "674ef26590bf1a08d5ea6d62b2330bdf80b08a4d7ad6534ab985e8a9846901ee"
+  },
+  {
+    "file": "sources/evidence/FORM.png",
+    "bytes": 35104,
+    "sha256": "27b7fd63810f3a360e848551f339b26b4902a21dc4786368e6b7ebd91fd7875b"
+  },
+  {
+    "file": "sources/evidence/LEAVE-OVERLAY.png",
+    "bytes": 12175,
+    "sha256": "d31dc974e0d4b2e145989292b023ba46bfad689dbc7a3ca62403a495911b97cd"
+  },
+  {
+    "file": "sources/evidence/NAVIGATION.png",
+    "bytes": 15378,
+    "sha256": "41fd85975ccb79c41679f2621006652fe6c16301cdf168e43ecfce2b71a4a309"
+  },
+  {
+    "file": "sources/evidence/RESPONSIVE-412.png",
+    "bytes": 36824,
+    "sha256": "04418e9f2065059c1df646c0b032e9ece130c8211c32ddbeb8fbd0d475300381"
+  },
+  {
+    "file": "sources/evidence/S01.png",
+    "bytes": 47465,
+    "sha256": "d8db2c25f4fecf7eb7474417dc4b6a3a0f0684d0acbc283ad22780e4c6f376c2"
+  },
+  {
+    "file": "sources/evidence/S02.png",
+    "bytes": 39198,
+    "sha256": "26203138669e51c146594d74f6413e9a359f3495a608828f3fbf615c65283908"
+  },
+  {
+    "file": "sources/evidence/S06.png",
+    "bytes": 43036,
+    "sha256": "51e62c67d4eea9454c0d8d709704f0dbd165bc49992f63a21421fcd84d3c0352"
+  },
+  {
+    "file": "sources/evidence/S07-after-local-fix.png",
+    "bytes": 114717,
+    "sha256": "17d182ee5589100e4d6eb52c2816170b97784970c91b96bb1f04ae7e49360728"
+  },
+  {
+    "file": "sources/evidence/S07-before.png",
+    "bytes": 101379,
+    "sha256": "c0374a415426a6a8edd703b7425bd31d619159a07ca77c46e7d1061656199245"
+  },
+  {
+    "file": "sources/evidence/S08.png",
+    "bytes": 43615,
+    "sha256": "282b169b8ce03724c44cf5f571d65cccd569aad8e69322689bc6c0cb6e00b7f1"
+  },
+  {
+    "file": "sources/evidence/SCHEDULE-STITCH-AFTER.png",
+    "bytes": 160426,
+    "sha256": "36fdb86a348782b615247b7168140b20985d8301e2ef5934d9d7908c84f9e61d"
+  },
+  {
+    "file": "sources/evidence/STITCH-INITIAL.png",
+    "bytes": 415505,
+    "sha256": "a499b8d846d524606add7e9d42e5761ebcd38005cef5c2440cfb7ce75ca5e7da"
+  },
+  {
+    "file": "sources/evidence/UI-OVERVIEW.png",
+    "bytes": 205221,
+    "sha256": "6a0f2426e0e0120b60328621798f0d0dd819f6a6b7a55f9e836febd5bc1e7c17"
+  },
+  {
+    "file": "sources/evidence/WIREFRAME-S07.png",
+    "bytes": 25486,
+    "sha256": "2170a7418fc9887852670a8d60668317abe0f00c9ce2833f4af00086e06012eb"
+  },
+  {
+    "file": "sources/evidence-provenance.json",
+    "bytes": 3435,
+    "sha256": "16b57b3c24ecf58d00dd07186d52f2d43e7a3eac2197acdfc1b686934375c174"
+  },
+  {
+    "file": "sources/guidelines/PRM323_Lab2_HuongDan_Slide_Presentation_Demo.docx",
+    "bytes": 40638,
+    "sha256": "621e8f4b6c6e5a1fc989b9ba3e3965c2a10ec2b364b9a28b92015f5e1f0cfb60"
+  },
+  {
+    "file": "sources/guidelines/PRM323_Lab2_Presentation_Assessment_Guidelines_EN.docx",
+    "bytes": 41159,
+    "sha256": "a7fa449c6bfc7a91b47337961a6e444ab6874fee593f2d0c7595296321cc8402"
+  },
+  {
+    "file": "sources/handoff/flutter-handoff.md",
+    "bytes": 13063,
+    "sha256": "38daf926f021e2c9d218b539deff6c0e4e07ae68ebcc7fd76559b23d6aa91a52"
+  },
+  {
+    "file": "sources/output/office-ui-font-check/font-verification.json",
+    "bytes": 2357,
+    "sha256": "38b343099f2be327e5724014934e6863a032ff46d1e8a4ed8a311e254254c3bb"
+  },
+  {
+    "file": "sources/README.md",
+    "bytes": 1800,
+    "sha256": "be244c1009fa3eaa01db24137b3d990a9d2e066ebfc5d3ba97ed77c43f50ddec"
+  },
+  {
+    "file": "sources/ux/persona.md",
+    "bytes": 8607,
+    "sha256": "fe10af27d669782852742464070006d56d9ebbe43c4f4c5474642fbb56cc8daf"
+  },
+  {
+    "file": "sources/ux/user-flow.md",
+    "bytes": 4286,
+    "sha256": "276c0f467fbad4bff8df3f598ad05194ab1521bc6c2f16f5324bbc4d189c7f24"
+  }
+]

@@ -1,0 +1,686 @@
+
+FILE: PRM323 - Lab 2 Thiết kế UI UX có hỗ trợ AI (bản tiếng Việt).pdf
+
+PAGE 1
+PRM323 — Lab 2: Thiết kế UI/UX có hỗ tr ợ  AI
+(Google Stitch → Figma)
+Sep 28, 2026  ·  @Lam Phuong
+Trong bài lab này, bạn thiế t kế  UI/UX cho ứ ng dụng di độ ng bằ ng các công cụ AI, và bạn
+đ ượ c chấ m đi ể m d ự a trên các quyế t định thiế t kế  nhiề u không kém các màn hình cuố i
+cùng. Phầ n quy trình (phân tích, viế t prompt, ph ả n biệ n, lậ p luậ n) chiế m 45 đi ể m; phầ n s ả n
+ph ẩ m (UI, design system, prototype, handoff) chiế m 55 đi ể m.
+1. Thông tin Lab
+Công cụ: Google Stitch · Figma cho sinh viên và giáo viên
+2. Chu ẩ n đầu ra
+Sau lab này, bạn có th ể :
+1 . Xác định ng ườ i dùng mục tiêu, vấ n đề  và kiế n trúc thông tin (information architecture)
+tr ướ c khi m ở  bấ t kỳ công cụ thiế t kế  nào.
+Mục Chi tiế t
+Môn học PRM323 — Cross-Platform Application
+Development
+Lab Lab 2 — Thiế t kế  UI/UX có hỗ  tr ợ  AI
+Hình th ứ c làm bài Cá nhân (tr ừ  khi gi ả ng viên thông báo làm nhóm)
+Th ờ i l ượ ng / hạn nộ p [gi ả ng viên điề n]
+Trọng số  trong đi ể m môn học [gi ả ng viên điề n]
+Công cụ bắ t buộ c Google Stitch, Figma (gói Education miễ n phí),
+GitHub, mộ t tr ợ  lý AI tùy chọn đ ể  ph ả n biệ n thiế t kế
+Nộ p bài Mộ t link GitHub repository và mộ t link Figma (ai có
+link đề u xem đ ượ c)
+Viế t code Không. Không viế t code Flutter trong lab này
+PRM323 — Lab 2: Thiết kế UI/UX có hỗ trợ AI (bản tiếng Việt)
+Page 1 of 12
+PAGE 2
+2. Viế t prompt đ ủ  ng ữ  c ả nh đ ể  Google Stitch tạo ra UI dùng đ ượ c, và tinh ch ỉ nh qua nhiề u
+vòng lặ p.
+3. Ph ả n biệ n kế t qu ả  do AI tạo ra theo các heuristic về  usability, tiêu chí accessibility và
+ng ườ i dùng c ủ a bạn, rồ i chấ p nhậ n, ch ỉ nh s ử a hoặ c t ừ  chố i t ừ ng đề  xuấ t kèm lý do.
+4. Xây d ự ng design system d ự a trên token và các component tái s ử  dụng có đầ y đ ủ  trạng
+thái (state) trong Figma.
+5. Viế t đặ c t ả  đ ể  mộ t lậ p trình viên khác có th ể  cài đặ t bằ ng Flutter mà không ph ả i h ỏ i lại
+bạn.
+3. Nhiệm vụ
+Thiế t kế  mộ t ứ ng dụng di độ ng gi ả i quyế t vấ n đề  th ự c tế  cho mộ t nhóm ng ườ i dùng cụ th ể .
+UI cuố i cùng ph ả i có:
+Ít nhấ t 8 màn hình khác nhau (dialog và các biế n th ể  trạng thái không tính là màn hình
+riêng).
+Ít nhấ t 3 user flow hoàn ch ỉ nh, mỗ i flow có đi ể m bắ t đầ u, mục tiêu và đi ể m kế t thúc rõ
+ràng.
+Ít nhấ t 1 flow có nhánh lỗ i hoặ c phục hồ i (ví dụ: nhậ p sai, mấ t mạng, hoặ c hoàn tác).
+Ch ủ  đề . Chọn trong danh sách d ướ i đây hoặ c t ự  đề  xuấ t, và đ ượ c gi ả ng viên duyệ t tr ướ c
+ngày [ngày]. Hãy làm ch ủ  đề  cụ th ể : viế t " ứ ng dụng lậ p kế  hoạch học cho sinh viên năm
+nhấ t có 6 môn và ch ư a có thói quen học cố  định", không viế t " ứ ng dụng lậ p kế  hoạch học".
+Ch ủ  đề  trùng c ả  ch ủ  đề  lẫ n persona v ớ i sinh viên khác sẽ  không đ ượ c duyệ t.
+Student Course Planner (th ờ i khóa bi ể u và chọn môn)
+Study Planner (bu ổ i học hằ ng ngày và deadline)
+Campus Event App
+Expense Tracker
+Food Ordering App
+Habit Tracker
+Library App
+Internship Finder
+PRM323 — Lab 2: Thiết kế UI/UX có hỗ trợ AI (bản tiếng Việt)
+Page 2 of 12
+PAGE 3
+4. Quy trình bắt buộc
+Làm theo đúng th ứ  t ự : Analyze (phân tích), Generate (tạo), Critique (ph ả n biệ n), Refine
+(tinh ch ỉ nh), Prototype, Handoff. Mỗ i giai đoạn tạo ra mộ t s ả n ph ẩ m mà giai đoạn sau phụ
+thuộ c vào.
+L ư u ý về  công cụ. Tính năng, hạn m ứ c và cách export c ủ a Google Stitch thay đ ổ i theo th ờ i
+gian. Nế u không dùng đ ượ c Stitch, hãy báo gi ả ng viên tr ướ c khi bắ t đầ u; có th ể  đ ượ c
+duyệ t mộ t công cụ AI tạo UI t ươ ng đ ươ ng, nh ư ng yêu cầ u về  log vẫ n gi ữ  nguyên. Màn hình
+xuấ t t ừ  công cụ AI th ườ ng đế n d ướ i dạng các layer r ờ i rạc, vì vậ y hãy d ự ng lại trong Figma
+bằ ng Auto Layout, token và component thay vì d ự a vào b ả n import.
+Tài liệ u tham kh ả o
+Google Stitch
+Figma cho sinh viên và giáo viên
+Figma: Guide to auto layout
+# Giai đoạn S ả n ph ẩ m
+1 Vấ n đề  và persona ux/persona.md
+2 Phân tích UX, information architecture,
+user flow
+ux/user-flow.md
+3 B ả n mô t ả  thiế t kế  (màu, ch ữ , kho ả ng
+cách, tone, quy tắ c component)
+design/DESIGN.md
+4 UI ban đầ u trong Google Stitch Prompt và ả nh chụp trong ai/ai-
+design-log.md
+5 Ít nhấ t 3 vòng lặ p v ớ i AI kèm ph ả n biệ n
+bằ ng AI
+Các mục log kèm quyế t định
+6 Wireframe và UI cuố i cùng trong Figma Figma page 02 và 03
+7 Design system và component Figma page 04 và 05
+8 Prototype t ươ ng tác Figma page 06
+9 Flutter handoff handoff/flutter-handoff.md
+PRM323 — Lab 2: Thiết kế UI/UX có hỗ trợ AI (bản tiếng Việt)
+Page 3 of 12
+PAGE 4
+5. Yêu cầu s ử  dụng AI
+Bạn ph ả i dùng AI và ph ả i ghi lại cách dùng. AI tạo ra; bạn quyế t định.
+1 . UI ban đầ u. Tạo phiên b ả n UI đầ u tiên bằ ng Google Stitch. Ghi lại nguyên văn toàn bộ
+prompt, t ừ ng ch ữ , và l ư u ả nh chụp kế t qu ả .
+2. Ba vòng lặ p có ý nghĩa. Mộ t vòng lặ p ch ỉ  đ ượ c tính khi nó nhắ m vào mộ t vấ n đề  cụ th ể ,
+có tên rõ (ví dụ: hành độ ng chính không rõ, điề u h ướ ng quá sâu, contrast thấ p, thiế u
+empty state) và khác v ớ i các vòng lặ p còn lại. L ư u ả nh tr ướ c và sau. Yêu cầ u AI "làm đẹp
+h ơ n" không đ ượ c tính.
+3. Ph ả n biệ n bằ ng AI. Nh ờ  mộ t tr ợ  lý AI đánh giá UI c ủ a bạn theo 10 heuristic usability c ủ a
+Nielsen, các quy tắ c accessibility c ơ  b ả n và persona c ủ a bạn. Gi ữ  lại prompt và toàn bộ
+câu tr ả  l ờ i. B ả n ph ả n biệ n ph ả i có ít nhấ t 5 phát hiệ n gắ n v ớ i các màn hình cụ th ể .
+4. Ghi nhậ n quyế t định. V ớ i mỗ i đề  xuấ t quan trọng, ghi rõ bạn chấ p nhậ n, ch ỉ nh s ử a hay
+t ừ  chố i, và vì sao. Lý do ph ả i liên quan đế n persona, mộ t heuristic, hoặ c mộ t ràng buộ c
+th ự c tế  (phạm vi, th ờ i gian, nề n t ả ng). "Mình thích" và "AI nói vậ y" không ph ả i lý do.
+5. Khai báo. Ghi lại mọi công cụ AI bạn đã dùng, k ể  c ả  công cụ ngoài Stitch, và dùng cho
+mục đích gì.
+Tài liệ u tham kh ả o
+Nielsen Norman Group: 10 Usability Heuristics for User Interface Design
+W3C: Understanding WCAG 2.1 Success Criterion 1.4.3, Contrast (Minimum)
+Google Stitch
+6. Yêu cầu phân tích UX
+ux/persona.md  ph ả i có:
+Mộ t persona chính: tên, độ  tu ổ i, vai trò, bố i c ả nh hằ ng ngày, mục tiêu, nỗ i đau (pain
+point), thói quen dùng thiế t bị, và nhu cầ u accessibility nế u có.
+Mộ t câu phát bi ể u vấ n đề .
+Mộ t tiêu chí thành công đo đ ượ c (ví dụ: "sinh viên thêm đ ượ c mộ t deadline m ớ i trong
+d ướ i 20 giây").
+ux/user-flow.md  ph ả i có:
+Information architecture: danh sách màn hình và cấ u trúc điề u h ướ ng (màn nào là cấ p
+cao nhấ t, màn nào là màn lồ ng bên trong).
+PRM323 — Lab 2: Thiết kế UI/UX có hỗ trợ AI (bản tiếng Việt)
+Page 4 of 12
+PAGE 5
+Ít nhấ t 3 user flow, mỗ i flow vẽ  thành s ơ  đồ  (dùng Mermaid cũng đ ượ c) v ớ i đi ể m bắ t
+đầ u, mục tiêu, đi ể m kế t thúc, nhánh thành công (happy path) và ít nhấ t mộ t nhánh thay
+thế . Mộ t flow ph ả i có nhánh lỗ i hoặ c phục hồ i.
+Mộ t b ả ng ánh xạ mỗ i flow sang các màn hình nó s ử  dụng.
+Tài liệ u tham kh ả o
+Nielsen Norman Group: Personas Make Users Memorable for Product Team Members
+Mermaid: Flowchart syntax
+7. Yêu cầu Figma
+File Figma ph ả i có đúng sáu page sau, theo đúng th ứ  t ự :
+Design system. Định nghĩa token bằ ng Figma Variables hoặ c styles. Component ph ả i
+dùng token; giá trị màu hoặ c kích th ướ c gán c ứ ng bên trong component bị tr ừ  đi ể m. Bắ t
+buộ c có light theme; dark theme không bắ t buộ c.
+Component tố i thi ể u, mỗ i component d ự ng bằ ng Auto Layout và variant:
+Page Nộ i dung
+01 User Flow Các s ơ  đồ  flow, mỗ i flow liên kế t t ớ i các màn hình
+nó s ử  dụng
+02 Wireframe Bố  cục low-fidelity c ủ a tấ t c ả  màn hình
+03 Final UI Tấ t c ả  màn hình cuố i cùng, kích th ướ c 360 × 800 dp,
+các biế n th ể  trạng thái đặ t cạnh màn hình t ươ ng
+ứ ng
+04 Design System Token: màu, typography, kho ả ng cách, bo góc,
+elevation
+05 Components Th ư  việ n component tái s ử  dụng có variant
+06 Prototype Các flow có th ể  bấ m đ ượ c, mỗ i flow có đi ể m bắ t
+đầ u đ ượ c đặ t rõ
+Component Trạng thái bắ t buộ c
+Button Default, pressed, disabled, loading
+PRM323 — Lab 2: Thiết kế UI/UX có hỗ trợ AI (bản tiếng Việt)
+Page 5 of 12
+PAGE 6
+Checklist accessibility và responsive. Ghi kế t qu ả  t ừ ng mục vào design/design-
+decisions.md .
+Độ  t ươ ng ph ả n (contrast) ch ữ  tố i thi ể u 4.5:1 v ớ i văn b ả n th ườ ng và 3:1 v ớ i ch ữ  l ớ n và
+các điề u khi ể n UI (WCAG 2.x).
+Vùng chạm (touch target) tố i thi ể u 48 × 48 dp.
+Ch ữ  nộ i dung tố i thi ể u 14 sp; không truyề n đạt thông tin ch ỉ  bằ ng màu sắ c.
+Bố  cục dùng constraint và Auto Layout, và đã ki ể m tra ở  chiề u rộ ng 360 dp và 412 dp.
+Trong handoff/flutter-handoff.md , mô t ả  nh ữ ng gì thay đ ổ i trên màn hình rộ ng h ơ n
+(t ừ  600 dp tr ở  lên). Bạn không cầ n thiế t kế  chúng.
+Prototype. Mỗ i flow trong 3 flow c ủ a bạn ph ả i bấ m đ ượ c t ừ  đầ u đế n cuố i mà không bị ngõ
+cụt. Thêm ít nhấ t mộ t dialog m ở  d ướ i dạng overlay và mộ t chuy ể n c ả nh t ừ  loading sang kế t
+qu ả . Đặ t flow starting point cho mỗ i flow trong Figma.
+Tài liệ u tham kh ả o
+Figma: Guide to variables
+Figma: The difference between variables and styles
+Figma: Guide to auto layout
+Figma: Create and use variants
+Component Trạng thái bắ t buộ c
+Text field Default, focused, filled, error, disabled
+Card Default, pressed (nế u bấ m đ ượ c)
+Navigation (bottom bar hoặ c t ươ ng
+đ ươ ng)
+Mỗ i đi ể m đế n ở  trạng thái đ ượ c chọn
+App bar Default, có action
+Dialog Xác nhậ n, và mộ t biế n th ể  h ủ y hoặ c báo lỗ i
+Loading state Ít nhấ t mộ t pattern ở  m ứ c màn hình (skeleton
+hoặ c spinner)
+Empty state Hình minh họa hoặ c icon, thông báo, mộ t hành
+độ ng
+Error state Thông báo, nguyên nhân bằ ng ngôn ng ữ  dễ  hi ể u,
+hành độ ng th ử  lại
+PRM323 — Lab 2: Thiết kế UI/UX có hỗ trợ AI (bản tiếng Việt)
+Page 6 of 12
+PAGE 7
+Figma: Create and manage component properties
+Figma: Guide to prototyping
+Figma: Create and manage prototype flows
+W3C: Understanding WCAG 2.1 Success Criterion 1.4.3, Contrast (Minimum)
+Material Design 3: Accessibility designing
+Flutter: Accessibility, UI design and styling
+8. Repository và Flutter handoff
+Nộ p mộ t GitHub repository đặ t tên prm323-lab2-<student-id>  v ớ i cấ u trúc sau:
+prm323-lab2-<student-id>/
+├ ── README.md
+├ ── ux/
+│   ├ ── persona.md
+│   └── user-flow.md
+├ ── design/
+│   ├ ── DESIGN.md
+│   ├ ── screen-spec.md
+│   └── design-decisions.md
+├ ── ai/
+│   └── ai-design-log.md
+├ ── assets/
+│   ├ ── stitch/          ( ả nh chụp mọi phiên b ả n do Stitch tạo)
+│   └── figma/           (PNG export các màn hình cuối cùng)
+└── handoff/
+    └── flutter-handoff.md
+File Mục đích
+README.md Ch ủ  đề , persona mộ t dòng, link Figma, danh sách
+công cụ AI đã dùng, và b ả n đồ  n ơ i tìm t ừ ng s ả n
+ph ẩ m
+design/DESIGN.md B ả n mô t ả  thiế t kế  bạn đ ư a cho Stitch: màu,
+typography, kho ả ng cách, tone, quy tắ c component
+design/screen-spec.md Mỗ i màn hình dùng đ ể  làm gì, hi ể n thị nộ i dung gì,
+thuộ c flow nào (ý đồ  thiế t kế )
+PRM323 — Lab 2: Thiết kế UI/UX có hỗ trợ AI (bản tiếng Việt)
+Page 7 of 12
+PAGE 8
+Flutter handoff. V ớ i mỗ i màn hình, đặ c t ả  đ ủ  sáu mục:
+1 . Layout: cấ u trúc t ừ  trên xuố ng d ướ i (ví dụ Scaffold  → AppBar  → Column  cuộ n đ ượ c),
+giá trị kho ả ng cách lấ y t ừ  token, và phầ n nào cuộ n.
+2. Components: các component nào t ừ  th ư  việ n xuấ t hiệ n, kèm tên variant.
+3. States: default, loading, empty, error và populated, tùy cái nào áp dụng.
+4. User interactions: mỗ i thao tác chạm, vuố t, nhậ p liệ u và quy tắ c validation, và kế t qu ả
+c ủ a nó.
+5. Navigation: ng ườ i dùng đế n t ừ  đâu, mỗ i hành độ ng dẫ n t ớ i đâu, và nút Back làm gì.
+6. Important UI constraints: vùng chạm tố i thi ể u, hành vi bàn phím, quy tắ c khi ch ữ  tràn,
+độ  dài nộ i dung tố i đa, hành vi trên màn hình rộ ng h ơ n.
+Cầ n có thêm hai b ả ng chung: token sang Flutter (mỗ i màu, text style và giá trị kho ả ng
+cách kèm tên d ự  kiế n trong ColorScheme , TextTheme  hoặ c hằ ng số ) và component sang
+widget (ví dụ Button sang FilledButton , Text field sang TextFormField , Navigation
+sang NavigationBar , Dialog sang AlertDialog ). Template ở  Phụ lục B.
+Ki ể m tra handoff. Mộ t bạn cùng l ớ p ph ả i d ự ng đ ượ c mộ t màn hình t ừ  file handoff c ủ a bạn,
+ch ỉ  m ở  Figma đ ể  xem giao diệ n. Bấ t c ứ  điề u gì họ ph ả i h ỏ i lại bạn đề u là kho ả ng trố ng trong
+đặ c t ả .
+Tài liệ u tham kh ả o
+Flutter: Use themes to share colors and font styles
+Flutter API: ThemeData
+Flutter: Material components (widget catalog)
+Flutter: Navigation and routing
+Flutter: Build a form with validation
+Flutter: Adaptive and responsive design
+File Mục đích
+design/design-decisions.md Không quá 10 quyế t định quan trọng nhấ t kèm lý
+do, cộ ng kế t qu ả  checklist accessibility
+ai/ai-design-log.md Mọi prompt, kế t qu ả , ph ả n biệ n và quyế t định
+(template ở  Phụ lục A)
+handoff/flutter-handoff.md Cách lậ p trình viên d ự ng ứ ng dụng (xem d ướ i)
+PRM323 — Lab 2: Thiết kế UI/UX có hỗ trợ AI (bản tiếng Việt)
+Page 8 of 12
+PAGE 9
+9. Rubric chấm đi ể m (100 đi ể m)
+Mỗ i tiêu chí con đ ượ c chấ m mộ t trong ba m ứ c: đi ể m tố i đa, đi ể m mộ t phầ n, hoặ c 0. Đi ể m
+mộ t phầ n đ ượ c cho khi yêu cầ u đạt ở  mộ t m ứ c nhấ t định, ví dụ đúng ở  mộ t số  flow hoặ c
+màn hình nh ư ng ch ư a đ ủ  tấ t c ả . Các tiêu chí quy trình t ổ ng cộ ng 45 đi ể m (UX 15, tạo UI
+bằ ng AI 10, vòng lặ p và ph ả n biệ n 15, tài liệ u 5); các tiêu chí s ả n ph ẩ m t ổ ng cộ ng 55 đi ể m.
+Tiêu chí Đi ể m Đi ể m tố i đa khi Mấ t đi ể m khi
+Phân tích UX và user
+flow
+15
+Ng ườ i dùng mục tiêu và
+vấ n đề
+5 Persona cụ th ể , có bố i
+c ả nh, mục tiêu, pain point;
+vấ n đề  mộ t câu; tiêu chí
+thành công đo đ ượ c
+Persona chung chung
+("sinh viên"); không có
+pain point; không có tiêu
+chí thành công
+Information
+architecture
+5 Có danh sách màn hình và
+cấ u trúc điề u h ướ ng; mọi
+màn hình đề u đ ượ c ít nhấ t
+mộ t flow s ử  dụng
+Màn hình không thuộ c
+flow nào; màn hình không
+th ể  truy cậ p; không có cấ u
+trúc điề u h ướ ng
+User flow 5 Ít nhấ t 3 flow có đi ể m bắ t
+đầ u, mục tiêu, đi ể m kế t
+thúc, nhánh thay thế , và
+b ả ng ánh xạ flow sang màn
+hình
+Ch ỉ  có happy path; d ướ i 3
+flow; flow không ánh xạ
+sang màn hình
+Tạo UI bằ ng AI 10
+Viế t prompt 5 Prompt nêu rõ ng ườ i dùng,
+nhiệ m vụ, nề n t ả ng, ràng
+buộ c, phong cách (d ự a
+trên DESIGN.md ) và đ ượ c
+ghi nguyên văn
+Prompt mộ t dòng; prompt
+không đ ượ c ghi hoặ c ch ỉ
+tóm tắ t
+UI ban đầ u t ừ  Stitch 5 UI đ ượ c tạo bao ph ủ  ít nhấ t
+flow chính, có ả nh chụp
+làm bằ ng ch ứ ng
+Không có bằ ng ch ứ ng về
+kế t qu ả  c ủ a Stitch; kế t qu ả
+ch ỉ  có mộ t màn hình
+Vòng lặ p AI và ph ả n
+biệ n UX
+15
+PRM323 — Lab 2: Thiết kế UI/UX có hỗ trợ AI (bản tiếng Việt)
+Page 9 of 12
+PAGE 10
+Tiêu chí Đi ể m Đi ể m tố i đa khi Mấ t đi ể m khi
+Ít nhấ t 3 vòng lặ p có ý
+nghĩa
+5 Mỗ i vòng nhắ m vào mộ t
+vấ n đề  có tên khác nhau,
+có ả nh tr ướ c và sau
+D ướ i 3; ch ỉ  đ ổ i giao diệ n bề
+ngoài; các vòng lặ p lặ p lại
+cùng mộ t thay đ ổ i
+Ph ả n biệ n UX bằ ng AI 5 B ả n ph ả n biệ n dùng
+heuristic có tên,
+accessibility và persona; ít
+nhấ t 5 phát hiệ n gắ n v ớ i
+màn hình
+Ph ả n biệ n chung chung;
+d ướ i 5 phát hiệ n; phát hiệ n
+không gắ n v ớ i màn hình
+Lậ p luậ n và quyế t định
+c ủ a sinh viên
+5 Mọi đề  xuấ t quan trọng
+đ ượ c đánh dấ u chấ p nhậ n,
+ch ỉ nh s ử a hoặ c t ừ  chố i kèm
+lý do, và Figma ph ả n ánh
+các quyế t định đó
+Không có lý do; chấ p nhậ n
+hế t mà không gi ả i thích;
+quyế t định không thấ y
+trong UI cuố i cùng
+Thiế t kế  UI/UX cuố i
+cùng
+20
+Th ứ  bậ c thị giác (visual
+hierarchy)
+5 Mỗ i màn hình có mộ t hành
+độ ng chính rõ ràng; thang
+c ỡ  ch ữ  nhấ t quán; nhóm
+nộ i dung rõ
+Nhiề u hành độ ng chính
+cạnh tranh nhau; c ỡ  ch ữ
+không nhấ t quán
+Tính nhấ t quán 5 Cùng component, token,
+nhãn và pattern trên mọi
+màn hình
+Cùng mộ t thành phầ n nhìn
+khác hoặ c đặ t tên khác ở
+các màn hình khác nhau
+Tính dễ  dùng (usability) 5 Hoàn thành flow v ớ i ít
+b ướ c; có ph ả n hồ i cho mọi
+hành độ ng; phòng ng ừ a và
+phục hồ i lỗ i; có empty,
+loading, error state ở  màn
+hình liên quan
+Ngõ cụt; không ph ả n hồ i;
+thiế u state
+Accessibility và
+responsive
+5 Hoàn thành checklist ở
+mục 7 kèm bằ ng ch ứ ng; đã
+ki ể m tra bố  cục ở  360 dp và
+412 dp
+Contrast hoặ c touch
+target không đạt; ý nghĩa
+ch ỉ  bằ ng màu; thiế u
+checklist
+Design system và
+component
+15
+PRM323 — Lab 2: Thiết kế UI/UX có hỗ trợ AI (bản tiếng Việt)
+Page 10 of 12
+PAGE 11
+Tiêu chí Đi ể m Đi ể m tố i đa khi Mấ t đi ể m khi
+Design token 5 Màu, typography, kho ả ng
+cách, bo góc, elevation
+đ ượ c định nghĩa thành
+Variables hoặ c styles và
+đ ượ c component s ử  dụng
+Giá trị gán c ứ ng; token
+định nghĩa nh ư ng không
+đ ượ c dùng
+Component tái s ử  dụng 5 Đ ủ  9 component tố i thi ể u
+d ự ng bằ ng Auto Layout và
+variant; màn hình dùng
+instance
+Thiế u component; màn
+hình dùng b ả n sao đã
+detach
+Trạng thái component 5 Mọi state bắ t buộ c ở  mục 7
+đề u có và đ ượ c s ử  dụng
+Thiế u state hoặ c ch ỉ  vẽ
+thành các frame r ờ i
+Prototype t ươ ng tác 10
+Ít nhấ t 3 flow hoàn
+ch ỉ nh
+5 Mỗ i flow bấ m đ ượ c t ừ  đầ u
+đế n cuố i, có starting point
+D ướ i 3 flow; flow đ ứ t gi ữ a
+ch ừ ng
+T ươ ng tác và điề u
+h ướ ng đúng
+5 Back đúng; ít nhấ t mộ t
+overlay và mộ t chuy ể n
+c ả nh loading sang kế t qu ả ;
+không ngõ cụt
+Đích đế n sai; không có
+Back; ngõ cụt
+Đặ c t ả  Flutter handoff 10
+Đặ c t ả  màn hình 5 Mỗ i màn hình có đ ủ  6 mục
+ở  mục 8
+Thiế u màn hình; thiế u mục;
+ch ỉ  mô t ả  giao diệ n
+Component, state,
+t ươ ng tác, b ả ng ánh xạ
+5 B ả ng token sang Flutter và
+component sang widget
+đầ y đ ủ ; state và t ươ ng tác
+không m ơ  hồ
+Lậ p trình viên ph ả i h ỏ i lại
+m ớ i d ự ng đ ượ c màn hình
+Tài liệ u và log s ử  dụng
+AI
+5
+Prompt và vòng lặ p đầ y
+đ ủ
+3 Đ ủ  prompt, kế t qu ả , ph ả n
+biệ n, quyế t định và truy vế t
+đ ượ c t ớ i ả nh chụp
+Prompt bị tóm tắ t hoặ c
+thiế u; vòng lặ p không có
+bằ ng ch ứ ng
+Tài liệ u rõ ràng 2 Repository đúng cấ u trúc;
+README ánh xạ các s ả n
+ph ẩ m; mọi link hoạt độ ng
+Sai cấ u trúc; link h ỏ ng
+hoặ c đặ t riêng t ư
+PRM323 — Lab 2: Thiết kế UI/UX có hỗ trợ AI (bản tiếng Việt)
+Page 11 of 12
+PAGE 12
+Quy tắ c truy cậ p. Nế u link Figma không m ở  đ ượ c tại th ờ i đi ể m hế t hạn, các tiêu chí d ự a
+trên Figma (UI cuố i cùng, design system, prototype) bị chấ m 0 cho đế n khi đ ượ c s ử a, và áp
+dụng chính sách nộ p trễ .
+PRM323 — Lab 2: Thiết kế UI/UX có hỗ trợ AI (bản tiếng Việt)
+Page 12 of 12
+
+FILE: PRM323_Lab2_HuongDan_Slide_Presentation_Demo.docx
+
+PRM323 — LAB 2
+HƯỚNG DẪN CHUẨN BỊ SLIDE PRESENTATION VÀ DEMO ĐỂ ĐÁNH GIÁ
+Áp dụng cho: Lab 2 – Thiết kế UI/UX có hỗ trợ AI (Google Stitch → Figma)
+Tài liệu dành cho sinh viên/nhóm trình bày và giảng viên đánh giá. Căn cứ: đề Lab 2 ngày 28/09/2026. Các quy định về thời lượng, số slide và phân vai bên dưới là đề xuất cho buổi chấm, không phải yêu cầu đã có trong đề gốc.
+1. Mục tiêu và hình thức đánh giá
+Nhóm cần chứng minh được chuỗi quyết định thiết kế: Analyze → Generate → Critique → Refine → Prototype → Handoff. Trọng tâm là khả năng giải thích vì sao thiết kế phù hợp persona, cách sử dụng và phản biện AI, chất lượng UI, cũng như tính khả thi của prototype và handoff.
+Đề xuất tổ chức: 10 phút trình bày (10–12 slide), 5 phút demo trực tiếp, 5 phút giảng viên hỏi đáp. Giảng viên có thể điều chỉnh tùy lịch học. Đề gốc quy định hình thức cá nhân, trừ khi giảng viên thông báo làm nhóm; nếu tổ chức đánh giá theo nhóm cần xác nhận hình thức này trước.
+2. Cấu trúc slide và minh chứng
+Slide
+Tiêu đề
+Nội dung phải trình bày
+Minh chứng
+01
+Project Overview
+Tên sản phẩm, đối tượng, thành viên/vai trò, vấn đề thực tế
+Link repo + Figma
+02
+Problem & Persona
+Bối cảnh, mục tiêu, pain points, problem statement, chỉ số thành công đo được
+ux/persona.md
+03
+Information Architecture
+Sitemap/cấu trúc điều hướng, ≥8 màn hình, chỉ rõ màn hình cấp cao và cấp con
+ux/user-flow.md; Figma 01
+04
+Three User Flows
+3 sơ đồ: start → goal → end, happy path, alternate path; ≥1 error/recovery; ánh xạ flow–screen
+Figma 01; user-flow.md
+05
+AI UI Generation
+Prompt nguyên văn có persona, task, mobile platform, constraints và style; Stitch UI ban đầu
+DESIGN.md; ai-design-log.md; screenshots
+06
+AI Iterations & Critique
+≥3 lần tinh chỉnh có mục tiêu KHÁC nhau; before/after; ≥5 vấn đề UX trên màn hình cụ thể
+AI log + ảnh trước/sau
+07
+Design Decisions
+3–5 ví dụ accept / modify / reject và lý do gắn persona, heuristics hoặc constraints
+design-decisions.md; Figma
+08
+Wireframe → Final UI
+Đối chiếu bố cục low-fi và UI hoàn chỉnh, hierarchy, consistency, empty/loading/error
+Figma 02/03; ≥8 screens
+09
+Design System
+Color, type, spacing, radius, elevation tokens; variables/styles; component instances
+Figma 04/05
+10
+Accessibility / Responsive
+Bằng chứng contrast, 48×48 dp, text ≥14 sp, 360/412 dp; không chỉ dùng màu
+design-decisions.md
+11
+Live Prototype
+Demo ba flow, back, overlay/dialog và loading→result; không có ngõ cụt
+Figma 06
+12
+Flutter Handoff / Summary
+6 mục/screen; token→Flutter, component→widget; kết quả, tồn tại, link nộp
+flutter-handoff.md; GitHub
+3. Kịch bản demo trực tiếp
+01. Mở file Figma, kiểm tra đúng 6 page theo thứ tự: 01 User Flow, 02 Wireframe, 03 Final UI, 04 Design System, 05 Components, 06 Prototype.
+02. Trên Final UI, chỉ ra tối thiểu 8 màn hình KHÁC nhau (dialog và biến thể trạng thái không được tính thêm).
+03. Trên Prototype, chạy cả 3 flow từ starting point tới đích; trình diễn ít nhất một lỗi/phục hồi, Back đúng và không dead-end.
+04. Cho xem dialog dạng overlay và một chuyển cảnh loading → result.
+05. Mở Components, chỉ ra component dùng Auto Layout, biến thể trạng thái và instances; mở Variables/styles để chứng minh tokens được sử dụng thực tế.
+06. Mở AI log, chọn một vòng cải tiến để chứng minh prompt → output → critique → decision → thay đổi trong Figma.
+07. Mở GitHub, kiểm tra cấu trúc repo, screen spec và Flutter handoff (hai bảng ánh xạ token→Flutter, component→widget).
+4. Checklist kỹ thuật cần hoàn thành trước khi chấm
+☐ Tối thiểu 8 màn hình cuối; 3 flow có nhánh thay thế và ít nhất một nhánh lỗi/phục hồi.
+☐ AI log giữ nguyên prompt, ảnh đầu ra, ≥3 vòng lặp có ảnh trước/sau; AI critique ≥5 phát hiện theo Nielsen/accessibility/persona; quyết định được giải thích.
+☐ Design system có color/typography/spacing/radius/elevation; đủ 9 nhóm component: Button, Text field, Card, Navigation, App bar, Dialog, Loading, Empty, Error và states bắt buộc.
+☐ Accessibility: contrast ≥4.5:1 (chữ thường), ≥3:1 (chữ lớn/điều khiển), tap target ≥48×48 dp, font nội dung ≥14 sp; kiểm tra rộng 360 và 412 dp.
+☐ Flutter handoff đủ 6 phần cho mỗi màn hình: layout, components, states, interactions, navigation, UI constraints; hai bảng mapping.
+☐ Link Figma truy cập được; link GitHub và assets không bị chặn; README ghi đủ các artifact; không yêu cầu viết Flutter code trong Lab 2.
+5. Rubric gốc để giảng viên đối chiếu
+Nhóm đánh giá
+Điểm
+Phân tích UX & user flow
+15
+Tạo UI bằng AI
+10
+Vòng lặp AI & phản biện UX
+15
+Thiết kế UI/UX cuối cùng
+20
+Design system & components
+15
+Prototype tương tác
+10
+Flutter handoff
+10
+Tài liệu & AI log
+5
+TỔNG
+100
+Lưu ý: 45 điểm cho quá trình (UX, AI và tài liệu), 55 điểm cho sản phẩm (UI, design system, prototype và handoff). Slide và demo chỉ là hình thức trình bày bằng chứng; không tự động phát sinh điểm riêng so với rubric Lab 2.
+6. Câu hỏi giảng viên có thể sử dụng
+Persona có nhu cầu gì khiến nhóm chọn cấu trúc điều hướng này?
+Flow nào dễ thất bại nhất? Khi xảy ra lỗi người dùng có thể phục hồi ra sao?
+Một đề xuất AI nào đã bị nhóm từ chối? Vì sao?
+Ba vòng lặp chỉnh sửa đã giải quyết ba vấn đề UX khác nhau như thế nào?
+Nếu đổi primary color hoặc spacing token, các màn hình nào tự cập nhật?
+Làm thế nào chứng minh màn hình rộng 412 dp không vỡ layout?
+Một lập trình viên Flutter chưa biết dự án sẽ dựa vào đâu để hiện thực màn hình và states?
+7. Hướng dẫn tác phong trình bày và nộp
+Chỉ trình bày các quyết định chính; để screenshot, bảng log đầy đủ và thông số chi tiết tại repository/Figma. Không sử dụng ảnh minh họa giả làm bằng chứng sản phẩm. Nên phân công các thành viên giải thích đúng phần mình phụ trách (nếu làm theo nhóm). Trước buổi chấm, thử toàn bộ link bằng cửa sổ trình duyệt chưa đăng nhập.
+Đề gốc yêu cầu nộp 01 GitHub repository và 01 Figma link có quyền xem. Không có yêu cầu nộp slide riêng trong đề gốc; giảng viên thông báo cách gửi slide khi áp dụng hướng dẫn đánh giá này.
+Nguồn: PRM323 — Lab 2: Thiết kế UI/UX có hỗ trợ AI (12 trang), các mục 1–9; đặc biệt trang 2–8 về yêu cầu và trang 9–11 về rubric.
+
+FILE: PRM323_Lab2_Presentation_Assessment_Guidelines_EN.docx
+
+PRM323 — LABORATORY 2
+GUIDELINES FOR PRESENTATION, LIVE DEMONSTRATION, AND ASSESSMENT
+Topic: AI-Assisted UI/UX Design (Google Stitch → Figma)
+Audience: Students and assessors | Reference: PRM323 Laboratory 2 specification, 28 September 2026.
+Note: The proposed slide count, duration, and allocation of speaking roles in this document are assessment-session recommendations, not additional requirements of the original laboratory specification.
+1. Purpose and proposed assessment format
+Students must demonstrate the complete design process: Analyze → Generate → Critique → Refine → Prototype → Handoff. Assessment focuses on the rationale for design choices, critical use of AI-generated output, usability, implementation readiness, and verifiable project evidence.
+Suggested session: 10 minutes for presentation (10–12 slides), 5 minutes for live demonstration, and 5 minutes for questions and answers. The lecturer may adjust the schedule. The original laboratory is an individual assignment unless the lecturer expressly authorizes group work.
+2. Required slide structure and supporting evidence
+Slide
+Title
+Content to present
+Evidence
+01
+Project Overview
+Application name, target audience, presenter(s), practical problem
+GitHub and Figma links
+02
+Problem and Persona
+User context, goals, pain points, problem statement, measurable success criterion
+ux/persona.md
+03
+Information Architecture
+Navigation hierarchy and at least eight distinct application screens
+ux/user-flow.md; Figma Page 01
+04
+Three User Flows
+Three start-to-end flows, alternative branches, at least one error/recovery path, flow-to-screen mapping
+User-flow diagrams and mapping
+05
+AI UI Generation
+Verbatim original prompt: persona, task, platform, constraints, design style; first Stitch output
+DESIGN.md; AI log; screenshots
+06
+AI Iterations and UX Critique
+At least three distinct problem-focused iterations with before/after evidence; at least five screen-specific UX findings
+ai/ai-design-log.md
+07
+Design Decisions
+Three to five examples: accept, modify, or reject AI suggestions, with justified reasoning
+design-decisions.md; final UI
+08
+Wireframes and Final UI
+Low-fidelity versus final screens, visual hierarchy, consistency, relevant empty/loading/error states
+Figma Pages 02 and 03
+09
+Design System and Components
+Color, typography, spacing, radius, elevation tokens; variables/styles; reusable component variants
+Figma Pages 04 and 05
+10
+Accessibility and Responsiveness
+Contrast, touch target, type size, and layout checks at 360 dp and 412 dp
+Accessibility checklist and evidence
+11
+Interactive Prototype
+Demonstration of three complete flows, Back behavior, dialog overlay, loading-to-result transition
+Figma Page 06
+12
+Flutter Handoff and Summary
+Six specification fields per screen; token-to-Flutter and component-to-widget mapping; limitations
+flutter-handoff.md; GitHub
+3. Live demonstration sequence
+1. Open the Figma file and show all six pages in the required order: 01 User Flow, 02 Wireframe, 03 Final UI, 04 Design System, 05 Components, and 06 Prototype.
+2. Identify at least eight distinct final screens. Dialogs and state variations do not count as additional screens.
+3. Run each of the three prototype flows from its designated starting point to completion; demonstrate an error/recovery path, correct Back navigation, and no dead ends.
+4. Demonstrate at least one dialog as an overlay and one loading-to-result transition.
+5. Inspect reusable components, Auto Layout, variants, and actual usage of tokens through Figma Variables or styles.
+6. Open the AI design log and trace one example from prompt and AI output through critique, decision, and the corresponding change in Figma.
+7. Open the GitHub repository and verify its structure, screen specifications, Flutter handoff, and both mapping tables.
+4. Pre-assessment checklist
+☐  At least eight distinct final screens; three complete flows with alternative paths and at least one error/recovery branch.
+☐  Verbatim AI prompts and outputs; three meaningful iterations with before/after screenshots; five or more screen-specific findings using Nielsen heuristics, accessibility, and persona; justified decisions.
+☐  Design tokens for color, typography, spacing, radius, and elevation; all nine required component categories (Button, Text field, Card, Navigation, App bar, Dialog, Loading, Empty, Error), with applicable variants and states.
+☐  Accessibility: contrast of at least 4.5:1 for normal text and 3:1 for large text and UI controls; touch targets at least 48 × 48 dp; body text at least 14 sp; layouts checked at 360 dp and 412 dp.
+☐  Flutter handoff includes six aspects for each screen: layout, components, states, interactions, navigation, and UI constraints; plus two token/widget mapping tables.
+☐  Figma view access and GitHub/asset links work; README maps all deliverables; Flutter implementation code is not required for Laboratory 2.
+5. Official assessment rubric (100 points)
+Assessment criterion
+Points
+UX analysis and user flows
+15
+AI UI generation
+10
+AI iterations and UX critique
+15
+Final UI/UX design
+20
+Design system and components
+15
+Interactive prototype
+10
+Flutter handoff
+10
+Documentation and AI log
+5
+TOTAL
+100
+The original rubric assigns 45 points to process-related criteria and 55 points to product-related criteria. Slides and live demonstrations provide evidence for these criteria; they do not create a separate grading category.
+6. Illustrative assessor questions
+1. Which persona needs justify your navigation structure?
+2. Which flow is most likely to fail, and how does a user recover?
+3. Which AI-generated recommendation did you reject, and why?
+4. How did your three iterations address three different UX problems?
+5. Which screens automatically reflect a change to a primary-color or spacing token?
+6. How did you verify that the layout remains usable at 412 dp?
+7. How could an unfamiliar Flutter developer implement the screen and its states from your handoff documentation?
+7. Presentation conduct and submission
+Prioritize critical decisions and clear evidence rather than generic definitions. Keep full screenshots, AI logs, and detailed specifications accessible in Figma and GitHub. Do not present illustrative mockups as evidence of actual project output. For lecturer-authorized group presentations, distribute speaking responsibilities clearly.
+The original specification requires one viewable Figma link and one GitHub repository link. It does not independently require slide submission; the lecturer should communicate any additional slide-submission arrangements.
+Source: PRM323 — Laboratory 2: AI-Assisted UI/UX Design (12-page Vietnamese specification), Sections 1–9, with requirements on pp. 2–8 and the official rubric on pp. 9–11.

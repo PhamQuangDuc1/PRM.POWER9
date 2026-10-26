@@ -1,0 +1,55 @@
+{
+  "zip_sha256": "ed0119ec3981a82922d38c8b4f3dc38e1ebebea6c8b7bd03e7b0296709ea45aa",
+  "screens": [
+    {
+      "id": "S01",
+      "html": "assets/stitch/office-ui/OI01-source/export-original/stitch_power9_office_routine_wireframe/office_oi01_s01_h_m_nay/code.html",
+      "sha256": "9c70b771e094d27b83b5bf172a7f23173d2f7b3835003b570aa0b35a2a0832b7"
+    },
+    {
+      "id": "S02",
+      "html": "assets/stitch/office-ui/OI01-source/export-original/stitch_power9_office_routine_wireframe/office_oi01_s02_n_u_ng/code.html",
+      "sha256": "5e550bc2b21cac5ed5fb2d8600c859eb6e23656dc56c9f7aeac4e48ec603a252"
+    },
+    {
+      "id": "S03",
+      "html": "assets/stitch/office-ui/OI01-source/export-original/stitch_power9_office_routine_wireframe/office_oi01_s03_th_gi_n/code.html",
+      "sha256": "d5ac1f4bee7592f21aac160a360e15883ed63663ce3f47244b8a86d83cdeda7f"
+    },
+    {
+      "id": "S04",
+      "html": "assets/stitch/office-ui/OI01-source/export-original/stitch_power9_office_routine_wireframe/office_oi01_s04_k_t_n_i/code.html",
+      "sha256": "aa32fd449014a1ac8ef6a3118fad6e7e7a18dd15da279084dcb0c732a39ac88a"
+    },
+    {
+      "id": "S05",
+      "html": "assets/stitch/office-ui/OI01-source/export-original/stitch_power9_office_routine_wireframe/office_oi01_s05_kh_m_ph/code.html",
+      "sha256": "425c4c853434253c8213b266d163b9ae902d89ca2b8e9bda54647ae56416b108"
+    },
+    {
+      "id": "S06",
+      "html": "assets/stitch/office-ui/OI01-source/export-original/stitch_power9_office_routine_wireframe/office_oi01_s06_chi_ti_t_th_i_quen/code.html",
+      "sha256": "d3da5a657bbe0e369db9d7d69cbe18a8a6d34dd6c233b25251a17ca1309a952f"
+    },
+    {
+      "id": "S07",
+      "html": "assets/stitch/office-ui/OI01-source/export-original/stitch_power9_office_routine_wireframe/office_oi01_s07_l_ch_th_i_quen/code.html",
+      "sha256": "d575c5173c46d768f009ef9cf97255b13bc80573516e4d0c0eb6a8d6d5582e4a"
+    },
+    {
+      "id": "S08",
+      "html": "assets/stitch/office-ui/OI01-source/export-original/stitch_power9_office_routine_wireframe/office_oi01_s08_ti_n/code.html",
+      "sha256": "69d48db426489ec4643c2730f82817d3d349e655fc75e2f4d3fe4fc45cf6e23b"
+    },
+    {
+      "id": "S09",
+      "html": "assets/stitch/office-ui/OI01-source/export-original/stitch_power9_office_routine_wireframe/office_oi01_s09_g_c_l_m_vi_c/code.html",
+      "sha256": "e602e7b0008fe075c4d06da459f2ad1eba2367f58b36a4144d70288438d29091"
+    },
+    {
+      "id": "S10",
+      "html": "assets/stitch/office-ui/OI01-source/export-original/stitch_power9_office_routine_wireframe/office_oi01_s10_ng_ph_c_h_i/code.html",
+      "sha256": "c86c234e394b1ffe378cc6d98ad5b2f3516c6c928710748c945fcbda756adcef"
+    }
+  ]
+}
