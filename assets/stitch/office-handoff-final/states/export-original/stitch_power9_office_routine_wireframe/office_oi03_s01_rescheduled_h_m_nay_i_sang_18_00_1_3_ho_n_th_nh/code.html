@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;min-height:100%;margin:0;padding:0;font-family:"Be Vietnam Pro",Roboto,sans-serif !important;background-color:#f8f9ff;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-family:'Material Symbols Outlined' !important;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'on-secondary-container': '#5d656e', 'on-primary-container': '#bed4ff', 'surface-tint': '#235eac', 'on-error': '#ffffff', 'surface-container-high': '#dce9ff', 'surface-bright': '#f8f9ff', 'on-error-container': '#93000a', 'primary-fixed-dim': '#aac7ff', 'surface-variant': '#d3e4ff', 'on-background': '#031c36', 'secondary-container': '#dbe3ed', 'outline-variant': '#c2c6d3', 'surface-container-lowest': '#ffffff', 'on-secondary-fixed': '#141c23', 'on-tertiary-fixed': '#410001', 'tertiary-container': '#a53229', 'surface-container-low': '#eff4ff', 'primary-container': '#1e5aa8', 'tertiary': '#841914', 'secondary-fixed-dim': '#bfc7d1', 'primary-fixed': '#d6e3ff', 'on-secondary': '#ffffff', 'on-surface-variant': '#424751', 'secondary-fixed': '#dbe3ed', 'tertiary-fixed': '#ffdad5', 'surface-dim': '#c5dcfd', 'surface-container-highest': '#d3e4ff', 'outline': '#737782', 'inverse-surface': '#1b314c', 'on-tertiary-fixed-variant': '#891d17', 'inverse-on-surface': '#eaf1ff', 'primary': '#004287', 'tertiary-fixed-dim': '#ffb4aa', 'error-container': '#ffdad6', 'on-tertiary': '#ffffff', 'error': '#ba1a1a', 'on-surface': '#031c36', 'surface': '#f8f9ff', 'on-primary-fixed': '#001b3e', 'inverse-primary': '#aac7ff', 'on-primary-fixed-variant': '#00458d', 'on-primary': '#ffffff', 'secondary': '#575f68', 'on-secondary-fixed-variant': '#404850', 'background': '#f8f9ff', 'on-tertiary-container': '#ffc6be', 'surface-container': '#e5eeff' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-sm': '0.5rem', 'gutter-desktop': '1.5rem', 'margin-tablet': '1.5rem', 'margin': '1rem', 'gutter': '1rem', 'margin-desktop': '2.5rem', 'space-md': '1rem', 'space-xs': '0.25rem', 'space-lg': '1.5rem', 'space-xl': '2rem' }, fontFamily: { 'display': ['Be Vietnam Pro', 'Roboto', 'sans-serif'], 'body': ['Be Vietnam Pro', 'Roboto', 'sans-serif'], 'label': ['Be Vietnam Pro', 'Roboto', 'sans-serif'], 'headline': ['Be Vietnam Pro', 'Roboto', 'sans-serif'], 'helper': ['Be Vietnam Pro', 'Roboto', 'sans-serif'], 'body-medium': ['Be Vietnam Pro', 'Roboto', 'sans-serif'], 'sans': ['Be Vietnam Pro', 'Roboto', 'sans-serif'] }, fontSize: { 'display': ['24px', { lineHeight: '32px', letterSpacing: '-0.01em', fontWeight: '700' }], 'body': ['16px', { lineHeight: '24px', letterSpacing: '0em', fontWeight: '400' }], 'label': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '500' }], 'headline': ['20px', { lineHeight: '28px', letterSpacing: '-0.005em', fontWeight: '600' }], 'helper': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '400' }], 'body-medium': ['16px', { lineHeight: '24px', letterSpacing: '0em', fontWeight: '500' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body text-on-surface flex flex-col min-h-screen antialiased"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(3,28,54,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><img alt="Power9 Logo" class="w-10 h-10 object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_La5xYygNRGKI_rSIKwHs_NrG0sGPYQNDZCgGMfnvGS535cddSm6zmqqFW_OvGcuFUctVkqU02NGmp-MYnIGQ3MgFBDrVKMExKn4GMEk088_1768rjC39mJDkTTGXGVBcQ82eLSRk5GSROgM5AE8uUbI4hJGGP7hze3Wf02WfIvNz-jT3aD77jgr7fUnx9UY8QRwOUq7NGBXQE57Q9PLYXcsm_jsw9u4Dz6wjJAgF7RLxrpOAsNHOvqctmOlMCUGkkQ"/><h1 class="text-[20px] leading-[28px] font-bold text-on-surface">Power9 Office Routine</h1></div><div class="flex items-center gap-space-sm flex-shrink-0"><img alt="Profile" class="w-10 h-10 rounded-full object-cover shadow-[0_1px_4px_rgba(3,28,54,0.08)]" src="https://lh3.googleusercontent.com/aida/AEtjO1W_CdcPeLqpT_RR0Bo3e6SD5KJoJNTytyT9mmFK6oQNN6sZXzFRK683TQthuSvpsJW5N3WExV_ri26dNT-luMTbdzN5QcyiqmSvamkSov5zCZQliz0JhpgdAQluEdJ-LFkillSSTjsNSU-f2qRqBIfrAoxgzHj8zhUzK8VHYYjdg18ZAnPenhKcN9BCAtUvDwf7WZy0_FrtvewpTyHu0StmVrb9R9Aqd7II-_14n2Goz1iEMKHQkNPsEQ6Z3HypDmDeSiaudF9u"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin pt-space-md pb-space-lg flex flex-col gap-space-md">
+<!-- Header Context Card (Blue Calm Banner) -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-headline text-headline text-on-surface">Hôm nay</span>
+<span class="font-helper text-helper text-on-surface-variant">Thứ Hai, 26/10/2026</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-high rounded-full">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="font-label text-label text-primary">Blue Calm</span>
+</div>
+</div>
+<!-- Progress Snapshot Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-body-medium text-body-medium text-on-surface">Tiến độ trong ngày</span>
+<span class="font-label text-label text-primary font-semibold">33%</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 33.33%;"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-helper text-helper pt-0.5">
+<span>1/3 hoạt động đã chọn hoàn thành</span>
+<span class="font-medium text-primary">Còn 2 hoạt động</span>
+</div>
+</div>
+<!-- Section Title & Status Indicator -->
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label text-label text-on-surface-variant uppercase tracking-wider">Hoạt động hôm nay</span>
+<span class="font-helper text-helper text-on-surface-variant">3 mục</span>
+</div>
+<!-- Activities List (Strictly 3 Items) -->
+<div class="flex flex-col gap-space-sm">
+<!-- Activity 1: Completed with Undo option -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<button class="mt-0.5 w-6 h-6 rounded bg-primary flex items-center justify-center flex-shrink-0" id="task-1-toggle" title="Hoàn tác" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-primary font-bold">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface-variant line-through truncate">Viết một việc có ý nghĩa</span>
+<span class="font-helper text-helper text-on-surface-variant">Mục tiêu và ý nghĩa • 09:00</span>
+</div>
+</div>
+<button class="text-primary font-label text-label flex items-center gap-1 hover:underline flex-shrink-0 pt-0.5" id="task-1-undo" type="button">
+<span class="material-symbols-outlined text-[16px]">undo</span>
+<span>Hoàn tác</span>
+</button>
+</div>
+<!-- Activity 2: Pending -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<button class="mt-0.5 w-6 h-6 rounded bg-surface-container flex items-center justify-center flex-shrink-0" type="button">
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface truncate">Đi bộ giữa giờ</span>
+<span class="font-helper text-helper text-on-surface-variant">Vận động thường xuyên • 10:00</span>
+</div>
+</div>
+<span class="font-label text-label text-on-surface-variant px-2.5 py-1 bg-surface-container rounded-lg flex-shrink-0">
+          Chưa làm
+        </span>
+</div>
+<!-- Activity 3: Rescheduled (17:30 -> 18:00) -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<button class="mt-0.5 w-6 h-6 rounded bg-surface-container flex items-center justify-center flex-shrink-0" type="button">
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface truncate">Tổng kết công việc</span>
+<span class="font-helper text-helper text-on-surface-variant">Cân bằng công việc–cuộc sống</span>
+</div>
+</div>
+<span class="font-label text-label text-on-surface-variant px-2.5 py-1 bg-surface-container rounded-lg flex-shrink-0">
+            Chưa làm
+          </span>
+</div>
+<!-- Schedule Change Badge -->
+<div class="flex items-center gap-2 mt-1 pl-8">
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-highest rounded-lg text-primary font-label text-label">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="line-through text-on-surface-variant font-helper">17:30</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+<span class="font-semibold text-primary">18:00</span>
+</div>
+<span class="font-helper text-helper text-on-surface-variant italic">Đã dời giờ</span>
+</div>
+</div>
+</div>
+<!-- Quick Action Dual Buttons: Khám phá & Tiến độ -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="h-11 px-4 rounded-xl bg-surface-container-lowest text-primary font-label text-label flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span>Khám phá</span>
+</button>
+<button class="h-11 px-4 rounded-xl bg-primary text-on-primary font-label text-label flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+<span>Tiến độ</span>
+</button>
+</div>
+<!-- Motivational Insight Card with Image Placeholder -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center gap-space-md">
+<img class="w-16 h-16 rounded-xl object-cover flex-shrink-0 bg-surface-container" data-alt="A peaceful office worker taking an intentional afternoon break near a sunlit modern window overlooking gentle green plants, soothing light blue ambience, quiet minimalist design, soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfufULrAhzq_PWxzaW4VJafAAm85snRSJXqFh19vY2wtggcQWuW_9LTmrMJ6_zf17epTtcPPN6X4kGz_W3wpol-ABUDaKGlEPx0B5DXjFlnYE8glqIjMCTztl7EvMnWF5KgIKiZ8_-zys8xzViy5TSTdaj-HhMyt6Ts6sFgxR-rAP3QcL1Kx-QvO-San-MWBfc6Ebft19L811EJW2yque5o0QKCDM07A7D0XBS02LdzYFDUHprys3m"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface">Nhịp điệu cân bằng</span>
+<span class="font-helper text-helper text-on-surface-variant line-clamp-2">Việc dời lịch sang 18:00 giúp bạn có không gian chuyển tiếp mượt mà giữa công việc và buổi tối gia đình.</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive undo simulation for Activity 1
+  const undoBtn = document.getElementById('task-1-undo');
+  const toggleBtn = document.getElementById('task-1-toggle');
+  
+  if (undoBtn && toggleBtn) {
+    undoBtn.addEventListener('click', () => {
+      const isChecked = toggleBtn.classList.contains('bg-primary');
+      const textElem = undoBtn.parentElement.querySelector('.line-through');
+      
+      if (isChecked) {
+        toggleBtn.classList.remove('bg-primary');
+        toggleBtn.classList.add('bg-surface-container');
+        toggleBtn.innerHTML = '';
+        if (textElem) textElem.classList.remove('line-through', 'text-on-surface-variant');
+        undoBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Xong</span>';
+      } else {
+        toggleBtn.classList.add('bg-primary');
+        toggleBtn.classList.remove('bg-surface-container');
+        toggleBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-on-primary font-bold">check</span>';
+        if (textElem) textElem.classList.add('line-through', 'text-on-surface-variant');
+        undoBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">undo</span><span>Hoàn tác</span>';
+      }
+    });
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(3,28,54,0.05)]" data-active-classes="bg-surface-variant text-primary-container font-semibold"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[72px] min-h-[48px] py-1.5 px-2 rounded-xl text-on-surface-variant transition-all text-primary-container" data-path="hom-nay" href="#"><span class="material-symbols-outlined text-[24px]">today</span><span class="text-label font-label leading-tight">Hôm nay</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[72px] min-h-[48px] py-1.5 px-2 rounded-xl text-on-surface-variant transition-all" data-path="an-uong" href="#"><span class="material-symbols-outlined text-[24px]">restaurant</span><span class="text-label font-label leading-tight">Ăn uống</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[72px] min-h-[48px] py-1.5 px-2 rounded-xl text-on-surface-variant transition-all" data-path="thu-gian" href="#"><span class="material-symbols-outlined text-[24px]">spa</span><span class="text-label font-label leading-tight">Thư giãn</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[72px] min-h-[48px] py-1.5 px-2 rounded-xl text-on-surface-variant transition-all" data-path="ket-noi" href="#"><span class="material-symbols-outlined text-[24px]">groups</span><span class="text-label font-label leading-tight">Kết nối</span></a></div></nav></body></html>

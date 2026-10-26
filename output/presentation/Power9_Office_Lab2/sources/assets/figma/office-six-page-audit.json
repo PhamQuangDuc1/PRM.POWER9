@@ -1,0 +1,174 @@
+{
+  "mutatedNodeIds": [
+    "27:147",
+    "27:149",
+    "27:151",
+    "28:532",
+    "28:534",
+    "28:536"
+  ],
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "01 User Flow"
+    },
+    {
+      "id": "7:2",
+      "name": "02 Wireframe"
+    },
+    {
+      "id": "7:3",
+      "name": "03 Final UI"
+    },
+    {
+      "id": "10:12",
+      "name": "04 Design System"
+    },
+    {
+      "id": "10:13",
+      "name": "05 Components"
+    },
+    {
+      "id": "10:14",
+      "name": "06 Prototype"
+    }
+  ],
+  "mainScreens": [
+    {
+      "id": "27:5",
+      "name": "S01 — Hôm nay",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "id": "27:46",
+      "name": "S02 — Ăn uống",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "id": "27:76",
+      "name": "S03 — Thư giãn",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "id": "27:105",
+      "name": "S04 — Kết nối",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "id": "27:135",
+      "name": "S05 — Khám phá",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "id": "27:186",
+      "name": "S06 — Chi tiết thói quen",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "id": "27:205",
+      "name": "S07 — Lịch thói quen",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "id": "27:234",
+      "name": "S08 — Tiến độ",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "id": "27:260",
+      "name": "S09 — Góc làm việc",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "id": "27:279",
+      "name": "S10 — Ngủ & phục hồi",
+      "width": 360,
+      "height": 800
+    }
+  ],
+  "qaScreens": [
+    {
+      "id": "28:396",
+      "name": "S01 — Hôm nay / 412",
+      "width": 412,
+      "height": 800
+    },
+    {
+      "id": "28:437",
+      "name": "S02 — Ăn uống / 412",
+      "width": 412,
+      "height": 800
+    },
+    {
+      "id": "28:467",
+      "name": "S03 — Thư giãn / 412",
+      "width": 412,
+      "height": 800
+    },
+    {
+      "id": "28:496",
+      "name": "S04 — Kết nối / 412",
+      "width": 412,
+      "height": 800
+    },
+    {
+      "id": "28:526",
+      "name": "S05 — Khám phá / 412",
+      "width": 412,
+      "height": 800
+    },
+    {
+      "id": "28:577",
+      "name": "S06 — Chi tiết thói quen / 412",
+      "width": 412,
+      "height": 800
+    },
+    {
+      "id": "28:596",
+      "name": "S07 — Lịch thói quen / 412",
+      "width": 412,
+      "height": 800
+    },
+    {
+      "id": "28:625",
+      "name": "S08 — Tiến độ / 412",
+      "width": 412,
+      "height": 800
+    },
+    {
+      "id": "28:651",
+      "name": "S09 — Góc làm việc / 412",
+      "width": 412,
+      "height": 800
+    },
+    {
+      "id": "28:670",
+      "name": "S10 — Ngủ & phục hồi / 412",
+      "width": 412,
+      "height": 800
+    }
+  ],
+  "wireframes": {
+    "count": 10,
+    "editableText": 107
+  },
+  "designSystem": {
+    "variables": 37,
+    "textStyles": 6,
+    "effectStyles": 1
+  },
+  "editableUI": 147,
+  "uiInstances": 38,
+  "textOverflow": [],
+  "shortActions": [],
+  "completeScreenImageFills": []
+}

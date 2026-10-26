@@ -1,0 +1,1522 @@
+[
+  {
+    "id": "S01",
+    "width": 360,
+    "viewport": 360,
+    "scrollWidth": 360,
+    "pageHeight": 800,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Hôm nay",
+    "text": "Logo HỆ THỐNG ĐỒNG HÀNH Power9 Office Routine v1.0 Hôm nay 1/3 hoạt động hoàn thành HOẠT ĐỘNG HÔM NAY 3 mục check Viết một việc có ý nghĩa 09:00 check Đi bộ giữa giờ 10:00 check Tổng kết công việc 17:30 LỐI TẮT NHANH KHÁM PHÁ TIẾN ĐỘ checklist Hôm nay restaurant Ăn uống self_improvement Thư giãn groups Kết nối",
+    "smallText": [],
+    "smallControls": [
+      {
+        "label": "Viết một việc có ý nghĩa 09:00",
+        "width": 288,
+        "height": 40
+      },
+      {
+        "label": "Đi bộ giữa giờ 10:00",
+        "width": 288,
+        "height": 40
+      },
+      {
+        "label": "Tổng kết công việc 17:30",
+        "width": 288,
+        "height": 40
+      }
+    ],
+    "controls": [
+      {
+        "label": "check",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "label": "Viết một việc có ý nghĩa 09:00",
+        "width": 288,
+        "height": 40
+      },
+      {
+        "label": "check",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "label": "Đi bộ giữa giờ 10:00",
+        "width": 288,
+        "height": 40
+      },
+      {
+        "label": "check",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "label": "Tổng kết công việc 17:30",
+        "width": 288,
+        "height": 40
+      },
+      {
+        "label": "KHÁM PHÁ",
+        "width": 158,
+        "height": 52
+      },
+      {
+        "label": "TIẾN ĐỘ",
+        "width": 158,
+        "height": 52
+      },
+      {
+        "label": "checklist Hôm nay",
+        "width": 88,
+        "height": 55
+      },
+      {
+        "label": "restaurant Ăn uống",
+        "width": 88,
+        "height": 53
+      },
+      {
+        "label": "self_improvement Thư giãn",
+        "width": 88,
+        "height": 53
+      },
+      {
+        "label": "groups Kết nối",
+        "width": 88,
+        "height": 53
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S01",
+    "width": 412,
+    "viewport": 412,
+    "scrollWidth": 412,
+    "pageHeight": 800,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Hôm nay",
+    "text": "Logo HỆ THỐNG ĐỒNG HÀNH Power9 Office Routine v1.0 Hôm nay 1/3 hoạt động hoàn thành HOẠT ĐỘNG HÔM NAY 3 mục check Viết một việc có ý nghĩa 09:00 check Đi bộ giữa giờ 10:00 check Tổng kết công việc 17:30 LỐI TẮT NHANH KHÁM PHÁ TIẾN ĐỘ checklist Hôm nay restaurant Ăn uống self_improvement Thư giãn groups Kết nối",
+    "smallText": [],
+    "smallControls": [
+      {
+        "label": "Viết một việc có ý nghĩa 09:00",
+        "width": 340,
+        "height": 40
+      },
+      {
+        "label": "Đi bộ giữa giờ 10:00",
+        "width": 340,
+        "height": 40
+      },
+      {
+        "label": "Tổng kết công việc 17:30",
+        "width": 340,
+        "height": 40
+      }
+    ],
+    "controls": [
+      {
+        "label": "check",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "label": "Viết một việc có ý nghĩa 09:00",
+        "width": 340,
+        "height": 40
+      },
+      {
+        "label": "check",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "label": "Đi bộ giữa giờ 10:00",
+        "width": 340,
+        "height": 40
+      },
+      {
+        "label": "check",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "label": "Tổng kết công việc 17:30",
+        "width": 340,
+        "height": 40
+      },
+      {
+        "label": "KHÁM PHÁ",
+        "width": 184,
+        "height": 52
+      },
+      {
+        "label": "TIẾN ĐỘ",
+        "width": 184,
+        "height": 52
+      },
+      {
+        "label": "checklist Hôm nay",
+        "width": 101,
+        "height": 55
+      },
+      {
+        "label": "restaurant Ăn uống",
+        "width": 101,
+        "height": 53
+      },
+      {
+        "label": "self_improvement Thư giãn",
+        "width": 101,
+        "height": 53
+      },
+      {
+        "label": "groups Kết nối",
+        "width": 101,
+        "height": 53
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S02",
+    "width": 360,
+    "viewport": 360,
+    "scrollWidth": 360,
+    "pageHeight": 800,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Ăn uống",
+    "text": "Ăn uống ĂN UỐNG LÀNH MẠNH Thói quen hôm nay Ăn trưa có chú ý Dành thời gian cho bữa trưa, tạm rời công việc. 1 Chọn món phù hợp 2 Tạm rời điện thoại 3 Ăn chậm, chú ý mức vừa đủ check Đã thực hiện Xem tiến độ checklist Hôm nay restaurant Ăn uống self_improvement Thư giãn groups Kết nối",
+    "smallText": [
+      {
+        "text": "Thói quen hôm nay",
+        "size": 12
+      },
+      {
+        "text": "1",
+        "size": 12
+      },
+      {
+        "text": "2",
+        "size": 12
+      },
+      {
+        "text": "3",
+        "size": 12
+      },
+      {
+        "text": "Hôm nay",
+        "size": 11
+      },
+      {
+        "text": "Ăn uống",
+        "size": 11
+      },
+      {
+        "text": "Thư giãn",
+        "size": 11
+      },
+      {
+        "text": "Kết nối",
+        "size": 11
+      }
+    ],
+    "smallControls": [
+      {
+        "label": "Đánh dấu bước 1",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "label": "Đánh dấu bước 2",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "label": "Đánh dấu bước 3",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "label": "Xem tiến độ",
+        "width": 79,
+        "height": 44
+      }
+    ],
+    "controls": [
+      {
+        "label": "Đánh dấu bước 1",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "label": "Đánh dấu bước 2",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "label": "Đánh dấu bước 3",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "label": "check Đã thực hiện",
+        "width": 328,
+        "height": 52
+      },
+      {
+        "label": "Xem tiến độ",
+        "width": 79,
+        "height": 44
+      },
+      {
+        "label": "checklist Hôm nay",
+        "width": 86,
+        "height": 55
+      },
+      {
+        "label": "restaurant Ăn uống",
+        "width": 86,
+        "height": 55
+      },
+      {
+        "label": "self_improvement Thư giãn",
+        "width": 86,
+        "height": 55
+      },
+      {
+        "label": "groups Kết nối",
+        "width": 86,
+        "height": 55
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S02",
+    "width": 412,
+    "viewport": 412,
+    "scrollWidth": 412,
+    "pageHeight": 800,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Ăn uống",
+    "text": "Ăn uống ĂN UỐNG LÀNH MẠNH Thói quen hôm nay Ăn trưa có chú ý Dành thời gian cho bữa trưa, tạm rời công việc. 1 Chọn món phù hợp 2 Tạm rời điện thoại 3 Ăn chậm, chú ý mức vừa đủ check Đã thực hiện Xem tiến độ checklist Hôm nay restaurant Ăn uống self_improvement Thư giãn groups Kết nối",
+    "smallText": [
+      {
+        "text": "Thói quen hôm nay",
+        "size": 12
+      },
+      {
+        "text": "1",
+        "size": 12
+      },
+      {
+        "text": "2",
+        "size": 12
+      },
+      {
+        "text": "3",
+        "size": 12
+      },
+      {
+        "text": "Hôm nay",
+        "size": 11
+      },
+      {
+        "text": "Ăn uống",
+        "size": 11
+      },
+      {
+        "text": "Thư giãn",
+        "size": 11
+      },
+      {
+        "text": "Kết nối",
+        "size": 11
+      }
+    ],
+    "smallControls": [
+      {
+        "label": "Đánh dấu bước 1",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "label": "Đánh dấu bước 2",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "label": "Đánh dấu bước 3",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "label": "Xem tiến độ",
+        "width": 79,
+        "height": 44
+      }
+    ],
+    "controls": [
+      {
+        "label": "Đánh dấu bước 1",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "label": "Đánh dấu bước 2",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "label": "Đánh dấu bước 3",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "label": "check Đã thực hiện",
+        "width": 380,
+        "height": 52
+      },
+      {
+        "label": "Xem tiến độ",
+        "width": 79,
+        "height": 44
+      },
+      {
+        "label": "checklist Hôm nay",
+        "width": 99,
+        "height": 55
+      },
+      {
+        "label": "restaurant Ăn uống",
+        "width": 99,
+        "height": 55
+      },
+      {
+        "label": "self_improvement Thư giãn",
+        "width": 99,
+        "height": 55
+      },
+      {
+        "label": "groups Kết nối",
+        "width": 99,
+        "height": 55
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S03",
+    "width": 360,
+    "viewport": 360,
+    "scrollWidth": 360,
+    "pageHeight": 800,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Thư giãn",
+    "text": "Thư giãn Quản lý căng thẳng Nghỉ sau cuộc họp Thả lỏng và thở tự nhiên. 03:00 Chưa bắt đầu play_arrow Bắt đầu checklist Hôm nay restaurant Ăn uống self_improvement Thư giãn groups Kết nối",
+    "smallText": [
+      {
+        "text": "Hôm nay",
+        "size": 11
+      },
+      {
+        "text": "Ăn uống",
+        "size": 11
+      },
+      {
+        "text": "Thư giãn",
+        "size": 11
+      },
+      {
+        "text": "Kết nối",
+        "size": 11
+      }
+    ],
+    "smallControls": [],
+    "controls": [
+      {
+        "label": "play_arrow Bắt đầu",
+        "width": 328,
+        "height": 52
+      },
+      {
+        "label": "checklist Hôm nay",
+        "width": 90,
+        "height": 56
+      },
+      {
+        "label": "restaurant Ăn uống",
+        "width": 90,
+        "height": 56
+      },
+      {
+        "label": "self_improvement Thư giãn",
+        "width": 90,
+        "height": 56
+      },
+      {
+        "label": "groups Kết nối",
+        "width": 90,
+        "height": 56
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S03",
+    "width": 412,
+    "viewport": 412,
+    "scrollWidth": 412,
+    "pageHeight": 800,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Thư giãn",
+    "text": "Thư giãn Quản lý căng thẳng Nghỉ sau cuộc họp Thả lỏng và thở tự nhiên. 03:00 Chưa bắt đầu play_arrow Bắt đầu checklist Hôm nay restaurant Ăn uống self_improvement Thư giãn groups Kết nối",
+    "smallText": [
+      {
+        "text": "Hôm nay",
+        "size": 11
+      },
+      {
+        "text": "Ăn uống",
+        "size": 11
+      },
+      {
+        "text": "Thư giãn",
+        "size": 11
+      },
+      {
+        "text": "Kết nối",
+        "size": 11
+      }
+    ],
+    "smallControls": [],
+    "controls": [
+      {
+        "label": "play_arrow Bắt đầu",
+        "width": 380,
+        "height": 52
+      },
+      {
+        "label": "checklist Hôm nay",
+        "width": 103,
+        "height": 56
+      },
+      {
+        "label": "restaurant Ăn uống",
+        "width": 103,
+        "height": 56
+      },
+      {
+        "label": "self_improvement Thư giãn",
+        "width": 103,
+        "height": 56
+      },
+      {
+        "label": "groups Kết nối",
+        "width": 103,
+        "height": 56
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S04",
+    "width": 360,
+    "viewport": 360,
+    "scrollWidth": 360,
+    "pageHeight": 800,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Kết nối",
+    "text": "grid_view Kết nối groups KẾT NỐI ĐỒNG NGHIỆP Chọn hoạt động tự nguyện cùng đồng nghiệp. directions_walk Rủ đồng nghiệp đi bộ 5 phút chevron_right coffee Trò chuyện trong giờ nghỉ 5 phút chevron_right Tham gia tự nguyện. checklist Hôm nay restaurant Ăn uống self_improvement Thư giãn groups Kết nối",
+    "smallText": [
+      {
+        "text": "Kết nối đồng nghiệp",
+        "size": 12
+      },
+      {
+        "text": "5 phút",
+        "size": 13
+      },
+      {
+        "text": "5 phút",
+        "size": 13
+      },
+      {
+        "text": "Hôm nay",
+        "size": 11
+      },
+      {
+        "text": "Ăn uống",
+        "size": 11
+      },
+      {
+        "text": "Thư giãn",
+        "size": 11
+      },
+      {
+        "text": "Kết nối",
+        "size": 11
+      }
+    ],
+    "smallControls": [],
+    "controls": [
+      {
+        "label": "directions_walk Rủ đồng nghiệp đi bộ 5 phút chevron_right",
+        "width": 326,
+        "height": 66
+      },
+      {
+        "label": "coffee Trò chuyện trong giờ nghỉ 5 phút chevron_right",
+        "width": 326,
+        "height": 67
+      },
+      {
+        "label": "checklist Hôm nay",
+        "width": 90,
+        "height": 64
+      },
+      {
+        "label": "restaurant Ăn uống",
+        "width": 90,
+        "height": 64
+      },
+      {
+        "label": "self_improvement Thư giãn",
+        "width": 90,
+        "height": 64
+      },
+      {
+        "label": "groups Kết nối",
+        "width": 90,
+        "height": 64
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S04",
+    "width": 412,
+    "viewport": 412,
+    "scrollWidth": 412,
+    "pageHeight": 800,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Kết nối",
+    "text": "grid_view Kết nối groups KẾT NỐI ĐỒNG NGHIỆP Chọn hoạt động tự nguyện cùng đồng nghiệp. directions_walk Rủ đồng nghiệp đi bộ 5 phút chevron_right coffee Trò chuyện trong giờ nghỉ 5 phút chevron_right Tham gia tự nguyện. checklist Hôm nay restaurant Ăn uống self_improvement Thư giãn groups Kết nối",
+    "smallText": [
+      {
+        "text": "Kết nối đồng nghiệp",
+        "size": 12
+      },
+      {
+        "text": "5 phút",
+        "size": 13
+      },
+      {
+        "text": "5 phút",
+        "size": 13
+      },
+      {
+        "text": "Hôm nay",
+        "size": 11
+      },
+      {
+        "text": "Ăn uống",
+        "size": 11
+      },
+      {
+        "text": "Thư giãn",
+        "size": 11
+      },
+      {
+        "text": "Kết nối",
+        "size": 11
+      }
+    ],
+    "smallControls": [],
+    "controls": [
+      {
+        "label": "directions_walk Rủ đồng nghiệp đi bộ 5 phút chevron_right",
+        "width": 378,
+        "height": 66
+      },
+      {
+        "label": "coffee Trò chuyện trong giờ nghỉ 5 phút chevron_right",
+        "width": 378,
+        "height": 67
+      },
+      {
+        "label": "checklist Hôm nay",
+        "width": 103,
+        "height": 64
+      },
+      {
+        "label": "restaurant Ăn uống",
+        "width": 103,
+        "height": 64
+      },
+      {
+        "label": "self_improvement Thư giãn",
+        "width": 103,
+        "height": 64
+      },
+      {
+        "label": "groups Kết nối",
+        "width": 103,
+        "height": 64
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S05",
+    "width": 360,
+    "viewport": 360,
+    "scrollWidth": 360,
+    "pageHeight": 915,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Khám phá",
+    "text": "arrow_back Khám phá Tìm thói quen search Tất cả ≤5 phút ≤10 phút 9 nhóm thói quen Tổng 9 nhóm 01 Vận động thường xuyên expand_more 02 Ngồi đúng tư thế expand_more 03 Ăn uống lành mạnh expand_more 04 Ngủ và phục hồi expand_more 05 Quản lý căng thẳng expand_more 06 Không gian làm việc expand_more 07 Kết nối đồng nghiệp expand_more Rủ đồng nghiệp đi bộ schedule 5 phút chevron_right Trò chuyện trong giờ nghỉ schedule 5 phút chevron_right 08 Mục tiêu và ý nghĩa expand_more 09 Cân bằng công việc–cuộc sống expand_more",
+    "smallText": [
+      {
+        "text": "Tất cả",
+        "size": 13
+      },
+      {
+        "text": "≤5 phút",
+        "size": 13
+      },
+      {
+        "text": "≤10 phút",
+        "size": 13
+      },
+      {
+        "text": "Tổng 9 nhóm",
+        "size": 12
+      },
+      {
+        "text": "01",
+        "size": 13
+      },
+      {
+        "text": "02",
+        "size": 13
+      },
+      {
+        "text": "03",
+        "size": 13
+      },
+      {
+        "text": "04",
+        "size": 13
+      },
+      {
+        "text": "05",
+        "size": 13
+      },
+      {
+        "text": "06",
+        "size": 13
+      },
+      {
+        "text": "07",
+        "size": 13
+      },
+      {
+        "text": "5 phút",
+        "size": 12
+      },
+      {
+        "text": "5 phút",
+        "size": 12
+      },
+      {
+        "text": "08",
+        "size": 13
+      },
+      {
+        "text": "09",
+        "size": 13
+      }
+    ],
+    "smallControls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "Tất cả",
+        "width": 65,
+        "height": 36
+      },
+      {
+        "label": "≤5 phút",
+        "width": 73,
+        "height": 36
+      },
+      {
+        "label": "≤10 phút",
+        "width": 79,
+        "height": 36
+      }
+    ],
+    "controls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "text",
+        "width": 326,
+        "height": 52
+      },
+      {
+        "label": "Tất cả",
+        "width": 65,
+        "height": 36
+      },
+      {
+        "label": "≤5 phút",
+        "width": 73,
+        "height": 36
+      },
+      {
+        "label": "≤10 phút",
+        "width": 79,
+        "height": 36
+      },
+      {
+        "label": "01 Vận động thường xuyên expand_more",
+        "width": 328,
+        "height": 48
+      },
+      {
+        "label": "02 Ngồi đúng tư thế expand_more",
+        "width": 328,
+        "height": 48
+      },
+      {
+        "label": "03 Ăn uống lành mạnh expand_more",
+        "width": 328,
+        "height": 48
+      },
+      {
+        "label": "04 Ngủ và phục hồi expand_more",
+        "width": 328,
+        "height": 48
+      },
+      {
+        "label": "05 Quản lý căng thẳng expand_more",
+        "width": 328,
+        "height": 48
+      },
+      {
+        "label": "06 Không gian làm việc expand_more",
+        "width": 328,
+        "height": 48
+      },
+      {
+        "label": "07 Kết nối đồng nghiệp expand_more",
+        "width": 328,
+        "height": 48
+      },
+      {
+        "label": "08 Mục tiêu và ý nghĩa expand_more",
+        "width": 328,
+        "height": 48
+      },
+      {
+        "label": "09 Cân bằng công việc–cuộc sống expand_more",
+        "width": 328,
+        "height": 48
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S05",
+    "width": 412,
+    "viewport": 412,
+    "scrollWidth": 412,
+    "pageHeight": 915,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Khám phá",
+    "text": "arrow_back Khám phá Tìm thói quen search Tất cả ≤5 phút ≤10 phút 9 nhóm thói quen Tổng 9 nhóm 01 Vận động thường xuyên expand_more 02 Ngồi đúng tư thế expand_more 03 Ăn uống lành mạnh expand_more 04 Ngủ và phục hồi expand_more 05 Quản lý căng thẳng expand_more 06 Không gian làm việc expand_more 07 Kết nối đồng nghiệp expand_more Rủ đồng nghiệp đi bộ schedule 5 phút chevron_right Trò chuyện trong giờ nghỉ schedule 5 phút chevron_right 08 Mục tiêu và ý nghĩa expand_more 09 Cân bằng công việc–cuộc sống expand_more",
+    "smallText": [
+      {
+        "text": "Tất cả",
+        "size": 13
+      },
+      {
+        "text": "≤5 phút",
+        "size": 13
+      },
+      {
+        "text": "≤10 phút",
+        "size": 13
+      },
+      {
+        "text": "Tổng 9 nhóm",
+        "size": 12
+      },
+      {
+        "text": "01",
+        "size": 13
+      },
+      {
+        "text": "02",
+        "size": 13
+      },
+      {
+        "text": "03",
+        "size": 13
+      },
+      {
+        "text": "04",
+        "size": 13
+      },
+      {
+        "text": "05",
+        "size": 13
+      },
+      {
+        "text": "06",
+        "size": 13
+      },
+      {
+        "text": "07",
+        "size": 13
+      },
+      {
+        "text": "5 phút",
+        "size": 12
+      },
+      {
+        "text": "5 phút",
+        "size": 12
+      },
+      {
+        "text": "08",
+        "size": 13
+      },
+      {
+        "text": "09",
+        "size": 13
+      }
+    ],
+    "smallControls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "Tất cả",
+        "width": 65,
+        "height": 36
+      },
+      {
+        "label": "≤5 phút",
+        "width": 73,
+        "height": 36
+      },
+      {
+        "label": "≤10 phút",
+        "width": 79,
+        "height": 36
+      }
+    ],
+    "controls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "text",
+        "width": 378,
+        "height": 52
+      },
+      {
+        "label": "Tất cả",
+        "width": 65,
+        "height": 36
+      },
+      {
+        "label": "≤5 phút",
+        "width": 73,
+        "height": 36
+      },
+      {
+        "label": "≤10 phút",
+        "width": 79,
+        "height": 36
+      },
+      {
+        "label": "01 Vận động thường xuyên expand_more",
+        "width": 380,
+        "height": 48
+      },
+      {
+        "label": "02 Ngồi đúng tư thế expand_more",
+        "width": 380,
+        "height": 48
+      },
+      {
+        "label": "03 Ăn uống lành mạnh expand_more",
+        "width": 380,
+        "height": 48
+      },
+      {
+        "label": "04 Ngủ và phục hồi expand_more",
+        "width": 380,
+        "height": 48
+      },
+      {
+        "label": "05 Quản lý căng thẳng expand_more",
+        "width": 380,
+        "height": 48
+      },
+      {
+        "label": "06 Không gian làm việc expand_more",
+        "width": 380,
+        "height": 48
+      },
+      {
+        "label": "07 Kết nối đồng nghiệp expand_more",
+        "width": 380,
+        "height": 48
+      },
+      {
+        "label": "08 Mục tiêu và ý nghĩa expand_more",
+        "width": 380,
+        "height": 48
+      },
+      {
+        "label": "09 Cân bằng công việc–cuộc sống expand_more",
+        "width": 380,
+        "height": 48
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S06",
+    "width": 360,
+    "viewport": 360,
+    "scrollWidth": 360,
+    "pageHeight": 800,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Chi tiết thói quen",
+    "text": "arrow_back Chi tiết thói quen Kết nối đồng nghiệp Rủ đồng nghiệp đi bộ 5 phút Mục đích Dành một khoảng nghỉ ngắn để vận động và trò chuyện cùng đồng nghiệp. Cách thực hiện 1 Hỏi đồng nghiệp có muốn tham gia. 2 Đi bộ cùng nhau khoảng 5 phút. 3 Quay lại công việc. info Tham gia tự nguyện. Chọn lịch thực hiện",
+    "smallText": [
+      {
+        "text": "1",
+        "size": 13
+      },
+      {
+        "text": "2",
+        "size": 13
+      },
+      {
+        "text": "3",
+        "size": 13
+      }
+    ],
+    "smallControls": [
+      {
+        "label": "arrow_back",
+        "width": 24,
+        "height": 24
+      }
+    ],
+    "controls": [
+      {
+        "label": "arrow_back",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "label": "Chọn lịch thực hiện",
+        "width": 296,
+        "height": 52
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S06",
+    "width": 412,
+    "viewport": 412,
+    "scrollWidth": 412,
+    "pageHeight": 800,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Chi tiết thói quen",
+    "text": "arrow_back Chi tiết thói quen Kết nối đồng nghiệp Rủ đồng nghiệp đi bộ 5 phút Mục đích Dành một khoảng nghỉ ngắn để vận động và trò chuyện cùng đồng nghiệp. Cách thực hiện 1 Hỏi đồng nghiệp có muốn tham gia. 2 Đi bộ cùng nhau khoảng 5 phút. 3 Quay lại công việc. info Tham gia tự nguyện. Chọn lịch thực hiện",
+    "smallText": [
+      {
+        "text": "1",
+        "size": 13
+      },
+      {
+        "text": "2",
+        "size": 13
+      },
+      {
+        "text": "3",
+        "size": 13
+      }
+    ],
+    "smallControls": [
+      {
+        "label": "arrow_back",
+        "width": 24,
+        "height": 24
+      }
+    ],
+    "controls": [
+      {
+        "label": "arrow_back",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "label": "Chọn lịch thực hiện",
+        "width": 348,
+        "height": 52
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S07",
+    "width": 360,
+    "viewport": 360,
+    "scrollWidth": 360,
+    "pageHeight": 841,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Lịch thói quen",
+    "text": "arrow_back Lịch thói quen directions_walk Rủ đồng nghiệp đi bộ · 5 phút Nạp năng lượng giữa giờ Ngày thực hiện Thứ Hai, 26/10/2026 calendar_today info Lịch thực hiện 1 lần Nhắc tôi Gửi thông báo trước hoạt động Giờ nhắc 12:00 schedule Giờ yên lặng Không phát thông báo trong khung giờ yên lặng. 18:00 đến 08:00 hôm sau bedtime Lưu lịch Hủy",
+    "smallText": [
+      {
+        "text": "Lịch thực hiện 1 lần",
+        "size": 12
+      },
+      {
+        "text": "Gửi thông báo trước hoạt động",
+        "size": 13
+      },
+      {
+        "text": "Giờ nhắc",
+        "size": 13
+      }
+    ],
+    "smallControls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "button",
+        "width": 48,
+        "height": 24
+      }
+    ],
+    "controls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "button",
+        "width": 48,
+        "height": 24
+      },
+      {
+        "label": "Lưu lịch",
+        "width": 328,
+        "height": 52
+      },
+      {
+        "label": "Hủy",
+        "width": 328,
+        "height": 52
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S07",
+    "width": 412,
+    "viewport": 412,
+    "scrollWidth": 412,
+    "pageHeight": 820,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Lịch thói quen",
+    "text": "arrow_back Lịch thói quen directions_walk Rủ đồng nghiệp đi bộ · 5 phút Nạp năng lượng giữa giờ Ngày thực hiện Thứ Hai, 26/10/2026 calendar_today info Lịch thực hiện 1 lần Nhắc tôi Gửi thông báo trước hoạt động Giờ nhắc 12:00 schedule Giờ yên lặng Không phát thông báo trong khung giờ yên lặng. 18:00 đến 08:00 hôm sau bedtime Lưu lịch Hủy",
+    "smallText": [
+      {
+        "text": "Lịch thực hiện 1 lần",
+        "size": 12
+      },
+      {
+        "text": "Gửi thông báo trước hoạt động",
+        "size": 13
+      },
+      {
+        "text": "Giờ nhắc",
+        "size": 13
+      }
+    ],
+    "smallControls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "button",
+        "width": 48,
+        "height": 24
+      }
+    ],
+    "controls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "button",
+        "width": 48,
+        "height": 24
+      },
+      {
+        "label": "Lưu lịch",
+        "width": 380,
+        "height": 52
+      },
+      {
+        "label": "Hủy",
+        "width": 380,
+        "height": 52
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S08",
+    "width": 360,
+    "viewport": 360,
+    "scrollWidth": 360,
+    "pageHeight": 800,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Tiến độ",
+    "text": "arrow_back Tiến độ calendar_today Hôm nay · 26/10/2026 1/3 hoạt động hoàn thành 33% ĐÃ HOÀN THÀNH 1 check_box Viết một việc có ý nghĩa · 09:00 · Mục tiêu và ý nghĩa CHƯA HOÀN THÀNH 2 check_box_outline_blank Đi bộ giữa giờ · 10:00 · Vận động check_box_outline_blank Tổng kết công việc · 17:30 · Cân bằng công việc–cuộc sống info Tiến độ cá nhân trên các hoạt động bạn tự chọn.",
+    "smallText": [
+      {
+        "text": "ĐÃ HOÀN THÀNH",
+        "size": 13
+      },
+      {
+        "text": "1",
+        "size": 12
+      },
+      {
+        "text": "CHƯA HOÀN THÀNH",
+        "size": 13
+      },
+      {
+        "text": "2",
+        "size": 12
+      }
+    ],
+    "smallControls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      }
+    ],
+    "controls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S08",
+    "width": 412,
+    "viewport": 412,
+    "scrollWidth": 412,
+    "pageHeight": 800,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Tiến độ",
+    "text": "arrow_back Tiến độ calendar_today Hôm nay · 26/10/2026 1/3 hoạt động hoàn thành 33% ĐÃ HOÀN THÀNH 1 check_box Viết một việc có ý nghĩa · 09:00 · Mục tiêu và ý nghĩa CHƯA HOÀN THÀNH 2 check_box_outline_blank Đi bộ giữa giờ · 10:00 · Vận động check_box_outline_blank Tổng kết công việc · 17:30 · Cân bằng công việc–cuộc sống info Tiến độ cá nhân trên các hoạt động bạn tự chọn.",
+    "smallText": [
+      {
+        "text": "ĐÃ HOÀN THÀNH",
+        "size": 13
+      },
+      {
+        "text": "1",
+        "size": 12
+      },
+      {
+        "text": "CHƯA HOÀN THÀNH",
+        "size": 13
+      },
+      {
+        "text": "2",
+        "size": 12
+      }
+    ],
+    "smallControls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      }
+    ],
+    "controls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S09",
+    "width": 360,
+    "viewport": 360,
+    "scrollWidth": 360,
+    "pageHeight": 800,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Góc làm việc",
+    "text": "arrow_back Góc làm việc Ngồi đúng tư thế · Không gian làm việc Kiểm tra góc làm việc 2 phút Đánh dấu nhanh các mục để đảm bảo tư thế chuẩn và khu vực làm việc gọn gàng, hiệu quả. Màn hình ở vị trí thuận tiện. Ghế và tư thế thoải mái. Mặt bàn và lối đi gọn. Đã chọn 0/3 mục Có thể xác nhận bất kỳ lúc nào check Đã kiểm tra",
+    "smallText": [
+      {
+        "text": "Đã chọn 0/3 mục",
+        "size": 13
+      },
+      {
+        "text": "Có thể xác nhận bất kỳ lúc nào",
+        "size": 13
+      }
+    ],
+    "smallControls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "checkbox",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "label": "checkbox",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "label": "checkbox",
+        "width": 1,
+        "height": 1
+      }
+    ],
+    "controls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "checkbox",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "label": "checkbox",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "label": "checkbox",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "label": "check Đã kiểm tra",
+        "width": 328,
+        "height": 52
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S09",
+    "width": 412,
+    "viewport": 412,
+    "scrollWidth": 412,
+    "pageHeight": 800,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Góc làm việc",
+    "text": "arrow_back Góc làm việc Ngồi đúng tư thế · Không gian làm việc Kiểm tra góc làm việc 2 phút Đánh dấu nhanh các mục để đảm bảo tư thế chuẩn và khu vực làm việc gọn gàng, hiệu quả. Màn hình ở vị trí thuận tiện. Ghế và tư thế thoải mái. Mặt bàn và lối đi gọn. Đã chọn 0/3 mục Có thể xác nhận bất kỳ lúc nào check Đã kiểm tra",
+    "smallText": [
+      {
+        "text": "Đã chọn 0/3 mục",
+        "size": 13
+      },
+      {
+        "text": "Có thể xác nhận bất kỳ lúc nào",
+        "size": 13
+      }
+    ],
+    "smallControls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "checkbox",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "label": "checkbox",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "label": "checkbox",
+        "width": 1,
+        "height": 1
+      }
+    ],
+    "controls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "checkbox",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "label": "checkbox",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "label": "checkbox",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "label": "check Đã kiểm tra",
+        "width": 380,
+        "height": 52
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S10",
+    "width": 360,
+    "viewport": 360,
+    "scrollWidth": 360,
+    "pageHeight": 808,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Ngủ & phục hồi",
+    "text": "arrow_back Ngủ & phục hồi Ngủ và phục hồi Chuẩn bị nghỉ tối Tạo khoảng chuyển tiếp từ công việc sang thời gian nghỉ. 1. Tạm dừng xử lý công việc. 2. Dành thời gian thư giãn. info Bạn tự chọn thời điểm phù hợp với lịch sinh hoạt. alarm Chọn giờ nhắc",
+    "smallText": [],
+    "smallControls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      }
+    ],
+    "controls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "alarm Chọn giờ nhắc",
+        "width": 328,
+        "height": 52
+      }
+    ],
+    "failedRequests": []
+  },
+  {
+    "id": "S10",
+    "width": 412,
+    "viewport": 412,
+    "scrollWidth": 412,
+    "pageHeight": 808,
+    "tailwindLoaded": true,
+    "bodyDisplay": "flex",
+    "heading": "Ngủ & phục hồi",
+    "text": "arrow_back Ngủ & phục hồi Ngủ và phục hồi Chuẩn bị nghỉ tối Tạo khoảng chuyển tiếp từ công việc sang thời gian nghỉ. 1. Tạm dừng xử lý công việc. 2. Dành thời gian thư giãn. info Bạn tự chọn thời điểm phù hợp với lịch sinh hoạt. alarm Chọn giờ nhắc",
+    "smallText": [],
+    "smallControls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      }
+    ],
+    "controls": [
+      {
+        "label": "arrow_back",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "alarm Chọn giờ nhắc",
+        "width": 380,
+        "height": 52
+      }
+    ],
+    "failedRequests": []
+  }
+]

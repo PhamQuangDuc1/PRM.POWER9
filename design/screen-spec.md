@@ -1,45 +1,35 @@
-# Bộ màn hình Power9 dùng cho Stitch và Figma
+# 10 màn — Power9 Office Routine
 
-Trạng thái: đã có ảnh Stitch đủ tám chức năng, ba vòng I01–I03 và S01 dán thử vào Figma; xem design/ui-selection.md. Cấu trúc/tương tác Figma chưa kiểm chứng. Linh là persona chính theo định hướng thiết kế. Bốn persona đều giả định. Đây là inventory chuẩn thay cho danh sách generic trong ảnh checklist, cần cập nhật sheet khi nhóm thao tác.
+Đã dựng10màn Office editable trong page03 và3flow trong page06. Trạng thái thực và kiểm tra tại docs/FIGMA-FINAL-AUDIT.md; bàn giao hiện hành tại handoff/office-figma-handoff.md. Giữ phong cách xanh biển và bốn tab.
 
-| ID | Tên | Nội dung chính và hành động | Cấp / Flow |
+| ID | Màn | Nội dung/hành động | Flow |
 | --- | --- | --- | --- |
-| S01 | Hôm nay | Danh sách thói quen, thời lượng, giờ nhắc, Hoàn thành, Hoàn tác; entry Khám phá và Lịch sử | Top-level; F01/F02/F03 |
-| S02 | Ăn uống | Một thói quen ăn chậm, hướng dẫn ngắn, ghi nhận hoàn thành → S08 | Top-level; F02 alternate |
-| S03 | Thư giãn | Phiên 5 phút, start/pause/resume/finish; xác nhận thoát phiên | Top-level; F02 |
-| S04 | Kết nối | Hoạt động với người thân có thời lượng, chọn và ghi nhận → S08 | Top-level; F02 alternate |
-| S05 | Khám phá thói quen | Search có nhãn, filter 5/10 phút, card có thời lượng → S06 | Màn con từ S01; F01 |
-| S06 | Chi tiết thói quen | Mục đích, thời lượng, bước làm, thêm mới hoặc đổi lịch → S07 | Màn con từ S01/S05; F01/F03 |
-| S07 | Lịch thói quen | Chọn ngày, reminder tùy chọn, giờ; lưu → S01; validation, retry giữ dữ liệu | Màn con từ S06; F01/F03 |
-| S08 | Lịch sử và tiến độ | Entry có ngày, icon + nhãn, tổng tuần, xác nhận xóa; empty có CTA khám phá | Màn con từ S01/S02/S03/S04; F02 |
+| S01 | Hôm nay | Logo + tên; vài việc tự chọn theo giờ/nhóm; hoàn thành/hoàn tác; entry Khám phá/Tiến độ | F01/F02/F03 |
+| S02 | Ăn uống | Eat Well, hoạt động bữa trưa văn phòng và ghi nhận | F02 nhánh |
+| S03 | Thư giãn | Manage Stress, phiên nghỉ 3 phút, start/pause/resume/finish | F02 |
+| S04 | Kết nối | Social Bonds, rủ đồng nghiệp ăn trưa/đi bộ, tự nguyện; ghi nhận việc ngoài đời | F02 nhánh |
+| S05 | Khám phá | Đủ 9 nhóm, tìm kiếm, filter nhóm/thời lượng, card → chi tiết | F01 |
+| S06 | Chi tiết | Nhóm, mục tiêu, số phút, bước làm, ví dụ văn phòng; new thêm hoặc existing đổi lịch | F01/F03 |
+| S07 | Lịch | Ngày làm việc, nhắc tùy chọn, giờ, giờ yên lặng; lưu/hủy/validation/retry | F01/F03 |
+| S08 | Tiến độ | Tổng trên việc tự chọn, lịch sử có ngày, nhóm thói quen, xóa có xác nhận | F02 |
+| S09 | Góc làm việc | Checklist 3 mục về màn hình, tư thế và mặt bàn/lối đi; ghi nhận 1 hoạt động tự kiểm tra | F02 nhánh |
+| S10 | Ngủ & phục hồi | Chuẩn bị nghỉ tối, 2 gợi ý, chọn giờ nhắc tới S07 theo dữ liệu hoạt động | F01/F03 nhánh |
 
-Bottom nav: Hôm nay / Ăn uống / Thư giãn / Kết nối. Màn con có Back trả về đúng nguồn. Vào chi tiết từ danh sách nào thì Back trở lại danh sách đó với bộ lọc giữ nguyên.
+Top-level: S01/S02/S03/S04. S05/S08 từ S01; S06 từ S05 hoặc card đã có ở S01; S07 từ S06. S09/S10 là màn con thực hiện/hướng dẫn sau S06 với dữ liệu tương ứng; S10 mở S07. Giữ returnOrigin và filter khi Back. Wireframe, UI/variant và prototype đã được dựng; timer/tìm kiếm/nhập liệu là mô phỏng các lựa chọn trạng thái mẫu. Chưa có kiểm thử người dùng.
 
-## Các state phụ, không tính thêm màn
-
-| ID | Screen cha | Nội dung / hành vi mong muốn |
+## Độ bao phủ
+| Nhóm | Ví dụ hoạt động | Đường truy cập |
 | --- | --- | --- |
-| S01-completed | S01 | Icon + “Đã hoàn thành”, Hoàn tác; lịch sử phản ánh trạng thái |
-| S01-added | S01 | Thói quen mới xuất hiện và xác nhận lưu rõ |
-| S05-empty | S05 | “Chưa có hoạt động phù hợp”; “Xóa bộ lọc” |
-| S07-validation | S07 | Nhắc giờ đang bật nhưng thiếu giờ: lỗi cạnh trường |
-| S07-loading | S07 | “Đang lưu…”; chặn gửi lặp |
-| S07-error | S07 | Nguyên nhân dễ hiểu, “Thử lại”, giữ dữ liệu |
-| S08-empty | S08 | Chưa có bản ghi, CTA Khám phá → S05 |
-| O01-exit | S03 | Overlay xác nhận kết thúc/hủy phiên; Hủy giữ phiên |
-| O02-delete | S08 | Overlay “Giữ lại” / “Xóa bản ghi”; hủy không xóa |
+| Move Often | Đi bộ giữa giờ 3 phút | S01 hoặc S05 → S06 |
+| Sit Smart | Kiểm tra tư thế 2 phút | S05 → S06 |
+| Eat Well | Sắp xếp bữa trưa | S02 hoặc S05 → S06 |
+| Sleep Well | Chuẩn bị nghỉ tối | S05 → S06 → S07 |
+| Manage Stress | Nghỉ sau họp 3 phút | S03 hoặc S05 → S06 |
+| Healthy Space | Sắp xếp góc làm việc 5 phút | S05 → S06 |
+| Social Bonds | Rủ đồng nghiệp ăn trưa | S04 hoặc S05 → S06 |
+| Purpose | Viết việc có ý nghĩa 2 phút | S01 hoặc S05 → S06 |
+| Work–Life Balance | Đặt mốc kết thúc ngày | S05 → S06 → S07 |
 
-Tên màn/mã chỉ ở canvas và tài liệu; không hiển thị mã kỹ thuật trong ứng dụng. Phiên active/paused và create/edit không được đếm như màn độc lập.
-
-## Truy vết persona
-
-- P03 Linh → S05 card có số phút, filter dễ thấy, S07 form ngắn, S01 xác nhận.
-- P01 Minh → S01 check-in trực tiếp và hoàn tác; S08 tuần đơn giản.
-- P02 Huy → S01 thấy giờ, S06/S07 đổi lịch nhanh và hủy giữ giờ cũ.
-- P04 Hùng → chữ đọc được, nút có nhãn trên toàn bộ màn, O02 xác nhận trước xóa.
-
-Đây là design intent. Handoff sáu mục/màn và bằng chứng Figma được viết/đo sau khi UI chốt; không ghi file này là handoff hoàn chỉnh.
-
-## Quy tắc đích khi hoàn thiện Figma
-
-Bộ lọc thời lượng là tối đa: dùng nhãn ≤5 phút/≤10 phút để khớp hoạt động 3 phút trong kết quả ≤5. Giữ returnOrigin khi mở Khám phá từ S08-empty, để Back trả đúng nguồn. Các giới hạn dữ liệu và hành vi chi tiết xem handoff/flutter-handoff.md; cần đối chiếu canvas trước khi bàn giao cuối.
+## State cạnh màn cha
+S01-added/completed/undo/rescheduled; S03-active/paused/finished; S05-empty/reset; S06-new/existing; S07-validation/saving/error/retry; S08-empty; O01 xác nhận rời phiên, O02 xác nhận xóa.
+Không cộng states/dialog vào tám màn chính. Lưu thất bại không đổi dữ liệu Home; check-in/undo phản ánh trong S08. Tiến độ riêng tư, không chỉ tiêu 9/9. Nhãn UI tiếng Việt, không hiển thị mã S/O.

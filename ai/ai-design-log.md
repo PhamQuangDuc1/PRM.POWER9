@@ -1,96 +1,50 @@
-# AI design log Power9
+# AI design log Power9 Office Routine
 
-## Quy ước
+Figma: https://www.figma.com/design/MTv5qJbn065VYJQIXausoq
 
-Theo dõi theo Run ID, phiên bản và screen ID. Phân biệt chuẩn bị prompt, đã gửi, đã có output, đã review và đã xác minh. Lưu prompt thực sự đã gửi, không chỉ tóm tắt.
+Stitch: https://stitch.withgoogle.com/projects/2176700449127941467
 
-## Công cụ hỗ trợ và phạm vi sử dụng
+GitHub: https://github.com/PhamQuangDuc1/PRM.POWER9
 
-| Công cụ | Mục đích | Output xác minh được | Không chứng minh |
-| --- | --- | --- | --- |
-| Codex | Đọc đề, soạn brief/prompt, review ảnh V00 | Markdown và bản phản biện đầy đủ C00 | UI hoàn chỉnh hoặc prototype hoạt động |
-| Google Stitch | Initial UI, output do nhóm cung cấp | ảnh tổng quan V00: 4 màn xanh lá và style board | Đủ 8 màn, model cụ thể hoặc prototype hoạt động |
-| Trích xuất PDF bằng pypdf, DOCX XML | Đối chiếu văn bản tài liệu người dùng | Yêu cầu được dẫn nguồn trong completion plan | Visual QA bố cục tài liệu |
-| Web search/read | Kiểm tra nguồn chính thức về Stitch export và Computer Use | Links nguồn trong guide | Quyền truy cập tài khoản Stitch |
-| Figma connector | Thử đọc metadata link được gửi trong phiên trước | Trả về thiếu edit access phù hợp | File công khai không có view access |
-| Windows screenshot + xem ảnh | Kiểm tra có thể chụp foreground trong phiên này | Ảnh thử lưu ngoài repo, cửa sổ Codex 1920×1080 đã xem | Output Stitch hoặc thao tác Figma |
+## Xác nhận prompt
 
-Không công bố tên model Codex/Stitch nếu chưa có thông tin công cụ đáng tin cậy. StitchDesign đã có trong môi trường; kỹ năng đã được đọc để rà soát semantic brief. Chưa có công cụ điều khiển Stitch trực tiếp được xác minh.
+Ngày 27/10/2026, người dùng xác nhận 100% các prompt Office đã được gửi nguyên văn theo nội dung trợ lý cung cấp trên dự án Stitch mới. Đây là xác nhận của người thực hiện. Khối prompt trong ai/prompts/OFFICE-*.md được giữ nguyên; không sửa lại lời prompt theo kết quả.
 
-## W00 / W01 — Wireframe
+## Công cụ và đầu ra
 
-- W00: **ĐÃ CÓ ẢNH TÁM MÀN, ĐÃ REVIEW TỔNG QUAN**.
-- Ảnh: assets/wireframe/W00/W00-overview-user-provided.png, bản gốc nhóm cung cấp và manifest SHA256.
-- Prompt dự kiến: ai/prompts/W00-wireframe.md; chưa xác minh đầy đủ bản thực gửi.
-- Theo nội dung từ trái sang phải: S05, S06, S07, S01, S03, S02, S04, S08.
-- Review đầy đủ: ai/critiques/W00-review.md, WF01–WF03: tiêu đề lặp, chữ hướng dẫn dài, trạng thái phụ chưa có bằng chứng trong ảnh.
-- W01: **ĐÃ CÓ ĐẦU RA, ĐÃ REVIEW TỔNG QUAN**. Ảnh assets/wireframe/W01/W01-overview-user-provided.png; thấy 4 màn thay thế S07/S06/S05/S08 và bảng trạng thái phụ.
-- Prompt dự kiến W01: ai/prompts/W01-wireframe-refinement.md; nguyên văn thực gửi chưa được xác minh toàn bộ.
-- Review: ai/critiques/W01-review.md; bộ được chọn: design/wireframe-selection.md. Dùng S01–S04 W00, S05–S08 W01; O02 trong ảnh bị cắt, chưa kiểm tra đủ.
-- Đặc tả: design/wireframe-spec.md; danh mục: assets/wireframe/README.md.
-- W00 sau V00; W01 chỉ chỉnh low-fi, không tính I01–I03 của Final UI đã hoàn thành.
+Google Stitch tạo wireframe/UI nguồn; người dùng cung cấp ZIP và ảnh. Codex hỗ trợ phân tích, phản biện, kiểm chứng HTML/font, dựng lớp native Figma, nối prototype và tài liệu. Không gán tên model nền của Stitch khi chưa có thông tin công cụ xác nhận.
 
-## P00 / V00 — Tạo giao diện ban đầu
+## Tạo UI từ wireframe
 
-- Trạng thái: **ĐÃ CÓ BẰNG CHỨNG ĐẦU RA MỘT PHẦN**.
-- Bằng chứng: assets/stitch/V00/V00-overview-user-provided.png; bản gốc nhóm cung cấp, có manifest SHA256.
-- Input brief: design/versions/DESIGN-V00-green.md. DESIGN.md hiện tại là hướng xanh biển cho lần sửa tiếp.
-- Candidate prompt: ai/prompts/P00-stitch-initial.md, giữ nguyên màu xanh lá như bản đã chuẩn bị; nguyên văn bản thực gửi chưa xác minh đầy đủ từ ảnh.
-- Project title: Power9 Family Routine UI Design. Chưa có URL.
-- UI hiển thị “Balanced”; không suy ra model nền.
-- Màn thấy được, trái sang phải sau style board: S05, S01, S07, S06, nhận diện theo nội dung.
-- S02/S03/S04/S08 chưa có bằng chứng output; sidebar đề xuất tạo tiếp.
-- Ảnh zoom 37%, chưa đủ kiểm tra font sp, target dp, màu thực tế hay tương tác.
-- Provenance chi tiết: assets/stitch/V00/README.md.
+Nguồn: assets/stitch/office-final/; ai/prompts/OFFICE-UI01-from-final-wireframe.md; assets/stitch/office-ui/UI01/. Brief xác định Android tiếng Việt, 3 persona chính ngang nhau, 10 màn, 9 nhóm, 360/412, logo gốc và phong cách xanh biển.
 
-## P00b — Bổ sung bốn màn UI
+## OI01 Typography
 
-- Trạng thái: **ĐÃ CÓ ẢNH VÀ REVIEW TỔNG QUAN**.
-- Prompt dự kiến: ai/prompts/P00b-stitch-remaining.md; nguyên văn thực gửi chưa xác minh toàn bộ.
-- Ảnh: assets/stitch/P00b/P00b-overview-user-provided.png và manifest SHA256.
-- Nhận diện trái sang phải S02/S03/S08/S04, xanh biển.
-- Review: ai/critiques/P00b-review.md; UX07 mã kỹ thuật lộ trong tiêu đề, UX08 S08 trộn có dữ liệu/rỗng.
-- Ghép với I01 đã có bằng chứng đủ tám chức năng UI; không tính P00b là vòng cải tiến bổ sung.
+- Vấn đề C01: font render serif khác brief; lỗi array gộp toàn danh sách fallback thành một font-name.
+- Prompt sửa: ai/prompts/OFFICE-OI01-font-root-fix.md.
+- BEFORE/AFTER kiểm chứng Chrome: output/office-ui-font-check/S07-before.png và S07-after-local-fix.png; font-verification.json ghi font render thật.
+- Ảnh Stitch sau sửa: assets/stitch/office-ui/OI01-after/.
+- Quyết định: sửa cấu hình, giữ nhiệm vụ/bố cục; không dùng ảnh style board để chứng minh font render. Không gọi ảnh Chrome cục bộ là output Stitch.
 
-## C00 — Phản biện UX
+## OI02 Mật độ nội dung
 
-- Trạng thái: **ĐÃ VIẾT ĐÁNH GIÁ ẢNH TỔNG QUAN V00**.
-- Tiêu chí/prompt áp dụng: ai/critiques/C00-review-criteria.md.
-- Báo cáo đầy đủ: ai/critiques/C00-response.md, do Codex review trực tiếp ảnh thật.
-- 6 findings UX01–UX06 gắn màn: dấu tiếng Việt, tên màn sai ngữ cảnh, kết quả/empty trộn, validation/network error trộn, CTA thêm/sửa mâu thuẫn, nhãn xem/thêm không rõ.
-- Không có cuộc hội thoại critique bên ngoài được giả lập; chưa có kiểm thử tương tác hoặc số đo accessibility.
+- Vấn đề C02: ảnh/banner/thẻ phụ ngoài nhiệm vụ, tên hoạt động S07 bị cắt.
+- Prompt sửa: ai/prompts/OFFICE-OI02-content-density.md.
+- BEFORE: assets/stitch/office-ui/OI01-after/; AFTER: assets/stitch/office-ui/OI02-after/.
+- Quyết định: bỏ nội dung phụ, giữ tên và CTA. Review thấy Home thiếu hàng hoàn thành so với Tiến độ, chuyển xử lý dữ liệu ở OI03; không bịa số đo thời gian giảm.
 
-## Các vòng cải tiến
+## OI03 Hoàn thành nhiệm vụ và phục hồi
 
-| Mã | Trạng thái | Vấn đề | Prompt thực gửi | Trước | Sau | Quyết định |
-| --- | --- | --- | --- | --- | --- | --- |
-| I01 | ĐÃ CÓ ẢNH, ĐÃ REVIEW TỔNG QUAN | UX01/UX02/UX06: tiêu đề và nhãn rõ hơn; kèm xanh biển | Prompt dự kiến: ai/prompts/I01-blue-vietnamese-labels.md; toàn văn thực gửi chưa xác minh | V00 overview | assets/stitch/I01/I01-overview-user-provided.png; review ai/critiques/I01-review.md | D04/D05/D06; chưa kiểm tra tương tác |
-| I02 | ĐÃ CÓ ẢNH, ĐÃ REVIEW TỔNG QUAN | UX03/UX04/UX08: trạng thái và phục hồi | Prompt dự kiến ai/prompts/I02-states-recovery.md, toàn văn thực gửi chưa xác minh | I01 S05/S07, P00b S08 | assets/stitch/I02/I02-overview-user-provided.png; ai/critiques/I02-review.md | D08; tương tác chưa kiểm tra |
-| I03 | ĐÃ CÓ ẢNH, ĐÃ REVIEW TỔNG QUAN | UX05: ngữ cảnh thêm mới/đã thêm | Prompt dự kiến ai/prompts/I03-context-actions.md; toàn văn thực gửi chưa xác minh | I01 S06 | assets/stitch/I03/I03-overview-user-provided.png; ai/critiques/I03-review.md | D09; đường đi và số đo chưa kiểm tra |
+- Vấn đề C03: thiếu đường kết thúc, error đổi tên/ngày/giờ, phiên nghỉ lệch thời lượng, metric không có nguồn.
+- Prompt sửa: ai/prompts/OFFICE-OI03-task-recovery.md.
+- BEFORE: OI02-after; output mở rộng và review: assets/stitch/office-ui/OI03-expanded/, ai/critiques/OFFICE-OI03-expanded-review.md.
+- AFTER hoàn thiện: Figma 03/06. Cùng hoạt động giữ dữ liệu xuyên form/saving/error/retry; Home và Tiến độ đồng bộ. Bỏ metric không có dữ liệu đo.
+- Kiểm tra: 15 điều kiện điều hướng/dữ liệu và nhánh xóa0/3; office-behavior-audit.json, office-deletion-audit.json.
 
-Drafts tại ai/prompts/I01-I03-drafts.md không phải bằng chứng iteration đã thực hiện.
+## Hoàn thiện accordion
 
-## Mẫu ghi cho từng lần chạy thật
+Người dùng phát hiện chỉ nhóm07 mở sẵn. Đã dựng DiscoverGroup18variants, áp dụng 9 nhóm trên All/≤5/≤10 và UI360/412. Đã kiểm tra 27 nhóm prototype chuyển trạng thái và giữ đích của thẻ/mũi tên; đúng 3 starting point; 323 reactions, 0 đích hỏng. Nguồn: office-accordion-audit.json và office-checkpoint.json.
 
-- Mã lần chạy / phiên bản:
-- Công cụ / chế độ hoặc model hiển thị:
-- Phiên bản đầu vào / mã màn hình:
-- File prompt nguyên văn thực sự gửi:
-- Ảnh đầu ra và liên kết project:
-- Prompt đánh giá và phản hồi đầy đủ:
-- Vấn đề gắn với từng màn:
-- Đề xuất → chấp nhận/điều chỉnh/từ chối → lý do:
-- Đường dẫn ảnh trước và sau:
-- Kiểm tra lại: kết quả thực tế, chưa đo hoặc còn lỗi:
-- Nút/khung Figma liên quan (chỉ thêm khi tồn tại):
-- Slide tham chiếu và kết quả kiểm tra:
+## Giới hạn
 
-Nếu một prompt thất bại hoặc output thiếu màn, giữ nguyên lần thử và ghi rõ, không xóa để tạo lịch sử trông hoàn hảo.
-
-## Lưu ý kích thước sau I02
-
-Ảnh I02 cho thấy khung đang chọn 390×884, cần chuẩn hóa về 360×800 trong Figma và kiểm tra rộng 412. Không coi lời mô tả của Stitch là kết quả đo. Xem design/ui-selection.md.
-
-## Kết thúc giai đoạn tạo sinh Stitch
-
-Đã review ba vòng I01/I02/I03 khác mục tiêu với ảnh trước/sau. Chuyển Figma theo docs/figma-next-steps.md. I03 hiện khung chọn 390×1169; còn phải chuẩn hóa 360×800, layout 412 và kiểm tra UI thực.
+Kiểm tra trên lớp Figma và dữ liệu mẫu, chưa phải usability test. Timer, tìm kiếm và nhập giờ là mô phỏng. Chưa có app Flutter/backend, TalkBack hoặc peer handoff test. Mục tiêu thời gian chưa được đo với người dùng.

@@ -1,0 +1,52 @@
+[
+  {
+    "key": "S01",
+    "nodeId": "27:5",
+    "image_url": "https://www.figma.com/api/mcp/asset/c68b2dd8-c003-4bb0-8b4f-0292a0c9dc3e.png",
+    "width": 360,
+    "height": 800,
+    "format": "png",
+    "original_width": 360,
+    "original_height": 800
+  },
+  {
+    "key": "S02",
+    "nodeId": "27:46",
+    "image_url": "https://www.figma.com/api/mcp/asset/fc792ecc-de82-4a7b-bdbe-f93901b9d8ef.png",
+    "width": 360,
+    "height": 800,
+    "format": "png",
+    "original_width": 360,
+    "original_height": 800
+  },
+  {
+    "key": "S06",
+    "nodeId": "27:186",
+    "image_url": "https://www.figma.com/api/mcp/asset/0e79b0f5-6204-46f3-82d8-5d66e671379b.png",
+    "width": 360,
+    "height": 800,
+    "format": "png",
+    "original_width": 360,
+    "original_height": 800
+  },
+  {
+    "key": "S08",
+    "nodeId": "27:234",
+    "image_url": "https://www.figma.com/api/mcp/asset/8ad1ad50-9588-4ab9-bf78-f7c3cca043c4.png",
+    "width": 360,
+    "height": 800,
+    "format": "png",
+    "original_width": 360,
+    "original_height": 800
+  },
+  {
+    "key": "ACCORDION",
+    "nodeId": "62:25",
+    "image_url": "https://www.figma.com/api/mcp/asset/16dc518e-814b-4026-9d10-ccdb2ff8e48f.png",
+    "width": 412,
+    "height": 496,
+    "format": "png",
+    "original_width": 412,
+    "original_height": 496
+  }
+]

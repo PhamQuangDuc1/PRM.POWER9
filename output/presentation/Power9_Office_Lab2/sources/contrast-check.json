@@ -1,0 +1,25 @@
+{
+  "method": "WCAG relative luminance",
+  "pairs": [
+    {
+      "foreground": "#031C36",
+      "background": "#F8F9FF",
+      "contrast": "16.34:1"
+    },
+    {
+      "foreground": "#FFFFFF",
+      "background": "#1E5AA8",
+      "contrast": "6.81:1"
+    },
+    {
+      "foreground": "#424751",
+      "background": "#FFFFFF",
+      "contrast": "9.33:1"
+    },
+    {
+      "foreground": "#BA1A1A",
+      "background": "#FFDAD6",
+      "contrast": "5.00:1"
+    }
+  ]
+}

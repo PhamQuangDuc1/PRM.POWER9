@@ -1,0 +1,218 @@
+[
+  {
+    "n": 1,
+    "title": "Power9 Office Routine",
+    "note": "Power9 Office Routine giúp nhân viên văn phòng tự chọn những hoạt động ngắn phù hợp khoảng nghỉ. Sản phẩm phục vụ ba persona chính ngang nhau là Huy, Mai và Linh. Nhóm phân tích nhu cầu, tạo UI bằng Stitch, phản biện, tinh chỉnh, dựng prototype trong Figma và bàn giao Flutter. Chín nhóm nội dung là hướng văn phòng theo gợi ý của giảng viên, không phải nguyên văn chín tên Power 9 gốc. Lab này bàn giao thiết kế và prototype, chưa triển khai ứng dụng hay backend.",
+    "sources": [
+      [
+        "Hướng dẫn trình bày, mục 2",
+        "sources/guidelines/PRM323_Lab2_HuongDan_Slide_Presentation_Demo.docx"
+      ],
+      [
+        "Figma hiện hành",
+        "https://www.figma.com/design/MTv5qJbn065VYJQIXausoq"
+      ],
+      [
+        "GitHub dự án",
+        "https://github.com/PhamQuangDuc1/PRM.POWER9"
+      ]
+    ]
+  },
+  {
+    "n": 2,
+    "title": "Vấn đề và ba persona",
+    "note": "Khoảng nghỉ ngắn dễ bị công việc lấn át. Huy thường ngồi lâu, quên nghỉ và cần thao tác ít bước. Mai muốn hoạt động dễ bắt đầu, giảm căng thẳng và kết nối tự nguyện. Linh hay bị ngắt quãng bởi lịch họp, nên cần đổi lịch và chủ động giờ yên lặng. Ba người có ưu tiên ngang nhau trong cùng một ứng dụng. Những ngưỡng thời gian trên slide chỉ là mục tiêu kiểm thử. Nhóm chưa khảo sát persona hoặc đo các chỉ số này với người dùng thực.",
+    "sources": [
+      [
+        "Ba persona và nhu cầu",
+        "sources/ux/persona.md"
+      ],
+      [
+        "Phạm vi và tiêu chí Lab 2",
+        "sources/guidelines/PRM323_Lab2_HuongDan_Slide_Presentation_Demo.docx"
+      ]
+    ]
+  },
+  {
+    "n": 3,
+    "title": "Kiến trúc thông tin",
+    "note": "Mười màn chức năng chia thành bốn tab cấp cao và sáu màn cấp con. Từ Hôm nay mở Khám phá hoặc Tiến độ. Khám phá chứa đủ chín nhóm, mỗi nhóm mở và thu gọn được. Chọn một hoạt động sẽ vào Chi tiết rồi đặt Lịch. Góc làm việc và Ngủ là các màn hướng dẫn chuyên biệt trong những nhóm tương ứng. Mỗi màn có đường truy cập trong prototype. Dialog, bộ lọc và snapshot dữ liệu không được tính thêm vào số màn chức năng.",
+    "sources": [
+      [
+        "IA và mapping flow",
+        "sources/ux/user-flow.md"
+      ],
+      [
+        "Figma 01 User Flow",
+        "https://www.figma.com/design/MTv5qJbn065VYJQIXausoq?node-id=7-4"
+      ]
+    ]
+  },
+  {
+    "n": 4,
+    "title": "Ba luồng người dùng",
+    "note": "F01 đại diện Mai: lọc hoạt động tối đa năm phút, xem chi tiết, đặt lịch, gặp lỗi lưu và thử lại. Đích là Home có việc mới và tiến độ một trên bốn. F02 đại diện Huy: bắt đầu phiên nghỉ, tạm dừng, thử overlay rời phiên, rồi kết thúc và ghi nhận. Demo dùng nhánh kết thúc sớm 45 giây để không phải chờ ba phút. F03 đại diện Linh: đổi Tổng kết công việc từ 17:30 sang 18:00. Lỗi giữ form và giờ cũ trên Home. Sau lưu thành công, Home hiện giờ mới nhưng không tăng số hoạt động.",
+    "sources": [
+      [
+        "Đặc tả ba flow",
+        "sources/ux/user-flow.md"
+      ],
+      [
+        "Figma 06 Prototype",
+        "https://www.figma.com/design/MTv5qJbn065VYJQIXausoq?node-id=10-14"
+      ]
+    ]
+  },
+  {
+    "n": 5,
+    "title": "Tạo UI bằng Google Stitch",
+    "note": "Bên trái là trích nguyên văn từ bản prompt được lưu trong dự án. Toàn văn có ở nguồn và cuối notes. Prompt mô tả ba persona, nhiệm vụ Android, mười wireframe, phong cách xanh biển và ràng buộc về chữ, kích thước, điều hướng. Bên phải là output Stitch thật đã được cung cấp. Cần phân biệt bản prompt lưu với log chat đã gửi: hiện chưa có đầy đủ log chat để đối chiếu 100 phần trăm bản thực gửi. Nhóm không tự gán tên model nền của Stitch hoặc dùng lời báo hoàn thành của AI thay cho kiểm tra thiết kế.\n\nTOÀN VĂN PROMPT LƯU\n# UI01 — từ wireframe Office đã chốt\n\nTrạng thái: prompt chuẩn bị, chưa gửi/chưa có output. Chọn đúng 10 wireframe đã xuất ZIP, đính kèm logo gốc. Nếu có thể, kèm ảnh UI xanh biển cũ để tham chiếu phong cách. Chỉ gửi khối dưới.\n\n```text\nTừ đúng 10 wireframe Power9 Office Routine đang chọn, tạo 1 bộ UI hoàn chỉnh đầu tiên gồm 10 màn tương ứng. Giữ nguyên bộ wireframe để đối chiếu. Bộ UI mới đặt tên OFFICE-UI01-S01 đến OFFICE-UI01-S10 trên canvas, không ghi mã trong giao diện.\n\nĐÂY LÀ GIAI ĐOẠN UI, KHÔNG PHẢI LÀM LẠI WIREFRAME.\nGiữ nhiệm vụ, thứ tự nội dung chính, điều hướng và dữ liệu mẫu đã chốt. Không tự thêm login, onboarding, tài khoản, chuông, chat, HR hoặc màn chức năng khác. Không tạo bảng style riêng ở lượt này.\n\nSẢN PHẨM\n3 persona chính ngang nhau: Huy 28 (vận động/tư thế/góc làm việc/lịch linh hoạt), Mai 24 (ăn uống/giảm căng thẳng/kết nối), Linh 39 (phục hồi/mục tiêu/cân bằng). Không chọn persona trong app. Giữ đủ 9 nhóm văn phòng qua Khám phá; không đổi về 9 tên nguyên tắc Blue Zones gốc; không ép 9/9 mỗi ngày. Số lượng, thứ tự và thời lượng dùng chữ số.\n\nPHONG CÁCH UI\nKế thừa phong cách xanh biển bình tĩnh của UI tham chiếu tôi cung cấp. Nếu không có ảnh tham chiếu, theo chính xác bảng màu và thông số dưới, không tự nhận đã xem UI cũ.\n- Nền #F5F8FD, surface/card #FFFFFF.\n- Chữ chính #152C46, chữ phụ #4C627A.\n- Nút/action chính #1E5AA8, chữ trên nút #FFFFFF.\n- Nền selected #EAF2FC, viền điều khiển #71839A.\n- Đỏ #A7332A chỉ khi có lỗi, đi cùng nhãn; chưa tạo error state ở lượt này.\n- Font Be Vietnam Pro, Roboto fallback; title 24/32, heading 20/28, body 16/24, label/navigation/trợ giúp tối thiểu 14/20.\n- Spacing 4/8/12/16/24/32; lề 16.\n- Radius input 8, button 12, card 16. Bóng nhẹ khi cần phân cấp, không lạm dụng card lồng nhau.\n- Không gradient neon, glow, ảnh nền lớn hoặc dashboard dày thông tin. Không tự thêm ảnh trang trí vào các màn.\n- Không mang quy tắc góc vuông/grayscale của low-fi sang UI: có thể bo góc và dùng màu theo token trên, nhưng không đổi cấu trúc nhiệm vụ.\n\nLOGO\nDùng nguyên ảnh power9-logo-3d.png tôi đính kèm do tôi tự thiết kế. Đặt vùng 40×40 tại header Home, giữ tỉ lệ và màu, cạnh tên Power9 Office Routine. Bỏ dòng Hệ thống đồng hành và v1.0 nếu còn trong wireframe. Không vẽ lại/recolor/crop logo, không dùng gradient logo làm nền toàn UI. Nếu không chèn đúng asset, giữ placeholder rồi báo rõ để thay file thật trong Figma; không tạo logo gần giống.\n\n10 MÀN VÀ ĐIỀU HƯỚNG\nS01 Hôm nay: giữ 3 việc/giờ, 1/3 hoàn thành, Khám phá/Tiến độ; check-in tách với chạm tên mở chi tiết. Không cào bằng nhu cầu 3 persona bằng cách tạo 3 hồ sơ trên Home.\nS02 Ăn uống: bữa trưa có chú ý, 3 bước ngắn, Đã thực hiện, Xem tiến độ.\nS03 Thư giãn: Nghỉ sau cuộc họp, timer 03:00 và Bắt đầu; chưa bắt đầu thì chưa hoàn thành.\nS04 Kết nối: 2 hoạt động đồng nghiệp tự nguyện, chọn hoạt động tới Chi tiết; không tự gửi lời mời.\nS05 Khám phá: đủ 9 nhóm, tìm kiếm/filter thời lượng áp dụng hoạt động, mở nhóm Kết nối với 2 hoạt động, danh mục cuộn.\nS06 Chi tiết thói quen: Rủ đồng nghiệp đi bộ, 5 phút, mục đích/3 bước, tự nguyện, Chọn lịch thực hiện. Trạng thái chưa thêm, không Đổi lịch hoặc Hoàn thành trên màn này.\nS07 Lịch thói quen: đúng tên hoạt động, ngày 26/10/2026, nhắc bật 12:00, giờ yên lặng 18:00–08:00 hôm sau, Lưu lịch/Hủy. Giờ 24h. Tắt nhắc không bắt giờ; lưu không đồng nghĩa hoàn thành; không tự dời giờ nhắc vào lúc khác.\nS08 Tiến độ: khớp Home 1/3 và đúng tên/giờ 3 hoạt động; riêng tư, không ranking/điểm tuổi thọ.\nS09 Góc làm việc: checklist 3 mục và Đã kiểm tra; đây là 1 hoạt động, không tự tính 2 nhóm hoàn thành. Không cảm biến/chẩn đoán.\nS10 Ngủ & phục hồi: Chuẩn bị nghỉ tối, 2 gợi ý, Chọn giờ nhắc tới S07 với đúng dữ liệu. Không đo giấc ngủ hoặc xác nhận Đã ngủ đủ.\n\nChỉ S01–S04 có 4 tab Hôm nay/Ăn uống/Thư giãn/Kết nối; chọn đúng tab bằng icon, nhãn và chỉ báo ngoài màu.\nS05–S10 có Back và đúng tên chức năng, không bottom navigation. Back trở về đúng nguồn, giữ nhóm/bộ lọc khi cần; Hủy không lưu. S06/S07 là template dùng chung theo dữ liệu hoạt động; chưa tạo thêm frame biến thể.\n\nCHUẨN HÓA TỪ KIỂM TRA ZIP\n- Frame gốc 360×800 cho cả 10, không desktop wrapper có khoảng trắng 2 bên; kiểm tra thêm rộng 412.\n- Nội dung dài cuộn trong vùng giữa app bar và footer/navigation, không cắt CTA ở S05/S07/S10 hoặc thu nhỏ chữ để ép vừa.\n- Tất cả chữ nhãn/trợ giúp/navigation ≥14, sửa các chữ 11–13 còn sót từ nguồn. Body ưu tiên 16.\n- Vùng chạm thật ≥48×48 cho Back, checkbox, switch, filter và link phụ; hình icon có thể nhỏ hơn nhưng hit area phải đủ.\n- Text thông thường tương phản ≥4.5:1; chữ lớn/điều khiển theo yêu cầu ≥3:1. Không chỉ dựa màu truyền đạt trạng thái.\n- Không đưa mã S01–S10 vào app bar, nội dung hoặc nút. Tên frame bên ngoài ví dụ OFFICE-UI01-S07 — Lịch thói quen; bên trong chỉ Lịch thói quen.\n\nĐẦU RA\nĐúng 10 màn UI mặc định trong 1 bộ riêng, xếp 2 hàng × 5 màn theo S01–S10. Giữ wireframe gốc. Chưa tạo empty/loading/error/dialog hoặc màn chức năng khác trong lượt này. Chưa coi prototype hoặc accessibility đã đạt nếu chưa kiểm tra thật.\nDừng sau bộ UI đầu tiên để tôi chụp và phản biện tổng thể trước các vòng cải tiến.\n```\n",
+    "sources": [
+      [
+        "Prompt UI01 lưu trong dự án",
+        "sources/ai/prompts/OFFICE-UI01-from-final-wireframe.md"
+      ],
+      [
+        "Brief và AI log",
+        "sources/ai/ai-design-log.md"
+      ],
+      [
+        "Dự án Stitch",
+        "https://stitch.withgoogle.com/projects/2176700449127941467"
+      ]
+    ]
+  },
+  {
+    "n": 6,
+    "title": "Ba vòng cải tiến có mục tiêu khác nhau",
+    "note": "Ba vòng có mục tiêu khác nhau. Vòng một sửa typography: cấu hình fallback khiến trình duyệt render Times New Roman, khác brief. Cặp ảnh là kiểm chứng Chrome cục bộ, không phải ảnh sửa trực tiếp trên Stitch. Vòng hai giảm nội dung phụ, giữ rõ tên hoạt động và hành động chính. Vòng ba xử lý tính liên tục của nhiệm vụ: state lỗi từng đổi sang Thiền và Thở sâu, với ngày giờ và thời lượng khác. Bản Figma đã chuẩn hóa cùng dữ liệu form và có đường Thử lại. Ảnh nguồn được giữ riêng để không ghi đè lịch sử.",
+    "sources": [
+      [
+        "3 vòng và bộ ảnh nguồn",
+        "sources/docs/SLIDE-3-VONG-PHAN-BIEN.md"
+      ],
+      [
+        "Phản biện C01–C03",
+        "sources/ai/critiques/OFFICE-3-MAIN-CRITIQUES.md"
+      ],
+      [
+        "Nielsen heuristics",
+        "https://www.nngroup.com/articles/ten-usability-heuristics/"
+      ]
+    ]
+  },
+  {
+    "n": 7,
+    "title": "Phản biện UX và quyết định thiết kế",
+    "note": "Nhóm chấp nhận sửa font để giao diện thống nhất với design system. Nhóm chấp nhận bỏ banner ngoài nhiệm vụ, vì người dùng cần xử lý một việc ngắn. Với state lỗi, nhóm điều chỉnh output AI: tên hoạt động, ngày và giờ phải được giữ nguyên. Metric như nhịp tim ước tính hoặc điểm sức khỏe bị loại vì không có nguồn dữ liệu hay tính năng đo tương ứng. Sau góp ý về nhóm 07, nhóm bổ sung mở và thu gọn cho cả chín nhóm. Quyết định dựa trên persona, tính nhất quán, khả năng kiểm soát và phục hồi lỗi.",
+    "sources": [
+      [
+        "Quyết định và lý do",
+        "sources/design/design-decisions.md"
+      ],
+      [
+        "Review trạng thái OI03",
+        "sources/ai/critiques/OFFICE-OI03-expanded-review.md"
+      ],
+      [
+        "Figma UI hiện hành",
+        "https://www.figma.com/design/MTv5qJbn065VYJQIXausoq?node-id=27-3"
+      ]
+    ]
+  },
+  {
+    "n": 8,
+    "title": "Wireframe và bộ UI hoàn chỉnh",
+    "note": "Bên trái là wireframe S07 render từ HTML nguồn Stitch đã chốt; bên cạnh là S07 native trong Figma. Nhóm giữ cấu trúc nhiệm vụ rồi bổ sung màu, phân cấp và component. Bên phải là ảnh bộ mười màn native ở mốc hoàn thiện UI, trước bổ sung tương tác accordion. Phần mới nhất thể hiện ở slide prototype và link Figma. State empty, loading, error và dialog nằm cạnh màn cha. Chúng phục vụ hành vi nhưng không tăng số màn chức năng. Ảnh có nhãn xuất xứ để không nhầm Stitch với Figma.",
+    "sources": [
+      [
+        "Wireframe nguồn Stitch S07",
+        "sources/evidence/WIREFRAME-S07.png"
+      ],
+      [
+        "Figma 03 Final UI",
+        "https://www.figma.com/design/MTv5qJbn065VYJQIXausoq?node-id=27-3"
+      ],
+      [
+        "Nguồn ảnh và node",
+        "sources/evidence-provenance.json"
+      ]
+    ]
+  },
+  {
+    "n": 9,
+    "title": "Design system và component",
+    "note": "Design system có 37 biến: 12 màu primitive, 12 semantic alias, tám biến kích thước và khoảng cách, năm biến bo góc. Có sáu text style dùng Be Vietnam Pro và một effect style bóng card. Chín nhóm component bắt buộc có 35 biến thể. Accordion thêm 18 biến thể, thành mười nhóm với 53 biến thể. Các màn dùng instance, còn màu, padding, gap và radius có binding. Trong demo, nhóm sẽ chọn Button để chỉ Auto Layout và token thực tế, thay vì chỉ mở ảnh bảng màu.",
+    "sources": [
+      [
+        "Figma 04 Design System",
+        "https://www.figma.com/design/MTv5qJbn065VYJQIXausoq?node-id=15-48"
+      ],
+      [
+        "Figma 05 Components",
+        "https://www.figma.com/design/MTv5qJbn065VYJQIXausoq?node-id=16-28"
+      ],
+      [
+        "Audit thư viện và accordion",
+        "sources/assets/figma/office-checkpoint.json"
+      ]
+    ]
+  },
+  {
+    "n": 10,
+    "title": "Accessibility và responsive",
+    "note": "W3C quy định tương phản chữ thông thường tối thiểu 4.5 trên 1 và chữ lớn 3 trên 1. Bảng tính từ những cặp màu cụ thể, không phải chứng nhận toàn bộ WCAG. Android khuyến nghị vùng chạm ít nhất 48 dp. Nút chính cao 52, Back và header accordion có vùng chạm 48, chữ nội dung 16 và nhãn 14. Hai bản 360 và 412 đã kiểm tra bố cục và text overflow. Trạng thái dùng nhãn, dấu kiểm và chỉ báo ngoài màu. Nhóm chưa kiểm thử TalkBack, chữ phóng lớn hoặc người dùng thực.",
+    "sources": [
+      [
+        "WCAG Contrast Minimum",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+      ],
+      [
+        "Android touch targets",
+        "https://support.google.com/accessibility/android/answer/7101858?hl=en"
+      ],
+      [
+        "Audit 360 / 412",
+        "sources/assets/figma/office-six-page-audit.json"
+      ]
+    ]
+  },
+  {
+    "n": 11,
+    "title": "Prototype và demo trực tiếp",
+    "note": "Prototype có ba starting point cho Mai, Huy và Linh. Nhóm chạy đúng đường của từng nhiệm vụ, gồm ít nhất một lỗi và phục hồi. Cả chín nhóm đã mở và thu gọn được; thẻ hoặc mũi tên dẫn đúng chi tiết. Kiểm tra cuối có 323 phản ứng và không có đích liên kết hỏng. Con số này gồm điều hướng và tương tác nội bộ, không phải số nhiệm vụ. Timer, tìm kiếm và giờ nhắc dùng trạng thái mẫu. Demo sẽ giải thích điều này để không tạo cảm giác có đồng hồ, backend hoặc thông báo thật.",
+    "sources": [
+      [
+        "Figma 06 Prototype",
+        "https://www.figma.com/design/MTv5qJbn065VYJQIXausoq?node-id=10-14"
+      ],
+      [
+        "Kiểm tra dữ liệu flow",
+        "sources/assets/figma/office-behavior-audit.json"
+      ],
+      [
+        "Kiểm tra accordion",
+        "sources/assets/figma/office-accordion-audit.json"
+      ]
+    ]
+  },
+  {
+    "n": 12,
+    "title": "Flutter handoff và kết luận",
+    "note": "Handoff Office có đủ sáu mục mỗi màn: layout, component, state, tương tác, điều hướng và ràng buộc UI. Hai bảng mapping mô tả token sang Flutter và component sang widget. Lập trình viên cần triển khai elapsed time thật, form tạm tách khỏi dữ liệu đã lưu và ghi nhận không trùng. Thiết kế và prototype đã sẵn sàng để trình bày. Trước buổi chấm cần tập demo, xác nhận toàn văn prompt thực gửi và kiểm tra quyền xem link bằng cửa sổ chưa đăng nhập. Nhóm chưa khảo sát persona, chưa có user test và chưa viết Flutter hoặc backend.",
+    "sources": [
+      [
+        "Handoff 10 màn, 6 mục/màn",
+        "sources/handoff/flutter-handoff.md"
+      ],
+      [
+        "Flutter ThemeData",
+        "https://docs.flutter.dev/cookbook/design/themes"
+      ],
+      [
+        "Repo và Figma",
+        "sources/README.md"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-27",
+  "slideCount": 12,
+  "slideSources": [
+    {
+      "slide": 1,
+      "visibleSource": true,
+      "hyperlinks": 3
+    },
+    {
+      "slide": 2,
+      "visibleSource": true,
+      "hyperlinks": 2
+    },
+    {
+      "slide": 3,
+      "visibleSource": true,
+      "hyperlinks": 2
+    },
+    {
+      "slide": 4,
+      "visibleSource": true,
+      "hyperlinks": 2
+    },
+    {
+      "slide": 5,
+      "visibleSource": true,
+      "hyperlinks": 3
+    },
+    {
+      "slide": 6,
+      "visibleSource": true,
+      "hyperlinks": 3
+    },
+    {
+      "slide": 7,
+      "visibleSource": true,
+      "hyperlinks": 3
+    },
+    {
+      "slide": 8,
+      "visibleSource": true,
+      "hyperlinks": 3
+    },
+    {
+      "slide": 9,
+      "visibleSource": true,
+      "hyperlinks": 3
+    },
+    {
+      "slide": 10,
+      "visibleSource": true,
+      "hyperlinks": 3
+    },
+    {
+      "slide": 11,
+      "visibleSource": true,
+      "hyperlinks": 6
+    },
+    {
+      "slide": 12,
+      "visibleSource": true,
+      "hyperlinks": 3
+    }
+  ],
+  "sourceLinksMissing": [],
+  "docxPageCount": 8,
+  "docxRenderedWith": "Microsoft Word PDF export and packaged render_docx.py rasterizer",
+  "visualQA": "12slide images and8document pages reviewed; Title border removed; slide11spacing repaired.",
+  "limitations": [
+    "Stitch project link is user-provided; full chat/prompt history not accessible through web tool.",
+    "No anonymous Figma/GitHub access check, user test or Flutter implementation claimed."
+  ],
+  "outputs": [
+    {
+      "file": "Power9_Office_Lab2_12_Slides.pptx",
+      "bytes": 1676717,
+      "sha256": "2a44ba22d66b8be32e3eab736ddae3dc0b188f19f764ad8bd5974e5287321298"
+    },
+    {
+      "file": "Power9_Office_Kich_Ban_Thuyet_Trinh_Va_Demo.docx",
+      "bytes": 49266,
+      "sha256": "02f212d21f2be669ee483860601b00d44ecdb97f761b825fd991c877cec9de63"
+    }
+  ]
+}

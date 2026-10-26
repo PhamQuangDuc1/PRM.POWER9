@@ -1,0 +1,10 @@
+{
+  "screens": 8,
+  "principles": 9,
+  "searchReset": true,
+  "allDetails": true,
+  "undo": true,
+  "horizontalOverflow": [],
+  "consoleErrors": [],
+  "limitations": "Local wireframe; no persistent state, no synced history, no Figma mutation."
+}

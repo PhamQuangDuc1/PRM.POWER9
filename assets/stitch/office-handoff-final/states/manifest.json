@@ -1,0 +1,57 @@
+{
+  "sha256": "428e816e4cc37856e9c61b95ebdf4cc67b28db08b80af5320eadd820ad9c2d3a",
+  "screens": [
+    {
+      "folder": "office_oi03_s01_added_h_m_nay_sau_khi_th_m_1_4_ho_n_th_nh",
+      "html": "assets/stitch/office-handoff-final/states/export-original/stitch_power9_office_routine_wireframe/office_oi03_s01_added_h_m_nay_sau_khi_th_m_1_4_ho_n_th_nh/code.html"
+    },
+    {
+      "folder": "office_oi03_s01_h_m_nay_g_c_ho_n_t_c",
+      "html": "assets/stitch/office-handoff-final/states/export-original/stitch_power9_office_routine_wireframe/office_oi03_s01_h_m_nay_g_c_ho_n_t_c/code.html"
+    },
+    {
+      "folder": "office_oi03_s01_rescheduled_h_m_nay_i_sang_18_00_1_3_ho_n_th_nh",
+      "html": "assets/stitch/office-handoff-final/states/export-original/stitch_power9_office_routine_wireframe/office_oi03_s01_rescheduled_h_m_nay_i_sang_18_00_1_3_ho_n_th_nh/code.html"
+    },
+    {
+      "folder": "office_oi03_s03_active_phi_n_ngh_ang_ch_y_02_15",
+      "html": "assets/stitch/office-handoff-final/states/export-original/stitch_power9_office_routine_wireframe/office_oi03_s03_active_phi_n_ngh_ang_ch_y_02_15/code.html"
+    },
+    {
+      "folder": "office_oi03_s03_dialog_h_p_tho_i_r_i_phi_n_ngh",
+      "html": "assets/stitch/office-handoff-final/states/export-original/stitch_power9_office_routine_wireframe/office_oi03_s03_dialog_h_p_tho_i_r_i_phi_n_ngh/code.html"
+    },
+    {
+      "folder": "office_oi03_s03_finished_phi_n_ngh_k_t_th_c_ghi_nh_n_ho_t_ng",
+      "html": "assets/stitch/office-handoff-final/states/export-original/stitch_power9_office_routine_wireframe/office_oi03_s03_finished_phi_n_ngh_k_t_th_c_ghi_nh_n_ho_t_ng/code.html"
+    },
+    {
+      "folder": "office_oi03_s03_paused_phi_n_ngh_t_m_d_ng_ti_p_t_c_k_t_th_c",
+      "html": "assets/stitch/office-handoff-final/states/export-original/stitch_power9_office_routine_wireframe/office_oi03_s03_paused_phi_n_ngh_t_m_d_ng_ti_p_t_c_k_t_th_c/code.html"
+    },
+    {
+      "folder": "office_oi03_s06b_chi_ti_t_th_m_flow_linh",
+      "html": "assets/stitch/office-handoff-final/states/export-original/stitch_power9_office_routine_wireframe/office_oi03_s06b_chi_ti_t_th_m_flow_linh/code.html"
+    },
+    {
+      "folder": "office_oi03_s07_edit_i_l_ch_18_00_gi_y_n_l_ng",
+      "html": "assets/stitch/office-handoff-final/states/export-original/stitch_power9_office_routine_wireframe/office_oi03_s07_edit_i_l_ch_18_00_gi_y_n_l_ng/code.html"
+    },
+    {
+      "folder": "office_oi03_s07_error_l_u_th_t_b_i_th_l_i_h_y",
+      "html": "assets/stitch/office-handoff-final/states/export-original/stitch_power9_office_routine_wireframe/office_oi03_s07_error_l_u_th_t_b_i_th_l_i_h_y/code.html"
+    },
+    {
+      "folder": "office_oi03_s07_saving_ang_l_u_ch_n_g_i_l_p",
+      "html": "assets/stitch/office-handoff-final/states/export-original/stitch_power9_office_routine_wireframe/office_oi03_s07_saving_ang_l_u_ch_n_g_i_l_p/code.html"
+    },
+    {
+      "folder": "office_oi03_s07_validation_l_i_thi_u_gi_nh_c",
+      "html": "assets/stitch/office-handoff-final/states/export-original/stitch_power9_office_routine_wireframe/office_oi03_s07_validation_l_i_thi_u_gi_nh_c/code.html"
+    },
+    {
+      "folder": "office_oi03_s08_ti_n_ng_b_ho_n_t_c",
+      "html": "assets/stitch/office-handoff-final/states/export-original/stitch_power9_office_routine_wireframe/office_oi03_s08_ti_n_ng_b_ho_n_t_c/code.html"
+    }
+  ]
+}
