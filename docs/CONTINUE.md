@@ -11,3 +11,5 @@ GitHub: https://github.com/PhamQuangDuc1/PRM.POWER9
 Người dùng xác nhận 100% prompt Office đã gửi nguyên văn trên Stitch mới ngày27/10/2026. Phạm vi chỉ3persona chính ngang nhau: Huy28, Mai24, Linh39.
 
 Đọc assets/figma/office-checkpoint.json, docs/FIGMA-FINAL-AUDIT.md, handoff/flutter-handoff.md trước khi sửa. Không rebuild các page hợp lệ. Timer là snapshot; chưa có user test/Flutter app. Bộ slide cập nhật dùng link web và trình bày phản biện trực tiếp trên slide06/07.
+
+Bộ trình bày đã hoàn thiện sau xác nhận push main: xem [trạng thái và link file](OFFICE-PRESENTATION-STATUS.md). Có 12 slide và kịch bản 8 trang; 31 URL trong slide trả HTTP 200. Lần này chưa rà trực tiếp Figma do MCP hết hạn mức Starter. Bản PPTX Office cũ đang mở trong PowerPoint nên chưa xóa được.

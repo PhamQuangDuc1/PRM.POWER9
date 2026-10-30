@@ -1,0 +1,14 @@
+# Local build files and tool state
+/.build/
+/.codex-finalizer/
+
+# Office temporary lock files
+~$*
+
+# Local credentials
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+**/service-account*.json
