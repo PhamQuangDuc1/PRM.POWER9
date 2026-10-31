@@ -12,3 +12,22 @@
 *.jks
 *.keystore
 **/service-account*.json
+
+# Flutter and Android generated files
+.dart_tool/
+.flutter-plugins-dependencies
+/build/
+/coverage/
+.idea/
+*.iml
+android/local.properties
+android/.gradle/
+android/.kotlin/
+android/app/debug/
+android/app/profile/
+android/app/release/
+firebase-debug.log
+firebase-debug.*.log
+node_modules/
+firestore-debug.log
+ui-debug.log

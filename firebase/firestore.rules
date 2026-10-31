@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function owner(uid) { return request.auth != null && request.auth.uid == uid; }
+    match /activities/{activityId} {
+      allow read: if request.auth != null && resource.data.published == true;
+      allow write: if false;
+    }
+    match /users/{uid}/schedules/{id} {
+      function validSchedule() {
+        let d = request.resource.data;
+        let activity = get(/databases/$(database)/documents/activities/$(d.activityId)).data;
+        return d.keys().hasAll(['activityId', 'title', 'groupId', 'dateKey', 'minuteOfDay', 'reminderEnabled', 'createdAt', 'updatedAt'])
+          && d.keys().hasOnly(['activityId', 'title', 'groupId', 'dateKey', 'minuteOfDay', 'reminderEnabled', 'createdAt', 'updatedAt'])
+          && d.activityId is string && d.dateKey is string
+          && d.dateKey.matches('[0-9]{4}-[0-9]{2}-[0-9]{2}')
+          && id == d.activityId + '_' + d.dateKey
+          && activity.published == true && d.title == activity.title && d.groupId == activity.groupId
+          && d.reminderEnabled is bool
+          && (d.minuteOfDay == null || (d.minuteOfDay is int && d.minuteOfDay >= 0 && d.minuteOfDay < 1440))
+          && (!d.reminderEnabled || d.minuteOfDay is int)
+          && d.createdAt is timestamp && d.updatedAt == request.time;
+      }
+      allow read, delete: if owner(uid);
+      allow create: if owner(uid) && validSchedule() && request.resource.data.createdAt == request.time;
+      allow update: if owner(uid) && validSchedule()
+        && request.resource.data.createdAt == resource.data.createdAt
+        && request.resource.data.activityId == resource.data.activityId
+        && request.resource.data.dateKey == resource.data.dateKey;
+    }
+    match /{document=**} { allow read, write: if false; }
+  }
+}

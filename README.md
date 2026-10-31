@@ -1,5 +1,18 @@
 # Power9 Office Routine
 
+## Lab 3 — khung Flutter đang triển khai
+
+Tên Android: **Power9 Office Routine**. Icon dùng logo P9 gốc trên nền trắng. App kế thừa thiết kế Lab 2 ở các mục bên dưới; chưa hoàn thành toàn bộ Lab 3.
+
+- Flutter 3.47.3 / Dart 3.13.3; Android package `vn.power9.power9_office_routine`.
+- Firebase project mới `power9-office-se180724`, app Android đã đăng ký và có SHA-1 debug. Không bật billing trong bước khởi tạo.
+- Mã app: `lib/screens/` → `lib/viewmodels/` → `lib/services/`; `lib/models/` độc lập SDK; token và widget ở `lib/theme/`, `lib/widgets/`.
+- Cách chạy: `flutter pub get`, `flutter run -d <device-id>`; kiểm tra: `flutter analyze lib test`, `flutter test`.
+- Xem [kiến trúc](docs/architecture.md), [truy vết Lab 2](docs/design-traceability.md), [kế hoạch hoàn thiện](docs/lab3-completion-plan.md), [Analytics plan](docs/analytics-plan.md).
+- Đã build/cài trên Sony SOV41 Android 11; người dùng đăng nhập Google và đã kiểm tra Home trên thiết bị. Có flow thêm lịch/đổi giờ/hủy dựa trên Firestore thật; F02, phần còn lại của 10 màn và sáu dịch vụ chưa hoàn thiện.
+- Kiểm tra mới nhất: analyze sạch, 11 test Flutter và 8 test Firestore Rules đạt. Xem [test report](docs/test-report.md); chưa chạy ARTEMIS.
+- `pubspec.lock` giữ dependency đã resolve. CLI: FlutterFire 1.4.1. Các lệnh Firebase cần đăng nhập tài khoản có quyền dự án. Không commit token/credential đăng nhập CLI.
+
 Ứng dụng Android tiếng Việt giúp nhân viên văn phòng tự chọn, lên lịch và ghi nhận hoạt động ngắn trong ngày làm việc. Ba persona chính ngang nhau: Huy 28 tuổi, Mai 24 tuổi và Linh 39 tuổi; đều là persona giả định.
 
 Figma: https://www.figma.com/design/MTv5qJbn065VYJQIXausoq
@@ -28,7 +41,7 @@ Figma có 6 page, 10 màn chức năng, 3 starting point; bản 360 và 412 px. 
 
 Người dùng xác nhận ngày 27/10/2026 đã gửi nguyên văn 100% các prompt Office do trợ lý cung cấp trên dự án Stitch mới. Giữ nguyên khối prompt trong ai/prompts/OFFICE-*.md; ảnh Stitch, render kiểm chứng Chrome và Figma được ghi nguồn riêng.
 
-Timer/tìm kiếm/giờ nhắc là mô phỏng trạng thái. Chưa có user test, TalkBack, peer handoff test hoặc ứng dụng Flutter/backend. Các mục tiêu thời gian là mục tiêu thiết kế, chưa đo thực tế. Thay đổi workspace không tự động được đẩy lên GitHub.
+Timer/tìm kiếm/giờ nhắc trong prototype Lab 2 là mô phỏng trạng thái. Tại mốc Lab 2 chưa có user test, TalkBack, peer handoff test hoặc ứng dụng Flutter/backend; tiến độ triển khai Lab 3 nằm ở đầu README. Các mục tiêu thời gian là mục tiêu thiết kế, chưa đo thực tế. Thay đổi workspace không tự động được đẩy lên GitHub.
 
 ## Bộ trình bày cập nhật ngày 27/10/2026
 

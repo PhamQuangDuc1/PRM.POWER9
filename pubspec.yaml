@@ -1,0 +1,38 @@
+name: power9_office_routine
+description: "Power9 Office Routine — thói quen nhỏ cho ngày làm việc."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.3
+
+dependencies:
+  cloud_firestore: 7.1.0
+  firebase_auth: 7.0.1
+  firebase_core: 5.1.0
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_riverpod: 3.4.3
+  google_sign_in: 7.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: 0.14.4
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/brand/power9-logo-3d.png
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: assets/brand/power9-logo-3d.png
+  adaptive_icon_background: '#FFFFFF'
+  adaptive_icon_foreground: assets/brand/power9-logo-3d.png
+  adaptive_icon_foreground_inset: 20
+  min_sdk_android: 23
