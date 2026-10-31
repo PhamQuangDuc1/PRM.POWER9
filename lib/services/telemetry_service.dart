@@ -8,6 +8,8 @@ enum AppEvent {
   activityCompleted,
   completionUndone,
   configRefreshed,
+  reportGenerated,
+  exportReport,
 }
 
 String eventName(AppEvent event) => switch (event) {
@@ -17,6 +19,8 @@ String eventName(AppEvent event) => switch (event) {
   AppEvent.activityCompleted => 'activity_completed',
   AppEvent.completionUndone => 'completion_undone',
   AppEvent.configRefreshed => 'config_refreshed',
+  AppEvent.reportGenerated => 'report_generated',
+  AppEvent.exportReport => 'export_report',
   _ => event.name,
 };
 

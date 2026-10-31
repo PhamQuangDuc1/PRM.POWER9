@@ -10,6 +10,7 @@ import '../viewmodels/completion_action_viewmodel.dart';
 import '../widgets/p9_async_content.dart';
 import '../widgets/p9_progress_summary.dart';
 import 'discover_screen.dart';
+import 'report_screen.dart';
 
 class ProgressScreen extends ConsumerStatefulWidget {
   const ProgressScreen({super.key, required this.initialDay});
@@ -28,7 +29,18 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: const Text('Tiến độ')),
+    appBar: AppBar(
+      title: const Text('Tiến độ'),
+      actions: [
+        IconButton(
+          tooltip: 'Xuất báo cáo PDF',
+          icon: const Icon(Icons.picture_as_pdf_outlined),
+          onPressed: () => Navigator.of(context).push(
+            MaterialPageRoute<void>(builder: (_) => ReportScreen(day: _day)),
+          ),
+        ),
+      ],
+    ),
     body: Column(
       children: [
         Padding(

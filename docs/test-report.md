@@ -6,6 +6,8 @@ Cập nhật 01/11: toàn bộ Flutter suite hiện có 23 tests đạt, analyze
 
 Mốc tiếp theo cùng ngày: 29 tests đạt sau tích hợp Analytics/Crashlytics/Remote Config; analyze không issue, APK mới đã cài Xperia. Đổi hai giá trị Remote Config làm thay đổi hành vi thật không rebuild; Crashlytics server xác nhận fatal test crash và non-fatal completion_write/unavailable; DebugView người dùng cung cấp cho thấy sự kiện thật. Xem docs/firebase-observability.md và evidence/firebase-observability. Không tính các thao tác ADB này thành ARTEMIS runs.
 
+Mốc FCM/PDF ngày 01/11: 36 Flutter tests đạt, analyze sạch; 18 Rules tests đạt (16 Firestore + 2 Storage). Console Test message đã nhận và chạm mở Home ở cả foreground/background/terminated trên Xperia; PDF thật đã lưu trên máy. Log mới tại evidence/flutter/unit-widget-fcm-report-tests.txt và evidence/firestore/report-storage-rules-tests.txt; chi tiết docs/fcm-pdf-storage.md. Storage production chưa kiểm thử vì giữ Spark. Không tính các lượt này thành ARTEMIS.
+
 ## Tự động
 
 | Kiểm tra | Kết quả | Nguồn |

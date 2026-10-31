@@ -11,6 +11,9 @@ import 'profile_screen.dart';
 import 'connection_screen.dart';
 import 'food_screen.dart';
 import 'relax_screen.dart';
+import 'notification_screen.dart';
+import 'progress_screen.dart';
+import '../viewmodels/notification_viewmodel.dart';
 
 class HomeShell extends ConsumerStatefulWidget {
   const HomeShell({super.key, required this.user});
@@ -19,8 +22,64 @@ class HomeShell extends ConsumerStatefulWidget {
   ConsumerState<HomeShell> createState() => _HomeShellState();
 }
 
-class _HomeShellState extends ConsumerState<HomeShell> {
+class _HomeShellState extends ConsumerState<HomeShell>
+    with WidgetsBindingObserver {
   int _index = 0;
+  bool _handlingNotification = false;
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      ref
+          .read(notificationControllerProvider(widget.user.uid).notifier)
+          .refresh();
+    }
+  }
+
+  Future<void> _openNotification() async {
+    if (_handlingNotification || !mounted) return;
+    final vm = ref.read(
+      notificationControllerProvider(widget.user.uid).notifier,
+    );
+    final item = vm.consumeTap();
+    if (item == null) return;
+    _handlingNotification = true;
+    try {
+      if (!await _mayLeaveSession() || !mounted) return;
+      await vm.markRead(item);
+      if (!mounted) return;
+      setState(() => _index = 0);
+      if (!context.mounted) return;
+      final navigator = Navigator.of(context);
+      navigator.popUntil((route) => route.isFirst);
+      if (item.target == 'progress') {
+        navigator.push(
+          MaterialPageRoute<void>(
+            builder: (_) => ProgressScreen(initialDay: item.dateKey),
+          ),
+        );
+      }
+    } finally {
+      _handlingNotification = false;
+      if (mounted &&
+          ref.read(notificationControllerProvider(widget.user.uid)).pending !=
+              null) {
+        _openNotification();
+      }
+    }
+  }
+
   Future<bool> _mayLeaveSession() async {
     if (_index != 2) return true;
     final session = ref.read(sessionViewModelProvider);
@@ -38,76 +97,104 @@ class _HomeShellState extends ConsumerState<HomeShell> {
   }
 
   @override
-  Widget build(BuildContext context) => PopScope(
-    canPop: _index == 0,
-    onPopInvokedWithResult: (didPop, _) {
-      if (!didPop) _changeIndex(0);
-    },
-    child: Scaffold(
-      appBar: AppBar(
-        toolbarHeight: P9Size.appBarHeight,
-        leadingWidth: P9Size.appBarHeight,
-        leading: const Padding(
-          padding: EdgeInsets.all(P9Space.sm),
-          child: P9Logo(size: P9Size.headerLogo),
-        ),
-        title: Text(
-          'Power9 Office Routine',
-          style: Theme.of(context).textTheme.titleMedium,
-        ),
-        actions: [
-          IconButton(
-            tooltip: 'Tài khoản',
-            icon: const Icon(Icons.account_circle_outlined),
-            onPressed: () async {
-              if (!await _mayLeaveSession() || !mounted) return;
-              if (!context.mounted) return;
-              Navigator.of(context).push(
-                MaterialPageRoute<void>(
-                  builder: (_) => ProfileScreen(user: widget.user),
-                ),
-              );
-            },
+  Widget build(BuildContext context) {
+    final notifications = ref.watch(
+      notificationControllerProvider(widget.user.uid),
+    );
+    ref.listen(notificationControllerProvider(widget.user.uid), (_, next) {
+      if (next.pending != null) _openNotification();
+    });
+    return PopScope(
+      canPop: _index == 0,
+      onPopInvokedWithResult: (didPop, _) {
+        if (!didPop) _changeIndex(0);
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          toolbarHeight: P9Size.appBarHeight,
+          leadingWidth: P9Size.appBarHeight,
+          leading: const Padding(
+            padding: EdgeInsets.all(P9Space.sm),
+            child: P9Logo(size: P9Size.headerLogo),
           ),
-        ],
-      ),
-      body: SafeArea(
-        child: IndexedStack(
-          index: _index,
-          children: [
-            const TodayScreen(),
-            const FoodScreen(),
-            RelaxScreen(onRecorded: () => setState(() => _index = 0)),
-            const ConnectionScreen(),
+          title: Text(
+            'Power9 Office Routine',
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: Theme.of(context).textTheme.titleMedium,
+          ),
+          actions: [
+            IconButton(
+              tooltip: 'Thông báo',
+              icon: Badge(
+                isLabelVisible: notifications.unread > 0,
+                label: Text('${notifications.unread}'),
+                child: const Icon(Icons.notifications_outlined),
+              ),
+              onPressed: () async {
+                if (!await _mayLeaveSession() || !mounted || !context.mounted) {
+                  return;
+                }
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) => const NotificationScreen(),
+                  ),
+                );
+              },
+            ),
+            IconButton(
+              tooltip: 'Tài khoản',
+              icon: const Icon(Icons.account_circle_outlined),
+              onPressed: () async {
+                if (!await _mayLeaveSession() || !mounted) return;
+                if (!context.mounted) return;
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) => ProfileScreen(user: widget.user),
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
+        body: SafeArea(
+          child: IndexedStack(
+            index: _index,
+            children: [
+              const TodayScreen(),
+              const FoodScreen(),
+              RelaxScreen(onRecorded: () => setState(() => _index = 0)),
+              const ConnectionScreen(),
+            ],
+          ),
+        ),
+        bottomNavigationBar: NavigationBar(
+          height: P9Size.navigationHeight,
+          selectedIndex: _index,
+          onDestinationSelected: _changeIndex,
+          destinations: const [
+            NavigationDestination(
+              icon: Icon(Icons.today_outlined),
+              selectedIcon: Icon(Icons.today),
+              label: 'Hôm nay',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.restaurant_outlined),
+              selectedIcon: Icon(Icons.restaurant),
+              label: 'Ăn uống',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.self_improvement),
+              label: 'Thư giãn',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.people_outline),
+              selectedIcon: Icon(Icons.people),
+              label: 'Kết nối',
+            ),
           ],
         ),
       ),
-      bottomNavigationBar: NavigationBar(
-        height: P9Size.navigationHeight,
-        selectedIndex: _index,
-        onDestinationSelected: _changeIndex,
-        destinations: const [
-          NavigationDestination(
-            icon: Icon(Icons.today_outlined),
-            selectedIcon: Icon(Icons.today),
-            label: 'Hôm nay',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.restaurant_outlined),
-            selectedIcon: Icon(Icons.restaurant),
-            label: 'Ăn uống',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.self_improvement),
-            label: 'Thư giãn',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.people_outline),
-            selectedIcon: Icon(Icons.people),
-            label: 'Kết nối',
-          ),
-        ],
-      ),
-    ),
-  );
+    );
+  }
 }

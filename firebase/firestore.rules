@@ -47,6 +47,19 @@ service cloud.firestore {
       allow create: if owner(uid) && validCompletion();
       allow update: if false;
     }
+    match /users/{uid}/reports/{id} {
+      allow read: if owner(uid);
+      allow create: if owner(uid)
+        && request.resource.data.keys().hasAll(['dateKey','fileName','storagePath','byteLength','sha256','createdAt'])
+        && request.resource.data.keys().hasOnly(['dateKey','fileName','storagePath','byteLength','sha256','createdAt'])
+        && id.matches('[a-f0-9]{64}') && request.resource.data.sha256 == id
+        && request.resource.data.dateKey.matches('[0-9]{4}-[0-9]{2}-[0-9]{2}')
+        && request.resource.data.fileName.matches('Power9-[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-f0-9]{12}\\.pdf')
+        && request.resource.data.storagePath == 'reports/' + uid + '/' + id + '.pdf'
+        && request.resource.data.byteLength is int && request.resource.data.byteLength > 0 && request.resource.data.byteLength <= 10 * 1024 * 1024
+        && request.resource.data.createdAt == request.time;
+      allow update, delete: if false;
+    }
     match /{document=**} { allow read, write: if false; }
   }
 }

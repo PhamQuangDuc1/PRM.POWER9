@@ -21,6 +21,8 @@ Map<String, Object> safeEventParameters(Map<String, Object> parameters) => {
       'method',
       'changed',
       'operation',
+      'item_count',
+      'file_size_kb',
     }.contains(entry.key))
       entry.key: entry.value is String
           ? (entry.value as String)

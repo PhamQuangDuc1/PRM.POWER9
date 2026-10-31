@@ -6,6 +6,11 @@ import '../theme/p9_theme.dart';
 import '../viewmodels/observability_providers.dart';
 import '../viewmodels/firebase_demo_viewmodel.dart';
 import '../widgets/p9_button.dart';
+import '../viewmodels/app_providers.dart';
+import '../viewmodels/notification_viewmodel.dart';
+import '../viewmodels/activity_providers.dart';
+import 'notification_screen.dart';
+import 'report_screen.dart';
 
 class FirebaseDemoScreen extends ConsumerWidget {
   const FirebaseDemoScreen({super.key});
@@ -19,9 +24,28 @@ class FirebaseDemoScreen extends ConsumerWidget {
       body: ListView(
         padding: const EdgeInsets.all(P9Space.lg),
         children: [
+          OutlinedButton.icon(
+            icon: const Icon(Icons.notifications_outlined),
+            label: const Text('Mở trung tâm thông báo'),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                builder: (_) => const NotificationScreen(),
+              ),
+            ),
+          ),
+          if (ref.watch(currentDayProvider).asData?.value case final String day)
+            OutlinedButton.icon(
+              icon: const Icon(Icons.picture_as_pdf_outlined),
+              label: const Text('Xuất / tải lên PDF hôm nay'),
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute<void>(builder: (_) => ReportScreen(day: day)),
+              ),
+            ),
+          const SizedBox(height: P9Space.lg),
           Text('Remote Config', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: P9Space.md),
           Text('discover_max_minutes: ${config.value.discoverMaxMinutes}'),
+          Text('report_upload_enabled: ${config.value.reportUploadEnabled}'),
           Text(
             'connection_checkin_enabled: ${config.value.connectionCheckinEnabled}',
           ),
@@ -84,6 +108,29 @@ class FirebaseDemoScreen extends ConsumerWidget {
           ),
           if (crash.hasError)
             const Text('Chưa tạo được test crash. Vui lòng thử lại.'),
+          const SizedBox(height: P9Space.xl),
+          if (ref.watch(sessionProvider).asData?.value?.uid
+              case final String uid)
+            ExpansionTile(
+              title: const Text('FCM · thông tin gửi thử'),
+              children: [
+                const Text(
+                  'Mở Thông báo và bật kết nối trước. Chỉ dùng token để gửi thử tới thiết bị này; không đăng token lên repo hoặc chat.',
+                ),
+                const SizedBox(height: P9Space.md),
+                const Text('recipient_uid'),
+                SelectableText(uid),
+                const SizedBox(height: P9Space.md),
+                const Text('Firebase Installation ID (FID)'),
+                SelectableText(
+                  ref.watch(notificationControllerProvider(uid)).status.token ??
+                      'Chưa có token',
+                ),
+                const Text(
+                  'Data: target=progress; date_key=yyyy-MM-dd; recipient_uid=mã người nhận phía trên.',
+                ),
+              ],
+            ),
         ],
       ),
     );

@@ -2,6 +2,8 @@
 
 ## Bổ sung 01/11/2026
 
+Mốc FCM/PDF: 36 Flutter tests đạt, analyze sạch. Notification Center đã nhận Test message từ Firebase Console ở foreground/background/terminated trên Xperia; native tap mở Home, inbox lưu thông báo. Các lượt API riêng mở Progress. PDF thật đã lưu Download trên Xperia và pull/QA đúng dữ liệu ngày 01/11, 0/2 lịch, giữ giờ 21:30. Storage uploader/Rules có code và 18 emulator tests (16 Firestore +2 Storage) đã đạt, metadata rules đã deploy; chưa có bucket/upload production. Người dùng chọn giữ Spark, không bật billing; upload được khóa bằng report_upload_enabled=false và cần trao đổi với thầy, không tuyên bố Storage đã hoàn thành. Chi tiết ở docs/fcm-pdf-storage.md.
+
 Mốc mới nhất: commit trước 291ff48 đã có trong Git; thay đổi Analytics/Crashlytics/Remote Config hiện chưa commit/push. Tổng Flutter suite 29 tests đạt, analyze không issue, APK mới đã cài Xperia. Remote Config hai tham số đã đổi hành vi thật không rebuild và trả defaults; Analytics đã có sự kiện trên DebugView do người dùng xác nhận bằng ảnh; Crashlytics reporting API xác nhận một fatal test crash và một non-fatal từ lỗi mất mạng thật. Xem docs/firebase-observability.md cho bằng chứng và giới hạn xác minh. Phần lịch sử dưới đây ghi số test của từng mốc trước.
 
 S04 Kết nối có hai hoạt động đi bộ/trò chuyện; S09 checklist thực tế; S10 nội dung nghỉ tối và form lịch quay về nguồn. Flutter analyze không issue, 23 tests đạt. Xperia đã kiểm chứng check-in/undo kết nối và nhánh checklist mất mạng → giữ 3/3 → thử lại → một completion server; xem `docs/workspace-verification.md`. Các kiểm thử mới là ADB smoke, không thay yêu cầu ARTEMIS 10 cases ×3 runs. Chưa commit/push các thay đổi hiện tại.

@@ -25,6 +25,7 @@ class FirebaseAppConfigService extends AppConfigService {
     return AppConfig.fromValues(
       config.getInt('discover_max_minutes'),
       config.getBool('connection_checkin_enabled'),
+      reportUploadEnabled: config.getBool('report_upload_enabled'),
     );
   }
 

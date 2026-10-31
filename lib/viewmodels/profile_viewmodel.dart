@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'app_providers.dart';
 import 'observability_providers.dart';
 import '../services/telemetry_service.dart';
+import 'notification_viewmodel.dart';
 
 final profileViewModelProvider =
     NotifierProvider.autoDispose<ProfileViewModel, AsyncValue<void>>(
@@ -18,6 +19,11 @@ class ProfileViewModel extends Notifier<AsyncValue<void>> {
     state = const AsyncLoading();
     final telemetry = ref.read(telemetryProvider);
     try {
+      try {
+        await ref.read(notificationServiceProvider).disable();
+      } catch (_) {
+        /* Do not trap a user in a signed-in session. */
+      }
       await ref.read(authServiceProvider).signOut();
       await telemetry.event(AppEvent.logout);
       await telemetry.identify(null);

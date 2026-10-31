@@ -26,6 +26,23 @@ beforeEach(async () => {
 });
 after(async () => { if (env) await env.cleanup(); });
 
+const reportId='a'.repeat(64);
+const reportRef=(client,uid='alice')=>doc(client,`users/${uid}/reports/${reportId}`);
+const reportData=()=>({dateKey:day,fileName:`Power9-${day}-${'a'.repeat(12)}.pdf`,
+  storagePath:`reports/alice/${reportId}.pdf`,byteLength:1234,sha256:reportId,createdAt:serverTimestamp()});
+test('report metadata is owner-only and immutable',async()=>{
+  await assertSucceeds(setDoc(reportRef(db('alice')),reportData()));
+  await assertSucceeds(getDoc(reportRef(db('alice'))));
+  await assertFails(getDoc(reportRef(db('bob'))));
+  await assertFails(getDoc(reportRef(db(null))));
+  await assertFails(updateDoc(reportRef(db('alice')),{byteLength:2345}));
+});
+test('report metadata rejects foreign storage path and extra fields',async()=>{
+  await assertFails(setDoc(reportRef(db('alice')),{...reportData(),storagePath:`reports/bob/${reportId}.pdf`}));
+  await assertFails(setDoc(reportRef(db('alice')),{...reportData(),downloadUrl:'https://example.invalid'}));
+  await assertFails(setDoc(reportRef(db('alice')),{...reportData(),byteLength:11*1024*1024}));
+});
+
 test('owner can create, read, update and delete their own schedule', async () => {
   const ref = scheduleRef(db('alice'));
   await assertSucceeds(setDoc(ref,schedule()));

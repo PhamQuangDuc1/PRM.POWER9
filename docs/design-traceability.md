@@ -27,5 +27,12 @@ F02 bổ sung P9CompletionButton, P9ProgressSummary và dialog rời phiên. Tim
 
 - Tên cài đặt/title **Power9 Office Routine**, logo gốc với nền trắng, theo người dùng. Không recolor hoặc vẽ lại.
 - Login/Profile là bổ sung theo đề; không đổi bốn tab Lab 2. Login mới cần được đồng bộ vào Figma khi có quyền thao tác.
-- Dùng token cuối trong handoff, ưu tiên hơn brief cũ. Font ban đầu Roboto, fallback Lab 2 cho phép; chưa bundle Be Vietnam Pro.
+- Dùng token cuối trong handoff, ưu tiên hơn brief cũ. UI dùng Roboto, fallback Lab 2 cho phép; Be Vietnam Pro đã bundle riêng cho PDF để giữ tiếng Việt/offline, chưa đổi font UI toàn app.
 - Dùng Firebase project mới theo người dùng; Android config, SHA-1 và OAuth đã có. Không giả đăng nhập hay hiển thị dữ liệu cá nhân giả; chưa phải bản nộp.
+
+### Bổ sung cho Lab 3 ngày 01/11
+
+- Thêm bell/Notification Center, permission và trạng thái inbox theo tài khoản: yêu cầu FCM trong đề, không đổi bốn tab. AppBar title giới hạn một dòng/ellipsis để vẫn giữ các vùng bấm tối thiểu khi có thêm bell và khi tăng cỡ chữ.
+- S08 thêm nút Xuất báo cáo PDF, mở màn báo cáo đúng ngày đang xem; hỗ trợ print Save as PDF/share và upload riêng. Đây là yêu cầu export/upload của Lab 3, không thêm chỉ số sức khỏe mới.
+- Profile → khu Kiểm thử Firebase có lối tắt Notification Center/PDF hôm nay, giá trị Remote Config và test crash có xác nhận; phần debug phục vụ demo công nghệ theo đề.
+- Các thay đổi này đã ghi nguồn/lý do; Figma chưa cập nhật các màn bổ sung, phải đồng bộ trước nộp. Chưa tuyên bố design/app hoàn toàn khớp.
