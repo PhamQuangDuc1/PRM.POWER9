@@ -9,8 +9,8 @@ Tên Android: **Power9 Office Routine**. Icon dùng logo P9 gốc trên nền tr
 - Mã app: `lib/screens/` → `lib/viewmodels/` → `lib/services/`; `lib/models/` độc lập SDK; token và widget ở `lib/theme/`, `lib/widgets/`.
 - Cách chạy: `flutter pub get`, `flutter run -d <device-id>`; kiểm tra: `flutter analyze lib test`, `flutter test`.
 - Xem [kiến trúc](docs/architecture.md), [truy vết Lab 2](docs/design-traceability.md), [kế hoạch hoàn thiện](docs/lab3-completion-plan.md), [Analytics plan](docs/analytics-plan.md).
-- Đã build/cài trên Sony SOV41 Android 11; người dùng đăng nhập Google và đã kiểm tra Home trên thiết bị. Có flow thêm lịch/đổi giờ/hủy dựa trên Firestore thật; F02, phần còn lại của 10 màn và sáu dịch vụ chưa hoàn thiện.
-- Kiểm tra mới nhất: analyze sạch, 11 test Flutter và 8 test Firestore Rules đạt. Xem [test report](docs/test-report.md); chưa chạy ARTEMIS.
+- Đã chạy trên Sony SOV41 Android 11: đăng nhập, thêm/đổi/hủy lịch, check-in/undo, timer thật pause/resume/background, ghi nhận sớm/đủ phiên và xóa completion giữ schedule. Các màn phụ S04/S09/S10 và sáu dịch vụ còn cần hoàn thiện.
+- Kiểm tra mới nhất: analyze sạch, 21 test Flutter và 14 test Firestore Rules đạt. Xem [test report](docs/test-report.md); chưa chạy ARTEMIS.
 - `pubspec.lock` giữ dependency đã resolve. CLI: FlutterFire 1.4.1. Các lệnh Firebase cần đăng nhập tài khoản có quyền dự án. Không commit token/credential đăng nhập CLI.
 
 Ứng dụng Android tiếng Việt giúp nhân viên văn phòng tự chọn, lên lịch và ghi nhận hoạt động ngắn trong ngày làm việc. Ba persona chính ngang nhau: Huy 28 tuổi, Mai 24 tuổi và Linh 39 tuổi; đều là persona giả định.

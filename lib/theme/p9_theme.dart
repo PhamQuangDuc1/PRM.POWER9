@@ -63,6 +63,11 @@ abstract final class P9Theme {
       errorContainer: P9Colors.errorContainer,
     ),
     textTheme: const TextTheme(
+      displayMedium: TextStyle(
+        fontSize: 48,
+        height: 64 / 48,
+        fontWeight: FontWeight.w700,
+      ),
       headlineSmall: TextStyle(
         fontSize: 24,
         height: 32 / 24,

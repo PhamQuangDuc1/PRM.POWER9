@@ -12,21 +12,30 @@ class ScheduleScreen extends ConsumerWidget {
     super.key,
     required this.activity,
     this.editing = false,
+    this.returnAfterSave = false,
   });
   final Activity activity;
   final bool editing;
+  final bool returnAfterSave;
 
-  static Route<void> route(Activity activity, Schedule? existing) =>
-      MaterialPageRoute<void>(
-        builder: (_) => ProviderScope(
-          overrides: [
-            scheduleDraftProvider.overrideWith(
-              () => ScheduleViewModel(existing: existing),
-            ),
-          ],
-          child: ScheduleScreen(activity: activity, editing: existing != null),
+  static Route<void> route(
+    Activity activity,
+    Schedule? existing, {
+    bool returnAfterSave = false,
+  }) => MaterialPageRoute<void>(
+    builder: (_) => ProviderScope(
+      overrides: [
+        scheduleDraftProvider.overrideWith(
+          () => ScheduleViewModel(existing: existing),
         ),
-      );
+      ],
+      child: ScheduleScreen(
+        activity: activity,
+        editing: existing != null,
+        returnAfterSave: returnAfterSave,
+      ),
+    ),
+  );
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -131,7 +140,11 @@ class ScheduleScreen extends ConsumerWidget {
                 final success = await vm.save(activity);
                 if (success && context.mounted) {
                   final messenger = ScaffoldMessenger.of(context);
-                  Navigator.of(context).popUntil((route) => route.isFirst);
+                  if (returnAfterSave) {
+                    Navigator.of(context).pop();
+                  } else {
+                    Navigator.of(context).popUntil((route) => route.isFirst);
+                  }
                   messenger.showSnackBar(
                     const SnackBar(content: Text('Đã lưu lịch hoạt động.')),
                   );

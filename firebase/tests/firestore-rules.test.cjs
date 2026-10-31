@@ -20,7 +20,7 @@ beforeEach(async () => {
   await env.clearFirestore();
   await env.withSecurityRulesDisabled(async (context) => {
     await setDoc(doc(context.firestore(), 'activities/move-walk'), {
-      title:'Đi bộ giữa giờ', groupId:'move', published:true});
+      title:'Đi bộ giữa giờ', groupId:'move', minutes:3, published:true});
     await setDoc(doc(context.firestore(), 'activities/hidden'), {title:'Hidden', groupId:'move', published:false});
   });
 });
@@ -69,4 +69,43 @@ test('owner cannot forge catalog title or rewrite creation time', async () => {
   await assertFails(setDoc(ref,{...schedule(),title:'Forged title'}));
   await setDoc(ref,schedule());
   await assertFails(updateDoc(ref,{createdAt:Timestamp.fromMillis(0),updatedAt:serverTimestamp()}));
+});
+
+const completion=(source='timer',durationSeconds=45)=>({activityId:'move-walk',title:'Đi bộ giữa giờ',
+  groupId:'move',dateKey:day,source,durationSeconds,createdAt:serverTimestamp()});
+const completionRef=(client,owner='alice')=>doc(client,`users/${owner}/completions/${id}`);
+
+test('owner can record 45 actual seconds; records cannot be overwritten',async()=>{
+  const ref=completionRef(db('alice'));
+  await assertSucceeds(setDoc(ref,completion()));
+  await assertSucceeds(getDoc(ref));
+  await assertFails(updateDoc(ref,{durationSeconds:180}));
+});
+test('deleting completion keeps the separately stored schedule',async()=>{
+  const client=db('alice');
+  await setDoc(scheduleRef(client),schedule());
+  await setDoc(completionRef(client),completion());
+  await assertSucceeds(deleteDoc(completionRef(client)));
+  const plan=await assertSucceeds(getDoc(scheduleRef(client)));
+  if(!plan.exists()) throw new Error('Schedule was lost');
+});
+test('another user cannot read, delete or create an owner completion',async()=>{
+  await setDoc(completionRef(db('alice')),completion());
+  await assertFails(getDoc(completionRef(db('bob'))));
+  await assertFails(deleteDoc(completionRef(db('bob'))));
+  await assertFails(setDoc(completionRef(db('bob')),completion()));
+});
+test('zero, excessive or nonnumeric measured duration is rejected',async()=>{
+  const ref=completionRef(db('alice'));
+  for(const duration of [0,181,'45']) await assertFails(setDoc(ref,completion('timer',duration)));
+});
+test('check-in does not invent a measured duration',async()=>{
+  const ref=completionRef(db('alice'));
+  await assertFails(setDoc(ref,completion('checkin',180)));
+  await assertSucceeds(setDoc(ref,completion('checkin',null)));
+});
+test('unknown completion source or random ID is rejected',async()=>{
+  const client=db('alice');
+  await assertFails(setDoc(completionRef(client),completion('admin',45)));
+  await assertFails(setDoc(doc(client,'users/alice/completions/random'),completion()));
 });

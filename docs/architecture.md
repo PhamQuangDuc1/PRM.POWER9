@@ -97,3 +97,21 @@ sequenceDiagram
 ```
 
 Cloud Firestore 7.1.0; database Standard ở asia-southeast1, freeTier=true theo response tạo database. Chưa bật billing. Local admin seed script dùng tài khoản Firebase CLI và thư viện firebase-tools 15.33.0 trong memory, không lưu token/khóa service-account. Script không là custom backend của ứng dụng. Catalog là nội dung sản phẩm, không tạo lịch sử cá nhân giả.
+
+## F02 — phiên thư giãn và tiến độ
+
+| Tầng | Thành phần | Trách nhiệm |
+| --- | --- | --- |
+| Model | Completion, CompletionSource, TodayOverview/TodayItem | Dữ liệu độc lập SDK; hợp nhất schedule/completion, tính done/total và durationLabel |
+| Service | SessionClock/MonotonicSessionClock | Stopwatch elapsed time, start/pause/reset; không đếm tick UI làm thời lượng |
+| Service | CompletionService/FirestoreCompletionService | Listener theo uid/ngày, transaction create-if-absent và delete chỉ completion |
+| ViewModel | SessionViewModel | Idle/running/paused/finished; elapsed cap, save/retry, chặn ghi lặp, giữ thời lượng khi lỗi |
+| ViewModel | completionActionProvider | Record/undo theo activity+date; loading/error riêng, không gọi SDK từ widget |
+| State providers | dayCompletionsProvider, completionForActivityProvider, todayOverviewProvider | Kết hợp dữ liệu có loading/empty/error, refresh theo session/day |
+| View/widgets | RelaxScreen, FoodScreen, ProgressScreen, P9CompletionButton, P9ProgressSummary | Render trạng thái; thao tác xác nhận và điều hướng, không tính thời lượng hay ghi Firebase trực tiếp |
+
+Timer refresh UI mỗi 250 ms nhưng lấy thời lượng từ Stopwatch. Pause dừng clock; resume tiếp tục; background vẫn tính elapsed, khi resumed refresh ngay và cap đúng mục tiêu. Kết thúc sớm không tự ghi đủ 3 phút. Rời tab/profile/back khi có phiên chưa ghi phải chọn Ở lại/Bỏ phiên; Ở lại giữ running/paused, Bỏ phiên reset không gọi record. Ghi nhận thành công mở Progress trên Home để Back về Home theo F02.
+
+Provider timer và completion actions theo dõi UID; generation token ngăn kết quả request cũ cập nhật state của tài khoản mới sau logout. Timer bị hủy khi provider dispose. Process bị hệ điều hành kill thì phiên chưa ghi không được tự phục hồi hoặc tự tạo completion; đây là giới hạn hiện tại, không coi như đã hoàn thành phiên.
+
+Food/check-in không đo thời lượng nên durationSeconds=null. Mỗi activity/ngày có tối đa một completion; trường hợp đã có từ thiết bị khác được giữ nguyên, không ghi đè. Home và Progress dùng cùng TodayOverview, xóa completion không thay schedule.

@@ -1,0 +1,105 @@
+
+📱 Device Status
+✅ Android device(s) connected:
+  - QV7106B02T
+
+ℹ Activated local ADB server endpoint 127.0.0.1:5037
+✓ LLM config initialized
+ℹ Retrieved Android screen dimensions: 1080x2520
+ℹ Host platform: WINDOWS
+Mobile platform: android
+Device ID: QV7106B02T
+Device width: 1080
+Device height: 2520
+
+ℹ ✅ Artemis agent initialized.
+ℹ Profile default:
+
+📃 Planner: google/gemini-3.5-flash-lite (fallback: google/gemini-3.1-flash-lite)
+🧩 Utils:
+    🔽 Hopper: google/gemini-3.5-flash-lite (fallback: google/gemini-3.1-flash-lite)
+    📝 Outputter: google/gemini-3.5-flash-lite (fallback: google/gemini-3.1-flash-lite)
+    🎬 Video Analyzer: google/gemini-3.5-flash-lite (fallback: google/gemini-3.1-flash-lite)
+    👁️ Object Detector: google/gemini-robotics-er-2-preview (fallback: google/gemini-robotics-er-2-preview)
+
+ℹ Output Description: JSON object: today_visible boolean, discover_list_visible boolean, returned_to_today boolean, observed_labels array, error string or null. Use observed UI facts only.
+
+ℹ [preflight-navigation] Starting graph with goal: `In Power9 Office Routine, inspect the Today screen (Hom nay). Open Kham pha, verify an activity list is visible, then return to Hom nay. Do not create, edit, delete, check in, log out, or start a timer. Report only what you actually observe. Stop if login is required.`
+ℹ Starting background pre-warming of Gemini API connection pools...
+[11/01/26 00:10:09] INFO     AFC is enabled with max remote      models.py:8418
+                             calls: 10.                                        
+                    WARNING  Direct use of automatic function    models.py:8422
+                             calling (AFC) in                                  
+                             AsyncModels.generate_content is not               
+                             recommended. Instead, we recommend                
+                             to use AFC in                                     
+                             AsyncChat.send_message. Similarly,                
+                             direct use of AFC in                              
+                             AsyncModels.generate_content_stream               
+                             is not recommended. Instead, we                   
+                             recommend to use AFC in                           
+                             AsyncChat.send_message_stream.                    
+ℹ [preflight-navigation] 📂 Traces output path: D:\PRM393\PRM.POWER9\.build\artemis-traces
+ℹ [preflight-navigation] 📄📂 Traces temp path: D:\PRM393\PRM.POWER9\.build\artemis-run\traces\preflight-navigation
+ℹ Database initialized at D:\PRM393\PRM.POWER9\.build\artemis-run\traces\data_engine.db
+ℹ Session directory created at D:\PRM393\PRM.POWER9\.build\artemis-run\traces\8c8fba65-84a0-45bb-bd9e-ba47ed040f6d
+ℹ Session started: 8c8fba65-84a0-45bb-bd9e-ba47ed040f6d (current step counter: 0)
+ℹ Connecting UIAutomator2 to device: QV7106B02T
+ℹ UIAutomator2 connected successfully
+ℹ UI hierarchy source: UIAutomator2
+ℹ Forcing web accessibility is disabled in AgentConfig. Skipping device environment prep...
+ℹ [preflight-navigation] Preparing app lock for: vn.power9.power9_office_routine
+ℹ Starting initial app launch for package: vn.power9.power9_office_routine
+ℹ Current foreground app: vn.power9.power9_office_routine
+ℹ App vn.power9.power9_office_routine is already in foreground
+ℹ [preflight-navigation] Invoking FlashRunner reactive loop...
+ℹ Starting Artemis Flash reactive loop for goal: In Power9 Office Routine, inspect the Today screen (Hom nay). Open Kham pha, verify an activity list is visible, then return to Hom nay. Do not create, edit, delete, check in, log out, or start a timer. Report only what you actually observe. Stop if login is required. (turn limit: 12)
+ℹ Delaying 0.4s before capturing screen state...
+ℹ --- Artemis Flash Turn 1/12 ---
+D:\PRM393\PRM.POWER9\.build\tools\artemis\.venv\Lib\site-packages\langchain_google_genai\chat_models.py:3120: UserWarning: Model 'gemini-3.5-flash-lite' uses fixed sampling defaults; the sampling parameter(s) temperature will be ignored.
+  request = self._build_request_config(
+ℹ FlashRunner received response without tool calls at turn 1: To inspect the Today screen, open Kham pha, verify the activity list, and return to Hom nay, I will ...
+ℹ --- Artemis Flash Turn 2/12 ---
+D:\PRM393\PRM.POWER9\.build\tools\artemis\.venv\Lib\site-packages\langchain_google_genai\chat_models.py:3120: UserWarning: Model 'gemini-3.5-flash-lite' uses fixed sampling defaults; the sampling parameter(s) temperature will be ignored.
+  request = self._build_request_config(
+ℹ Executing Flash tool: click({'target': 8})
+ℹ Action server 'artemis_actions' built with 15 device actions and 0 extension tools.
+[11/01/26 00:10:21] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+ℹ [ADB] input tap 540 960
+[11/01/26 00:10:22] INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+ℹ Delaying 0.4s before capturing screen state...
+ℹ Recorded step 1 for session 8c8fba65-84a0-45bb-bd9e-ba47ed040f6d
+ℹ --- Artemis Flash Turn 3/12 ---
+D:\PRM393\PRM.POWER9\.build\tools\artemis\.venv\Lib\site-packages\langchain_google_genai\chat_models.py:3120: UserWarning: Model 'gemini-3.5-flash-lite' uses fixed sampling defaults; the sampling parameter(s) temperature will be ignored.
+  request = self._build_request_config(
+ℹ Executing Flash tool: click({'target': 2})
+[11/01/26 00:10:26] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+ℹ [ADB] input tap 74 136
+                    INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+ℹ Delaying 0.4s before capturing screen state...
+ℹ Recorded step 2 for session 8c8fba65-84a0-45bb-bd9e-ba47ed040f6d
+ℹ --- Artemis Flash Turn 4/12 ---
+D:\PRM393\PRM.POWER9\.build\tools\artemis\.venv\Lib\site-packages\langchain_google_genai\chat_models.py:3120: UserWarning: Model 'gemini-3.5-flash-lite' uses fixed sampling defaults; the sampling parameter(s) temperature will be ignored.
+  request = self._build_request_config(
+ℹ Executing Flash tool: report_task_status({'explanation': "I have inspected the Today screen (Hôm nay), opened the Kham pha section, verified that the activity list is visible with various activities (such as 'Đi bộ giữa giờ', 'Kiểm tra tư thế', etc.), and successfully returned to the Today screen as requested.", 'status': 'completed'})
+ℹ Recorded step 3 for session 8c8fba65-84a0-45bb-bd9e-ba47ed040f6d
+ℹ ✅ Automation 'preflight-navigation' is success ✅
+ℹ LLM usage for session 8c8fba65-84a0-45bb-bd9e-ba47ed040f6d: 4 calls, 38003 prompt tokens, 14158 cached (cached_ratio=0.373, cache-hit calls 2); google:gemini-3.5-flash-lite: 4 calls, cached_ratio=0.373
+ℹ Session ended: 8c8fba65-84a0-45bb-bd9e-ba47ed040f6d with status: completed
+ℹ Waiting for 3 pending async tasks to complete...
+ℹ DataEngine shutdown complete. All data persisted.
+ℹ [preflight-navigation] Compiling trace FROM FOLDER: D:\PRM393\PRM.POWER9\.build\artemis-run\traces\preflight-navigation
+ℹ Found 0 images to compile
+ℹ Found 0 steps to compile
+ℹ [preflight-navigation] Video created, removing dust...
+ℹ [preflight-navigation] 📽️ Trace compiled, moving to output path 📽️
+ℹ [preflight-navigation] 📂✅ Traces located in: D:\PRM393\PRM.POWER9\.build\artemis-traces\preflight-navigation_PASS_2026-11-01T00-10-08
+ℹ UIAutomator2 client disconnected
+ℹ UIAutomator2 client disconnected
+ℹ ✅ Artemis agent stopped.

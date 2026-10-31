@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../models/today_overview.dart';
 import '../theme/p9_theme.dart';
 import '../viewmodels/activity_providers.dart';
+import '../viewmodels/completion_providers.dart';
 import '../widgets/p9_async_content.dart';
 import '../widgets/p9_button.dart';
+import '../widgets/p9_progress_summary.dart';
+import '../widgets/p9_completion_button.dart';
 import 'discover_screen.dart';
 import 'activity_detail_screen.dart';
+import 'progress_screen.dart';
 
 class TodayScreen extends ConsumerWidget {
   const TodayScreen({super.key});
@@ -22,79 +27,119 @@ class _TodayBody extends ConsumerWidget {
   const _TodayBody({required this.date});
   final String date;
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final schedules = ref.watch(daySchedulesProvider(date));
-    return P9AsyncContent(
-      value: schedules,
-      retry: () => ref.invalidate(daySchedulesProvider(date)),
-      builder: (items) => ListView(
-        padding: const EdgeInsets.all(P9Space.lg),
-        children: [
-          Text('Hôm nay', style: Theme.of(context).textTheme.headlineSmall),
-          const SizedBox(height: P9Space.sm),
-          Text(date),
-          const SizedBox(height: P9Space.xl),
-          Text(
-            'Tự chọn một vài hoạt động phù hợp với ngày làm việc của bạn.',
-            style: Theme.of(context).textTheme.bodyLarge,
+  Widget build(BuildContext context, WidgetRef ref) => P9AsyncContent(
+    value: ref.watch(todayOverviewProvider(date)),
+    retry: () {
+      ref.invalidate(daySchedulesProvider(date));
+      ref.invalidate(dayCompletionsProvider(date));
+    },
+    builder: (overview) => ListView(
+      padding: const EdgeInsets.all(P9Space.lg),
+      children: [
+        Text('Hôm nay', style: Theme.of(context).textTheme.headlineSmall),
+        const SizedBox(height: P9Space.sm),
+        Text(date),
+        const SizedBox(height: P9Space.xl),
+        P9ProgressSummary(overview: overview),
+        const SizedBox(height: P9Space.lg),
+        P9Button(
+          label: 'Khám phá hoạt động',
+          icon: Icons.explore_outlined,
+          onPressed: () => Navigator.of(context).push(
+            MaterialPageRoute<void>(builder: (_) => const DiscoverScreen()),
           ),
-          const SizedBox(height: P9Space.lg),
-          P9Button(
-            label: 'Khám phá hoạt động',
-            icon: Icons.explore_outlined,
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute<void>(builder: (_) => const DiscoverScreen()),
+        ),
+        const SizedBox(height: P9Space.sm),
+        OutlinedButton.icon(
+          icon: const Icon(Icons.insights_outlined),
+          label: const Text('Xem tiến độ'),
+          onPressed: () => Navigator.of(context).push(
+            MaterialPageRoute<void>(
+              builder: (_) => ProgressScreen(initialDay: date),
             ),
           ),
-          const SizedBox(height: P9Space.xl),
-          Text(
-            'Lịch hôm nay · ${items.length} hoạt động',
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
-          const SizedBox(height: P9Space.md),
-          if (items.isEmpty)
-            const P9Empty(
-              message: 'Bạn chưa đặt hoạt động nào hôm nay. Hãy chọn một việc nhỏ để bắt đầu.',
-            )
-          else
-            for (final schedule in items)
-              Card(
-                color: P9Colors.card,
-                elevation: 0,
-                child: ListTile(
-                  contentPadding: const EdgeInsets.all(P9Space.lg),
-                  title: Text(
-                    schedule.title,
-                    style: Theme.of(context).textTheme.titleMedium,
-                  ),
-                  subtitle: Text(schedule.timeLabel),
-                  trailing: const Icon(Icons.chevron_right),
-                  onTap: () {
-                    final activity = ref
-                        .read(activityByIdProvider(schedule.activityId))
-                        .asData
-                        ?.value;
-                    if (activity == null) {
-                      ref.invalidate(activitiesProvider);
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Đang tải chi tiết. Vui lòng thử lại.'),
-                        ),
-                      );
-                      return;
-                    }
-                    Navigator.of(context).push(
-                      MaterialPageRoute<void>(
-                        builder: (_) => ActivityDetailScreen(
-                          activity: activity,
-                          existing: schedule,
-                        ),
-                      ),
-                    );
-                  },
-                ),
+        ),
+        const SizedBox(height: P9Space.xl),
+        Text(
+          'Hoạt động hôm nay · ${overview.total}',
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
+        const SizedBox(height: P9Space.md),
+        if (overview.items.isEmpty)
+          const P9Empty(
+            message: 'Bạn chưa chọn hoạt động nào hôm nay. Hãy bắt đầu từ một việc nhỏ.',
+          )
+        else
+          for (final item in overview.items) _TodayCard(item: item, day: date),
+      ],
+    ),
+  );
+}
+
+class _TodayCard extends ConsumerWidget {
+  const _TodayCard({required this.item, required this.day});
+  final TodayItem item;
+  final String day;
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final activity = ref
+        .watch(activityByIdProvider(item.activityId))
+        .asData
+        ?.value;
+    return Card(
+      color: P9Colors.card,
+      elevation: 0,
+      child: Padding(
+        padding: const EdgeInsets.all(P9Space.lg),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            ListTile(
+              contentPadding: EdgeInsets.zero,
+              leading: Icon(
+                item.isDone ? Icons.check_circle : Icons.radio_button_unchecked,
+                color: item.isDone ? P9Colors.primary : P9Colors.secondaryText,
               ),
-        ],
+              title: Text(
+                item.title,
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              subtitle: Text(
+                '${item.schedule?.timeLabel ?? 'Thực hiện ngoài lịch'}${item.isDone ? '\n${item.completion!.durationLabel}' : ''}',
+              ),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                if (activity == null) {
+                  ref.invalidate(activitiesProvider);
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text(
+                        'Chưa tải được chi tiết. Vui lòng thử lại.',
+                      ),
+                    ),
+                  );
+                  return;
+                }
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) => ActivityDetailScreen(
+                      activity: activity,
+                      existing: item.schedule,
+                    ),
+                  ),
+                );
+              },
+            ),
+            if (activity != null) ...[
+              const SizedBox(height: P9Space.md),
+              P9CompletionButton(
+                activity: activity,
+                day: day,
+                isDone: item.isDone,
+              ),
+            ],
+          ],
+        ),
       ),
     );
   }

@@ -53,3 +53,14 @@ final daySchedulesProvider = StreamProvider.autoDispose
       if (user == null) return Stream.value(const []);
       return ref.watch(scheduleServiceProvider).watchDay(user.uid, dateKey);
     });
+
+final activityScheduleProvider = Provider.autoDispose
+    .family<AsyncValue<Schedule?>, ({String activityId, String dateKey})>(
+      (ref, key) =>
+          ref.watch(daySchedulesProvider(key.dateKey)).whenData((schedules) {
+            for (final schedule in schedules) {
+              if (schedule.activityId == key.activityId) return schedule;
+            }
+            return null;
+          }),
+    );
