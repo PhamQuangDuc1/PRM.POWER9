@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/app_user.dart';
 import '../theme/p9_theme.dart';
 import '../viewmodels/profile_viewmodel.dart';
 import '../widgets/p9_logo.dart';
+import 'firebase_demo_screen.dart';
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key, required this.user});
@@ -31,6 +33,18 @@ class ProfileScreen extends ConsumerWidget {
               Text(email, textAlign: TextAlign.center),
             ],
             const SizedBox(height: P9Space.xxl),
+            if (kDebugMode) ...[
+              OutlinedButton.icon(
+                icon: const Icon(Icons.science_outlined),
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) => const FirebaseDemoScreen(),
+                  ),
+                ),
+                label: const Text('Kiểm thử Firebase'),
+              ),
+              const SizedBox(height: P9Space.lg),
+            ],
             OutlinedButton.icon(
               style: OutlinedButton.styleFrom(
                 minimumSize: const Size.fromHeight(P9Size.buttonHeight),

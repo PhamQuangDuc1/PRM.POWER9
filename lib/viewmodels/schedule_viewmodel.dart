@@ -4,6 +4,8 @@ import '../models/activity.dart';
 import '../models/schedule.dart';
 import 'activity_providers.dart';
 import 'app_providers.dart';
+import 'observability_providers.dart';
+import '../services/telemetry_service.dart';
 
 class ScheduleDraft {
   const ScheduleDraft({
@@ -89,6 +91,15 @@ class ScheduleViewModel extends Notifier<ScheduleDraft> {
             reminderEnabled: draft.reminderEnabled,
           );
       if (!ref.mounted) return false;
+      await ref
+          .read(telemetryProvider)
+          .event(
+            existing == null
+                ? AppEvent.scheduleCreated
+                : AppEvent.scheduleUpdated,
+            activityEventParameters(activity),
+          );
+      if (!ref.mounted) return false;
       state = ScheduleDraft(
         date: draft.date,
         minuteOfDay: draft.minuteOfDay,
@@ -96,14 +107,16 @@ class ScheduleViewModel extends Notifier<ScheduleDraft> {
         saved: true,
       );
       return true;
-    } catch (_) {
+    } catch (error, stack) {
       if (!ref.mounted) return false;
+      final telemetry = ref.read(telemetryProvider);
       state = ScheduleDraft(
         date: draft.date,
         minuteOfDay: draft.minuteOfDay,
         reminderEnabled: draft.reminderEnabled,
         error: 'Chưa lưu được lịch. Kiểm tra kết nối rồi thử lại. Nội dung bạn chọn vẫn được giữ.',
       );
+      await telemetry.report(error, stack, operation: 'schedule_save');
       return false;
     }
   }

@@ -4,6 +4,8 @@ Ngày 31/10/2026, Asia/Saigon. Bản này là báo cáo tiến độ, chưa ph�
 
 Cập nhật 01/11: toàn bộ Flutter suite hiện có 23 tests đạt, analyze không issue. Ba màn S04/S09/S10 đã được bổ sung và kiểm tra Xperia, gồm mất mạng/thử lại checklist không trùng bản ghi và lưu giờ nghỉ tối 21:30. Chi tiết cùng bằng chứng tại `docs/workspace-verification.md`; log Flutter mới tại `evidence/flutter/unit-widget-workspace-tests.txt`. Các số liệu bên dưới giữ lại kết quả của mốc 31/10, không phải một lần chạy mới.
 
+Mốc tiếp theo cùng ngày: 29 tests đạt sau tích hợp Analytics/Crashlytics/Remote Config; analyze không issue, APK mới đã cài Xperia. Đổi hai giá trị Remote Config làm thay đổi hành vi thật không rebuild; Crashlytics server xác nhận fatal test crash và non-fatal completion_write/unavailable; DebugView người dùng cung cấp cho thấy sự kiện thật. Xem docs/firebase-observability.md và evidence/firebase-observability. Không tính các thao tác ADB này thành ARTEMIS runs.
+
 ## Tự động
 
 | Kiểm tra | Kết quả | Nguồn |

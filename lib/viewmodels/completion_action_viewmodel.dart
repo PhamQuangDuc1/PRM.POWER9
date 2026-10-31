@@ -5,6 +5,8 @@ import '../models/completion.dart';
 import '../models/schedule.dart';
 import 'app_providers.dart';
 import 'completion_providers.dart';
+import 'observability_providers.dart';
+import '../services/telemetry_service.dart';
 
 typedef CompletionKey = ({String activityId, String dateKey});
 final completionActionProvider = NotifierProvider.autoDispose
@@ -37,14 +39,22 @@ class CompletionActionViewModel extends Notifier<AsyncValue<void>> {
           source: source,
           durationSeconds: durationSeconds,
         ),
+    event: AppEvent.activityCompleted,
+    parameters: {...activityEventParameters(activity), 'source': source.name},
   );
   Future<bool> undo() => _run(
     (uid) => ref
         .read(completionServiceProvider)
         .delete(uid, scheduleId(key.activityId, key.dateKey)),
+    event: AppEvent.completionUndone,
+    parameters: {'activity_id': key.activityId},
   );
 
-  Future<bool> _run(Future<void> Function(String uid) action) async {
+  Future<bool> _run(
+    Future<void> Function(String uid) action, {
+    required AppEvent event,
+    required Map<String, Object> parameters,
+  }) async {
     if (state.isLoading) return false;
     final user = ref.read(sessionProvider).asData?.value;
     if (user == null) return false;
@@ -54,10 +64,13 @@ class CompletionActionViewModel extends Notifier<AsyncValue<void>> {
       await action(user.uid);
       if (!ref.mounted || generation != _generation) return false;
       state = const AsyncData(null);
+      await ref.read(telemetryProvider).event(event, parameters);
       return true;
     } catch (error, stack) {
       if (ref.mounted && generation == _generation) {
+        final telemetry = ref.read(telemetryProvider);
         state = AsyncError(error, stack);
+        await telemetry.report(error, stack, operation: 'completion_write');
       }
       return false;
     }

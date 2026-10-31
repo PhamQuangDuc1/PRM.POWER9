@@ -7,6 +7,8 @@ import '../models/completion.dart';
 import '../services/session_clock.dart';
 import 'app_providers.dart';
 import 'completion_providers.dart';
+import 'observability_providers.dart';
+import '../services/telemetry_service.dart';
 
 enum SessionPhase { idle, running, paused, finished }
 
@@ -176,13 +178,20 @@ class SessionViewModel extends Notifier<SessionState> {
           );
       if (!ref.mounted || generation != _generation) return false;
       state = state.copyWith(saving: false, saved: true);
+      await ref.read(telemetryProvider).event(AppEvent.activityCompleted, {
+        ...activityEventParameters(activity),
+        'source': 'timer',
+        'duration_seconds': state.elapsedSeconds,
+      });
       return true;
-    } catch (_) {
+    } catch (error, stack) {
       if (ref.mounted && generation == _generation) {
+        final telemetry = ref.read(telemetryProvider);
         state = state.copyWith(
           saving: false,
           error: 'Chưa ghi nhận được phiên. Thời lượng vẫn được giữ, bạn có thể thử lại.',
         );
+        await telemetry.report(error, stack, operation: 'session_save');
       }
       return false;
     }

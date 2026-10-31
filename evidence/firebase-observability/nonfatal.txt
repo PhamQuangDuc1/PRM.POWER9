@@ -1,0 +1,12 @@
+--------- beginning of main
+V/FA      (22358): Connecting to remote service
+D/FA      (22358): Connected to remote service
+V/FA      (22358): Processing queued up service tasks: 1
+V/FA      (22358): Logging telemetry for logEvent from database
+V/FA      (22358): Inactivity, disconnecting from the service
+D/FirebaseCrashlytics(22358): disk worker: log non-fatal event to persistence
+V/FA      (22358): Connecting to remote service
+D/FA      (22358): Connected to remote service
+V/FA      (22358): Processing queued up service tasks: 1
+V/FA      (22358): Logging telemetry for logEvent from database
+V/FA      (22358): Inactivity, disconnecting from the service

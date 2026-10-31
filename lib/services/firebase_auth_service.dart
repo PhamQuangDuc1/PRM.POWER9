@@ -3,14 +3,19 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 import '../models/app_user.dart';
 import 'auth_service.dart';
+import 'telemetry_service.dart';
 
 class FirebaseAuthService implements AuthService {
-  FirebaseAuthService({FirebaseAuth? auth, GoogleSignIn? google})
-    : _auth = auth ?? FirebaseAuth.instance,
-      _google = google ?? GoogleSignIn.instance;
+  FirebaseAuthService({
+    FirebaseAuth? auth,
+    GoogleSignIn? google,
+    this.telemetry,
+  }) : _auth = auth ?? FirebaseAuth.instance,
+       _google = google ?? GoogleSignIn.instance;
 
   final FirebaseAuth _auth;
   final GoogleSignIn _google;
+  final TelemetryService? telemetry;
   Future<void>? _googleReady;
 
   Future<void> _initializeGoogle() async {
@@ -44,9 +49,10 @@ class FirebaseAuthService implements AuthService {
           'Chưa thể xác nhận tài khoản Google. Vui lòng thử lại.',
         );
       }
-      await _auth.signInWithCredential(
+      final credential = await _auth.signInWithCredential(
         GoogleAuthProvider.credential(idToken: token),
       );
+      await telemetry?.identify(credential.user?.uid);
     } on GoogleSignInException catch (error) {
       throw AuthFailure(
         error.code == GoogleSignInExceptionCode.canceled

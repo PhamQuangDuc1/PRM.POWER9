@@ -7,6 +7,7 @@ import '../viewmodels/discover_viewmodel.dart';
 import '../widgets/p9_activity_card.dart';
 import '../widgets/p9_async_content.dart';
 import 'activity_detail_screen.dart';
+import '../viewmodels/observability_providers.dart';
 
 class DiscoverScreen extends ConsumerStatefulWidget {
   const DiscoverScreen({super.key});
@@ -92,6 +93,16 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
                           style: Theme.of(context).textTheme.titleLarge,
                         ),
                         const SizedBox(height: P9Space.lg),
+                        if (ref
+                                .watch(appConfigProvider)
+                                .value
+                                .discoverMaxMinutes <
+                            60) ...[
+                          Text(
+                            'Danh mục hiện giới hạn hoạt động tối đa ${ref.watch(appConfigProvider).value.discoverMaxMinutes} phút.',
+                          ),
+                          const SizedBox(height: P9Space.md),
+                        ],
                         for (final group in data.entries)
                           ExpansionTile(
                             key: PageStorageKey(group.key),

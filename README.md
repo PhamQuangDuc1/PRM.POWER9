@@ -9,8 +9,9 @@ Tên Android: **Power9 Office Routine**. Icon dùng logo P9 gốc trên nền tr
 - Mã app: `lib/screens/` → `lib/viewmodels/` → `lib/services/`; `lib/models/` độc lập SDK; token và widget ở `lib/theme/`, `lib/widgets/`.
 - Cách chạy: `flutter pub get`, `flutter run -d <device-id>`; kiểm tra: `flutter analyze lib test`, `flutter test`.
 - Xem [kiến trúc](docs/architecture.md), [truy vết Lab 2](docs/design-traceability.md), [kế hoạch hoàn thiện](docs/lab3-completion-plan.md), [Analytics plan](docs/analytics-plan.md).
-- Đã chạy trên Sony SOV41 Android 11: đăng nhập, thêm/đổi/hủy lịch, check-in/undo, timer thật pause/resume/background, ghi nhận sớm/đủ phiên và xóa completion giữ schedule. Các màn phụ S04/S09/S10 và sáu dịch vụ còn cần hoàn thiện.
-- Kiểm tra mới nhất: analyze sạch, 21 test Flutter và 14 test Firestore Rules đạt. Xem [test report](docs/test-report.md); chưa chạy ARTEMIS.
+- Đã chạy trên Sony SOV41 Android 11: đăng nhập, thêm/đổi/hủy lịch, check-in/undo, timer thật pause/resume/background, ghi nhận sớm/đủ phiên và xóa completion giữ schedule; S04 Kết nối, S09 checklist/offline retry, S10 nghỉ tối/đổi giờ đã có flow thật.
+- Analytics đã có sự kiện trên DebugView, Crashlytics server có fatal test crash và non-fatal lỗi mất mạng, Remote Config hai tham số đã đổi hành vi không rebuild. Xem [bằng chứng ba dịch vụ](docs/firebase-observability.md). Tài khoản → Kiểm thử Firebase chỉ hiện trong bản debug; test crash cần xác nhận và sẽ đóng app.
+- Kiểm tra mới nhất: analyze sạch, 29 test Flutter và 14 test Firestore Rules đạt. Xem [test report](docs/test-report.md); ARTEMIS mới qua preflight, chưa đủ suite/runs. FCM, PDF/Storage và bộ nộp còn cần hoàn thiện.
 - `pubspec.lock` giữ dependency đã resolve. CLI: FlutterFire 1.4.1. Các lệnh Firebase cần đăng nhập tài khoản có quyền dự án. Không commit token/credential đăng nhập CLI.
 
 Ứng dụng Android tiếng Việt giúp nhân viên văn phòng tự chọn, lên lịch và ghi nhận hoạt động ngắn trong ngày làm việc. Ba persona chính ngang nhau: Huy 28 tuổi, Mai 24 tuổi và Linh 39 tuổi; đều là persona giả định.

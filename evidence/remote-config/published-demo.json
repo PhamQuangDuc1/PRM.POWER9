@@ -1,0 +1,10 @@
+{
+  "projectId": "power9-office-se180724",
+  "mode": "demo",
+  "verifiedAt": "2026-10-31T20:24:28.090Z",
+  "version": "2",
+  "parameters": {
+    "discover_max_minutes": "5",
+    "connection_checkin_enabled": "false"
+  }
+}

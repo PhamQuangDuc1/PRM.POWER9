@@ -12,6 +12,7 @@ import '../widgets/p9_completion_button.dart';
 import 'workspace_screen.dart';
 import 'recovery_screen.dart';
 import 'progress_screen.dart';
+import '../viewmodels/observability_providers.dart';
 import 'schedule_screen.dart';
 
 class ActivityDetailScreen extends ConsumerWidget {
@@ -24,6 +25,7 @@ class ActivityDetailScreen extends ConsumerWidget {
   final Schedule? existing;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    ref.watch(activityViewEventProvider(activity));
     if (existing == null &&
         (activity.id == 'space-desk' || activity.id == 'posture-check')) {
       return WorkspaceScreen(activity: activity);
@@ -65,7 +67,8 @@ class ActivityDetailScreen extends ConsumerWidget {
           const SizedBox(height: P9Space.lg),
           Text(activity.note, style: Theme.of(context).textTheme.bodyMedium),
           const SizedBox(height: P9Space.xl),
-          if (activity.groupId == 'social') ...[
+          if (activity.groupId == 'social' &&
+              ref.watch(appConfigProvider).value.connectionCheckinEnabled) ...[
             P9AsyncContent(
               value: ref.watch(currentDayProvider),
               retry: () => ref.invalidate(currentDayProvider),

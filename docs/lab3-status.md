@@ -2,6 +2,8 @@
 
 ## Bổ sung 01/11/2026
 
+Mốc mới nhất: commit trước 291ff48 đã có trong Git; thay đổi Analytics/Crashlytics/Remote Config hiện chưa commit/push. Tổng Flutter suite 29 tests đạt, analyze không issue, APK mới đã cài Xperia. Remote Config hai tham số đã đổi hành vi thật không rebuild và trả defaults; Analytics đã có sự kiện trên DebugView do người dùng xác nhận bằng ảnh; Crashlytics reporting API xác nhận một fatal test crash và một non-fatal từ lỗi mất mạng thật. Xem docs/firebase-observability.md cho bằng chứng và giới hạn xác minh. Phần lịch sử dưới đây ghi số test của từng mốc trước.
+
 S04 Kết nối có hai hoạt động đi bộ/trò chuyện; S09 checklist thực tế; S10 nội dung nghỉ tối và form lịch quay về nguồn. Flutter analyze không issue, 23 tests đạt. Xperia đã kiểm chứng check-in/undo kết nối và nhánh checklist mất mạng → giữ 3/3 → thử lại → một completion server; xem `docs/workspace-verification.md`. Các kiểm thử mới là ADB smoke, không thay yêu cầu ARTEMIS 10 cases ×3 runs. Chưa commit/push các thay đổi hiện tại.
 
 ## Đã kiểm chứng
@@ -25,7 +27,7 @@ S04 Kết nối có hai hoạt động đi bộ/trò chuyện; S09 checklist th�
 
 ## Chưa hoàn thành
 
-Các màn S04/S09/S10, PDF/Storage, FCM, Analytics, Crashlytics, Remote Config, ARTEMIS, PR review và bộ nộp. Kết nối còn là danh sách, chưa có đủ hai activity/nhánh ghi nhận như đặc tả. Profile chưa có khu demo sáu dịch vụ. Figma Login/Profile và fidelity chưa đồng bộ/kiểm tra đầy đủ. Nhắc theo giờ hiện chỉ lưu cấu hình, chưa phát notification. Không có lịch sử hoàn thành seed giả hoặc nút bỏ qua xác thực.
+PDF/Storage, FCM, bộ ARTEMIS đầy đủ, PR review và bộ nộp. Analytics đã tích hợp 9 loại event, còn bổ sung bằng chứng params/đủ sự kiện và auth events trên SDK mới. S04/S09/S10 đã triển khai/kiểm thử; Profile có khu debug cho Remote Config/Crashlytics, chưa đủ sáu dịch vụ. Figma Login/Profile và fidelity chưa đồng bộ/kiểm tra đầy đủ. Nhắc theo giờ hiện chỉ lưu cấu hình, chưa phát notification. Không có lịch sử hoàn thành seed giả hoặc nút bỏ qua xác thực.
 
 Người dùng đã commit/push mốc Auth/F01/F03, commit `76bbfa5`. Phần F02 hiện tại chưa commit/push. Chưa đổi main hoặc merge thay người dùng.
 

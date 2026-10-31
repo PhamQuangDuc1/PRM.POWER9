@@ -1,0 +1,47 @@
+--------- beginning of main
+V/FA      (22358): Connecting to remote service
+D/FA      (22358): Connected to remote service
+V/FA      (22358): Processing queued up service tasks: 1
+V/FA      (22358): Logging telemetry for logEvent from database
+V/FA      (22358): Inactivity, disconnecting from the service
+D/FirebaseCrashlytics(22358): disk worker: log non-fatal event to persistence
+V/FA      (22358): Connecting to remote service
+D/FA      (22358): Connected to remote service
+V/FA      (22358): Processing queued up service tasks: 1
+V/FA      (22358): Logging telemetry for logEvent from database
+V/FA      (22358): Inactivity, disconnecting from the service
+V/FA      (22358): Connecting to remote service
+D/FA      (22358): Connected to remote service
+V/FA      (22358): Processing queued up service tasks: 1
+V/FA      (22358): Logging telemetry for logEvent from database
+V/FA      (22358): Inactivity, disconnecting from the service
+V/FA      (22358): Connecting to remote service
+D/FA      (22358): Connected to remote service
+V/FA      (22358): Processing queued up service tasks: 1
+D/FirebaseCrashlytics(22358): Updated Crashlytics Rollout State
+V/FA      (22358): Logging telemetry for logEvent from database
+V/FA      (22358): Inactivity, disconnecting from the service
+--------- beginning of crash
+E/AndroidRuntime(22358): FATAL EXCEPTION: main
+E/AndroidRuntime(22358): Process: vn.power9.power9_office_routine, PID: 22358
+E/AndroidRuntime(22358): io.flutter.plugins.firebase.crashlytics.[REDACTED_ID]: This is a test crash caused by calling .crash() in Dart.
+E/AndroidRuntime(22358): 	at io.flutter.plugins.firebase.crashlytics.FlutterFirebaseCrashlyticsPlugin.crash$lambda$0(FlutterFirebaseCrashlyticsPlugin.kt:82)
+E/AndroidRuntime(22358): 	at io.flutter.plugins.firebase.crashlytics.FlutterFirebaseCrashlyticsPlugin$$ExternalSyntheticLambda12.run(D8$$SyntheticClass:0)
+E/AndroidRuntime(22358): 	at android.os.Handler.handleCallback(Handler.java:938)
+E/AndroidRuntime(22358): 	at android.os.Handler.dispatchMessage(Handler.java:99)
+E/AndroidRuntime(22358): 	at android.os.Looper.loop(Looper.java:368)
+E/AndroidRuntime(22358): 	at android.app.ActivityThread.main(ActivityThread.java:7710)
+E/AndroidRuntime(22358): 	at java.lang.reflect.Method.invoke(Native Method)
+E/AndroidRuntime(22358): 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:592)
+E/AndroidRuntime(22358): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:954)
+D/FirebaseCrashlytics(22358): Handling uncaught exception "io.flutter.plugins.firebase.crashlytics.[REDACTED_ID]: This is a test crash caused by calling .crash() in Dart." from thread main
+D/FirebaseCrashlytics(22358): appQualitySessionId: [REDACTED_ID]
+D/FirebaseCrashlytics(22358): Opening a new session with ID [REDACTED_ID]
+D/FirebaseCrashlytics(22358): Crashlytics automatic data collection ENABLED by API.
+D/FirebaseCrashlytics(22358): Logging app exception event to Firebase Analytics
+D/FirebaseCrashlytics(22358): Sending report through Google DataTransport: [REDACTED_ID]
+V/FA      (22358): Connecting to remote service
+V/FA      (22358): Recording user engagement, ms: 315064
+D/FirebaseCrashlytics(22358): Crashlytics report successfully enqueued to DataTransport: [REDACTED_ID]
+D/FirebaseCrashlytics(22358): Deleted report file: /data/user/0/vn.power9.power9_office_routine/files/.crashlytics.v3/vn.power9.power9_office_routine/priority-reports/[REDACTED_ID]
+D/FirebaseCrashlytics(22358): Completed exception processing. Invoking default exception handler.

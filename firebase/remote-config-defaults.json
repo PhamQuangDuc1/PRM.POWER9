@@ -1,0 +1,14 @@
+{
+  "parameters": {
+    "discover_max_minutes": {
+      "defaultValue": {"value": "60"},
+      "valueType": "NUMBER",
+      "description": "Maximum activity duration shown in Discover (5–60 minutes). Invalid values use 60 in the client."
+    },
+    "connection_checkin_enabled": {
+      "defaultValue": {"value": "true"},
+      "valueType": "BOOLEAN",
+      "description": "Show direct check-in on social activity details. Scheduling remains available."
+    }
+  }
+}

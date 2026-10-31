@@ -2,6 +2,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../services/auth_service.dart';
 import 'app_providers.dart';
+import 'observability_providers.dart';
+import '../services/telemetry_service.dart';
 
 final loginViewModelProvider = NotifierProvider<LoginViewModel, LoginState>(
   LoginViewModel.new,
@@ -22,6 +24,10 @@ class LoginViewModel extends Notifier<LoginState> {
     state = const LoginState(loading: true);
     try {
       await ref.read(authServiceProvider).signInWithGoogle();
+      if (!ref.mounted) return;
+      await ref.read(telemetryProvider).event(AppEvent.login, {
+        'method': 'google',
+      });
       if (!ref.mounted) return;
       state = const LoginState();
     } on AuthFailure catch (error) {
