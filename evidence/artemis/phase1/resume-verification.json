@@ -1,0 +1,34 @@
+{
+  "dateLocal": "2026-11-01",
+  "flutterTests": {
+    "passed": 36,
+    "failed": 0,
+    "source": "flutter test --no-pub, current session"
+  },
+  "flutterAnalyze": {
+    "issues": 0,
+    "elapsedSeconds": 95,
+    "source": "flutter analyze lib test, current session"
+  },
+  "offlineRunnerTests": {
+    "passed": 8,
+    "failed": 0,
+    "source": "pytest test_device_preconditions.py test_trace_observations.py"
+  },
+  "rulesTests": {
+    "passed": 18,
+    "rerunThisSession": false
+  },
+  "phase1VerifiedUniqueRuns": 7,
+  "phase1PlannedRuns": 9,
+  "pytestPassedVerifiedUniqueRuns": 6,
+  "delayedTerminalAuditedRuns": 1,
+  "modelFailedRunIds": [
+    "TC04[2]",
+    "TC04[3]"
+  ],
+  "deviceReturnedHome": true,
+  "daemonShutdownHttpStatus": 202,
+  "runtimeFlutterChanged": false,
+  "billingEnabledByThisSession": false
+}

@@ -31,3 +31,8 @@ firebase-debug.*.log
 node_modules/
 firestore-debug.log
 ui-debug.log
+
+# Python E2E runner generated files
+__pycache__/
+.pytest_cache/
+*.pyc

@@ -1,6 +1,16 @@
 # ARTEMIS — chuẩn bị, chưa thực thi AI E2E
 
+## Mốc hiện hành tối 01/11/2026 — đã thực thi phase 1, chưa hoàn tất
+
+Đã tiếp tục bốn lượt sau khi người dùng xác nhận trực tiếp việc gửi ảnh/cây Power9 sang Google Gemini. Phase 1 hiện 7/9 run ID được xác minh: 6 pytest passes hợp lệ +1 audit terminal ghi chậm; TC04[2]/[3] task failed, có HTTP 503/UNAVAILABLE trong log. Không đổi model hoặc bật billing để né lỗi. Runner có 8 offline regression tests đạt; Flutter chạy lại 36/36 và analyze sạch. App đã trả Home, daemon đã shutdown. Trạng thái/checkpoint/trace IDs ở docs/CONTINUE.md và evidence/artemis/phase1/summary.json. Các phần tạm dừng bên dưới là lịch sử.
+
 ## Cập nhật 01/11/2026
+
+- Điểm dừng theo yêu cầu người dùng: phase1 có 5/9 lượt đạt (TC11 3, TC03 1, TC04 1), bốn lượt còn lại chưa hoàn tất. Daemon đã tắt, không tự resume. Có lỗi tiền điều kiện hierarchy giữa các ca cần xử lý; chưa quy thành lỗi app. Checkpoint: evidence/artemis/phase1/checkpoint.json và docs/CONTINUE.md. Các đoạn dưới ghi lại quá trình chuẩn bị/hiệu chỉnh, không có nghĩa hiện vẫn đang chạy.
+
+- Đã chuẩn bị e2e_test/phase1 bằng Python SDK: TC11 bốn tab, TC03 tìm kiếm rỗng/reset, TC04 validation thiếu giờ/native time picker cancel; mỗi ca 3 lượt. Collect đủ 9 tests, kiểm tra cú pháp đạt; chạy mặc định 9 skipped đúng chủ đích (không gọi AI). Đây chưa phải kết quả thiết bị.
+- Lượt thực thi phase1 bị automatic approval review chặn trước khi chạy vì ảnh/cây giao diện sẽ gửi sang Gemini và cần người dùng xác nhận rõ payload/đích xử lý. Đã hỏi xác nhận, chưa tính bất kỳ ca nào pass. Daemon localhost chỉ được khởi động chuẩn bị; không gửi task phase1.
+- Người dùng sau đó đã đồng ý gửi ảnh/cây giao diện Power9 sang Gemini cho phase1. Đã bắt đầu chạy thật. Phát hiện endpoint SDK thiếu output và Flash bỏ qua Outputter; adapter yêu cầu terminal tool trả JSON quan sát, không suy ra pass từ completed. Đối chiếu UI dùng UIAutomator2 cùng backend vì adb uiautomator dump riêng gặp exit 137. Các lượt hiệu chỉnh được giữ trong evidence, phân biệt với batch cuối.
 
 - Key local đã xác thực bằng API chỉ liệt kê model; không lưu secret vào tài liệu, evidence hoặc mã nguồn được Git theo dõi.
 - Kiểm tra Cloud Billing API trả `billingEnabled: false` cho `power9-office-se180724`.

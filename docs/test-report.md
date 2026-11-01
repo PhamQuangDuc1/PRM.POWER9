@@ -1,5 +1,15 @@
 # Power9 — kết quả kiểm chứng Auth/F01/F02/F03
 
+## Kiểm tra tiếp tục tối 01/11/2026
+
+- Flutter chạy lại: 36/36 tests đạt; flutter analyze lib test không issue. 18 Rules tests là kết quả đã có ở mốc FCM/PDF, không chạy lại trong phiên này.
+- Runner ARTEMIS: 8 tests cục bộ đạt cho khóa/ngủ, hierarchy lọc package/retry, hủy picker bỏ dở và race terminal trace commit. Không dùng các tests này thay E2E.
+- Bốn run ID tiếp tục: TC03[3] pytest đạt; TC03[2] pytest fail do terminal trace chưa commit lúc đọc, audit cùng trace sau đó xác minh JSON và final post-action UI (giữ nguyên failure lịch sử). TC04[2]/[3] task failed, output=null, không tính đạt; log ignored có HTTP 503/UNAVAILABLE. Có validation/picker trong trace chưa chứng minh đã hủy thành công.
+- Tổng phase 1: **7/9 run ID xác minh** (6 pytest passes hợp lệ +1 delayed-terminal audit), 15 attempts có trace, 8 attempts không tính đạt. Setup errors trước khi gửi model không nằm trong 15 attempts. Không phải toàn bộ >=10 ca ×3, không phải pass rate toàn Lab 3. TC04/TC11 ở phase 1 chỉ bao phủ một phần case đầy đủ trong test-plan.
+- Summary và từng trace ID: evidence/artemis/phase1/summary.json. Checkpoint cũ nhầm TC03[1] với lượt bị audit loại đã được sửa sang trace dc7bc0e4; không sửa/xóa kết quả lịch sử. Power9 đã về Home; daemon được tắt sau thử nghiệm.
+
+Phần dưới lưu lịch sử các mốc cũ.
+
 Ngày 31/10/2026, Asia/Saigon. Bản này là báo cáo tiến độ, chưa phải kết quả toàn bộ Lab 3.
 
 Cập nhật 01/11: toàn bộ Flutter suite hiện có 23 tests đạt, analyze không issue. Ba màn S04/S09/S10 đã được bổ sung và kiểm tra Xperia, gồm mất mạng/thử lại checklist không trùng bản ghi và lưu giờ nghỉ tối 21:30. Chi tiết cùng bằng chứng tại `docs/workspace-verification.md`; log Flutter mới tại `evidence/flutter/unit-widget-workspace-tests.txt`. Các số liệu bên dưới giữ lại kết quả của mốc 31/10, không phải một lần chạy mới.

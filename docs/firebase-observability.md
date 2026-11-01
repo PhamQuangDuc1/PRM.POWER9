@@ -18,6 +18,10 @@
 | activity_completed | check-in/checklist/timer được xác nhận | activity_id, group_id, source; timer có duration_seconds |
 | completion_undone | delete completion thành công | activity_id |
 | config_refreshed | fetch/activate cấu hình thành công | không có |
+| report_generated | tạo bytes PDF thành công | item_count, file_size_kb |
+| export_report | upload PDF thành công | item_count, file_size_kb |
+
+Hai event báo cáo được bổ sung ở mốc FCM/PDF sau 29-test milestone. Có mã và unit tests không có nghĩa cả hai đã xuất hiện trên DebugView; Storage production đang khóa theo Spark nên chưa xác minh export_report từ upload thật.
 
 Các event save phản ánh hành động được xác nhận, không dùng event count để đếm duy nhất completion trong database.
 

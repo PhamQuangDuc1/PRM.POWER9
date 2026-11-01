@@ -1,5 +1,22 @@
 # Lab 3 — mốc khởi tạo 31/10/2026
 
+## Trạng thái hiện hành — tiếp tục tối 01/11/2026
+
+Các đoạn mốc cũ bên dưới là lịch sử, không phải danh sách việc còn thiếu hiện tại.
+
+| Hạng mục | Hiện trạng | Cần đóng tiếp |
+| --- | --- | --- |
+| Flutter/MVVM, 10 màn và ba flow | Đã triển khai, có smoke Xperia | Fidelity 360/412, TalkBack và đồng bộ Figma Login/Profile |
+| Auth/Firestore | Có đăng nhập/dữ liệu thật, Rules ownership/schema | Minh chứng hủy đăng nhập, offline/logout và cách ly tài khoản trên máy |
+| Analytics/Crashlytics/Remote Config | Có bằng chứng dịch vụ thật | Bổ sung đủ event/params và các lỗi bắt buộc theo đề |
+| FCM/PDF | Console ba trạng thái và tap đã kiểm chứng; PDF thật đã lưu | Quyền bị từ chối và ARTEMIS native interaction còn thiếu |
+| Storage | Có uploader/Rules/emulator, upload flag=false | Chưa có upload production; giữ Spark theo quyết định người dùng, cần phương án được giảng viên chấp nhận |
+| Flutter/Rules | Chạy lại 36/36 Flutter tests và analyze sạch ngày 01/11; Rules 18/18 ở mốc trước | Không dùng thay E2E |
+| ARTEMIS | Phase 1 xác minh 7/9: 6 pytest passes hợp lệ +1 delayed-terminal audit; TC04[2]/[3] failed | Hoàn tất hai lượt lỗi, >=10 ca ×3, native/error/analytics và exploratory 15–30 phút |
+| Review và bộ nộp | Chưa đóng | Review PR >=5 findings / >=2 nhóm / >=3 accepted fixes; report 8–12 trang, slide 12–15 trang, video 5–10 phút |
+
+Runner đã thêm guard khóa/ngủ trước khi mở Activity, chờ hierarchy có giới hạn, hủy Flutter picker còn mở và chờ terminal trace commit. Tám regression tests cục bộ đạt; không gọi model trong các tests này. Xperia đã trả Home và daemon đã tắt sau bốn lượt. Lỗi HTTP 503/UNAVAILABLE có trong log, chưa quy thành lỗi app. Không tự bật billing, commit hoặc push.
+
 ## Bổ sung 01/11/2026
 
 Mốc FCM/PDF: 36 Flutter tests đạt, analyze sạch. Notification Center đã nhận Test message từ Firebase Console ở foreground/background/terminated trên Xperia; native tap mở Home, inbox lưu thông báo. Các lượt API riêng mở Progress. PDF thật đã lưu Download trên Xperia và pull/QA đúng dữ liệu ngày 01/11, 0/2 lịch, giữ giờ 21:30. Storage uploader/Rules có code và 18 emulator tests (16 Firestore +2 Storage) đã đạt, metadata rules đã deploy; chưa có bucket/upload production. Người dùng chọn giữ Spark, không bật billing; upload được khóa bằng report_upload_enabled=false và cần trao đổi với thầy, không tuyên bố Storage đã hoàn thành. Chi tiết ở docs/fcm-pdf-storage.md.

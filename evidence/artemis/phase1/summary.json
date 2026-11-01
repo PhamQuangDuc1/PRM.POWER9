@@ -1,0 +1,198 @@
+{
+  "scope": "Phase 1 only: search/reset, missing-time validation and Flutter picker cancel, four tabs. Not the full TC04/TC11 test-plan cases or native Android interaction.",
+  "plannedRuns": 9,
+  "verifiedUniqueRuns": 7,
+  "remaining": [
+    {
+      "case": "TC04",
+      "repetition": 2
+    },
+    {
+      "case": "TC04",
+      "repetition": 3
+    }
+  ],
+  "recordedAttempts": 15,
+  "unverifiedOrFailedAttemptsRetained": 8,
+  "verified": [
+    {
+      "case": "TC03",
+      "repetition": 1,
+      "traceId": "dc7bc0e4-83f1-406d-95e0-ba40ceef6c69",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC03",
+      "repetition": 2,
+      "traceId": "9236e5ec-4494-414f-9467-f55ff65fb7f4",
+      "pytestPassed": false,
+      "verified": true,
+      "delayedTerminalAudit": true
+    },
+    {
+      "case": "TC03",
+      "repetition": 3,
+      "traceId": "7e0d6509-818e-4063-89fc-6567d88774c2",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC04",
+      "repetition": 1,
+      "traceId": "67640119-96b7-4c9e-90ed-ead468de0536",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC11",
+      "repetition": 1,
+      "traceId": "26f5bbe8-296a-4479-832b-13d7d179ac36",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC11",
+      "repetition": 2,
+      "traceId": "d8da098c-4298-4541-a588-eb3103e04c64",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC11",
+      "repetition": 3,
+      "traceId": "8dbd6324-db3c-4a7d-a238-19eae087e684",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    }
+  ],
+  "attempts": [
+    {
+      "case": "TC03",
+      "repetition": 1,
+      "traceId": "6e9e9059-8bac-4cfc-96c9-cb4cf9c9f194",
+      "pytestPassed": false,
+      "verified": false,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC03",
+      "repetition": 1,
+      "traceId": "aa058207-f302-458a-aabf-d18936b2c0af",
+      "pytestPassed": true,
+      "verified": false,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC03",
+      "repetition": 1,
+      "traceId": "dc7bc0e4-83f1-406d-95e0-ba40ceef6c69",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC03",
+      "repetition": 2,
+      "traceId": "9236e5ec-4494-414f-9467-f55ff65fb7f4",
+      "pytestPassed": false,
+      "verified": true,
+      "delayedTerminalAudit": true
+    },
+    {
+      "case": "TC03",
+      "repetition": 2,
+      "traceId": "a8f066be-76bf-43c3-a746-fba623c9c800",
+      "pytestPassed": false,
+      "verified": false,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC03",
+      "repetition": 3,
+      "traceId": "7e0d6509-818e-4063-89fc-6567d88774c2",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC04",
+      "repetition": 1,
+      "traceId": "67640119-96b7-4c9e-90ed-ead468de0536",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC04",
+      "repetition": 2,
+      "traceId": "3a7072c8-4250-4f6e-9235-f1e7050839f9",
+      "pytestPassed": false,
+      "verified": false,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC04",
+      "repetition": 3,
+      "traceId": "41d1f2d4-b071-4d55-ac89-7ce27ca7d4a1",
+      "pytestPassed": false,
+      "verified": false,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC11",
+      "repetition": 1,
+      "traceId": "144a4b56-130c-4381-90c7-6781e4b56872",
+      "pytestPassed": false,
+      "verified": false,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC11",
+      "repetition": 1,
+      "traceId": "26f5bbe8-296a-4479-832b-13d7d179ac36",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC11",
+      "repetition": 1,
+      "traceId": "3b83fc58-ef86-431a-82a7-f69f87cb970a",
+      "pytestPassed": false,
+      "verified": false,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC11",
+      "repetition": 1,
+      "traceId": "dd9f214e-304a-4e90-9c30-8b08341872cb",
+      "pytestPassed": false,
+      "verified": false,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC11",
+      "repetition": 2,
+      "traceId": "d8da098c-4298-4541-a588-eb3103e04c64",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC11",
+      "repetition": 3,
+      "traceId": "8dbd6324-db3c-4a7d-a238-19eae087e684",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    }
+  ],
+  "note": "A delayed-terminal audit does not rewrite the original pytest failure. Setup failures without model trace IDs are excluded from attempt counts. This is not an overall Lab 3 pass rate."
+}

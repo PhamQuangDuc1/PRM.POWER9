@@ -2,6 +2,8 @@
 
 ## Cập nhật 01/11/2026
 
+Rà soát tiếp tục tối 01/11: mã hiện có 11 event trong AppEvent, bổ sung `report_generated` sau khi tạo PDF và `export_report` sau khi upload thành công; cả hai gửi item_count/file_size_kb. Upload production đang khóa theo Spark nên chưa có bằng chứng export_report từ upload thật. Các tham số thực tế khác theo bảng trong firebase-observability.md; bảng bên dưới là kế hoạch ban đầu, không dùng để khẳng định đã gửi các params chưa có trong mã. `screen_view` riêng từng Flutter route chưa triển khai. Chưa đủ DebugView evidence cho cả 11 event.
+
 Đã instrument 9 event: login, logout, search, view_activity, schedule_created, schedule_updated, activity_completed, completion_undone, config_refreshed. Bảng params/trigger thực tế và bằng chứng nằm ở docs/firebase-observability.md. DebugView do người dùng cung cấp đã có config_refreshed/view_activity/activity_completed; cần bổ sung đủ ảnh params/event cho bộ nộp. screen_view hiện là auto event Android Activity, chưa phải screen tracking riêng cho từng Flutter route. export_report vẫn chưa triển khai; bảng dưới giữ lại kế hoạch ban đầu, không mô tả tất cả trạng thái hiện tại.
 
 Các event dự kiến cho Power9, 31/10/2026. Chưa instrument và chưa có DebugView evidence. Không ghi tên, email, ghi chú hoặc query tự do; `activity_id` và `group_id` là mã danh mục kiểm soát. `user_id` dùng UID sau sign-in và clear khi sign-out, không dùng email.
