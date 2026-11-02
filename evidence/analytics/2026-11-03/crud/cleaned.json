@@ -1,0 +1,14 @@
+{
+  "phase": "cleaned",
+  "dateKey": "2026-11-03",
+  "source": "read-only Firestore API, exact current test-user document paths",
+  "scheduleExists": false,
+  "completionExists": false,
+  "minuteOfDay": null,
+  "createdAt": null,
+  "updatedAt": null,
+  "completionSource": null,
+  "durationSeconds": null,
+  "ownerUidExported": false,
+  "credentialsExported": false
+}

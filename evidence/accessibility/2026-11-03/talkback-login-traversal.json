@@ -1,0 +1,122 @@
+{
+  "dateLocal": "2026-11-03",
+  "source": "TalkBack bound on Xperia; injected right-swipe gestures; actual Android accessibility focus snapshots",
+  "modelCalls": 0,
+  "spokenAudioManuallyAssessed": false,
+  "automationSuppressesAccessibilityServices": false,
+  "steps": [
+    {
+      "rightSwipe": 1,
+      "focused": [
+        {
+          "text": "",
+          "description": "Logo Power9",
+          "class": "android.widget.ImageView",
+          "clickable": false,
+          "enabled": true,
+          "selected": false,
+          "accessibilityFocused": true,
+          "heading": false,
+          "liveRegion": 0
+        }
+      ]
+    },
+    {
+      "rightSwipe": 2,
+      "focused": [
+        {
+          "text": "",
+          "description": "Logo Power9",
+          "class": "android.widget.ImageView",
+          "clickable": false,
+          "enabled": true,
+          "selected": false,
+          "accessibilityFocused": true,
+          "heading": false,
+          "liveRegion": 0
+        }
+      ]
+    },
+    {
+      "rightSwipe": 3,
+      "focused": [
+        {
+          "text": "",
+          "description": "Logo Power9",
+          "class": "android.widget.ImageView",
+          "clickable": false,
+          "enabled": true,
+          "selected": false,
+          "accessibilityFocused": true,
+          "heading": false,
+          "liveRegion": 0
+        }
+      ]
+    },
+    {
+      "rightSwipe": 4,
+      "focused": [
+        {
+          "text": "",
+          "description": "Logo Power9",
+          "class": "android.widget.ImageView",
+          "clickable": false,
+          "enabled": true,
+          "selected": false,
+          "accessibilityFocused": true,
+          "heading": false,
+          "liveRegion": 0
+        }
+      ]
+    },
+    {
+      "rightSwipe": 5,
+      "focused": [
+        {
+          "text": "",
+          "description": "Logo Power9",
+          "class": "android.widget.ImageView",
+          "clickable": false,
+          "enabled": true,
+          "selected": false,
+          "accessibilityFocused": true,
+          "heading": false,
+          "liveRegion": 0
+        }
+      ]
+    },
+    {
+      "rightSwipe": 6,
+      "focused": [
+        {
+          "text": "",
+          "description": "Logo Power9",
+          "class": "android.widget.ImageView",
+          "clickable": false,
+          "enabled": true,
+          "selected": false,
+          "accessibilityFocused": true,
+          "heading": false,
+          "liveRegion": 0
+        }
+      ]
+    },
+    {
+      "rightSwipe": 7,
+      "focused": [
+        {
+          "text": "",
+          "description": "Logo Power9",
+          "class": "android.widget.ImageView",
+          "clickable": false,
+          "enabled": true,
+          "selected": false,
+          "accessibilityFocused": true,
+          "heading": false,
+          "liveRegion": 0
+        }
+      ]
+    }
+  ],
+  "loginButtonReached": false
+}

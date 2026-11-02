@@ -1,5 +1,10 @@
 # Power9 — kết quả kiểm chứng Auth/F01/F02/F03
 
+## Kiểm chứng bổ sung 03/11/2026
+
+Auth mất mạng/thử lại đã xác minh trên Xperia: Android không có mạng mặc định, app báo lỗi, private Home không mở, kết nối và tài khoản ban đầu được khôi phục. Analytics bổ sung native SDK evidence theo marker/time, không thay DebugView server. Đang hoàn tất kiểm tra hai tài khoản và trợ năng; kết quả chi tiết ở docs/lab3-verification-2026-11-03.md. Hướng dẫn sử dụng/demo từng flow ở docs/lab3-demo-guide.md. Không gọi thêm ARTEMIS, không bật billing hoặc đồng bộ Figma; video/thầy để sau.
+
+
 ## CRUD lịch đã xác minh trên Xperia
 
 Flutter48/48 đạt, analyzer sạch; APK CRUD mới đã build/cài. Năm tests mới bao phủ ack/chống bấm lặp, failure/retry, đổi tài khoản khi đang xóa, telemetry lỗi và UI cancel/failure/retry giữ completion. Demo native có API server đọc đúng doc kiểm thử theo uid (không xuất uid): create, read, update10:30 giữ createdAt, cancel delete không đổi updatedAt, delete lịch giữ completion và cleanup đúng dữ liệu do lượt thử tạo. Evidence evidence/flows/crud/native-crud-result.json và phase snapshots/ảnh. Ba harness attempts ban đầu giữ riêng; không tính các lỗi nhập liệu/hint thành app pass. Không gọi model, không tăng30/33ARTEMIS. Không đồng bộ Figma theo yêu cầu; video/thầy để sau.

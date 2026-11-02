@@ -1,6 +1,8 @@
 # Gói Lab 3 Power9 Office Routine
 
-Đóng gói 03/11/2026; bằng chứng kiểm thử đến 02/11/2026. Đây là snapshot mã, bản cài và bằng chứng thật; các tiêu chí còn thiếu được khai báo riêng.
+Hướng dẫn demo hiện hành: [sử dụng app và các flow](../../docs/lab3-demo-guide.md). Kiểm chứng bổ sung ngày03/11: [Analytics/Auth/trợ năng](../../docs/lab3-verification-2026-11-03.md); Auth offline/retry đạt, kiểm tra hai tài khoản đang chờ người dùng chọnB, TalkBack đầy đủ chưa đóng. PDF/slide lưu mốc02/11; đọc checkpoint03/11 cho tiến độ bổ sung. Không gọi thêm ARTEMIS.
+
+Đóng gói 03/11/2026; bằng chứng kiểm thử đến 03/11/2026. Đây là snapshot mã, bản cài và bằng chứng thật; các tiêu chí còn thiếu được khai báo riêng.
 
 ## Bản trình bày hiện hành
 

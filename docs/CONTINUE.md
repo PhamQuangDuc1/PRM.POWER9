@@ -1,5 +1,10 @@
 # Mốc tiếp tục Power9 Office Routine
 
+## Kiểm chứng bổ sung 03/11/2026
+
+Auth mất mạng/thử lại đã xác minh trên Xperia: Android không có mạng mặc định, app báo lỗi, private Home không mở, kết nối và tài khoản ban đầu được khôi phục. Analytics bổ sung native SDK evidence theo marker/time, không thay DebugView server. Đang hoàn tất kiểm tra hai tài khoản và trợ năng; kết quả chi tiết ở docs/lab3-verification-2026-11-03.md. Hướng dẫn sử dụng/demo từng flow ở docs/lab3-demo-guide.md. Không gọi thêm ARTEMIS, không bật billing hoặc đồng bộ Figma; video/thầy để sau.
+
+
 ## CRUD lịch cá nhân đã bổ sung và demo thật ngày 02/11
 
 Người dùng yêu cầu hoàn thiện phần demo trước, video và trao đổi với giảng viên để sau; sau đó nói rõ **không cần đồng bộ Figma**. Không thực hiện Figma write; chỉ đọc metadata/library rồi dừng. Không tạo ảnh mới vì người dùng chỉ muốn UI đẹp hơn; không thay toàn bộ theme trong đợt CRUD này.

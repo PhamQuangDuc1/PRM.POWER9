@@ -1,6 +1,6 @@
 {
   "packagedDateLocal": "2026-11-03",
-  "evidenceCutoffDateLocal": "2026-11-02",
+  "evidenceCutoffDateLocal": "2026-11-03",
   "purpose": "Lab 3 submission snapshot; see report for incomplete requirements",
   "containsRawArtemisTraces": false,
   "containsModelCredentials": false,
@@ -227,8 +227,8 @@
     },
     {
       "path": "docs/CONTINUE.md",
-      "bytes": 20236,
-      "sha256": "a09b862dc2cb53b52f0fa0326b2cd2fe8a692cda6992463102ea8ff6c3ff4c09"
+      "bytes": 20877,
+      "sha256": "2a73b04852e305b9786388a18c815befb5e62e832ede8c06bbb4734b39fec62e"
     },
     {
       "path": "docs/data-model.md",
@@ -301,6 +301,11 @@
       "sha256": "e56c50efd40279fab01a6efeac6a8ac27dc5a608f3c779914f60760f235280bd"
     },
     {
+      "path": "docs/lab3-demo-guide.md",
+      "bytes": 12159,
+      "sha256": "7ea46ef9d9fd7410733be96b12e07eac3da7396ee3faa6e12e2d803837bb1312"
+    },
+    {
       "path": "docs/lab3-e2e-results.md",
       "bytes": 3182,
       "sha256": "71679c5d16625b597d4f8da87441e163976f77ea920ddc0e7d01e1e5c6f8519c"
@@ -317,8 +322,13 @@
     },
     {
       "path": "docs/lab3-status.md",
-      "bytes": 12279,
-      "sha256": "b71e923e528b1150dd0102fb147179ce88229c74089387395b541ea8aebc76ba"
+      "bytes": 12920,
+      "sha256": "5619bb3c1896e1966437d5d7f91322daca0799637bde65b9b27c18e3a06ce809"
+    },
+    {
+      "path": "docs/lab3-verification-2026-11-03.md",
+      "bytes": 5811,
+      "sha256": "aa401e39aeeac82b426a3cd609dbe17f8a9400a765243bb4d30e2e9f04438be3"
     },
     {
       "path": "docs/language-conventions.md",
@@ -367,8 +377,8 @@
     },
     {
       "path": "docs/test-report.md",
-      "bytes": 12227,
-      "sha256": "70ee896ee3b8fbf46343b241f015b7f7863f6bf82194aa0dd797e151833ae3f2"
+      "bytes": 12868,
+      "sha256": "f31eab3e9ba51e628a3d35f06a985adc3ecee2f75f01b2892e923739a7ed7163"
     },
     {
       "path": "docs/workspace-verification.md",
@@ -459,6 +469,81 @@
       "path": "e2e_test/trace_observations.py",
       "bytes": 3635,
       "sha256": "430cdaa9f5d7d4fe83e90865251d40bbd9690f04758da7669ab07ba62ba8019b"
+    },
+    {
+      "path": "evidence/accessibility/2026-11-03/talkback-login-traversal.json",
+      "bytes": 3036,
+      "sha256": "e5ccf9bbe7ac8699e1e6e0da143017655489d9b3a2402e0525b347506edc95a8"
+    },
+    {
+      "path": "evidence/analytics/2026-11-03/crud/before-xperia.png",
+      "bytes": 534810,
+      "sha256": "4fe75dbc9c14367c5b877aed4802dd27163c907c83b0cc0c6ad4d2db7d944f7b"
+    },
+    {
+      "path": "evidence/analytics/2026-11-03/crud/before.json",
+      "bytes": 367,
+      "sha256": "a6c2408a1b1824bb0c60c654d775983606db86613626dcac5f69d47921422b4a"
+    },
+    {
+      "path": "evidence/analytics/2026-11-03/crud/cancelled.json",
+      "bytes": 414,
+      "sha256": "0136dd752ca15ab39d8380e0bb961d306814345c9c901d8ba0fdc5ee1afac8e7"
+    },
+    {
+      "path": "evidence/analytics/2026-11-03/crud/cleaned.json",
+      "bytes": 368,
+      "sha256": "c76eedae8e1e21c853ddd40f525296f5df9925c51abbfbedd863ca97a3dd6535"
+    },
+    {
+      "path": "evidence/analytics/2026-11-03/crud/completion-retained.json",
+      "bytes": 428,
+      "sha256": "8041c32b1d66fb4f74a877a47600c7ef4e50f3e31c62668d533fff1ba10abf0d"
+    },
+    {
+      "path": "evidence/analytics/2026-11-03/crud/confirmation-xperia.png",
+      "bytes": 569642,
+      "sha256": "453fd23b13d435c234166cfca6d412a9db76c600e5232d89d899e8d2e58a313d"
+    },
+    {
+      "path": "evidence/analytics/2026-11-03/crud/created-xperia.png",
+      "bytes": 530767,
+      "sha256": "9f13d482cda2598830a278b9cd44bee6a4938756a28f9e3a2e97df3b9c9b2a8b"
+    },
+    {
+      "path": "evidence/analytics/2026-11-03/crud/created.json",
+      "bytes": 411,
+      "sha256": "70cebab1e2f6b1a0a533c6a74a4b2f43531d464bd8049333a2fc0714b988f84b"
+    },
+    {
+      "path": "evidence/analytics/2026-11-03/crud/deleted.json",
+      "bytes": 372,
+      "sha256": "fd3f0d9db7805b10ffd2582ba8340f94a28f444ca6d66143ff3a2f1672ed9926"
+    },
+    {
+      "path": "evidence/analytics/2026-11-03/crud/native-crud-result.json",
+      "bytes": 414,
+      "sha256": "9482df5b869459ebe7eb7ceaaa168c5addf69fccb9bf7e2f2a1434e4d328304b"
+    },
+    {
+      "path": "evidence/analytics/2026-11-03/crud/native-crud-resumed-result.json",
+      "bytes": 318,
+      "sha256": "d0073c425b2eb23244240d2ccd5e0dccd2aadcb4d12547d6afc29d8b2a29a330"
+    },
+    {
+      "path": "evidence/analytics/2026-11-03/crud/updated-xperia.png",
+      "bytes": 523485,
+      "sha256": "5c76573bab8ec75e3295929bb74e5874f45ac12cff038c4873037be271b264c7"
+    },
+    {
+      "path": "evidence/analytics/2026-11-03/crud/updated.json",
+      "bytes": 412,
+      "sha256": "4d4fe07df6445ee79ad800b06dc6363a599de98068bb3873fd28a7c66c4d15dc"
+    },
+    {
+      "path": "evidence/analytics/2026-11-03/native-sdk-events.json",
+      "bytes": 2018,
+      "sha256": "dd2d5bc9d40d69f6738b63461775dea8e3429432d93395e85abca61d21e4c95e"
     },
     {
       "path": "evidence/artemis/billing-preflight-deadline.json",
@@ -2121,6 +2206,31 @@
       "sha256": "f304f436c49cc1b63e072dc2723c443435acd6bbc5fca78e7854412d53c9bf6c"
     },
     {
+      "path": "evidence/auth/2026-11-03/account-a/before.json",
+      "bytes": 367,
+      "sha256": "a6c2408a1b1824bb0c60c654d775983606db86613626dcac5f69d47921422b4a"
+    },
+    {
+      "path": "evidence/auth/2026-11-03/account-a/completion-retained.json",
+      "bytes": 427,
+      "sha256": "2eb61430df4e6cf518ac885c74d1e6db90203f39be5724509c56c1f89ae7ef39"
+    },
+    {
+      "path": "evidence/auth/2026-11-03/offline-login-mobile-setting-attempt.json",
+      "bytes": 399,
+      "sha256": "29076ac6f32ad1b5c00f4df0bdef053ca45aaaf1c59c712176bebba38610df16"
+    },
+    {
+      "path": "evidence/auth/2026-11-03/offline-login-precondition-attempt.json",
+      "bytes": 399,
+      "sha256": "d36540ecea916e4a63438c8d454ef13a587a690c158d5136e26c8c81f6b820a5"
+    },
+    {
+      "path": "evidence/auth/2026-11-03/offline-login.json",
+      "bytes": 669,
+      "sha256": "005bf8379778db03496b9a907c8db789b49a21b0e8e703d57351716f1b0bc39b"
+    },
+    {
       "path": "evidence/bootstrap/login-xperia.png",
       "bytes": 160546,
       "sha256": "8e5f5ce448dd302da96ba66711cef1ed5a41719671b455c78e025ad869d89cde"
@@ -3067,8 +3177,8 @@
     },
     {
       "path": "output/lab3/DEMO-RUNBOOK.md",
-      "bytes": 3817,
-      "sha256": "0fa464f84c4804af62d03cd3213ae8b336033568677f18038baf419089f5a453"
+      "bytes": 4579,
+      "sha256": "68c57ac69f7d7e2d179385aaa2f8fefc53627795bc4d38f1638490af3f350c37"
     },
     {
       "path": "output/lab3/designer-slide-notes.json",
@@ -3112,8 +3222,8 @@
     },
     {
       "path": "output/lab3/README.md",
-      "bytes": 4877,
-      "sha256": "786d59d47c0e1a616a5f037b2457904bfa599e76f4fac0ce0a8f11e5be24f989"
+      "bytes": 5322,
+      "sha256": "7182439272b7ad06c4e1b8aaceb09f00455de6d7dd35a8d0b57e1e11decc3afd"
     },
     {
       "path": "output/lab3/slide-content.json",
@@ -3137,8 +3247,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7676,
-      "sha256": "bb8074e1d01064cbf82d1b2fe4a134558bc523cbc6099e579552f78339724d6b"
+      "bytes": 7863,
+      "sha256": "a4e3c7a09767f8c83f22631b68eee9f59da293ee2f62bcde906efeca2c6cfabc"
     },
     {
       "path": "scripts/lab3/build_designer_deck.mjs",
@@ -3149,6 +3259,11 @@
       "path": "scripts/lab3/build_submission_pdfs.py",
       "bytes": 27982,
       "sha256": "c039caca301404713b828666e27d2c99d429e75c3497123665b4183d15f1d64c"
+    },
+    {
+      "path": "scripts/lab3/check_analytics_sdk.py",
+      "bytes": 3007,
+      "sha256": "1a8d1cb905c06e07e0d3282579b46217adb7082a604752abe9bd2c478a389c01"
     },
     {
       "path": "scripts/lab3/check_crud_server.cjs",
@@ -3173,7 +3288,7 @@
     {
       "path": "scripts/lab3/package_submission.py",
       "bytes": 2492,
-      "sha256": "f7a0b430ad9d2da03ba9f85c96da073c52241575fd47186c3a32cbd7d3054d3f"
+      "sha256": "f24fa37a8bb63682923cda82ad14b696a129e3d6e7e8fe6d9e8f343d537359f5"
     },
     {
       "path": "scripts/lab3/smoke_schedule_crud.py",

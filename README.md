@@ -59,3 +59,5 @@ Kịch bản có lời nói cho 12 slide, phân bổ 10 phút, demo 5 phút, ba 
 ## Hồ sơ Lab 3 trước hạn nộp 02/11
 
 Báo cáo 10 trang và slide 15 trang nằm trong [gói cục bộ](output/lab3/README.md). [Review mã](ai/code-review/lab3-review.md) có ba sửa runtime và tests tương ứng; [hướng dẫn commit và PR](docs/lab3-commit-and-pr-guide.md) dành cho người dùng tự commit/push. APK/video/ZIP lớn giữ cục bộ, không commit; chưa có link video nộp bài. Kết quả E2E mới nhất ở [summary](evidence/artemis/lab3-summary.json); không suy ra collect/test code là pass.
+
+Hướng dẫn sử dụng và demo từng flow Lab3: [docs/lab3-demo-guide.md](docs/lab3-demo-guide.md). Kiểm chứng bổ sung: [03/11/2026](docs/lab3-verification-2026-11-03.md).

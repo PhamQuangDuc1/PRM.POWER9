@@ -26,7 +26,7 @@ def main():
     entries=[]
     for p in sorted(selected):
         entries.append({'path':p.relative_to(ROOT).as_posix(),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
-    manifest={'packagedDateLocal':'2026-11-03','evidenceCutoffDateLocal':'2026-11-02','purpose':'Lab 3 submission snapshot; see report for incomplete requirements','containsRawArtemisTraces':False,'containsModelCredentials':False,'files':entries}
+    manifest={'packagedDateLocal':'2026-11-03','evidenceCutoffDateLocal':'2026-11-03','purpose':'Lab 3 submission snapshot; see report for incomplete requirements','containsRawArtemisTraces':False,'containsModelCredentials':False,'files':entries}
     manifest_path=OUT/'manifest.json';manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     selected.add(manifest_path)
     target=OUT/'Power9_Lab3_Bundle.zip'

@@ -1,3 +1,13 @@
+# Demo và hướng dẫn sử dụng Power9
+
+Hướng dẫn thao tác hiện hành: [Sử dụng app và demo từng luồng](../../docs/lab3-demo-guide.md).
+
+Tài liệu đó bao gồm chuẩn bị, F01/F02/F03, CRUD lịch, timer, các màn bổ sung, PDF, Auth/privacy, Firebase, TalkBack và kịch bản demo gọn8–10phút. Có phân biệt phần làm được trên máy với Storage production/ARTEMIS còn phụ thuộc. Video được để sau; không cần quay mới dùng được hướng dẫn.
+
+---
+
+Phần dưới là kịch bản quay video dự kiến trước đó, lưu để dùng sau. Các số liệu/giới hạn phải đối chiếu mốc kiểm chứng hiện hành trước khi quay.
+
 # Demo Lab 3 Power9 Office Routine
 
 Mục tiêu: quay một video liên tục 7–9 phút, cho thấy app thật và Firebase Console. Đây là kịch bản quay, chưa phải minh chứng đã quay. Không dùng ảnh cũ để giả video thao tác hiện tại.
