@@ -21,6 +21,7 @@ OfficeNotification? notificationFromMessage(
       (message.data.isEmpty ? publicRecipient : null);
   if (owner is! String || owner.isEmpty) return null;
   final now = DateTime.now();
+  final rawDay = message.data['date_key'];
   return OfficeNotification(
     id:
         message.messageId ??
@@ -33,7 +34,7 @@ OfficeNotification? notificationFromMessage(
     title: message.notification?.title ?? 'Power9 Office Routine',
     body: message.notification?.body ?? 'Bạn có một thông báo mới.',
     target: message.data['target'] == 'progress' ? 'progress' : 'today',
-    dateKey: notificationDay(message.data['date_key'] as String?, now),
+    dateKey: notificationDay(rawDay is String ? rawDay : null, now),
     receivedAt: now,
   );
 }
