@@ -11,6 +11,7 @@ import '../widgets/p9_async_content.dart';
 import '../widgets/p9_progress_summary.dart';
 import 'discover_screen.dart';
 import 'report_screen.dart';
+import 'activity_detail_screen.dart';
 
 class ProgressScreen extends ConsumerStatefulWidget {
   const ProgressScreen({super.key, required this.initialDay});
@@ -97,6 +98,32 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen> {
                         item.schedule?.timeLabel ?? 'Chưa chọn giờ',
                       ),
                       leading: const Icon(Icons.radio_button_unchecked),
+                      trailing: const Icon(Icons.chevron_right),
+                      onTap: () {
+                        final activity = ref
+                            .read(activityByIdProvider(item.activityId))
+                            .asData
+                            ?.value;
+                        if (activity == null) {
+                          ref.invalidate(activitiesProvider);
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                'Chưa tải được chi tiết. Vui lòng thử lại.',
+                              ),
+                            ),
+                          );
+                          return;
+                        }
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => ActivityDetailScreen(
+                              activity: activity,
+                              existing: item.schedule,
+                            ),
+                          ),
+                        );
+                      },
                     ),
                 ],
                 const SizedBox(height: P9Space.xl),

@@ -61,7 +61,7 @@ progress=f'ARTEMIS hiện có {verified}/30 run ID được xác minh trong 10 c
 sections=[
 ('Báo cáo Lab 3 Power9 Office Routine',[
  'Ứng dụng Android hỗ trợ nhân viên văn phòng chọn, lên lịch và tự ghi nhận hoạt động ngắn trong ngày. Bản Flutter kết nối Firebase, kế thừa 10 màn và ba flow từ Lab 2. Tài liệu này trình bày kiến trúc, tích hợp, kết quả kiểm chứng và các giới hạn còn lại; ảnh được giữ ngày chụp để tránh nhầm với lần thử mới.',
- 'Mốc sửa lỗi hiện hành: 43/43 Flutter tests đạt, flutter analyze không issue và APK debug arm64 đã build thành công. 18 Rules tests đạt ở mốc FCM/PDF trước đó. FCM Console đã được kiểm chứng ở foreground, background và terminated; PDF thật đã được lưu trên Xperia. Không dùng số test Dart hoặc emulator để thay yêu cầu ARTEMIS.',
+ 'Mốc sửa lỗi hiện hành: 48/48 Flutter tests đạt, flutter analyze không issue và APK debug arm64 đã build thành công. 18 Rules tests đạt ở mốc FCM/PDF trước đó. FCM Console đã được kiểm chứng ở foreground, background và terminated; PDF thật đã được lưu trên Xperia. Không dùng số test Dart hoặc emulator để thay yêu cầu ARTEMIS.',
  progress,
  'Storage production chưa được xác minh: dự án giữ Spark theo lựa chọn của người dùng, report_upload_enabled=false. Năm findings đã đưa vào draft PR #3, ba fixes runtime có commit riêng ac4b35b / 38b52bc / e595956. Video được để cuối sau khi chốt UI/UX. Exploratory và các mục bằng chứng thiếu phải được bổ sung trước khi tuyên bố hoàn thành toàn bộ đề.'
 ],None),
@@ -85,6 +85,7 @@ sections=[
 ],None),
 ('F01 và F03 lưu lịch có phục hồi',[
  'Trên Xperia, lượt kiểm chứng ngày 31/10 bắt đầu từ không có lịch. Người dùng bật nhắc nhưng chưa chọn giờ thì form báo lỗi, không tạo schedule. Sau khi tắt nhắc và lưu, Home có đúng một lịch đi bộ. Đổi giờ thành 23:01 vẫn giữ một document và createdAt ban đầu; chọn Hủy sau khi sửa không thay updatedAt/time/reminder trên server.',
+ 'Ngày 02/11 đã bổ sung Xóa lịch hoạt động với xác nhận, lỗi/retry và guard đổi tài khoản. Demo CRUD thật trên Xperia đã đối chiếu Firestore: thêm, xem, đổi thành 10:30 giữ document/createdAt, hủy xóa không thay updatedAt, xóa lịch giữ completion; chỉ hoàn tác dữ liệu do lượt thử tạo. Evidence tại evidence/flows/crud.',
  'ScheduleViewModel giữ ngày, giờ và trạng thái nhắc trong draft. Khi đang saving, thao tác bị chặn để tránh gửi lặp. Service xác nhận ghi rồi ViewModel mới trả success. Nhánh lỗi cho phép retry từ cùng draft. Đây là luồng ghi bất đồng bộ thật, khác với snapshot của prototype Lab 2.',
  'Ảnh bên dưới lấy từ trace TC16 lượt 1 ngày 01/11 trên bản debug mới; lịch đi bộ đã đổi thành 11:00 trong kiểm thử. JSON server tương ứng ở evidence/flows/firestore-server-verification.json. ARTEMIS lưu lịch tương lai và sửa lịch được ghi riêng, không cộng ADB smoke vào số lần ARTEMIS.'
 ],('evidence/artemis/latest-home-trace-xperia.jpg','Home từ trace TC16 lượt 1 ngày 01/11/2026: hai lịch thật, giờ đi bộ 11:00. Ảnh không được chụp mới sau khi tắt daemon.')),
@@ -99,7 +100,7 @@ sections=[
  'SDK Messaging 17 dùng register/onRegistered và Android installation-id opt-in. Ngày 02/11 đã tắt riêng thông báo Power9 trong Android 11, xác minh lỗi quyền/nút thử lại, rồi khôi phục quyền như cũ và về Home. Đây là smoke cục bộ, không phải ARTEMIS hay bằng chứng runtime permission Android 13. R01 xử lý date_key sai kiểu; R02 ngăn refresh cũ ghi đè inbox mới. Evidence tại evidence/fcm.'
 ],('evidence/fcm/console-three-states-inbox-xperia.png','Inbox chứa Test message Console ở ba trạng thái, Xperia ngày 01/11/2026.')),
 ('Analytics Crashlytics và Remote Config',[
- 'Analytics có 11 AppEvent với tham số theo danh sách cho phép, không gửi tên, email hoặc từ khóa tự do. DebugView đã có config_refreshed, view_activity và activity_completed ở mốc trước. TC16 xác minh 1/3 lượt view_activity(activity_id=move-walk) bằng log SDK FA-SVC lọc theo mã bản debug ngẫu nhiên và thời điểm task. Không xuất raw log hoặc dùng log Dart tự in làm bằng chứng SDK. Hai lượt model thất bại; chưa đủ ảnh tham số cho cả 11 event.',
+ 'Analytics có 12 AppEvent với tham số theo danh sách cho phép, không gửi tên, email hoặc từ khóa tự do. DebugView đã có config_refreshed, view_activity và activity_completed ở mốc trước. TC16 xác minh 1/3 lượt view_activity(activity_id=move-walk) bằng log SDK FA-SVC lọc theo mã bản debug ngẫu nhiên và thời điểm task. Không xuất raw log hoặc dùng log Dart tự in làm bằng chứng SDK. Hai lượt model thất bại; chưa đủ ảnh tham số cho cả 11 event.',
  'Crashlytics reporting API đã xác nhận một FATAL test crash và một NON_FATAL completion_write/unavailable từ lỗi mất mạng thật, có user identifier và custom keys. Evidence công khai chỉ giữ boolean cho định danh. Test crash có xác nhận, chỉ ở debug. Lỗi gửi theo operation/code chuẩn hóa để tránh lộ exception message riêng tư.',
  'Remote Config đã thay hai hành vi không rebuild: discover_max_minutes 60→5 và connection_checkin_enabled true→false, rồi trở về defaults. Fetch thất bại giữ cache/default; debug interval 0, release một giờ. report_upload_enabled=false là cờ bổ sung để giữ Spark. JSON template và đối chiếu nằm ở evidence/remote-config và docs/firebase-observability.md.'
 ],('evidence/remote-config/demo-xperia.png','Giá trị Remote Config 5/false đã kích hoạt, Xperia ngày 01/11/2026.')),
@@ -122,7 +123,7 @@ for index,(title,paragraphs,fig) in enumerate(sections):
  story += [p(f'{index+1:02d}  {title}',TITLE)]
  for text in paragraphs: story.append(p(html.escape(text)))
  if index==0:
-  story += [Spacer(1,14),table([['Thành phần','Mốc kiểm chứng'],['Flutter','43 tests đạt; analyze sạch; APK build được'],['Firebase Rules','18 tests đạt ở mốc trước'],['FCM PDF RC Crashlytics','Có bằng chứng thật; giới hạn ghi trong từng mục'],['ARTEMIS',f'{verified}/30 run ID xác minh; chưa đóng toàn bộ yêu cầu'],['Storage và video','Chưa hoàn tất; PR #3 có ba fix commits']], [135,360])]
+  story += [Spacer(1,14),table([['Thành phần','Mốc kiểm chứng'],['Flutter','48 tests đạt; analyze sạch; APK build được'],['Firebase Rules','18 tests đạt ở mốc trước'],['FCM PDF RC Crashlytics','Có bằng chứng thật; giới hạn ghi trong từng mục'],['ARTEMIS',f'{verified}/30 run ID xác minh; chưa đóng toàn bộ yêu cầu'],['Storage và video','Chưa hoàn tất; PR #3 có ba fix commits']], [135,360])]
  if index==2:
   story += [Spacer(1,12), table([['Contract','Trách nhiệm chính'],['ActivityService','Đọc catalog chung; tìm/lọc qua ViewModel'],['ScheduleService','Lưu hoặc cập nhật một lịch theo hoạt động và ngày'],['CompletionService','Record, undo và xóa completion độc lập schedule'],['NotificationService','Binding theo uid, nhận message và route tap'],['ReportGenerator / ReportUploadService','Tạo bytes PDF tách biệt thao tác Storage'],['TelemetryService / AppConfigService','Event, error report và defaults/cache/fetch']], [185,310])]
  if index==3:
@@ -153,7 +154,7 @@ SLIDES=[
  ('Remote Config','Đổi hai hành vi không rebuild',['discover_max_minutes: 60 → 5.','connection_checkin_enabled: true → false.','Đã fetch lại defaults; fetch lỗi giữ cache.','Ảnh là lần demo 01/11, không phải cấu hình hiện tại.'],'evidence/remote-config/demo-xperia.png'),
  ('PDF và giới hạn Storage','Xuất đúng dữ liệu ngày đang xem',['PDF thật đã lưu bằng Android Save as PDF.','Font Việt, giờ lịch và duration thực từ dữ liệu.','Uploader/Rules có mã, progress và retry.','Storage production chưa đạt; Spark, upload=false.'],None),
  ('Kiểm thử ARTEMIS','Kết quả đọc từ trace và assertions',[f'{verified}/30 run ID đang được xác minh trong 10 ca đã chuẩn bị.','Giữ failed attempts và trace IDs; không đếm lại ca trùng.','Native print preview cần trace của Android print spooler.',f'Analytics TC16 đạt {analytics_count}/3; Pro bị chặn quota ngày500.'],None),
- ('Review và sửa lỗi','Năm findings có vị trí mã',['R01 payload date sai kiểu; R02 inbox refresh trả về lệch thứ tự.','R03 logout lỗi khiến messaging bị tắt.','Ba sửa runtime có regression; Flutter 43/43, analyze sạch.','R04/R05 sửa runner. PR và ba fix commits riêng còn phải đóng.'],None),
+ ('Review và sửa lỗi','Năm findings có vị trí mã',['R01 payload date sai kiểu; R02 inbox refresh trả về lệch thứ tự.','R03 logout lỗi khiến messaging bị tắt.','Ba sửa runtime có regression; Flutter 48/48, analyze sạch.','R04/R05 sửa runner. PR và ba fix commits riêng còn phải đóng.'],None),
  ('Bài học và phần cần đóng','Tách lỗi app khỏi lỗi công cụ và provider',['Demo: đăng nhập → F01 → F02 → F03 → PDF.','Console: FCM, DebugView, Crashlytics và Remote Config.','Còn ba lượt lỗi; Pro bị chặn quota; Storage, PR và video Console chưa đóng.','GitHub: PhamQuangDuc1/PRM.POWER9.'],None),
 ]
 c=canvas.Canvas(str(OUT/'Power9_Lab3_Slides.pdf'),pagesize=(1280,720));c.setTitle('Power9 Lab 3 Presentation');c.setAuthor('Power9')

@@ -1,6 +1,6 @@
 # Gói Lab 3 Power9 Office Routine
 
-Cập nhật 02/11/2026. Đây là snapshot mã, bản cài và bằng chứng thật; các tiêu chí còn thiếu được khai báo riêng.
+Đóng gói 03/11/2026; bằng chứng kiểm thử đến 02/11/2026. Đây là snapshot mã, bản cài và bằng chứng thật; các tiêu chí còn thiếu được khai báo riêng.
 
 ## Bản trình bày hiện hành
 
@@ -23,9 +23,13 @@ Deck giữ logo gốc và ảnh app thật, có notes và nguồn theo slide; b�
 
 Năm findings/dispositions có trong PR body và ai/code-review/lab3-review.md. Không giả định human approval hoặc merge.
 
+## CRUD lịch đã hoàn thiện
+
+Đã demo thêm/xem/sửa/xóa lịch trên Xperia và đối chiếu Firestore: sửa10:30 giữ ID/createdAt, hủy dialog không ghi, xóa lịch giữ history. Chỉ cleanup dữ liệu do smoke tạo. Bằng chứng: evidence/flows/crud/native-crud-result.json. Không gọi model, không cộng vào ARTEMIS. Source tái hiện opt-in: scripts/lab3/smoke_schedule_crud.py --run-device-writes, cần POWER9_CRUD_TEST_ACCOUNT_FILE trỏ tới JSON ignored chứa projectId/recipientUid và biến thiết bị. Không đồng bộ Figma theo yêu cầu; deviation đã ghi trong docs/design-traceability.md.
+
 ## Kết quả kiểm chứng
 
-43/43 Flutter tests đạt, analyzer sạch, APK debug arm64 cuối đã build/cài. Hai tests render 14 widget màn ở 360/412 dp, chữ 1,5× và kiểm tra nhãn/vùng chạm Android; không thay TalkBack hoặc fidelity Figma. 18 Rules tests là mốc trước, không phải chạy lại ngày 02/11.
+48/48 Flutter tests đạt, analyzer sạch, APK debug arm64 cuối đã build/cài. Hai tests render 14 widget màn ở 360/412 dp, chữ 1,5× và kiểm tra nhãn/vùng chạm Android; không thay TalkBack hoặc fidelity Figma. 18 Rules tests là mốc trước, không phải chạy lại ngày 02/11.
 
 ARTEMIS có 11 ca ×3 run ID; 30/33 xác minh =29 pytest pass hợp lệ +1 delayed-terminal audit. Giữ 59 attempts, gồm failures. TC10[3] và TC16[2–3] chưa đạt. Pro cũ bị quota, 0 bước UI; 926,82 giây chờ không tính là khám phá. Người dùng cho phép tổng 50 lượt nhưng auto-review chặn resume theo lệnh dừng cũ; chưa có model task mới. Không đổi key/model hoặc billing.
 

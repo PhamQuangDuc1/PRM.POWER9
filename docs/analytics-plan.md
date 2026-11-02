@@ -1,5 +1,9 @@
 # Lab 3 — Analytics plan trước instrumentation
 
+## Bổ sung ngày 02/11
+
+Mã hiện có12AppEvent, thêm schedule_deleted sau khi server xác nhận xóa lịch, tham số activity_id (mã danh mục, không UID/email). Telemetry lỗi không biến delete đã thành công thành failure. Event mới cần bổ sung DebugView evidence; không suy ra mọi event đã xác minh chỉ từ48tests hoặc demo CRUD.
+
 ## Cập nhật 01/11/2026
 
 Rà soát tiếp tục tối 01/11: mã hiện có 11 event trong AppEvent, bổ sung `report_generated` sau khi tạo PDF và `export_report` sau khi upload thành công; cả hai gửi item_count/file_size_kb. Upload production đang khóa theo Spark nên chưa có bằng chứng export_report từ upload thật. Các tham số thực tế khác theo bảng trong firebase-observability.md; bảng bên dưới là kế hoạch ban đầu, không dùng để khẳng định đã gửi các params chưa có trong mã. `screen_view` riêng từng Flutter route chưa triển khai. Chưa đủ DebugView evidence cho cả 11 event.

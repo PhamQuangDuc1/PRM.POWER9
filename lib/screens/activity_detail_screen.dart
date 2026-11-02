@@ -9,6 +9,8 @@ import '../viewmodels/activity_providers.dart';
 import '../viewmodels/completion_providers.dart';
 import '../widgets/p9_async_content.dart';
 import '../widgets/p9_completion_button.dart';
+import '../widgets/p9_delete_schedule_button.dart';
+import '../viewmodels/schedule_delete_viewmodel.dart';
 import 'workspace_screen.dart';
 import 'recovery_screen.dart';
 import 'progress_screen.dart';
@@ -94,15 +96,72 @@ class ActivityDetailScreen extends ConsumerWidget {
             ),
             const SizedBox(height: P9Space.lg),
           ],
-          P9Button(
-            label: existing == null ? 'Chọn lịch hoạt động' : 'Đổi lịch',
-            icon: Icons.event_outlined,
-            onPressed: () =>
-                Navigator.of(context)
-                    .push(ScheduleScreen.route(activity, existing)),
-          ),
+          if (existing == null)
+            P9Button(
+              label: 'Chọn lịch hoạt động',
+              icon: Icons.event_outlined,
+              onPressed: () =>
+                  Navigator.of(context)
+                      .push(ScheduleScreen.route(activity, null)),
+            )
+          else
+            _ExistingScheduleActions(activity: activity, original: existing!),
         ],
       ),
     );
   }
+}
+
+class _ExistingScheduleActions extends ConsumerWidget {
+  const _ExistingScheduleActions({
+    required this.activity,
+    required this.original,
+  });
+  final Activity activity;
+  final Schedule original;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) => P9AsyncContent(
+    value: ref.watch(
+      activityScheduleProvider((
+        activityId: original.activityId,
+        dateKey: original.dateKey,
+      )),
+    ),
+    retry: () => ref.invalidate(daySchedulesProvider(original.dateKey)),
+    builder: (schedule) {
+      final deletion = ref.watch(
+        scheduleDeleteProvider((
+          activityId: original.activityId,
+          dateKey: original.dateKey,
+        )),
+      );
+      final deleting = deletion.isLoading || deletion.asData?.value == true;
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          if (schedule != null) ...[
+            Text('${schedule.dateKey} · ${schedule.timeLabel}'),
+            const SizedBox(height: P9Space.md),
+          ],
+          P9Button(
+            label: schedule == null ? 'Chọn lịch hoạt động' : 'Đổi lịch',
+            icon: Icons.event_outlined,
+            onPressed: deleting
+                ? null
+                : () =>
+                      Navigator.of(context)
+                          .push(ScheduleScreen.route(activity, schedule)),
+          ),
+          if (schedule != null || deleting) ...[
+            const SizedBox(height: P9Space.sm),
+            P9DeleteScheduleButton(
+              schedule: schedule ?? original,
+              onDeleted: () => Navigator.of(context).pop(),
+            ),
+          ],
+        ],
+      );
+    },
+  );
 }

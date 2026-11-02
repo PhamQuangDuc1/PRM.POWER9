@@ -1,5 +1,5 @@
 {
-  "packagedDateLocal": "2026-11-02",
+  "packagedDateLocal": "2026-11-03",
   "evidenceCutoffDateLocal": "2026-11-02",
   "purpose": "Lab 3 submission snapshot; see report for incomplete requirements",
   "containsRawArtemisTraces": false,
@@ -212,8 +212,8 @@
     },
     {
       "path": "docs/analytics-plan.md",
-      "bytes": 3179,
-      "sha256": "1608c56984e20d44a593ebe761c8bab74bde9a6cd89c664b7d3f4000a9e2cd0a"
+      "bytes": 3549,
+      "sha256": "eb80c7f742ce8946a1eddc7c14042bf6d1263219092ec08d5bc61b7f3620a9d6"
     },
     {
       "path": "docs/architecture.md",
@@ -227,8 +227,8 @@
     },
     {
       "path": "docs/CONTINUE.md",
-      "bytes": 17715,
-      "sha256": "32fc233be4bdb35e5c1366f7339841f17eca303732f224f3f12f84563ca92f84"
+      "bytes": 20236,
+      "sha256": "a09b862dc2cb53b52f0fa0326b2cd2fe8a692cda6992463102ea8ff6c3ff4c09"
     },
     {
       "path": "docs/data-model.md",
@@ -237,8 +237,8 @@
     },
     {
       "path": "docs/design-traceability.md",
-      "bytes": 5499,
-      "sha256": "407f3aead3ab01400d550b981f45a663ab5d322b9bdcc28d173c2852a07dce64"
+      "bytes": 6403,
+      "sha256": "0c47ab40c4292c5d861d576ba6dc71f348eefa76db1825d2372505288ea0add8"
     },
     {
       "path": "docs/evidence-register.md",
@@ -296,6 +296,11 @@
       "sha256": "1262b3abd1f31d9ff78318fd9ed77c044bd31faaa2763191f75f5b2435a1d334"
     },
     {
+      "path": "docs/lab3-crud-audit.md",
+      "bytes": 6016,
+      "sha256": "e56c50efd40279fab01a6efeac6a8ac27dc5a608f3c779914f60760f235280bd"
+    },
+    {
       "path": "docs/lab3-e2e-results.md",
       "bytes": 3182,
       "sha256": "71679c5d16625b597d4f8da87441e163976f77ea920ddc0e7d01e1e5c6f8519c"
@@ -312,8 +317,8 @@
     },
     {
       "path": "docs/lab3-status.md",
-      "bytes": 11632,
-      "sha256": "dcb9b6f3764d65a8bbbb3b496915ae08316e3d64a76058affce61069e14dddc0"
+      "bytes": 12279,
+      "sha256": "b71e923e528b1150dd0102fb147179ce88229c74089387395b541ea8aebc76ba"
     },
     {
       "path": "docs/language-conventions.md",
@@ -362,8 +367,8 @@
     },
     {
       "path": "docs/test-report.md",
-      "bytes": 11389,
-      "sha256": "6c51d1ea49fdb9999e22c2cc584209312f857680cefcb98cf45f7adce2190b28"
+      "bytes": 12227,
+      "sha256": "70ee896ee3b8fbf46343b241f015b7f7863f6bf82194aa0dd797e151833ae3f2"
     },
     {
       "path": "docs/workspace-verification.md",
@@ -2361,6 +2366,86 @@
       "sha256": "60afc25964719aa00cff7b8d658a6b3ca6c522805b4317e59e264043f7c70f24"
     },
     {
+      "path": "evidence/flows/crud/before-xperia.png",
+      "bytes": 535701,
+      "sha256": "624df5108ef3b6ac64e6cec5a82f893e372524e866bcaf31b1e916bb0e7f555a"
+    },
+    {
+      "path": "evidence/flows/crud/before.json",
+      "bytes": 367,
+      "sha256": "a8ab2f3b40d2877190abaec3e7993b8d4e7c59f894456adb8e0b1d1898d2ade9"
+    },
+    {
+      "path": "evidence/flows/crud/cancelled.json",
+      "bytes": 414,
+      "sha256": "68bea556cff8dc4cf39e7695a62c8f1b541b7d5997a4aa90a14638cd01a67d12"
+    },
+    {
+      "path": "evidence/flows/crud/cleaned.json",
+      "bytes": 368,
+      "sha256": "4dde70e202fbbf27f7aa4ab371ee9de63780bdf47d1cef3acb6790dcd1faac7b"
+    },
+    {
+      "path": "evidence/flows/crud/completion-retained.json",
+      "bytes": 428,
+      "sha256": "6dd967ef16c1847933b5072e627b163484c306a3b74782ce0e36d7e956063914"
+    },
+    {
+      "path": "evidence/flows/crud/confirmation-xperia.png",
+      "bytes": 570915,
+      "sha256": "0ab9a18a06f488f1a239c299cd11739e42a9f255612e8204687d6131dc83ddf1"
+    },
+    {
+      "path": "evidence/flows/crud/created-xperia.png",
+      "bytes": 531661,
+      "sha256": "db557d20b6104e7e4a4e023c78d03082af6b905b551be25a7fe6ac2394a8c13e"
+    },
+    {
+      "path": "evidence/flows/crud/created.json",
+      "bytes": 411,
+      "sha256": "2d48c835c33595fba09b4a9d2fadaa3cb75e4112c8dd654795951dfe0f4c440a"
+    },
+    {
+      "path": "evidence/flows/crud/deleted-history-retained-xperia.png",
+      "bytes": 565225,
+      "sha256": "f697c8f3b215f45f5ce12bf6dbe05abc3a85549a4e46abdb83941e33574de4b2"
+    },
+    {
+      "path": "evidence/flows/crud/deleted.json",
+      "bytes": 372,
+      "sha256": "8164dabb37fd32b9e010f0f851be162ae596dc1ee809cfd0c04f5a18cfd3fde3"
+    },
+    {
+      "path": "evidence/flows/crud/native-crud-input-attempt.json",
+      "bytes": 464,
+      "sha256": "9ccb6760f3ead1cd9ac377e25139716cafe18a1edbea0cf849e952d7b50e4830"
+    },
+    {
+      "path": "evidence/flows/crud/native-crud-navigation-attempt.json",
+      "bytes": 353,
+      "sha256": "862acd471abc995dc72e4ff013c3c280b2ef3ce78f6046074a69fe25bb36af9e"
+    },
+    {
+      "path": "evidence/flows/crud/native-crud-precondition-attempt.json",
+      "bytes": 236,
+      "sha256": "f8e4dfa4af195cfdd7a98c4813a51fa0e4e26e9f498c09adf6b6180b6abfa4a8"
+    },
+    {
+      "path": "evidence/flows/crud/native-crud-result.json",
+      "bytes": 599,
+      "sha256": "519674d5f543a2d579b7e01dfc3f8255dfdee5b2eee52a9b5259e378ed8f6269"
+    },
+    {
+      "path": "evidence/flows/crud/updated-xperia.png",
+      "bytes": 524413,
+      "sha256": "150a386489bda24b598cca17c6276b33c5ec24367e34540214b9cf08f166e4b4"
+    },
+    {
+      "path": "evidence/flows/crud/updated.json",
+      "bytes": 412,
+      "sha256": "81c9b9107b9fc9beb3fe79613cd466573e019e589fc9c201ea59da5d7dd12bcc"
+    },
+    {
       "path": "evidence/flows/firestore-server-verification.json",
       "bytes": 402,
       "sha256": "963bc0ff44ce793fdfdc93cbd2d30afdb4f41762473db2f851de7986f502cff2"
@@ -2399,6 +2484,26 @@
       "path": "evidence/flutter/lab3-analyze-2026-11-02.txt",
       "bytes": 67,
       "sha256": "a4c49c1c42e46c23c53ed78c033847c36a196d49de0fbd3b90ec140ecdf7b84a"
+    },
+    {
+      "path": "evidence/flutter/lab3-crud-all-tests.txt",
+      "bytes": 6223,
+      "sha256": "61eed3f503a031baf22e98ada3ee1a6cfb8fe1770411052cca67f22b4a1537f8"
+    },
+    {
+      "path": "evidence/flutter/lab3-crud-analyze.txt",
+      "bytes": 55,
+      "sha256": "03c3ac4b7bee42c1ec488097022c24810e910a3783b70a0e11d8ca4179c8030d"
+    },
+    {
+      "path": "evidence/flutter/lab3-crud-build.txt",
+      "bytes": 1569,
+      "sha256": "c244d57e2cae3c41d8985db69369eec11de7bc4de9fe63f4e0c3fe2624525743"
+    },
+    {
+      "path": "evidence/flutter/lab3-crud-unit-widget-tests.txt",
+      "bytes": 473,
+      "sha256": "a26ade5cb86d52a332e9b06ba20a3ef3799e8d90eaab0745d56011eb605a17d2"
     },
     {
       "path": "evidence/flutter/lab3-final-analyze.txt",
@@ -2637,8 +2742,8 @@
     },
     {
       "path": "lib/screens/activity_detail_screen.dart",
-      "bytes": 4015,
-      "sha256": "d4e78d5bacae9f1804cd03c17bd839f7cda3917e7ad81a477e87eb51afd0b4d9"
+      "bytes": 5925,
+      "sha256": "6f7067b2a3049bd80578bea24960c372bd1e16e041e20092efe79bc14ce5a5ae"
     },
     {
       "path": "lib/screens/connection_screen.dart",
@@ -2682,8 +2787,8 @@
     },
     {
       "path": "lib/screens/progress_screen.dart",
-      "bytes": 7731,
-      "sha256": "2e803743931c6e615061fc733f40df3bab244e17f286d606d96b4939815d5c53"
+      "bytes": 8958,
+      "sha256": "2475a58951b7fd9c811bcb75b336d6bf74db087cdaed954f693f94af367b8411"
     },
     {
       "path": "lib/screens/recovery_screen.dart",
@@ -2827,8 +2932,8 @@
     },
     {
       "path": "lib/services/telemetry_service.dart",
-      "bytes": 1021,
-      "sha256": "501aa9d3f4e9d086e3cdd9e139f6aa4b85767460d363cc697860e9a39bc5e259"
+      "bytes": 1090,
+      "sha256": "98afba83566dbc0829700dbb268c86138941870ca672e2e95a9e01870ce07f23"
     },
     {
       "path": "lib/theme/p9_theme.dart",
@@ -2896,6 +3001,11 @@
       "sha256": "14e0cabcbd2b0a012614efae1a459de227320423c8f1e8edbbdf885747c94533"
     },
     {
+      "path": "lib/viewmodels/schedule_delete_viewmodel.dart",
+      "bytes": 2171,
+      "sha256": "4f5bd32476f4359565522dd1b4efaef6c066b39387ed350986d94435df852dbb"
+    },
+    {
       "path": "lib/viewmodels/schedule_viewmodel.dart",
       "bytes": 3793,
       "sha256": "eb91b65557e99db1073f52718010699e1f01cd842cc0f3bc48246ba12bb12431"
@@ -2926,6 +3036,11 @@
       "sha256": "bae8523ff218831ad179be826acc79e4e578e31fe1825345e7af6fab634948e8"
     },
     {
+      "path": "lib/widgets/p9_delete_schedule_button.dart",
+      "bytes": 3376,
+      "sha256": "d3f76c2a5e1f1da41c183e0e865e6e3096a61692a9cafaea0a4aeed11420589a"
+    },
+    {
       "path": "lib/widgets/p9_leave_session_dialog.dart",
       "bytes": 760,
       "sha256": "36b91296a8130f3ae6b158d7c522d5abf7ac544fe4576eef4e2a09222fa32e99"
@@ -2947,8 +3062,8 @@
     },
     {
       "path": "output/lab3/build-config.json",
-      "bytes": 383,
-      "sha256": "99179e87225ac224ac6cf0811e7f37022876faf83225b385984d49ec06e07f1d"
+      "bytes": 584,
+      "sha256": "0c9ed321b3a2befaf78c07c5b44b2184e97eee49145cae1bebefda5484baea36"
     },
     {
       "path": "output/lab3/DEMO-RUNBOOK.md",
@@ -2957,8 +3072,8 @@
     },
     {
       "path": "output/lab3/designer-slide-notes.json",
-      "bytes": 10428,
-      "sha256": "808ab7ba862ddde373bc134aee5960a93974b6241c15d3dbeb8f3122c0514b58"
+      "bytes": 10499,
+      "sha256": "1554996b5574e9a75e50e939489548aa48983e3ee6e447754c21bf2149403e9d"
     },
     {
       "path": "output/lab3/footage-metadata.json",
@@ -2968,12 +3083,12 @@
     {
       "path": "output/lab3/Power9-Lab3-debug-arm64.apk",
       "bytes": 165172536,
-      "sha256": "286308c77ae97e3dcbbb51cd556607962adadf7b8c5cb04b11d029c385b0d430"
+      "sha256": "882e282fca56f704fb30821c8fd5d151d8579c1cd9cef32e4a4f0a5bfd8bfcca"
     },
     {
       "path": "output/lab3/Power9_Lab3_Designer.pptx",
-      "bytes": 1495967,
-      "sha256": "7bab66ee5b10d0b284001be6d86ce3b1c038b2d5d9890d46593342ef0917e14f"
+      "bytes": 1495961,
+      "sha256": "e9c42d945dd8b5e517fc12814eda52e9134b9cac11f52002d4a0f540ae6a618a"
     },
     {
       "path": "output/lab3/Power9_Lab3_Designer_preview.png",
@@ -2987,23 +3102,23 @@
     },
     {
       "path": "output/lab3/Power9_Lab3_Report.pdf",
-      "bytes": 718689,
-      "sha256": "39f607c0ab50de767ac2000e428c6cde5b29691c688dd4e3a97349aad034dd7d"
+      "bytes": 718919,
+      "sha256": "e8bafb22db6faa415be2e5b20792f834e63272c798085be3ccd8f246ba9a0e8d"
     },
     {
       "path": "output/lab3/Power9_Lab3_Slides.pdf",
-      "bytes": 664472,
-      "sha256": "22d4b7fd288f4d6bc855779b9eb955918b518e2e8a19dedf5f8ddb02e69bf4a0"
+      "bytes": 664252,
+      "sha256": "a13715767362887db907328135c283a87c8a27ef75f02a760ae09bf15a77ac3c"
     },
     {
       "path": "output/lab3/README.md",
-      "bytes": 4179,
-      "sha256": "7d14a1af17352a6ef1c53a28a53d2a9fee93ae4663f45bd01370e50a7a0fc68f"
+      "bytes": 4877,
+      "sha256": "786d59d47c0e1a616a5f037b2457904bfa599e76f4fac0ce0a8f11e5be24f989"
     },
     {
       "path": "output/lab3/slide-content.json",
-      "bytes": 10589,
-      "sha256": "75c0ecbb7eb21b64dd85dd41f781c09c0aac2a5e7b3428c473b7f7d83db8e7f8"
+      "bytes": 10499,
+      "sha256": "1554996b5574e9a75e50e939489548aa48983e3ee6e447754c21bf2149403e9d"
     },
     {
       "path": "output/lab3/SUBMISSION-CHECKLIST.md",
@@ -3022,18 +3137,23 @@
     },
     {
       "path": "README.md",
-      "bytes": 7356,
-      "sha256": "3c1d9c43c1cda18529b3ddd8cb5d4481786ce58e17f73614134a67824eec218b"
+      "bytes": 7676,
+      "sha256": "bb8074e1d01064cbf82d1b2fe4a134558bc523cbc6099e579552f78339724d6b"
     },
     {
       "path": "scripts/lab3/build_designer_deck.mjs",
-      "bytes": 25541,
-      "sha256": "920ba39cd2b920525526e0fe9e8cbe8f966e5a3aeeda81f645d6b1253c433b82"
+      "bytes": 25656,
+      "sha256": "74a595e926346b70f67858f8cd19bb2362c10254ae5c1a0d155729984e4cfc35"
     },
     {
       "path": "scripts/lab3/build_submission_pdfs.py",
-      "bytes": 27589,
-      "sha256": "702e8b21567dbf6aa0d814054ca52a4244f4662d641d6bb82684e33da95a5a6e"
+      "bytes": 27982,
+      "sha256": "c039caca301404713b828666e27d2c99d429e75c3497123665b4183d15f1d64c"
+    },
+    {
+      "path": "scripts/lab3/check_crud_server.cjs",
+      "bytes": 2437,
+      "sha256": "dbcfe3fa2892d8eedcc529dfad64b15b025743699e5fa0f591e63f6b50d8ef41"
     },
     {
       "path": "scripts/lab3/check_notification_permission.py",
@@ -3053,7 +3173,12 @@
     {
       "path": "scripts/lab3/package_submission.py",
       "bytes": 2492,
-      "sha256": "3a225e6f5c229e3f6bea28b418b1382e758dae3434f079f11abeac4afe12f020"
+      "sha256": "f7a0b430ad9d2da03ba9f85c96da073c52241575fd47186c3a32cbd7d3054d3f"
+    },
+    {
+      "path": "scripts/lab3/smoke_schedule_crud.py",
+      "bytes": 6541,
+      "sha256": "27f94cff83eb3e2138d73d1d3820bc551bfd4756722106f12ea5f4690beed734"
     },
     {
       "path": "test/analytics_debug_marker_test.dart",
@@ -3114,6 +3239,11 @@
       "path": "test/responsive_main_screens_test.dart",
       "bytes": 5790,
       "sha256": "a44e90109810a376435002bbd10f0a831d07cb5883b117083e1ca49f935729bc"
+    },
+    {
+      "path": "test/schedule_delete_test.dart",
+      "bytes": 9129,
+      "sha256": "4331977569f0611de8bfe6387c632357b2e79f0cea7d200d3f19a1ab4cd38b5e"
     },
     {
       "path": "test/schedule_viewmodel_test.dart",

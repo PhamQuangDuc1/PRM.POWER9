@@ -57,6 +57,7 @@
       "firebase/firestore.rules",
       "evidence/flows/firestore-server-verification.json",
       "evidence/flows/completion-deleted.json",
+      "evidence/flows/crud/native-crud-result.json",
       "firebase/tests/firestore-rules.test.cjs"
     ]
   },
@@ -73,7 +74,7 @@
   {
     "slide": 8,
     "title": "Google Analytics",
-    "notes": "Có 11 AppEvent: login, logout, search, view_activity, schedule_created, schedule_updated, activity_completed, completion_undone, config_refreshed, report_generated, export_report. Bảng chọn bảy loại tiêu biểu, không phải danh sách toàn bộ. DebugView đã có một phần event; TC16[1] xác minh view_activity(activity_id=move-walk) bằng native SDK log được lọc build marker và thời điểm task. Hai lượt TC16 chưa đạt. export_report từ Storage production chưa xác minh vì upload tắt. Không dùng log tự in của Dart để thay SDK evidence.",
+    "notes": "Có 12 AppEvent: login, logout, search, view_activity, schedule_created, schedule_updated, activity_completed, completion_undone, config_refreshed, report_generated, export_report, schedule_deleted. Bảng chọn bảy loại tiêu biểu, không phải danh sách toàn bộ. DebugView đã có một phần event; TC16[1] xác minh view_activity(activity_id=move-walk) bằng native SDK log được lọc build marker và thời điểm task. Hai lượt TC16 chưa đạt. export_report từ Storage production chưa xác minh vì upload tắt. Không dùng log tự in của Dart để thay SDK evidence.",
     "sources": [
       "docs/analytics-plan.md",
       "docs/firebase-observability.md",
@@ -150,7 +151,7 @@
   {
     "slide": 15,
     "title": "Bản bàn giao và bước tiếp theo",
-    "notes": "Không khẳng định bài đã đạt 100%. App43tests/analyzer, Firebase evidence, PDF và replay đã bàn giao. Còn TC10[3]/TC16[2–3], Pro, production Storage, TalkBack/fidelity và một số Auth error coverage. Video được người dùng chủ động để cuối sau khi hướng UI/UX ổn định. PR ở trạng thái draft, không merge. Sau các bước hoàn thiện, cập nhật số liệu từ evidence thực thay vì sửa slide thành pass.",
+    "notes": "Không khẳng định bài đã đạt 100%. App48tests/analyzer, Firebase evidence, PDF và replay đã bàn giao. Còn TC10[3]/TC16[2–3], Pro, production Storage, TalkBack/fidelity và một số Auth error coverage. Video được người dùng chủ động để cuối sau khi hướng UI/UX ổn định. PR ở trạng thái draft, không merge. Sau các bước hoàn thiện, cập nhật số liệu từ evidence thực thay vì sửa slide thành pass.",
     "sources": [
       "https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3",
       "output/lab3/README.md",

@@ -1,5 +1,9 @@
 # Lab 3 — mốc khởi tạo 31/10/2026
 
+## CRUD đã demo thật ngày 02/11
+
+Lịch cá nhân đã có thêm/xem/sửa/xóa qua app. Native Xperia + Firestore xác minh sửa10:30 cùng document/createdAt, hủy xóa không thay dữ liệu, xóa lịch giữ completion, cleanup đúng dữ liệu thử. Flutter48/48 đạt; analyzer sạch; APK mới đã cài. Năm tests mới gồm lỗi/retry, chống bấm lặp, account race và giữ history. Xem evidence/flows/crud/native-crud-result.json. Không tính smoke này thành ARTEMIS;30/33 và Pro còn thiếu. Storage production vẫn tắt. Video/trao đổi thầy để sau; theo yêu cầu không đồng bộ Figma.
+
 ## Cập nhật PR và trình bày
 
 Theo yêu cầu mới, trợ lý đã tạo ba commit riêng R01/R02/R03 và [draft PR #3](https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3) từ codex/lab3-review-and-slides vào main, không merge. Video được người dùng chủ động để cuối sau khi chốt hướng UI/UX. Slide được làm lại thành deck PowerPoint 15 trang chỉnh sửa được; trạng thái ARTEMIS/Storage và các kết quả test không đổi chỉ vì đổi thiết kế slide.

@@ -1,5 +1,15 @@
 # Mốc tiếp tục Power9 Office Routine
 
+## CRUD lịch cá nhân đã bổ sung và demo thật ngày 02/11
+
+Người dùng yêu cầu hoàn thiện phần demo trước, video và trao đổi với giảng viên để sau; sau đó nói rõ **không cần đồng bộ Figma**. Không thực hiện Figma write; chỉ đọc metadata/library rồi dừng. Không tạo ảnh mới vì người dùng chỉ muốn UI đẹp hơn; không thay toàn bộ theme trong đợt CRUD này.
+
+Đã thêm ScheduleDeleteViewModel và P9DeleteScheduleButton (xác nhận, giữ lịch, loading, lỗi/retry, chống bấm lặp, guard đổi tài khoản, telemetry không làm hỏng delete), nối vào chi tiết lịch; pending lịch trong Tiến độ mở được chi tiết để sửa/xóa lịch tương lai. Detail đọc schedule realtime, tránh dùng snapshot cũ sau sửa/xóa. Không sửa Rules hoặc xóa completion theo lịch. Thêm event schedule_deleted (mã hiện12events, chưa đủ DebugView cho tất cả).
+
+**48/48 Flutter tests đạt**, analyzer sạch, APK mới build/cài Xperia. Năm tests mới bao gồm reverse account race, ack/duplicate taps, failure/retry, telemetry failure và widget cancel/fail/retry giữ history. Demo native CRUD đã đạt với Firestore API chỉ đọc đúng doc của tài khoản kiểm thử: tạo lịch walk ngày02/11, đọc, sửa10:30 giữ document/createdAt, Giữ lịch không đổi updatedAt, check-in thử, xóa lịch giữ completion, undo đúng completion vừa tạo → baseline0/0 và Home. Xem evidence/flows/crud/native-crud-result.json và các phase snapshots/ảnh. Ba harness failures trước đó giữ riêng: thiếu summary label/hint và clipboard time input; không ghi giờ sai thành pass. Cuối cùng dùng ADB key input xác minh10/30 trước OK. Không model call, không cộng các lượt native vào30/33ARTEMIS.
+
+APK mới đã thay output/lab3/Power9-Lab3-debug-arm64.apk, build-config48tests và hash mới; footage cũ giữ metadata APK lúc quay. Script native tái hiện opt-in ở scripts/lab3/smoke_schedule_crud.py + check_crud_server.cjs; yêu cầu POWER9_DEVICE_SERIAL/POWER9_ADB/POWER9_CRUD_TEST_ACCOUNT_FILE (JSON ignored chỉ projectId/recipientUid), Firebase CLI đăng nhập và Home không có dữ liệu walk có sẵn. Đợt này chưa chạy thêm ARTEMIS; budget thực tế45/45 và auto-review block cũ vẫn giữ. Storage production vẫn tắt theo billing-off; chưa thể tuyên bố100% toàn rubric.
+
 ## Yêu cầu mới: trợ lý commit/push/PR và thiết kế lại slide
 
 Người dùng đã thay lựa chọn tự Git bằng yêu cầu trực tiếp: **“lần này bạn tự commit và tạo PR giúp tôi”**. Trợ lý được phép tạo nhánh, ba commit R01/R02/R03 riêng, commit phần còn lại, push và tạo PR. Ghi chú tự commit/push bên dưới là lịch sử và không còn áp dụng cho đợt này. Video được người dùng chủ động để cuối vì có thể nâng cấp toàn bộ UI/UX. Làm lại slide với vai trò designer chuyên nghiệp, giữ số liệu kiểm chứng thật và không ngầm triển khai toàn bộ UI/UX app khi chưa có yêu cầu cụ thể.

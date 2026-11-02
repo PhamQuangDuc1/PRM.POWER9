@@ -1,5 +1,9 @@
 # Power9 — kết quả kiểm chứng Auth/F01/F02/F03
 
+## CRUD lịch đã xác minh trên Xperia
+
+Flutter48/48 đạt, analyzer sạch; APK CRUD mới đã build/cài. Năm tests mới bao phủ ack/chống bấm lặp, failure/retry, đổi tài khoản khi đang xóa, telemetry lỗi và UI cancel/failure/retry giữ completion. Demo native có API server đọc đúng doc kiểm thử theo uid (không xuất uid): create, read, update10:30 giữ createdAt, cancel delete không đổi updatedAt, delete lịch giữ completion và cleanup đúng dữ liệu do lượt thử tạo. Evidence evidence/flows/crud/native-crud-result.json và phase snapshots/ảnh. Ba harness attempts ban đầu giữ riêng; không tính các lỗi nhập liệu/hint thành app pass. Không gọi model, không tăng30/33ARTEMIS. Không đồng bộ Figma theo yêu cầu; video/thầy để sau.
+
 ## Cập nhật PR và trình bày
 
 Theo yêu cầu mới, trợ lý đã tạo ba commit riêng R01/R02/R03 và [draft PR #3](https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3) từ codex/lab3-review-and-slides vào main, không merge. Video được người dùng chủ động để cuối sau khi chốt hướng UI/UX. Slide được làm lại thành deck PowerPoint 15 trang chỉnh sửa được; trạng thái ARTEMIS/Storage và các kết quả test không đổi chỉ vì đổi thiết kế slide.

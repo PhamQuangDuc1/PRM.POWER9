@@ -1,0 +1,8 @@
+{
+  "source": "native UIAutomator2 on real Xperia + exact test-user Firestore document reads",
+  "modelCalls": 0,
+  "assertionsPassed": false,
+  "steps": [],
+  "privateIdentifiersExported": false,
+  "deviceDate": "2026-11-02"
+}

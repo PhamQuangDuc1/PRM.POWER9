@@ -2,6 +2,8 @@
 
 ## Lab 3 — ứng dụng đã tích hợp, đang hoàn thiện kiểm chứng
 
+CRUD lịch đã hoàn thiện qua app và demo Firestore/Xperia: thêm, xem, sửa và xóa; xóa lịch giữ lịch sử đã làm. [Bằng chứng](evidence/flows/crud/native-crud-result.json). Flutter48/48 và analyzer sạch; video/trao đổi thầy để sau, không đồng bộ Figma theo yêu cầu mới.
+
 Đã tạo [draft PR #3](https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3) với ba fix commits riêng. [Deck mới 15 trang, PowerPoint chỉnh sửa được](output/lab3/Power9_Lab3_Designer.pptx) · [PDF trình chiếu](output/lab3/Power9_Lab3_Slides.pdf). Video được để cuối sau khi chốt hướng UI/UX.
 
 Cập nhật 02/11: kết nối Xperia/Firebase/GitHub đã kiểm tra; 43/43 Flutter tests và analyzer sạch, bổ sung kiểm tra nhãn/vùng chạm Android. Smoke quyền thông báo và logout/Back/hủy đăng nhập/retry có bằng chứng thật. [Mốc mới nhất](docs/lab3-resume-2026-11-02.md), [checklist nộp](output/lab3/SUBMISSION-CHECKLIST.md). Vẫn còn ARTEMIS/Pro, Storage production, PR/commit và video Console; chưa đạt 100%.

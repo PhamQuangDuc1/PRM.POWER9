@@ -1,0 +1,14 @@
+{
+  "phase": "completion-retained",
+  "dateKey": "2026-11-02",
+  "source": "read-only Firestore API, exact current test-user document paths",
+  "scheduleExists": true,
+  "completionExists": true,
+  "minuteOfDay": "630",
+  "createdAt": "2026-11-02T16:49:48.635Z",
+  "updatedAt": "2026-11-02T16:55:01.965Z",
+  "completionSource": "checkin",
+  "durationSeconds": null,
+  "ownerUidExported": false,
+  "credentialsExported": false
+}
