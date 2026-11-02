@@ -1,0 +1,161 @@
+[
+  {
+    "slide": 1,
+    "title": "",
+    "notes": "Power9 Office Routine là ứng dụng Android cho các khoảng nghỉ ngắn trong ngày làm việc. Đây là Lab 3 Cloud-Enabled, kế thừa ba flow Lab 2. Ảnh là app thật từ trace ngày 01/11, không phải đề xuất UI mới. Bản trình bày được làm lại ngày 02/11; video được để cuối theo quyết định người dùng.",
+    "sources": [
+      "assets/brand/README.md",
+      "evidence/artemis/latest-home-trace-source.json"
+    ]
+  },
+  {
+    "slide": 2,
+    "title": "Khoảng nghỉ ngắn, lịch làm việc thay đổi",
+    "notes": "Huy, Mai và Linh là ba persona giả định ngang nhau. Nhóm chưa tiến hành khảo sát hoặc đo thời gian hoàn thành tác vụ. Một ứng dụng chung, không có bước chọn persona. Các hoạt động là tự nguyện và không phải lời khuyên sức khỏe.",
+    "sources": [
+      "ux/persona.md",
+      "ux/user-flow.md"
+    ]
+  },
+  {
+    "slide": 3,
+    "title": "Ba luồng cốt lõi",
+    "notes": "F01 kiểm tra thiếu giờ khi bật nhắc và chỉ cập nhật Home sau ghi thành công. F02 timer ghi thời gian thật, ví dụ 72 giây trong ảnh ngày 31/10; Undo không xóa schedule. F03 hủy giữ dữ liệu, lưu đổi giờ không tạo lịch thứ hai. Ba ảnh là bằng chứng các mốc trước, không khẳng định đã quay lại ngày 02/11.",
+    "sources": [
+      "evidence/flows/schedule-validation-xperia.png",
+      "evidence/f02/progress-early-end-xperia.png",
+      "evidence/flows/home-schedule-xperia.png",
+      "docs/test-report.md"
+    ]
+  },
+  {
+    "slide": 4,
+    "title": "MVVM và luồng dữ liệu",
+    "notes": "Riverpod kết nối View và ViewModel. Firebase SDK không nằm trong các màn nghiệp vụ. Service xác nhận ghi rồi ViewModel mới đưa success về UI. Stream dữ liệu cập nhật lại các màn; các mũi tên ở đây biểu diễn hướng phụ thuộc, không phải thứ tự đồng bộ của mọi request.",
+    "sources": [
+      "docs/architecture.md",
+      "lib/viewmodels/app_providers.dart",
+      "lib/services"
+    ]
+  },
+  {
+    "slide": 5,
+    "title": "Authentication",
+    "notes": "Ảnh Login là mốc bootstrap, không dùng ảnh này riêng để chứng minh Google sign-in đã thành công. Ngày 02/11 đã logout về Login, Back/mở lại không lộ Home, hủy native Google picker thấy lỗi và retry mở picker. Lượt đầu kiểm tra Activity quá sớm bị fail, được giữ riêng. Người dùng đăng nhập lại, Home đã được xác nhận. Chưa đủ test chuyển hai tài khoản và login mất mạng.",
+    "sources": [
+      "evidence/bootstrap/login-xperia.png",
+      "evidence/flows/auth-cancel-retry-xperia-2026-11-02.json",
+      "evidence/flows/auth-privacy-xperia-2026-11-02.json",
+      "lib/app.dart"
+    ]
+  },
+  {
+    "slide": 6,
+    "title": "Cloud Firestore",
+    "notes": "Dữ liệu riêng nằm dưới users/{uid}; catalog chung chỉ đọc các hoạt động published. Logical ID theo hoạt động/ngày bảo vệ một occurrence. Rules deny-by-default, ownership, schema và immutable fields. 18 Rules tests là mốc trước gồm 16 Firestore và 2 Storage emulator, không phải 18 production tests.",
+    "sources": [
+      "firebase/firestore.rules",
+      "evidence/flows/firestore-server-verification.json",
+      "evidence/flows/completion-deleted.json",
+      "firebase/tests/firestore-rules.test.cjs"
+    ]
+  },
+  {
+    "slide": 7,
+    "title": "Firebase Cloud Messaging",
+    "notes": "Firebase Console Test message đã được người dùng gửi và xác minh foreground, background và terminated ngày 01/11. Terminated có process vắng, không phải Force stop. Notification-only công khai mở Home, payload scope hợp lệ có thể mở Progress. Ngày 02/11 local smoke tắt riêng quyền notification Android 11, xác minh lỗi/retry và restore đúng trạng thái cũ. Không thay cho runtime permission Android 13. Ảnh là inbox ngày 01/11.",
+    "sources": [
+      "evidence/fcm/console-three-states-inbox-xperia.png",
+      "docs/fcm-pdf-storage.md",
+      "evidence/fcm/permission-denied-xperia-2026-11-02.json"
+    ]
+  },
+  {
+    "slide": 8,
+    "title": "Google Analytics",
+    "notes": "Có 11 AppEvent: login, logout, search, view_activity, schedule_created, schedule_updated, activity_completed, completion_undone, config_refreshed, report_generated, export_report. Bảng chọn bảy loại tiêu biểu, không phải danh sách toàn bộ. DebugView đã có một phần event; TC16[1] xác minh view_activity(activity_id=move-walk) bằng native SDK log được lọc build marker và thời điểm task. Hai lượt TC16 chưa đạt. export_report từ Storage production chưa xác minh vì upload tắt. Không dùng log tự in của Dart để thay SDK evidence.",
+    "sources": [
+      "docs/analytics-plan.md",
+      "docs/firebase-observability.md",
+      "evidence/artemis/phase2",
+      "lib/services/telemetry_service.dart"
+    ]
+  },
+  {
+    "slide": 9,
+    "title": "Firebase Crashlytics",
+    "notes": "Reporting API xác nhận một FATAL test crash và một NON_FATAL completion_write/unavailable từ mất mạng thật. Metadata cho thấy user identifier và custom keys; public evidence chỉ xuất boolean, không xuất giá trị định danh. Native test crash có xác nhận và chỉ có trong debug. Không coi việc gọi SDK hoặc log local là dashboard evidence.",
+    "sources": [
+      "evidence/firebase-observability/crashlytics-server.json",
+      "evidence/firebase-observability/crashlytics-event-metadata.json",
+      "docs/firebase-observability.md"
+    ]
+  },
+  {
+    "slide": 10,
+    "title": "Firebase Remote Config",
+    "notes": "discover_max_minutes 60→5 giới hạn catalog; connection_checkin_enabled true→false ẩn check-in nhanh ở social. Sau demo đã đưa về 60/true và fetch lại. Ảnh là snapshot 5/false ngày 01/11, không phải cấu hình hiện tại. Fetch lỗi giữ cache/default. report_upload_enabled là cờ bổ sung đang false.",
+    "sources": [
+      "evidence/remote-config/demo-xperia.png",
+      "evidence/remote-config/published-demo.json",
+      "evidence/remote-config/published-defaults.json",
+      "docs/firebase-observability.md"
+    ]
+  },
+  {
+    "slide": 11,
+    "title": "PDF và Cloud Storage",
+    "notes": "Ảnh PDF thật ngày 01/11: 0/2, lịch nghỉ tối 21:30; không UID/email. PDF lưu local qua Android Save as PDF đã kiểm chứng. Uploader/Rules có code, progress, timeout, SHA256 path và metadata sau Storage xác nhận. Production upload chưa có; billing tắt và report_upload_enabled=false. Firebase yêu cầu Blaze cho Cloud Storage; không đổi dịch vụ hay bật billing trong công việc này.",
+    "sources": [
+      "evidence/pdf/Power9-2026-11-01-xperia.pdf",
+      "docs/fcm-pdf-storage.md",
+      "lib/services/firebase_report_upload_service.dart",
+      "https://firebase.google.com/docs/storage/faqs-storage-changes-announced-sept-2024"
+    ]
+  },
+  {
+    "slide": 12,
+    "title": "Nền tảng UI/UX hiện tại",
+    "notes": "Hai widget tests render 14 widget màn ở 360/412dp và text scale 1,5; bổ sung androidTapTargetGuideline/labeledTapTargetGuideline, đều đạt. Các màn ban đầu có phần chồng lấn HomeShell/body; không thổi phồng số màn chức năng. Không thay cho TalkBack, contrast, mọi trạng thái cuộn/dialog hoặc fidelity Figma đầy đủ. Hình checklist lỗi giữ 3/3 và Progress empty là ảnh thật. Người dùng đang cân nhắc đổi toàn bộ UI/UX; deck trình bày baseline đã kiểm chứng, chưa giả định thiết kế mới đã được duyệt.",
+    "sources": [
+      "handoff/flutter-handoff.md",
+      "test/responsive_main_screens_test.dart",
+      "evidence/flutter/lab3-accessibility-2026-11-02.txt",
+      "evidence/workspace/checklist-offline-xperia.png",
+      "evidence/f02/progress-empty-xperia.png"
+    ]
+  },
+  {
+    "slide": 13,
+    "title": "Kiểm thử ARTEMIS",
+    "notes": "30/33 unique run IDs xác minh: 29 valid pytest passes + 1 delayed-terminal audit TC03. Không phải 30 pytest passes. 59 retained attempts, 9 ca đủ 3/3. TC10[3], TC16[2], TC16[3] thiếu. Pro bị quota, 0 UI steps; 926,82 giây chờ không tính khám phá. Không tính local smoke như ARTEMIS. Biểu đồ thể hiện verified repetitions per case, không phải pass rate từng attempt.",
+    "sources": [
+      "evidence/artemis/lab3-summary.json",
+      "docs/lab3-e2e-results.md",
+      "evidence/artemis/pro-exploratory.json"
+    ]
+  },
+  {
+    "slide": 14,
+    "title": "AI code review và ba sửa lỗi",
+    "notes": "Baseline review 616f83e. R01 defensive robustness, chưa khẳng định sự cố production; R02 async correctness; R03 session recovery. R04/R05 gia cố runner. PR thật https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3, draft để giữ rõ các tiêu chí còn thiếu và hướng UI chưa chốt. Ba fix commits ac4b35b, 38b52bc, e595956. Local Codex review và disposition được đưa vào PR body; không có human approval hoặc merge được giả định.",
+    "sources": [
+      "ai/code-review/lab3-review.md",
+      "https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3",
+      "test/notification_payload_regression_test.dart",
+      "test/notification_refresh_regression_test.dart",
+      "test/profile_signout_regression_test.dart"
+    ]
+  },
+  {
+    "slide": 15,
+    "title": "Bản bàn giao và bước tiếp theo",
+    "notes": "Không khẳng định bài đã đạt 100%. App43tests/analyzer, Firebase evidence, PDF và replay đã bàn giao. Còn TC10[3]/TC16[2–3], Pro, production Storage, TalkBack/fidelity và một số Auth error coverage. Video được người dùng chủ động để cuối sau khi hướng UI/UX ổn định. PR ở trạng thái draft, không merge. Sau các bước hoàn thiện, cập nhật số liệu từ evidence thực thay vì sửa slide thành pass.",
+    "sources": [
+      "https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3",
+      "output/lab3/README.md",
+      "output/lab3/DEMO-RUNBOOK.md",
+      "docs/lab3-resume-2026-11-02.md"
+    ]
+  }
+]

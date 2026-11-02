@@ -1,0 +1,11 @@
+{
+  "marker": "p9_20261101_ba59e48a39514b6f",
+  "purpose": "Synthetic debug build correlation only; not a user identifier or credential",
+  "dartDefine": "POWER9_E2E_BUILD",
+  "sdkDefaultParameter": "p9_e2e_build",
+  "buildMode": "debug",
+  "targetPlatform": "android-arm64",
+  "flutterTestsPassed": 43,
+  "analyzeIssues": 0,
+  "releaseOrUnsetMarkerClearsDefault": true
+}

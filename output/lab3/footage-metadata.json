@@ -1,0 +1,11 @@
+{
+  "durationSeconds": 361.89,
+  "bytes": 22128192,
+  "source": "Android screenrecord two consecutive segments on Xperia",
+  "audio": false,
+  "uploadPerformed": false,
+  "role": "Supplementary E2E footage; not a narrated app-and-console submission demo",
+  "sampledFrames": 24,
+  "recordedApkSha256": "717a3e5142edf3ad63f40540be2874190aec5cd5b7715ea4421e4a69c6837f79",
+  "appVariant": "Debug APK with R01/R02/R03; recorded before native Analytics marker instrumentation."
+}

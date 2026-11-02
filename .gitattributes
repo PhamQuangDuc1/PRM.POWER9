@@ -1,0 +1,3 @@
+# Preserve document bytes and disable text line-ending conversion.
+*.pdf binary
+*.pptx binary
