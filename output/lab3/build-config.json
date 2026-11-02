@@ -5,9 +5,9 @@
   "sdkDefaultParameter": "p9_e2e_build",
   "buildMode": "debug",
   "targetPlatform": "android-arm64",
-  "flutterTestsPassed": 48,
+  "flutterTestsPassed": 49,
   "analyzeIssues": 0,
   "releaseOrUnsetMarkerClearsDefault": true,
-  "featuresAdded": "Schedule delete with confirmation, retry, account-race guard and preserved completion history",
-  "apkSha256": "882e282fca56f704fb30821c8fd5d151d8579c1cd9cef32e4a4f0a5bfd8bfcca"
+  "featuresAdded": "Schedule CRUD with safe deletion; explicit accessible notification name with unread count",
+  "apkSha256": "ad6c5c41ea708f9112656e239242133baa3d217c4ad4370144c206df0f5d4e3a"
 }

@@ -1,5 +1,9 @@
 # Lab 3 — Truy vết từ Lab 2
 
+## Trợ năng03/11
+
+Đã sửa semantic name của nút chuông khi có unread badge: Android trước chỉ lộ“2”, nay“Thông báo,2chưa đọc”; unread0 vẫn có tên chức năng. Có regression test và native snapshot xác nhận. Không đổi bố cục/logo, không đồng bộ Figma theo yêu cầu. Trợ năng tự động và giới hạn focus/nghe/vuốt ở docs/lab3-verification-2026-11-03.md.
+
 ## Bổ sung CRUD lịch ngày 02/11
 
 S06 khi mở lịch hiện có bổ sung **Xóa lịch hoạt động** qua component P9DeleteScheduleButton; dialog có Giữ lịch/Xóa lịch, nêu rõ ngày và giữ các bản ghi hoàn thành. Delete được xác nhận backend rồi mới báo thành công/quay lại; có loading/error/retry và guard đổi tài khoản. S08 pending item mở được chi tiết để sửa/xóa lịch ở ngày đang xem. Detail theo dõi lịch realtime để không giữ giờ cũ sau edit. Đây là bổ sung cho thiếu sót nghiệp vụ hủy lịch, không đồng nhất với xóa completion của Lab 2. Năm tests mới và demo Firestore/Xperia ở evidence/flows/crud. Người dùng yêu cầu **không đồng bộ Figma** trong đợt này; thay đổi này được ghi nhận tại đây, không khẳng định Figma/app đã khớp toàn bộ.

@@ -1,5 +1,9 @@
 # Lab 3 — Analytics plan trước instrumentation
 
+## Native SDK bổ sung03/11/2026
+
+Đã đối chiếu11/12 loại AppEvent bằng FA-SVC lọc trên thiết bị theo marker Power9 và thời gian thao tác, gồm login/logout, search, view_activity, schedule_created/updated/deleted, activity_completed, completion_undone, config_refreshed và report_generated. Params theo whitelist, không xuất rawlog/tài khoản. export_report chưa xác minh vì Storage production chưa có. Không suy ra server DebugView đã nhận đủ11 loại; xem evidence/analytics/2026-11-03/native-sdk-events.json và docs/lab3-verification-2026-11-03.md. Debug đã tắt và taglogs đã trả lại sau test.
+
 ## Bổ sung ngày 02/11
 
 Mã hiện có12AppEvent, thêm schedule_deleted sau khi server xác nhận xóa lịch, tham số activity_id (mã danh mục, không UID/email). Telemetry lỗi không biến delete đã thành công thành failure. Event mới cần bổ sung DebugView evidence; không suy ra mọi event đã xác minh chỉ từ48tests hoặc demo CRUD.

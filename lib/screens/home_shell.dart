@@ -125,11 +125,20 @@ class _HomeShellState extends ConsumerState<HomeShell>
           ),
           actions: [
             IconButton(
-              tooltip: 'Thông báo',
-              icon: Badge(
-                isLabelVisible: notifications.unread > 0,
-                label: Text('${notifications.unread}'),
-                child: const Icon(Icons.notifications_outlined),
+              tooltip: notifications.unread > 0
+                  ? 'Thông báo, ${notifications.unread} chưa đọc'
+                  : 'Thông báo',
+              icon: Semantics(
+                label: notifications.unread > 0
+                    ? 'Thông báo, ${notifications.unread} chưa đọc'
+                    : 'Thông báo',
+                child: ExcludeSemantics(
+                  child: Badge(
+                    isLabelVisible: notifications.unread > 0,
+                    label: Text('${notifications.unread}'),
+                    child: const Icon(Icons.notifications_outlined),
+                  ),
+                ),
               ),
               onPressed: () async {
                 if (!await _mayLeaveSession() || !mounted || !context.mounted) {

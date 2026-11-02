@@ -2,7 +2,7 @@
 
 ## Kiểm chứng bổ sung 03/11/2026
 
-Auth mất mạng/thử lại đã xác minh trên Xperia: Android không có mạng mặc định, app báo lỗi, private Home không mở, kết nối và tài khoản ban đầu được khôi phục. Analytics bổ sung native SDK evidence theo marker/time, không thay DebugView server. Đang hoàn tất kiểm tra hai tài khoản và trợ năng; kết quả chi tiết ở docs/lab3-verification-2026-11-03.md. Hướng dẫn sử dụng/demo từng flow ở docs/lab3-demo-guide.md. Không gọi thêm ARTEMIS, không bật billing hoặc đồng bộ Figma; video/thầy để sau.
+Auth offline/retry/logout/Back đạt trên Xperia; hai tài khoản chưa thử vì người dùng chỉ có một tài khoản. Analytics11/12 event có native SDK evidence, không đồng nhất DebugView server; export_report còn phụ thuộc Storage. Trợ năng17/17 hành vi đạt,21/21 request được chấp nhận nhưng20/21 snapshot thấy focus: còn Hôm nay sau Ở lại, strict check vẫn failed. Người dùng chọn tự động trước, nghe/vuốt thủ công để sau. Đã sửa nhãn chuông, Flutter49/49 đạt, analyzer sạch, APK mới build/cài và dữ liệu/mạng/TalkBack/debug đã khôi phục. Chi tiết: docs/lab3-verification-2026-11-03.md. Hướng dẫn demo đầy đủ: docs/lab3-demo-guide.md. Không gọi thêm ARTEMIS, không bật billing/đồng bộ Figma; video/thầy để sau.
 
 
 ## CRUD lịch đã xác minh trên Xperia

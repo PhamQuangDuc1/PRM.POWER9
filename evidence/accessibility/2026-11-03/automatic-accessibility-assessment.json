@@ -1,0 +1,23 @@
+{
+  "dateLocal": "2026-11-03",
+  "sourceResult": "automatic-accessibility-result.json",
+  "functionalChecksPassed": 17,
+  "functionalChecksTotal": 17,
+  "focusRequestsAccepted": 21,
+  "clickRequestsAccepted": 21,
+  "actionsTotal": 21,
+  "focusedSnapshots": 20,
+  "strictFocusStabilityPassed": false,
+  "unresolved": [
+    {
+      "action": "H\u00f4m nay",
+      "context": "After Stay in leave-timer dialog",
+      "focusRequestAccepted": true,
+      "focusedSnapshot": false
+    }
+  ],
+  "humanGesturesAndSpeechAssessed": false,
+  "originalAccessibilitySettingsRestored": true,
+  "modelCalls": 0,
+  "note": "Do not reinterpret the strict failed focus assertion as a full TalkBack pass."
+}

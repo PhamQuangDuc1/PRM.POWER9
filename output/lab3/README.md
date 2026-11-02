@@ -1,6 +1,6 @@
 # Gói Lab 3 Power9 Office Routine
 
-Hướng dẫn demo hiện hành: [sử dụng app và các flow](../../docs/lab3-demo-guide.md). Kiểm chứng bổ sung ngày03/11: [Analytics/Auth/trợ năng](../../docs/lab3-verification-2026-11-03.md); Auth offline/retry đạt, kiểm tra hai tài khoản đang chờ người dùng chọnB, TalkBack đầy đủ chưa đóng. PDF/slide lưu mốc02/11; đọc checkpoint03/11 cho tiến độ bổ sung. Không gọi thêm ARTEMIS.
+Hướng dẫn demo hiện hành: [sử dụng app và các flow](../../docs/lab3-demo-guide.md). Kiểm chứng bổ sung ngày03/11: [Analytics/Auth/trợ năng](../../docs/lab3-verification-2026-11-03.md); Auth offline/retry đạt; hai tài khoản chưa thử vì chỉ có một tài khoản. Đã sửa nhãn chuông, Flutter49/49 đạt và APK mới đã cài. Trợ năng17/17 hành vi đạt; còn một focus snapshot sau Ở lại chưa đóng, chưa kiểm tra nghe/vuốt thủ công. PDF/slide lưu mốc02/11; đọc checkpoint03/11 cho tiến độ bổ sung. Không gọi thêm ARTEMIS.
 
 Đóng gói 03/11/2026; bằng chứng kiểm thử đến 03/11/2026. Đây là snapshot mã, bản cài và bằng chứng thật; các tiêu chí còn thiếu được khai báo riêng.
 

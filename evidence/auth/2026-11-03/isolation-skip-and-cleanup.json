@@ -1,0 +1,11 @@
+{
+  "dateLocal": "2026-11-03",
+  "modelCalls": 0,
+  "twoAccountIsolation": "not run: user confirmed only one test account",
+  "originalAccountRestored": true,
+  "ownScheduleDeleted": true,
+  "ownCompletionUndone": true,
+  "preexistingFoodCompletionStillVisible": true,
+  "walkDocumentsAbsentAfterCleanup": true,
+  "returnedHome": true
+}

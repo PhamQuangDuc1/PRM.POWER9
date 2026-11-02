@@ -2,6 +2,10 @@
 
 Bản hướng dẫn ngày 03/11/2026, cho APK trong `output/lab3`. Đây là kịch bản thao tác, không phải chứng nhận mọi tiêu chí đã đạt. Không cần đồng bộ Figma; video để sau theo yêu cầu người dùng.
 
+## Trạng thái bản demo hiện tại
+
+APK cập nhật03/11 có CRUD và nhãn chuông đã sửa;49tests đạt, analyzer sạch. Auth offline/retry đã kiểm chứng. Analytics có11/12 loại event được đối chiếu bằng SDK; upload chưa hoạt động. Người dùng chỉ có một tài khoản nên kịch bản hai tài khoản bên dưới là hướng dẫn để thử sau, không phải kết quả đã đạt. Trợ năng17/17 hành vi tự động đạt; còn một snapshot focus sau Ở lại và kiểm tra nghe/vuốt thủ công chưa đóng. Xem [bằng chứng và giới hạn](lab3-verification-2026-11-03.md).
+
 ## Chuẩn bị
 
 1. Cài `Power9-Lab3-debug-arm64.apk` trên máy Android arm64. Mở mạng và đăng nhập bằng tài khoản Google kiểm thử. Người dùng tự chọn tài khoản, không quay lúc nhập mật khẩu.

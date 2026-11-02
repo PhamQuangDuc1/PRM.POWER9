@@ -1,5 +1,9 @@
 # Analytics, Crashlytics, Remote Config — mốc 01/11/2026
 
+## Native SDK bổ sung03/11/2026
+
+Đã đối chiếu11/12 loại AppEvent bằng FA-SVC lọc trên thiết bị theo marker Power9 và thời gian thao tác, gồm login/logout, search, view_activity, schedule_created/updated/deleted, activity_completed, completion_undone, config_refreshed và report_generated. Params theo whitelist, không xuất rawlog/tài khoản. export_report chưa xác minh vì Storage production chưa có. Không suy ra server DebugView đã nhận đủ11 loại; xem evidence/analytics/2026-11-03/native-sdk-events.json và docs/lab3-verification-2026-11-03.md. Debug đã tắt và taglogs đã trả lại sau test.
+
 ## Triển khai
 
 - Firebase SDK chỉ ở services; ViewModel gọi TelemetryService/AppConfigService. `observability_providers.dart` quản lý dependency và state cấu hình. Việc gửi telemetry theo best effort, không làm thất bại thao tác đã lưu.

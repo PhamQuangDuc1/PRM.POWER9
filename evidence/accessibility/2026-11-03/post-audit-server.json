@@ -1,0 +1,22 @@
+{
+  "dateLocal": "2026-11-03",
+  "source": "exact test-account Firestore document reads after native accessibility audit",
+  "observations": {
+    "walkSchedule": {
+      "exists": false
+    },
+    "walkCompletion": {
+      "exists": false
+    },
+    "timerCompletion": {
+      "exists": false
+    },
+    "preexistingFoodCompletion": {
+      "exists": true,
+      "source": "checkin"
+    }
+  },
+  "ownerUidExported": false,
+  "modelCalls": 0,
+  "assertionsPassed": true
+}
