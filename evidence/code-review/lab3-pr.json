@@ -1,0 +1,15 @@
+{
+  "number": 3,
+  "url": "https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3",
+  "base": "main",
+  "head": "codex/lab3-review-and-slides",
+  "draft": true,
+  "state": "open",
+  "runtimeFixCommits": [
+    "ac4b35b",
+    "38b52bc",
+    "e595956"
+  ],
+  "merged": false,
+  "tokenSaved": false
+}

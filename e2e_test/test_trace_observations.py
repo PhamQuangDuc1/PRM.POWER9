@@ -37,3 +37,11 @@ def test_failed_terminal_is_rejected(tmp_path):
     add_terminal(path,'target','failed')
     with pytest.raises(AssertionError,match='did not report completion'):
         terminal_output(path,'target',timeout=0)
+
+
+def test_native_observations_are_read_verbatim(tmp_path):
+    path = database(tmp_path)
+    payload = json.dumps({'action':'report_task_status','args':{'status':'completed','explanation':'summary','observations':{'seen':False,'count':0}}})
+    with sqlite3.connect(path) as db:
+        db.execute('INSERT INTO steps VALUES (?,1,?)',('target',payload))
+    assert terminal_output(path,'target',timeout=0)=={'seen':False,'count':0}

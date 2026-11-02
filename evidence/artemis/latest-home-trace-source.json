@@ -1,0 +1,11 @@
+{
+  "traceId": "ef0562c9-03c0-4cb0-9d9d-b8975628aa21",
+  "sourceFrame": {
+    "step": 1,
+    "seconds": 0.0,
+    "action": "click",
+    "role": "pre",
+    "image": "images/e577d79e2e1fb7274fec69606ab1c0d59ce0eae1c1860efd6f6f8fbef9f65efd.jpg"
+  },
+  "caption": "Real Home screenshot from TC16 run1 before opening activity, 2026-11-01; not a new screenshot taken after daemon shutdown."
+}

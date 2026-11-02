@@ -1,19 +1,10 @@
 {
   "scope": "Phase 1 only: search/reset, missing-time validation and Flutter picker cancel, four tabs. Not the full TC04/TC11 test-plan cases or native Android interaction.",
   "plannedRuns": 9,
-  "verifiedUniqueRuns": 7,
-  "remaining": [
-    {
-      "case": "TC04",
-      "repetition": 2
-    },
-    {
-      "case": "TC04",
-      "repetition": 3
-    }
-  ],
-  "recordedAttempts": 15,
-  "unverifiedOrFailedAttemptsRetained": 8,
+  "verifiedUniqueRuns": 9,
+  "remaining": [],
+  "recordedAttempts": 18,
+  "unverifiedOrFailedAttemptsRetained": 9,
   "verified": [
     {
       "case": "TC03",
@@ -43,6 +34,22 @@
       "case": "TC04",
       "repetition": 1,
       "traceId": "67640119-96b7-4c9e-90ed-ead468de0536",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC04",
+      "repetition": 2,
+      "traceId": "c0766dc6-f3cc-4889-b27e-12d48697f5a3",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC04",
+      "repetition": 3,
+      "traceId": "3454c3ff-c758-4983-8dc0-ced34d8058df",
       "pytestPassed": true,
       "verified": true,
       "delayedTerminalAudit": false
@@ -135,6 +142,30 @@
       "traceId": "3a7072c8-4250-4f6e-9235-f1e7050839f9",
       "pytestPassed": false,
       "verified": false,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC04",
+      "repetition": 2,
+      "traceId": "6968a686-a2f0-4805-be40-5d812ff12a52",
+      "pytestPassed": false,
+      "verified": false,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC04",
+      "repetition": 2,
+      "traceId": "c0766dc6-f3cc-4889-b27e-12d48697f5a3",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC04",
+      "repetition": 3,
+      "traceId": "3454c3ff-c758-4983-8dc0-ced34d8058df",
+      "pytestPassed": true,
+      "verified": true,
       "delayedTerminalAudit": false
     },
     {

@@ -2,6 +2,10 @@
 
 ## Lab 3 — ứng dụng đã tích hợp, đang hoàn thiện kiểm chứng
 
+Đã tạo [draft PR #3](https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3) với ba fix commits riêng. [Deck mới 15 trang, PowerPoint chỉnh sửa được](output/lab3/Power9_Lab3_Designer.pptx) · [PDF trình chiếu](output/lab3/Power9_Lab3_Slides.pdf). Video được để cuối sau khi chốt hướng UI/UX.
+
+Cập nhật 02/11: kết nối Xperia/Firebase/GitHub đã kiểm tra; 43/43 Flutter tests và analyzer sạch, bổ sung kiểm tra nhãn/vùng chạm Android. Smoke quyền thông báo và logout/Back/hủy đăng nhập/retry có bằng chứng thật. [Mốc mới nhất](docs/lab3-resume-2026-11-02.md), [checklist nộp](output/lab3/SUBMISSION-CHECKLIST.md). Vẫn còn ARTEMIS/Pro, Storage production, PR/commit và video Console; chưa đạt 100%.
+
 Tên Android: **Power9 Office Routine**. Icon dùng logo P9 gốc trên nền trắng. App kế thừa thiết kế Lab 2 ở các mục bên dưới; chưa hoàn thành toàn bộ Lab 3.
 
 - Flutter 3.47.3 / Dart 3.13.3; Android package `vn.power9.power9_office_routine`.
@@ -11,7 +15,7 @@ Tên Android: **Power9 Office Routine**. Icon dùng logo P9 gốc trên nền tr
 - Xem [kiến trúc](docs/architecture.md), [truy vết Lab 2](docs/design-traceability.md), [kế hoạch hoàn thiện](docs/lab3-completion-plan.md), [Analytics plan](docs/analytics-plan.md).
 - Đã chạy trên Sony SOV41 Android 11: đăng nhập, thêm/đổi/hủy lịch, check-in/undo, timer thật pause/resume/background, ghi nhận sớm/đủ phiên và xóa completion giữ schedule; S04 Kết nối, S09 checklist/offline retry, S10 nghỉ tối/đổi giờ đã có flow thật.
 - Analytics đã có sự kiện trên DebugView, Crashlytics server có fatal test crash và non-fatal lỗi mất mạng, Remote Config hai tham số đã đổi hành vi không rebuild. Xem [bằng chứng ba dịch vụ](docs/firebase-observability.md). Tài khoản → Kiểm thử Firebase chỉ hiện trong bản debug; test crash cần xác nhận và sẽ đóng app.
-- Kiểm tra ngày 01/11: analyze sạch, chạy lại 36/36 Flutter tests đạt; 18 Rules tests đạt ở mốc FCM/PDF (chưa chạy lại). FCM Console đã kiểm chứng foreground/background/terminated; PDF đã xuất trên Xperia. Storage production chưa đạt vì giữ Spark và khóa upload. ARTEMIS đang hoàn thiện phase 1, chưa đủ >=10 ca ×3; review PR và bộ nộp còn thiếu. Xem [tiến độ](docs/lab3-status.md), [test report](docs/test-report.md), [FCM/PDF/Storage](docs/fcm-pdf-storage.md).
+- Kiểm tra ngày 01/11: analyze sạch, chạy lại 43/43 Flutter tests đạt; 18 Rules tests đạt ở mốc FCM/PDF (chưa chạy lại). FCM Console đã kiểm chứng foreground/background/terminated; PDF đã xuất trên Xperia. Storage production chưa đạt vì giữ Spark và khóa upload. ARTEMIS đã có suite mở rộng, đang xác minh đủ >=10 ca ×3; review PR và video demo còn cần đóng. Xem [tiến độ](docs/lab3-status.md), [test report](docs/test-report.md), [FCM/PDF/Storage](docs/fcm-pdf-storage.md).
 - `pubspec.lock` giữ dependency đã resolve. CLI: FlutterFire 1.4.1. Các lệnh Firebase cần đăng nhập tài khoản có quyền dự án. Không commit token/credential đăng nhập CLI.
 
 Ứng dụng Android tiếng Việt giúp nhân viên văn phòng tự chọn, lên lịch và ghi nhận hoạt động ngắn trong ngày làm việc. Ba persona chính ngang nhau: Huy 28 tuổi, Mai 24 tuổi và Linh 39 tuổi; đều là persona giả định.
@@ -49,3 +53,7 @@ Timer/tìm kiếm/giờ nhắc trong prototype Lab 2 là mô phỏng trạng th�
 12 slide theo hai tài liệu hướng dẫn Lab 2. Slide 06 trình bày ba vòng cải tiến và ảnh trước/sau; slide 07 có năm phát hiện, quyết định và lý do. Mỗi slide có nguồn HTTPS bấm được. Các nguồn GitHub gắn commit `aed77f1ccd9b8721816932cc7471992fbb7b7be8` đã push, để giữ nguyên minh chứng khi main cập nhật. Đã kiểm tra 31 URL trả HTTP 200; phản hồi HTTP không thay thế quyền xem nội dung Figma/Stitch.
 
 Kịch bản có lời nói cho 12 slide, phân bổ 10 phút, demo 5 phút, ba flow và phần hỏi đáp. Đã xem bản render của 12 slide và 8 trang kịch bản. Lượt này Figma MCP báo hết hạn mức gói Starter; số liệu thiết kế dựa trên audit và ảnh đã lưu, chưa có kiểm tra trực tiếp Figma mới.
+
+## Hồ sơ Lab 3 trước hạn nộp 02/11
+
+Báo cáo 10 trang và slide 15 trang nằm trong [gói cục bộ](output/lab3/README.md). [Review mã](ai/code-review/lab3-review.md) có ba sửa runtime và tests tương ứng; [hướng dẫn commit và PR](docs/lab3-commit-and-pr-guide.md) dành cho người dùng tự commit/push. APK/video/ZIP lớn giữ cục bộ, không commit; chưa có link video nộp bài. Kết quả E2E mới nhất ở [summary](evidence/artemis/lab3-summary.json); không suy ra collect/test code là pass.

@@ -1,9 +1,9 @@
 {
-  "state": "phase1_incomplete_model_tasks_failed_daemon_stopped",
+  "state": "phase1_verified_with_one_trace_audit_full_lab3_incomplete",
   "dateLocal": "2026-11-01",
   "plannedRuns": 9,
-  "verifiedRuns": 7,
-  "passedRuns": 6,
+  "verifiedRuns": 9,
+  "pytestPassedVerifiedRuns": 8,
   "traceAuditedAdditionalRuns": 1,
   "passed": [
     {
@@ -39,6 +39,22 @@
       "delayedTerminalAudit": false
     },
     {
+      "case": "TC04",
+      "repetition": 2,
+      "traceId": "c0766dc6-f3cc-4889-b27e-12d48697f5a3",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC04",
+      "repetition": 3,
+      "traceId": "3454c3ff-c758-4983-8dc0-ced34d8058df",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
       "case": "TC11",
       "repetition": 1,
       "traceId": "26f5bbe8-296a-4479-832b-13d7d179ac36",
@@ -63,19 +79,6 @@
       "delayedTerminalAudit": false
     }
   ],
-  "remaining": [
-    {
-      "case": "TC04",
-      "repetition": 2
-    },
-    {
-      "case": "TC04",
-      "repetition": 3
-    }
-  ],
-  "recordedAttempts": 15,
-  "unverifiedOrFailedAttemptsRetained": 8,
-  "deviceReturnedHome": true,
-  "daemonShutdownAccepted": true,
-  "note": "Four remaining run IDs were attempted. TC03[3] pytest passed; TC03[2] original pytest failure retained with successful delayed-terminal audit from same trace. TC04[2]/[3] model tasks failed; no successful terminal output. Logs contain HTTP 503/UNAVAILABLE; no app defect established. Earlier checkpoint referenced invalidated TC03 aa058207; corrected to dc7bc0e4. See summary.json; no new model calls authorized beyond current scope."
+  "remaining": [],
+  "note": "Scope is partial TC04/TC11 as documented. Original failures retained; full Lab3/pro quota status in ../lab3-summary.json and ../pro-exploratory.json."
 }

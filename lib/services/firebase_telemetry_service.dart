@@ -7,6 +7,15 @@ import 'package:flutter/foundation.dart';
 
 import 'telemetry_service.dart';
 
+// Synthetic build marker lets E2E attribute native shared-service logs to this
+// debug build. It is never a user identifier and is cleared in ordinary builds.
+Map<String, Object>? analyticsDebugParameters({
+  required bool debug,
+  required String marker,
+}) => debug && RegExp(r'^[a-zA-Z0-9_-]{1,40}$').hasMatch(marker)
+    ? {'p9_e2e_build': marker}
+    : null;
+
 // Only product metadata is allowed. Never forward free-text search, email or name.
 Map<String, Object> safeEventParameters(Map<String, Object> parameters) => {
   for (final entry in parameters.entries)
@@ -63,6 +72,14 @@ class FirebaseTelemetryService implements TelemetryService {
         'flutter_android',
       );
     });
+    await _bestEffort(
+      () => FirebaseAnalytics.instance.setDefaultEventParameters(
+        analyticsDebugParameters(
+          debug: kDebugMode,
+          marker: const String.fromEnvironment('POWER9_E2E_BUILD'),
+        ),
+      ),
+    );
     FlutterError.onError = (details) {
       FlutterError.presentError(details);
       unawaited(

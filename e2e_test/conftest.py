@@ -21,6 +21,7 @@ sys.path.insert(0, str(SDK))
 
 def pytest_addoption(parser):
     parser.addoption('--run-artemis', action='store_true', help='Call the real ARTEMIS daemon/model on the connected test phone')
+    parser.addoption('--run-lab3-writes', action='store_true', help='Also allow the explicitly authorized Lab 3 test data writes and Android print preview')
 
 
 def normalized(text):
@@ -64,14 +65,15 @@ class Device:
         time.sleep(2)
         for _ in range(7):
             labels = self.labels()
-            if 'Khám phá hoạt động' in labels:
+            if 'Khám phá hoạt động' in labels and any('Power9 Office Routine' in label for label in labels):
                 return
             # The app has a nested Navigator: use its explicit app-bar Back.
             # Android Back may leave the Activity instead of its inner route.
             # Do not keep issuing system Back into the launcher.
             import uiautomator2
             picker_cancel = next((label for label in labels if normalized(label) == 'huy'), None)
-            if picker_cancel and 'OK' in labels and any(label.startswith('Chọn phút ') for label in labels):
+            known_picker = 'Nhập thời gian' in labels or any(label.startswith('Chọn phút ') for label in labels)
+            if picker_cancel and 'OK' in labels and known_picker:
                 # A failed model call can leave this known Flutter dialog open.
                 # Cancel only this unsaved picker; never confirm its selected time.
                 ui = uiautomator2.connect(self.serial)
@@ -101,14 +103,24 @@ def artemis_run(request):
     device = Device(serial)
     device.home()
 
-    def run(case, repetition, goal, fields):
+    def run(case, repetition, goal, fields, *, extended=False):
+        if extended:
+            assert request.config.getoption('--run-lab3-writes'), 'Extended cases require --run-lab3-writes after explicit user authorization'
         # Fail closed before EVERY model task. Credential remains in daemon only.
         node = os.environ.get('POWER9_NODE', 'node')
-        check = subprocess.run([node, str(ROOT / '.build/check-model-billing.cjs')], cwd=ROOT, capture_output=True, text=True, timeout=40)
+        check = subprocess.run([node, str(ROOT / 'e2e_test/check_model_billing.cjs')], cwd=ROOT, capture_output=True, text=True, timeout=40)
         assert check.returncode == 0 and json.loads(check.stdout)['billingEnabled'] is False, 'Billing unverified/changed; model task blocked'
+        budget_path = ROOT / '.build/artemis-run/deadline-budget.json'
+        if budget_path.exists():
+            budget = json.loads(budget_path.read_text(encoding='utf-8'))
+            assert budget['used'] < budget['limit'], 'Authorized model-run limit reached'
+            budget['used'] += 1
+            budget_path.write_text(json.dumps(budget), encoding='utf-8')
         client = ArtemisClient(os.environ.get('ARTEMIS_BASE_URL', 'http://127.0.0.1:8019'), device_serial=serial)
         description = 'Return ONLY a JSON object with these observed fields: ' + fields + '. Use exact visible Vietnamese labels. Never invent observations or set a flag true for an unperformed action. Do not output personal data, IDs, credentials, or notifications.'
         safety = ' Only use Power9 Office Routine and its native Android picker. Do not log out, save a valid schedule, record activities, start timers, change permissions/settings, open Profile/debug tools, or send messages. An explicitly requested invalid save to test validation is allowed. Stop and report if login/unlock is required. '
+        if extended:
+            safety = ' Only use Power9 Office Routine and its Android print preview for the requested test. Schedule/check-in/timer test actions explicitly requested in the goal are authorized. Never delete or undo any preexisting completion: stop if it blocks the test. Only undo a completion you created during THIS task. Do not log out, open Profile/debug, change connectivity/permissions/settings, send/share messages, browse existing files, upload to cloud, or enable billing. Cancel Android print preview without selecting a printer or saving a file. Stop if login/unlock is required. '
         started = time.monotonic()
         task_id = None
         async def execute():
@@ -117,20 +129,32 @@ def artemis_run(request):
             # session endpoint omits output. Request explicit observed JSON in
             # the terminal tool; read that exact payload from its trace below.
             terminal_contract = ' When finished, put the requested JSON object in the explanation argument of report_task_status. Do not substitute a prose success summary. ' + description
+            properties = {}
+            for entry in fields.split(','):
+                name, detail = entry.strip().split(':', 1)
+                kind = 'boolean' if 'boolean' in detail else 'integer' if 'integer' in detail else 'string'
+                properties[name] = {'type': kind, 'description': detail.strip() + '. Omit if not observed; never invent.'}
+            schema = {'type': 'object', 'properties': properties}
+            terminal_contract += '\nPOWER9_OBSERVATION_SCHEMA=' + json.dumps(schema, separators=(',', ':'))
+            terminal_contract += '\nIf the report_task_status tool has observations, put these typed observed values there. explanation may be a short summary. Never invent an observation just to complete the schema.'
             handle = await client.submit(goal + safety + terminal_contract, profile='flash', expected_output=description, enable_outputter=True, locked_app_package=PACKAGE)
             task_id = handle.task_id
             try:
-                return await client.wait_for_task(task_id, timeout=240)
+                return await client.wait_for_task(task_id, timeout=480 if extended else 240)
             except BaseException:
                 await client.stop(task_id)
                 raise
         result = asyncio.run(execute())
         output = result.output
         output_source = 'SDK result.output'
+        terminal_error = None
         if output is None:
             database = ROOT / '.build/artemis-run/traces/data_engine.db'
-            output = terminal_output(database, result.trace_id)
-            output_source = 'ARTEMIS recorded terminal report_task_status.args.explanation JSON (bounded commit wait)'
+            try:
+                output = terminal_output(database, result.trace_id)
+            except AssertionError as error:
+                terminal_error = str(error)
+            output_source = 'ARTEMIS recorded terminal observations object or legacy explanation JSON (bounded commit wait)'
         if isinstance(output, str):
             cleaned = re.sub(r'^```(?:json)?\s*|\s*```$', '', output.strip())
             try:
@@ -140,7 +164,8 @@ def artemis_run(request):
         # Whitelist public task output. Raw traces may contain screenshots: keep ignored.
         record = {'case': case, 'repetition': repetition, 'traceId': result.trace_id, 'status': result.status, 'elapsedSeconds': round(time.monotonic()-started, 2), 'outputSource': output_source, 'output': output, 'assertionsPassed': False}
         record['nativeTraceObservations'] = observed_states(ROOT / '.build/artemis-run/traces/data_engine.db', result.trace_id)
-        evidence = ROOT / 'evidence/artemis/phase1'
+        record['terminalTraceError'] = terminal_error
+        evidence = ROOT / ('evidence/artemis/phase2' if extended else 'evidence/artemis/phase1')
         evidence.mkdir(parents=True, exist_ok=True)
         path = evidence / f'{case}-run{repetition}-{result.trace_id}.json'
         public_fields = set(re.findall(r'([a-z_]+)\s*:', fields))
@@ -151,6 +176,7 @@ def artemis_run(request):
         path.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding='utf-8')
         request.node.artemis_evidence = (path, record)
         assert result.succeeded, f'ARTEMIS task did not succeed: {result.status}; trace={result.trace_id}'
+        assert terminal_error is None, terminal_error
         assert isinstance(output, dict), f'Missing structured JSON output; trace={result.trace_id}'
         if case == 'TC03':
             assert record['nativeTraceObservations']['searchQuerySeen'], 'No native trace showing the entered query; reject AI-only claim'
@@ -158,7 +184,15 @@ def artemis_run(request):
         if case == 'TC04':
             assert record['nativeTraceObservations']['missingTimeErrorSeen'], 'No native validation error in trace'
             assert record['nativeTraceObservations']['timePickerSeen'], 'No Flutter time picker dialog in recorded UI'
+        for required in {
+            'TC13': ['androidPrintPreviewSeen', 'pdfGeneratedSeen'],
+            'TC07': ['timerPausedSeen', 'leaveSessionDialogSeen'],
+            'TC06': ['timerPausedSeen'],
+            'TC09': ['completionDeleteDialogSeen'],
+        }.get(case, []):
+            assert record['nativeTraceObservations'][required], f'Missing recorded UI evidence: {required}'
         return output, device
+    run.device = device
     return run
 
 

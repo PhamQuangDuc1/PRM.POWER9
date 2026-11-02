@@ -48,7 +48,7 @@ def test_home_cancels_known_picker_before_appbar_back():
     device = Device('offline-test')
     device.require_unlocked = Mock()
     device.adb = Mock()
-    device.labels = Mock(side_effect=[['Chọn phút 36', 'Huỷ', 'OK'], ['Quay lại'], ['Khám phá hoạt động']])
+    device.labels = Mock(side_effect=[['Chọn phút 36', 'Huỷ', 'OK'], ['Quay lại'], ['Khám phá hoạt động', 'Power9 Office Routine']])
     ui = Mock()
     with patch('uiautomator2.connect', return_value=ui), patch('conftest.time.sleep'):
         device.home()
@@ -56,3 +56,27 @@ def test_home_cancels_known_picker_before_appbar_back():
     assert ui.call_args_list[1].kwargs['description'] == 'Quay lại'
     assert ui.return_value.click.call_count == 2
     assert device.adb.call_count == 1
+
+
+def test_progress_explore_cta_is_not_mistaken_for_home():
+    device = Device('offline-test')
+    device.require_unlocked = Mock()
+    device.adb = Mock()
+    device.labels = Mock(side_effect=[['Khám phá hoạt động', 'Tiến độ', 'Quay lại'], ['Khám phá hoạt động', 'Power9 Office Routine']])
+    ui = Mock()
+    with patch('uiautomator2.connect', return_value=ui), patch('conftest.time.sleep'):
+        device.home()
+    ui.assert_called_once_with(description='Quay lại', packageName='vn.power9.power9_office_routine')
+    ui.return_value.click.assert_called_once()
+
+
+def test_home_cancels_time_picker_text_input_mode():
+    device = Device('offline-test')
+    device.require_unlocked = Mock()
+    device.adb = Mock()
+    device.labels = Mock(side_effect=[['Nhập thời gian', 'Huỷ', 'OK'], ['Quay lại'], ['Khám phá hoạt động', 'Power9 Office Routine']])
+    ui = Mock()
+    with patch('uiautomator2.connect', return_value=ui), patch('conftest.time.sleep'):
+        device.home()
+    assert ui.call_args_list[0].kwargs['text'] == 'Huỷ'
+    assert ui.return_value.click.call_count == 2

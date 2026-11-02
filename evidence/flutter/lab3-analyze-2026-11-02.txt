@@ -1,0 +1,2 @@
+flutter analyze --no-pub lib test
+No issues found! (ran in 9.3s)

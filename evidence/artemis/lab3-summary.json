@@ -1,0 +1,860 @@
+{
+  "pytestVerifiedUniqueRunIds": 29,
+  "auditOnlyUniqueRunIds": 1,
+  "plannedCases": 11,
+  "plannedRunIds": 33,
+  "attemptedUniqueRunIds": 33,
+  "verifiedUniqueRunIds": 30,
+  "fullyVerifiedCases": 9,
+  "attemptsWithEvidence": 59,
+  "cases": [
+    {
+      "case": "TC02",
+      "attemptedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "verifiedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "remaining": [],
+      "attempts": 4,
+      "meanAttemptSeconds": 116.26,
+      "attemptPytestPassRate": 0.75
+    },
+    {
+      "case": "TC03",
+      "attemptedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "verifiedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "remaining": [],
+      "attempts": 6,
+      "meanAttemptSeconds": 45.43,
+      "attemptPytestPassRate": 0.5
+    },
+    {
+      "case": "TC04",
+      "attemptedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "verifiedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "remaining": [],
+      "attempts": 6,
+      "meanAttemptSeconds": 73.19,
+      "attemptPytestPassRate": 0.5
+    },
+    {
+      "case": "TC06",
+      "attemptedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "verifiedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "remaining": [],
+      "attempts": 5,
+      "meanAttemptSeconds": 114.59,
+      "attemptPytestPassRate": 0.6
+    },
+    {
+      "case": "TC07",
+      "attemptedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "verifiedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "remaining": [],
+      "attempts": 5,
+      "meanAttemptSeconds": 106.65,
+      "attemptPytestPassRate": 0.6
+    },
+    {
+      "case": "TC08",
+      "attemptedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "verifiedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "remaining": [],
+      "attempts": 3,
+      "meanAttemptSeconds": 26.03,
+      "attemptPytestPassRate": 1.0
+    },
+    {
+      "case": "TC09",
+      "attemptedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "verifiedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "remaining": [],
+      "attempts": 5,
+      "meanAttemptSeconds": 80.32,
+      "attemptPytestPassRate": 0.6
+    },
+    {
+      "case": "TC10",
+      "attemptedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "verifiedRepetitions": [
+        1,
+        2
+      ],
+      "remaining": [
+        3
+      ],
+      "attempts": 7,
+      "meanAttemptSeconds": 121.28,
+      "attemptPytestPassRate": 0.2857
+    },
+    {
+      "case": "TC11",
+      "attemptedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "verifiedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "remaining": [],
+      "attempts": 6,
+      "meanAttemptSeconds": 38.19,
+      "attemptPytestPassRate": 0.5
+    },
+    {
+      "case": "TC13",
+      "attemptedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "verifiedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "remaining": [],
+      "attempts": 6,
+      "meanAttemptSeconds": 54.45,
+      "attemptPytestPassRate": 0.5
+    },
+    {
+      "case": "TC16",
+      "attemptedRepetitions": [
+        1,
+        2,
+        3
+      ],
+      "verifiedRepetitions": [
+        1
+      ],
+      "remaining": [
+        2,
+        3
+      ],
+      "attempts": 6,
+      "meanAttemptSeconds": 85.0,
+      "attemptPytestPassRate": 0.1667
+    }
+  ],
+  "attempts": [
+    {
+      "case": "TC03",
+      "repetition": 1,
+      "traceId": "6e9e9059-8bac-4cfc-96c9-cb4cf9c9f194",
+      "status": "completed",
+      "elapsedSeconds": 34.2,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC03-run1-6e9e9059-8bac-4cfc-96c9-cb4cf9c9f194.json"
+    },
+    {
+      "case": "TC03",
+      "repetition": 1,
+      "traceId": "aa058207-f302-458a-aabf-d18936b2c0af",
+      "status": "completed",
+      "elapsedSeconds": 57.74,
+      "pytestPassed": true,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC03-run1-aa058207-f302-458a-aabf-d18936b2c0af.json"
+    },
+    {
+      "case": "TC03",
+      "repetition": 1,
+      "traceId": "dc7bc0e4-83f1-406d-95e0-ba40ceef6c69",
+      "status": "completed",
+      "elapsedSeconds": 35.31,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC03-run1-dc7bc0e4-83f1-406d-95e0-ba40ceef6c69.json"
+    },
+    {
+      "case": "TC03",
+      "repetition": 2,
+      "traceId": "9236e5ec-4494-414f-9467-f55ff65fb7f4",
+      "status": "completed",
+      "elapsedSeconds": 47.32,
+      "pytestPassed": false,
+      "verified": true,
+      "auditOnly": true,
+      "evidence": "evidence/artemis/phase1/TC03-run2-9236e5ec-4494-414f-9467-f55ff65fb7f4.json"
+    },
+    {
+      "case": "TC03",
+      "repetition": 2,
+      "traceId": "a8f066be-76bf-43c3-a746-fba623c9c800",
+      "status": "completed",
+      "elapsedSeconds": 64.15,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC03-run2-a8f066be-76bf-43c3-a746-fba623c9c800.json"
+    },
+    {
+      "case": "TC03",
+      "repetition": 3,
+      "traceId": "7e0d6509-818e-4063-89fc-6567d88774c2",
+      "status": "completed",
+      "elapsedSeconds": 33.88,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC03-run3-7e0d6509-818e-4063-89fc-6567d88774c2.json"
+    },
+    {
+      "case": "TC04",
+      "repetition": 1,
+      "traceId": "67640119-96b7-4c9e-90ed-ead468de0536",
+      "status": "completed",
+      "elapsedSeconds": 51.67,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC04-run1-67640119-96b7-4c9e-90ed-ead468de0536.json"
+    },
+    {
+      "case": "TC04",
+      "repetition": 2,
+      "traceId": "3a7072c8-4250-4f6e-9235-f1e7050839f9",
+      "status": "failed",
+      "elapsedSeconds": 73.14,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC04-run2-3a7072c8-4250-4f6e-9235-f1e7050839f9.json"
+    },
+    {
+      "case": "TC04",
+      "repetition": 2,
+      "traceId": "6968a686-a2f0-4805-be40-5d812ff12a52",
+      "status": "failed",
+      "elapsedSeconds": 74.07,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC04-run2-6968a686-a2f0-4805-be40-5d812ff12a52.json"
+    },
+    {
+      "case": "TC04",
+      "repetition": 2,
+      "traceId": "c0766dc6-f3cc-4889-b27e-12d48697f5a3",
+      "status": "completed",
+      "elapsedSeconds": 82.5,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC04-run2-c0766dc6-f3cc-4889-b27e-12d48697f5a3.json"
+    },
+    {
+      "case": "TC04",
+      "repetition": 3,
+      "traceId": "3454c3ff-c758-4983-8dc0-ced34d8058df",
+      "status": "completed",
+      "elapsedSeconds": 82.0,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC04-run3-3454c3ff-c758-4983-8dc0-ced34d8058df.json"
+    },
+    {
+      "case": "TC04",
+      "repetition": 3,
+      "traceId": "41d1f2d4-b071-4d55-ac89-7ce27ca7d4a1",
+      "status": "failed",
+      "elapsedSeconds": 75.78,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC04-run3-41d1f2d4-b071-4d55-ac89-7ce27ca7d4a1.json"
+    },
+    {
+      "case": "TC11",
+      "repetition": 1,
+      "traceId": "144a4b56-130c-4381-90c7-6781e4b56872",
+      "status": "completed",
+      "elapsedSeconds": 34.27,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC11-run1-144a4b56-130c-4381-90c7-6781e4b56872.json"
+    },
+    {
+      "case": "TC11",
+      "repetition": 1,
+      "traceId": "26f5bbe8-296a-4479-832b-13d7d179ac36",
+      "status": "completed",
+      "elapsedSeconds": 39.24,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC11-run1-26f5bbe8-296a-4479-832b-13d7d179ac36.json"
+    },
+    {
+      "case": "TC11",
+      "repetition": 1,
+      "traceId": "3b83fc58-ef86-431a-82a7-f69f87cb970a",
+      "status": "completed",
+      "elapsedSeconds": 32.24,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC11-run1-3b83fc58-ef86-431a-82a7-f69f87cb970a.json"
+    },
+    {
+      "case": "TC11",
+      "repetition": 1,
+      "traceId": "dd9f214e-304a-4e90-9c30-8b08341872cb",
+      "status": "completed",
+      "elapsedSeconds": 34.22,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC11-run1-dd9f214e-304a-4e90-9c30-8b08341872cb.json"
+    },
+    {
+      "case": "TC11",
+      "repetition": 2,
+      "traceId": "d8da098c-4298-4541-a588-eb3103e04c64",
+      "status": "completed",
+      "elapsedSeconds": 52.86,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC11-run2-d8da098c-4298-4541-a588-eb3103e04c64.json"
+    },
+    {
+      "case": "TC11",
+      "repetition": 3,
+      "traceId": "8dbd6324-db3c-4a7d-a238-19eae087e684",
+      "status": "completed",
+      "elapsedSeconds": 36.32,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase1/TC11-run3-8dbd6324-db3c-4a7d-a238-19eae087e684.json"
+    },
+    {
+      "case": "TC02",
+      "repetition": 1,
+      "traceId": "d1507c7b-a394-4b3f-a8cd-52382cec9b2a",
+      "status": "completed",
+      "elapsedSeconds": 90.38,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC02-run1-d1507c7b-a394-4b3f-a8cd-52382cec9b2a.json"
+    },
+    {
+      "case": "TC02",
+      "repetition": 2,
+      "traceId": "628e8bd6-8d32-4fce-a3ed-64e99796f781",
+      "status": "completed",
+      "elapsedSeconds": 162.67,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC02-run2-628e8bd6-8d32-4fce-a3ed-64e99796f781.json"
+    },
+    {
+      "case": "TC02",
+      "repetition": 3,
+      "traceId": "0bada17b-5716-4a68-96c3-9430e2814dbd",
+      "status": "completed",
+      "elapsedSeconds": 132.71,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC02-run3-0bada17b-5716-4a68-96c3-9430e2814dbd.json"
+    },
+    {
+      "case": "TC02",
+      "repetition": 3,
+      "traceId": "9b7a29b6-9228-42f8-b7d0-4cc1c25799ba",
+      "status": "completed",
+      "elapsedSeconds": 79.27,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC02-run3-9b7a29b6-9228-42f8-b7d0-4cc1c25799ba.json"
+    },
+    {
+      "case": "TC06",
+      "repetition": 1,
+      "traceId": "09e984b0-b140-41c9-835c-862e65b54596",
+      "status": "completed",
+      "elapsedSeconds": 131.46,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC06-run1-09e984b0-b140-41c9-835c-862e65b54596.json"
+    },
+    {
+      "case": "TC06",
+      "repetition": 1,
+      "traceId": "61de6bea-cbaf-4c64-8707-f59363ebb9a0",
+      "status": "completed",
+      "elapsedSeconds": 159.76,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC06-run1-61de6bea-cbaf-4c64-8707-f59363ebb9a0.json"
+    },
+    {
+      "case": "TC06",
+      "repetition": 2,
+      "traceId": "b72d5d51-607b-47bf-b708-90abff220756",
+      "status": "completed",
+      "elapsedSeconds": 92.94,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC06-run2-b72d5d51-607b-47bf-b708-90abff220756.json"
+    },
+    {
+      "case": "TC06",
+      "repetition": 3,
+      "traceId": "0439f2f2-81eb-4523-9e47-e3677cda2ad0",
+      "status": "completed",
+      "elapsedSeconds": 94.33,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC06-run3-0439f2f2-81eb-4523-9e47-e3677cda2ad0.json"
+    },
+    {
+      "case": "TC06",
+      "repetition": 3,
+      "traceId": "8dfa05cc-e316-4e92-b98f-50cf4fad4047",
+      "status": "completed",
+      "elapsedSeconds": 94.47,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC06-run3-8dfa05cc-e316-4e92-b98f-50cf4fad4047.json"
+    },
+    {
+      "case": "TC07",
+      "repetition": 1,
+      "traceId": "75f39703-3bb8-4f25-b3a8-c9820a5c10bd",
+      "status": "completed",
+      "elapsedSeconds": 96.89,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC07-run1-75f39703-3bb8-4f25-b3a8-c9820a5c10bd.json"
+    },
+    {
+      "case": "TC07",
+      "repetition": 2,
+      "traceId": "b1b50a21-c892-45b0-94a4-547fd35fbd6b",
+      "status": "completed",
+      "elapsedSeconds": 99.82,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC07-run2-b1b50a21-c892-45b0-94a4-547fd35fbd6b.json"
+    },
+    {
+      "case": "TC07",
+      "repetition": 3,
+      "traceId": "14b018af-cb91-4bd3-a3b6-6392108acfeb",
+      "status": "completed",
+      "elapsedSeconds": 75.97,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC07-run3-14b018af-cb91-4bd3-a3b6-6392108acfeb.json"
+    },
+    {
+      "case": "TC07",
+      "repetition": 3,
+      "traceId": "5245d3dc-34e7-4bab-9b00-d3f1564f59e9",
+      "status": "completed",
+      "elapsedSeconds": 188.37,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC07-run3-5245d3dc-34e7-4bab-9b00-d3f1564f59e9.json"
+    },
+    {
+      "case": "TC07",
+      "repetition": 3,
+      "traceId": "da1652ef-57b9-4214-99e7-556d390291b3",
+      "status": "completed",
+      "elapsedSeconds": 72.2,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC07-run3-da1652ef-57b9-4214-99e7-556d390291b3.json"
+    },
+    {
+      "case": "TC08",
+      "repetition": 1,
+      "traceId": "66d2e72b-4106-4154-a18d-6d8f000abd38",
+      "status": "completed",
+      "elapsedSeconds": 26.99,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC08-run1-66d2e72b-4106-4154-a18d-6d8f000abd38.json"
+    },
+    {
+      "case": "TC08",
+      "repetition": 2,
+      "traceId": "407efc2a-cefe-4f57-a25e-0b993e8ec464",
+      "status": "completed",
+      "elapsedSeconds": 24.03,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC08-run2-407efc2a-cefe-4f57-a25e-0b993e8ec464.json"
+    },
+    {
+      "case": "TC08",
+      "repetition": 3,
+      "traceId": "2bf4d93c-d57f-4e55-bf2b-f8bdc236dd76",
+      "status": "completed",
+      "elapsedSeconds": 27.08,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC08-run3-2bf4d93c-d57f-4e55-bf2b-f8bdc236dd76.json"
+    },
+    {
+      "case": "TC09",
+      "repetition": 1,
+      "traceId": "772f5b00-52fa-41d2-9b40-3a55dbf5efd9",
+      "status": "completed",
+      "elapsedSeconds": 87.67,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC09-run1-772f5b00-52fa-41d2-9b40-3a55dbf5efd9.json"
+    },
+    {
+      "case": "TC09",
+      "repetition": 1,
+      "traceId": "b898030c-e37e-4556-a90c-de1b02c76f16",
+      "status": "completed",
+      "elapsedSeconds": 77.12,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC09-run1-b898030c-e37e-4556-a90c-de1b02c76f16.json"
+    },
+    {
+      "case": "TC09",
+      "repetition": 2,
+      "traceId": "7c6d981c-661e-409f-ad32-0fd03cfbf92a",
+      "status": "completed",
+      "elapsedSeconds": 93.4,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC09-run2-7c6d981c-661e-409f-ad32-0fd03cfbf92a.json"
+    },
+    {
+      "case": "TC09",
+      "repetition": 3,
+      "traceId": "4aa08134-4a95-484c-b871-8d17e31d3dee",
+      "status": "completed",
+      "elapsedSeconds": 63.86,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC09-run3-4aa08134-4a95-484c-b871-8d17e31d3dee.json"
+    },
+    {
+      "case": "TC09",
+      "repetition": 3,
+      "traceId": "88ae0c22-3263-4c02-ab06-560f55d66bc2",
+      "status": "completed",
+      "elapsedSeconds": 79.56,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC09-run3-88ae0c22-3263-4c02-ab06-560f55d66bc2.json"
+    },
+    {
+      "case": "TC10",
+      "repetition": 1,
+      "traceId": "15774fe1-96d7-4322-b40a-9918fb3b0f61",
+      "status": "completed",
+      "elapsedSeconds": 157.29,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC10-run1-15774fe1-96d7-4322-b40a-9918fb3b0f61.json"
+    },
+    {
+      "case": "TC10",
+      "repetition": 2,
+      "traceId": "14601a8a-39fc-4e1f-a12c-7e5b61f6bc61",
+      "status": "completed",
+      "elapsedSeconds": 188.79,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC10-run2-14601a8a-39fc-4e1f-a12c-7e5b61f6bc61.json"
+    },
+    {
+      "case": "TC10",
+      "repetition": 2,
+      "traceId": "29853c43-cd7e-4d0d-af20-d943e6ee184d",
+      "status": "completed",
+      "elapsedSeconds": 83.15,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC10-run2-29853c43-cd7e-4d0d-af20-d943e6ee184d.json"
+    },
+    {
+      "case": "TC10",
+      "repetition": 2,
+      "traceId": "6ec758d7-d8db-4fc0-916f-3e7d76eb4ebb",
+      "status": "completed",
+      "elapsedSeconds": 97.46,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC10-run2-6ec758d7-d8db-4fc0-916f-3e7d76eb4ebb.json"
+    },
+    {
+      "case": "TC10",
+      "repetition": 3,
+      "traceId": "07a72b4f-a5d8-419b-a4a9-1609b374e7c1",
+      "status": "failed",
+      "elapsedSeconds": 128.08,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC10-run3-07a72b4f-a5d8-419b-a4a9-1609b374e7c1.json"
+    },
+    {
+      "case": "TC10",
+      "repetition": 3,
+      "traceId": "0b6dc370-50a9-4ef2-9a4a-15a67b54becd",
+      "status": "completed",
+      "elapsedSeconds": 83.25,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC10-run3-0b6dc370-50a9-4ef2-9a4a-15a67b54becd.json"
+    },
+    {
+      "case": "TC10",
+      "repetition": 3,
+      "traceId": "20769aba-aa24-48ac-9d9a-e21c5720c0fa",
+      "status": "completed",
+      "elapsedSeconds": 110.92,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC10-run3-20769aba-aa24-48ac-9d9a-e21c5720c0fa.json"
+    },
+    {
+      "case": "TC13",
+      "repetition": 1,
+      "traceId": "242977e0-bcba-4fb0-be6f-69ad6719cb9f",
+      "status": "completed",
+      "elapsedSeconds": 61.62,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC13-run1-242977e0-bcba-4fb0-be6f-69ad6719cb9f.json"
+    },
+    {
+      "case": "TC13",
+      "repetition": 1,
+      "traceId": "b13085cd-b1f9-4ca4-8c4d-137449b2cc93",
+      "status": "completed",
+      "elapsedSeconds": 73.99,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC13-run1-b13085cd-b1f9-4ca4-8c4d-137449b2cc93.json"
+    },
+    {
+      "case": "TC13",
+      "repetition": 2,
+      "traceId": "1e7083b0-02a7-49a7-bd94-0684fd4bb391",
+      "status": "completed",
+      "elapsedSeconds": 63.63,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC13-run2-1e7083b0-02a7-49a7-bd94-0684fd4bb391.json"
+    },
+    {
+      "case": "TC13",
+      "repetition": 2,
+      "traceId": "ed58a496-9919-4bc9-a2e2-14cfdd69ee2e",
+      "status": "completed",
+      "elapsedSeconds": 35.25,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC13-run2-ed58a496-9919-4bc9-a2e2-14cfdd69ee2e.json"
+    },
+    {
+      "case": "TC13",
+      "repetition": 3,
+      "traceId": "26fb4643-ce1d-4ab7-a9b7-752874e79843",
+      "status": "completed",
+      "elapsedSeconds": 43.51,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC13-run3-26fb4643-ce1d-4ab7-a9b7-752874e79843.json"
+    },
+    {
+      "case": "TC13",
+      "repetition": 3,
+      "traceId": "297af202-7a33-4f9f-b809-2d68af1cabe8",
+      "status": "completed",
+      "elapsedSeconds": 48.67,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC13-run3-297af202-7a33-4f9f-b809-2d68af1cabe8.json"
+    },
+    {
+      "case": "TC16",
+      "repetition": 1,
+      "traceId": "94b3f95f-4117-44f0-883d-fdeab9c14ae3",
+      "status": "completed",
+      "elapsedSeconds": 30.62,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC16-run1-94b3f95f-4117-44f0-883d-fdeab9c14ae3.json"
+    },
+    {
+      "case": "TC16",
+      "repetition": 1,
+      "traceId": "ef0562c9-03c0-4cb0-9d9d-b8975628aa21",
+      "status": "completed",
+      "elapsedSeconds": 34.75,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC16-run1-ef0562c9-03c0-4cb0-9d9d-b8975628aa21.json"
+    },
+    {
+      "case": "TC16",
+      "repetition": 2,
+      "traceId": "1e5d7e94-81fe-4f10-bb07-b2caae9e6f95",
+      "status": "completed",
+      "elapsedSeconds": 23.93,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC16-run2-1e5d7e94-81fe-4f10-bb07-b2caae9e6f95.json"
+    },
+    {
+      "case": "TC16",
+      "repetition": 2,
+      "traceId": "360ddf8e-3be9-48ea-a636-308bc463b114",
+      "status": "failed",
+      "elapsedSeconds": 200.46,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC16-run2-360ddf8e-3be9-48ea-a636-308bc463b114.json"
+    },
+    {
+      "case": "TC16",
+      "repetition": 3,
+      "traceId": "491437b1-4636-4315-867b-b177c324ef14",
+      "status": "completed",
+      "elapsedSeconds": 19.84,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC16-run3-491437b1-4636-4315-867b-b177c324ef14.json"
+    },
+    {
+      "case": "TC16",
+      "repetition": 3,
+      "traceId": "d30df72c-30b9-409a-8d20-8693a4d196b4",
+      "status": "failed",
+      "elapsedSeconds": 200.37,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC16-run3-d30df72c-30b9-409a-8d20-8693a4d196b4.json"
+    }
+  ],
+  "scopeNotes": [
+    "TC04 phase1 tests missing-time validation and Flutter picker cancel; not full validation/retry successful save.",
+    "TC11 phase1 tests four tabs; not full filter/back persistence.",
+    "TC13 phase2 tests PDF/native preview cancel with Spark cloud upload disabled; not production Storage upload.",
+    "Original failed attempts remain failed even where later read-only audit verified observations.",
+    "Exploratory, Analytics assertion, full auth/privacy/permission coverage and PR review have separate requirements.",
+    "No model trace for setup errors or transport exceptions; do not count them as passes."
+  ]
+}

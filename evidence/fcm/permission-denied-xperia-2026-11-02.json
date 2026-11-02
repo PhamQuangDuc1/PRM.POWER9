@@ -1,0 +1,15 @@
+{
+  "dateLocal": "2026-11-02",
+  "source": "local native UIAutomator2 + real Android app settings; no ARTEMIS/model calls",
+  "androidApi": 30,
+  "originalNotificationsEnabled": true,
+  "modelDataSent": false,
+  "privateContentExported": false,
+  "assertionsPassed": true,
+  "systemNotificationsDisabled": true,
+  "permissionErrorVisible": true,
+  "retryControlAvailable": true,
+  "appRemainedResponsive": true,
+  "systemPermissionRestored": true,
+  "returnedHome": true
+}

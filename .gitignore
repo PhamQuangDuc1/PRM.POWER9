@@ -1,6 +1,8 @@
 # Local build files and tool state
 /.build/
 /.codex-finalizer/
+/.chart-data-*/
+/.presentation-finalizer-*/
 
 # Office temporary lock files
 ~$*
@@ -36,3 +38,8 @@ ui-debug.log
 __pycache__/
 .pytest_cache/
 *.pyc
+
+# Lab 3 binary delivery stays local; publish separately from source control.
+/output/lab3/*.apk
+/output/lab3/*.mp4
+/output/lab3/*Bundle*.zip

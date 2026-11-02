@@ -17,6 +17,8 @@ def terminal_output(database, session_id, timeout=10):
             if action.get('action') == 'report_task_status':
                 args = action.get('args', {})
                 assert args.get('status') == 'completed', 'Terminal ARTEMIS tool did not report completion'
+                if isinstance(args.get('observations'), dict):
+                    return args['observations']
                 return args.get('explanation')
         if time.monotonic() >= deadline:
             return None
@@ -30,7 +32,9 @@ def observed_states(database, session_id):
             WHERE s.session_id=?''', (session_id,)).fetchall()
     result = {'searchQuerySeen': False, 'emptyMessageSeen': False,
               'missingTimeErrorSeen': False, 'timePickerSeen': False,
-              'nativeTimePickerSeen': False}
+              'nativeTimePickerSeen': False, 'androidPrintPreviewSeen': False,
+              'timerPausedSeen': False, 'leaveSessionDialogSeen': False,
+              'completionDeleteDialogSeen': False, 'pdfGeneratedSeen': False}
     for (raw,) in rows:
         nodes = json.loads(raw or '[]')
         if not isinstance(nodes, list):
@@ -40,6 +44,8 @@ def observed_states(database, session_id):
         for node in nodes:
             if not isinstance(node, dict):
                 continue
+            if node.get('package', '').startswith('com.android.printspooler'):
+                result['androidPrintPreviewSeen'] = True
             if node.get('package') == PACKAGE:
                 app_labels.extend([node.get('text', ''), node.get('content-desc', '')])
             if node.get('package') == 'android' and any(
@@ -56,4 +62,8 @@ def observed_states(database, session_id):
             and 'OK' in app_labels
         )
         result['nativeTimePickerSeen'] |= native_picker
+        result['timerPausedSeen'] |= 'Đã tạm dừng' in app_labels
+        result['leaveSessionDialogSeen'] |= 'Ở lại' in app_labels and 'Bỏ phiên' in app_labels
+        result['completionDeleteDialogSeen'] |= 'Xóa bản ghi này?' in app_labels
+        result['pdfGeneratedSeen'] |= any('Power9-' in value and '.pdf' in value for value in app_labels)
     return result

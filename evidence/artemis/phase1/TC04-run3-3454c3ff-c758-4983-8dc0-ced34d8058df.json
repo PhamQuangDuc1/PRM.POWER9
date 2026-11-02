@@ -1,0 +1,22 @@
+{
+  "case": "TC04",
+  "repetition": 3,
+  "traceId": "3454c3ff-c758-4983-8dc0-ced34d8058df",
+  "status": "completed",
+  "elapsedSeconds": 82.0,
+  "outputSource": "ARTEMIS recorded terminal report_task_status.args.explanation JSON (bounded commit wait)",
+  "output": {
+    "validation_message": "Chọn giờ khi bật nhắc hoạt động.",
+    "time_picker_seen": true,
+    "picker_cancelled": true,
+    "time_unselected": true
+  },
+  "assertionsPassed": true,
+  "nativeTraceObservations": {
+    "searchQuerySeen": false,
+    "emptyMessageSeen": false,
+    "missingTimeErrorSeen": true,
+    "timePickerSeen": true,
+    "nativeTimePickerSeen": false
+  }
+}

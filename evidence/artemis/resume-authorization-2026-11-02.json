@@ -1,0 +1,16 @@
+{
+  "dateLocal": "2026-11-02",
+  "userAnswer": "Đồng ý tối đa 50 lượt",
+  "authorizedTotalTaskLimit": 50,
+  "usedBeforeResume": 45,
+  "scope": "Three remaining run IDs, one Pro exploratory session and one spare; Power9 screenshots and UI hierarchy to Google Gemini; no Profile/debug, billing or notifications.",
+  "gitPreference": "User still performs commit/push.",
+  "previousQuotaTaskStartedAtUtc": "2026-11-01T15:37:11.102777+00:00",
+  "readOnlyCheckAtUtc": "2026-11-02T15:32:33.888637+00:00",
+  "elapsedHoursSincePreviousTaskStart": 23.92,
+  "previousRetryDelayHours": 16.18111111111111,
+  "quotaCurrentlyAvailable": "Not verified; elapsed retry interval does not guarantee availability.",
+  "policy": "Use the existing model/key only. Check billing before every task. Stop on another daily quota error; no quota circumvention or automatic retries. Preserve previous failures.",
+  "automaticApprovalReview": "Two resume actions rejected, including reconsideration with explicit new consent and elapsed retry interval. Neither command executed; local budget remains 45/45. No alternate script/model/key used to bypass review.",
+  "resumeExecutionStatus": "blocked_by_automatic_approval_review"
+}

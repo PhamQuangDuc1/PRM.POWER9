@@ -21,6 +21,7 @@ def main():
     os.environ['ARTEMIS_KEEP_DEVICE_AWAKE'] = 'false'
     os.environ['ARTEMIS_HIERARCHY_BACKEND'] = 'uiautomator'
     os.environ['POWER9_ARTEMIS_ASCII_INPUT'] = '1'
+    os.environ['POWER9_ARTEMIS_STRUCTURED_REPORT'] = '1'
     runtime = str(Path(__file__).resolve().parent / 'runtime')
     os.environ['PYTHONPATH'] = runtime + os.pathsep + os.environ.get('PYTHONPATH', '')
     adb = os.environ.get('POWER9_ADB')

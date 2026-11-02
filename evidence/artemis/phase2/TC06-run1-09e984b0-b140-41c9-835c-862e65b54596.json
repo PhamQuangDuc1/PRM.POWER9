@@ -1,0 +1,23 @@
+{
+  "case": "TC06",
+  "repetition": 1,
+  "traceId": "09e984b0-b140-41c9-835c-862e65b54596",
+  "status": "completed",
+  "elapsedSeconds": 131.46,
+  "outputSource": "ARTEMIS recorded terminal report_task_status.args.explanation JSON (bounded commit wait)",
+  "output": null,
+  "assertionsPassed": false,
+  "nativeTraceObservations": {
+    "searchQuerySeen": false,
+    "emptyMessageSeen": false,
+    "missingTimeErrorSeen": false,
+    "timePickerSeen": false,
+    "nativeTimePickerSeen": false,
+    "androidPrintPreviewSeen": false,
+    "timerPausedSeen": true,
+    "leaveSessionDialogSeen": false,
+    "completionDeleteDialogSeen": false,
+    "pdfGeneratedSeen": false
+  },
+  "terminalTraceError": null
+}

@@ -1,5 +1,25 @@
 # Power9 — kết quả kiểm chứng Auth/F01/F02/F03
 
+## Cập nhật PR và trình bày
+
+Theo yêu cầu mới, trợ lý đã tạo ba commit riêng R01/R02/R03 và [draft PR #3](https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3) từ codex/lab3-review-and-slides vào main, không merge. Video được người dùng chủ động để cuối sau khi chốt hướng UI/UX. Slide được làm lại thành deck PowerPoint 15 trang chỉnh sửa được; trạng thái ARTEMIS/Storage và các kết quả test không đổi chỉ vì đổi thiết kế slide.
+
+## Cập nhật kiểm tra ngày 02/11/2026
+
+Xperia/Firebase/GitHub kết nối được, billing tắt. Flutter chạy lại 43/43 đạt; kiểm tra nhãn và vùng chạm Android trên 14 widget màn ở 360/412 dp chữ 1,5× đạt. Smoke thật đã xác minh lỗi quyền thông báo và khôi phục, logout/Back/hủy Google Sign-In/retry; người dùng đã đăng nhập lại và Home được xác nhận. Những lượt này không phải ARTEMIS. Xem [mốc tiếp tục ngày 02/11](lab3-resume-2026-11-02.md) và bằng chứng được liên kết ở đó.
+
+ARTEMIS giữ 30/33 xác minh. Người dùng đồng ý tổng 50 lượt nhưng auto-review chặn resume theo ràng buộc dừng cũ; thực tế vẫn dùng 45/45, không có model task mới. Storage production, Pro/ba run ID, PR/ba commit, video Console và fidelity/TalkBack còn thiếu; chưa thể đánh dấu 100%.
+
+## Kết quả chốt tối 01/11/2026
+
+- Flutter43/43đạt; analyzer0issue; APKdebugarm64build/cài thànhcông.13offline runner testsđạt.18Rules tests là mốc trước, không chạy lại khi Rules không đổi.
+- ARTEMIS11ca×3runIDđãthử;30/33xácminh =29pytestpasses hợp lệ +1auditTC03.59attemptsđượcgiữ,9cacó3/3xácminh. Ba runIDchưađạt:TC10[3],TC16[2]/[3]. [Bảng tỷ lệ và thời gian](lab3-e2e-results.md) không đếm các lỗi thành pass.
+- TC16[1] cóevent/paramSDKthật lọc theo markerbuildngẫu nhiên và tasktime. Khôngxuất rawlogFA-SVC củaappkhác hoặc dùng logDart thaySDK.
+- Prolượt45bịquotaRESOURCE_EXHAUSTED500/ngày,0bướcUI;926,82giây chờ không phải15phút khámphá. Đãdừngtask/daemon, dùngđủ45/45lượtđượcđồngý, khôngđổi key/model/billingđểnéquota.
+- Replayoffline33runs/257ảnhgốc đãlọc ởevidence/artemis/replay/index.html. Footage361,89giây làbổsung, chưa thay videoapp/Console. Bộreport10trang/slide15trang ởoutput/lab3. PRreview,Storageproduction,video vàcác phầncoverageđãghichú vẫnchưađóng.
+
+Các đoạn sau là lịch sử các mốc kiểm chứng.
+
 ## Kiểm tra tiếp tục tối 01/11/2026
 
 - Flutter chạy lại: 36/36 tests đạt; flutter analyze lib test không issue. 18 Rules tests là kết quả đã có ở mốc FCM/PDF, không chạy lại trong phiên này.

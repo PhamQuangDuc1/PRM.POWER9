@@ -1,0 +1,29 @@
+{
+  "case": "TC13",
+  "repetition": 2,
+  "traceId": "1e7083b0-02a7-49a7-bd94-0684fd4bb391",
+  "status": "completed",
+  "elapsedSeconds": 63.63,
+  "outputSource": "ARTEMIS recorded terminal report_task_status.args.explanation JSON (bounded commit wait)",
+  "output": {
+    "file_name": "Power9-2026-11-01-5db3f66750b2.pdf",
+    "summary": "0/2 hoạt động đã hoàn thành",
+    "android_print_seen": true,
+    "returned_report": true,
+    "cloud_disabled": true
+  },
+  "assertionsPassed": false,
+  "nativeTraceObservations": {
+    "searchQuerySeen": false,
+    "emptyMessageSeen": false,
+    "missingTimeErrorSeen": false,
+    "timePickerSeen": false,
+    "nativeTimePickerSeen": false,
+    "androidPrintPreviewSeen": true,
+    "timerPausedSeen": false,
+    "leaveSessionDialogSeen": false,
+    "completionDeleteDialogSeen": false,
+    "pdfGeneratedSeen": true
+  },
+  "terminalTraceError": null
+}

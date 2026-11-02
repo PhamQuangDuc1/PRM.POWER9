@@ -41,3 +41,9 @@ Mỗi instruction phải yêu cầu agent báo giá trị nhìn thấy trong str
 - Manual console: Auth Users, Storage file/Rules, FCM các trạng thái, từng Analytics event DebugView, Crashlytics nonfatal/test crash/user key, Remote Config trước/sau/default/cache.
 - Accessibility/fidelity: so ảnh Figma và app cùng kích thước, kiểm tra target >=48 dp, layout 360/412 dp, text scale và TalkBack trên màn thật.
 - ARTEMIS Pro exploratory 15–30 phút không script: đi các ngõ chưa biết, ghi issue thật; không tự tạo phát hiện hoặc coi không phát hiện là bằng chứng không có bug.
+
+## Phạm vi E2E bổ sung tối 01/11/2026
+
+Đã tạo executable pytest cho 10 ca chính ×3, cộng TC16 Analytics ×3 đang chuẩn bị thực thi. Không đồng nhất collect thành pass. TC13 mở print preview native và hủy khi upload cloud bị tắt, chưa phải toàn bộ ca Storage. TC04 và TC11 phase1 vẫn là các phần của case đầy đủ, ghi giới hạn riêng trong kết quả. Bộ tổng hợp `e2e_test/summarize_lab3.py` khử trùng theo case/repetition nhưng giữ mọi failed attempts, trace IDs, thời gian và pass rate theo attempts. Phiên Pro có script opt-in riêng và không tự suy ra đạt 15 phút nếu model kết thúc sớm.
+
+Các test tạo lịch tương lai và đổi giờ lịch hôm nay chỉ trên tài khoản thử; giữ toàn bộ dữ liệu cũ khác. Mọi UI data đi Google Gemini trong giới hạn người dùng xác nhận; không Profile/debug, không gửi thông báo/billing. Người dùng tự commit/push; review PR là bước riêng sau khi có commit/URL thật.

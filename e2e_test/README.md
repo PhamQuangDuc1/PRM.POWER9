@@ -25,3 +25,34 @@ Compatibility đã phát hiện khi chạy: Flash trong upstream commit này ret
 Rà soát sâu phát hiện clipboard paste có thể báo thành công nhưng query không vào ô tìm kiếm. runtime/sitecustomize.py là adapter chỉ bật trong worker được launcher cấu hình; các chuỗi ASCII kiểm thử có giới hạn đi qua AndroidInputIME/ADB thay clipboard. Không thay app, model hoặc upstream checkout. trace_observations.py kiểm tra query và thông báo rỗng thực sự có trong UI trace; kết quả model tự báo không đủ. Một lượt tìm kiếm cũ từng qua assertion JSON đã bị loại khỏi kết quả xác nhận do thiếu bằng chứng UI; record cũ giữ assertionsPassed lịch sử và retrospectiveNativeAudit.verified=false. Không tính lại nó thành pass.
 
 Đính chính TC04: showTimePicker là Flutter Material, không phải picker hệ thống Android. Ca này kiểm tra validation và hủy dialog Flutter, chưa đáp ứng riêng yêu cầu ARTEMIS native-system interaction; native account picker/notification shade/print UI cần ca khác. Các evidence cũ có trường native_picker_seen chỉ là lời model, không chứng minh native Android.
+
+## Bộ test mở rộng ngày 01/11
+
+`test_artemis_phase2.py` bổ sung TC02/06/07/08/09/10/13 ×3. Bắt buộc `--run-artemis --run-lab3-writes` sau khi người dùng xác nhận ảnh/cây giao diện Xperia được gửi tới API Google Gemini và đồng ý các thao tác lịch/check-in/timer/PDF. Người dùng đã xác nhận tối đa 40 lượt cho đợt này; `.build/artemis-run/deadline-budget.json` giữ số đã dùng, không tự reset để vượt hạn mức. File budget và model credential không commit.
+
+- TC02 tạo lịch test đi bộ ở các ngày +11/+12/+13 theo Asia/Saigon; các lịch này là dữ liệu kiểm thử, không phải sử dụng tự nhiên.
+- TC08/09 chỉ tạo rồi undo/xóa completion của đúng task, giữ schedule. Không xóa completion có sẵn.
+- TC06/07 timer dùng thời gian thực, cleanup sau task; nếu gặp record/phiên có sẵn thì phải dừng.
+- TC10 sửa giờ lịch đi bộ hôm nay thành 09:11/09:12/09:13, nhắc tắt; thay đổi này cần ghi trong bàn giao.
+- TC13 mở native Android print preview rồi Back, không chọn máy in, lưu file, share hoặc upload. Native print spooler phải xuất hiện trong trace; lời model tự báo không đủ.
+- TC16 (`test_artemis_analytics.py`) yêu cầu view_activity(activity_id=move-walk) trong logcat của đúng app process và sau thời điểm bắt đầu task. Không xuất raw FA-SVC dùng chung giữa các app.
+
+Outputter upstream chưa chạy ở Flash path đã pin. Adapter mới chỉ thay schema của terminal tool trong process worker khi goal có POWER9_OBSERVATION_SCHEMA: thêm object observations với kiểu từng field. Model phải tự ghi giá trị quan sát vào object; field chưa quan sát được phép bỏ trống và assertion sẽ fail. Không điền kết quả từ narrative, không thêm thao tác thiết bị thay model, không sửa checkout upstream. Dữ liệu được đọc nguyên từ action_taken.args.observations; explanation JSON cũ vẫn dùng được cho trace lịch sử. Có offline tests kiểm tra schema không sửa tool gốc, không tự phát sinh giá trị và giữ false/0 nguyên nghĩa.
+
+`run_exploratory.py --run-artemis` chuẩn bị một task Pro không script. Chỉ được tính đạt thời lượng khi thực tế 900–1800 giây; không thêm sleep để giả 15 phút. Output issue phải rà trace trước khi xuất công khai. Task hoàn tất sớm vẫn không đóng tiêu chí exploratory.
+
+## Firebase CLI preflight có trong repo
+
+Helper `e2e_test/check_model_billing.cjs` dùng Firebase CLI 15.33.0 đã kiểm tra trong môi trường này. Chỉ đọc billingInfo, không bật billing; thiếu field boolean hoặc lỗi xác thực đều fail closed. Dùng Node module resolution trước, fallback `%APPDATA%/npm/node_modules/firebase-tools/lib`; nếu cài nơi khác đặt POWER9_FIREBASE_TOOLS_DIR tới thư mục lib. Không hardcode đường dẫn tên người dùng hoặc credential. POWER9_FIREBASE_PROJECT mặc định power9-office-se180724; project này phải đúng project gắn model key đã xác minh. Khi đổi key/project phải xác minh lại quan hệ đó; một billing check cho project khác không chứng minh model miễn phí. Đây là preflight billing, không phải hạn mức quota tuyệt đối. Credential model/config vẫn do người chạy chuẩn bị riêng ignored.
+
+## TC16 và SDK service dùng chung
+
+Trên bản SDK hiện tại, PID app có log kết nối FA nhưng không có dòng view_activity; FA-SVC xử lý event trong service dùng chung. Không dùng một dòng không có định danh app để kết luận là Power9. Bản debug kiểm thử bổ sung default parameter `p9_e2e_build` ngẫu nhiên qua Firebase SDK, từ dart-define POWER9_E2E_BUILD; không phải UID, email hoặc device ID. Bản thường/release xóa marker. Hai regression tests kiểm tra release/off và từ chối giá trị dạng email/free text.
+
+Để tái hiện, tạo marker tổng hợp mới dạng p9_ + ngày + chuỗi ngẫu nhiên (tối đa40ký tự), lưu `{ "marker": "..." }` vào ignored `.build/artemis-run/analytics-build-marker.json`, build debug với cùng `--dart-define=POWER9_E2E_BUILD=<marker>`, rồi install -r. Bật tạm log.tag.FA và log.tag.FA-SVC thành VERBOSE, debug.firebase.analytics.app thành packagePower9. TC16 ưu tiên log đúng appPID; fallback dùng **--regex marker ngay ở logcat** rồi lọc thời điểm bắt đầu task và event+activity_id. Chỉ SDK lines có markercủa APK này được trả về; không đọc/xuất dữ liệuappkhác hoặc rawlogs. Log do Dart app tự in không được coi là bằng chứngSDK.
+
+Sau kiểm thử khôi phục taglogs về giá trị trước đó và tắt Analyticsdebug bằng .none. Tài liệu chính thức: [Native Android event logging](https://firebase.google.com/docs/analytics/android/events#view_events_in_the_android_studio_debug_log), [DebugView](https://firebase.google.com/docs/analytics/debugview). LogSDK chứng minh SDKđã xử lý event/params, không tự suy ra DebugView/dashboard đã nhận đầy đủmọievent.
+
+Lượt TC10 thử lại dùng tickđồnghồ dễ quan sát: rep2=10:30, rep3=11:00, vẫn yêu cầu Hủygiữgiờcũ rồi saveđúnggiờmới và tổngkhôngtăng. Các lượt cũ09:12/09:13/10:45 thấtbại giữ nguyên và không được đổi thành pass bằng cách đổiexpected.
+
+Người dùng đã nâng giới hạn từ40 lên **45 lượt tổng cộng**, gồm phiên Pro15–20phút; budget phải giữusedhiện tại, chỉ cập nhậtlimit sau xác nhận trực tiếp. Không mở rộng ra profile/debugUI, gửi thông báo hoặc billing.

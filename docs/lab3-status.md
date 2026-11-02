@@ -1,5 +1,25 @@
 # Lab 3 — mốc khởi tạo 31/10/2026
 
+## Cập nhật PR và trình bày
+
+Theo yêu cầu mới, trợ lý đã tạo ba commit riêng R01/R02/R03 và [draft PR #3](https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3) từ codex/lab3-review-and-slides vào main, không merge. Video được người dùng chủ động để cuối sau khi chốt hướng UI/UX. Slide được làm lại thành deck PowerPoint 15 trang chỉnh sửa được; trạng thái ARTEMIS/Storage và các kết quả test không đổi chỉ vì đổi thiết kế slide.
+
+## Cập nhật kiểm tra ngày 02/11/2026
+
+Xperia/Firebase/GitHub kết nối được, billing tắt. Flutter chạy lại 43/43 đạt; kiểm tra nhãn và vùng chạm Android trên 14 widget màn ở 360/412 dp chữ 1,5× đạt. Smoke thật đã xác minh lỗi quyền thông báo và khôi phục, logout/Back/hủy Google Sign-In/retry; người dùng đã đăng nhập lại và Home được xác nhận. Những lượt này không phải ARTEMIS. Xem [mốc tiếp tục ngày 02/11](lab3-resume-2026-11-02.md) và bằng chứng được liên kết ở đó.
+
+ARTEMIS giữ 30/33 xác minh. Người dùng đồng ý tổng 50 lượt nhưng auto-review chặn resume theo ràng buộc dừng cũ; thực tế vẫn dùng 45/45, không có model task mới. Storage production, Pro/ba run ID, PR/ba commit, video Console và fidelity/TalkBack còn thiếu; chưa thể đánh dấu 100%.
+
+## Mốc chốt 01/11 trước hạn nộp 02/11
+
+43/43 Flutter tests đạt, analyzer sạch và APK debug arm64 cuối đã build/cài. Ba fixes runtime và marker chẩn đoán Analytics có regression tests. Các widget màn chính đã được render ở360/412dp textscale1.5; không thay fidelity hoặc TalkBack trên máy.
+
+Đã thực thi11caARTEMIS×3runID, xác minh30/33 (29pytestpasses hợp lệ +1audit trace), giữ59attempts. ChưađạtTC10[3],TC16[2–3]. Một testAnalytics đã khớp SDKevent/params củaPower9; reportchi tiết ởlab3-e2e-results.md. Probịhủy vìquotaGemini ngày500với0bướcUI;926,82giây chờ khôngđóng yêu cầu15–30phút exploratory.
+
+Đã dùng45/45lượt được đồngý; daemon tắt, debugflagsđãdọn, billingkhôngbật. BộPDF10/15trang, APK, footage6phút02giây, replay33runs/257ảnh và kịchbảndemo ởoutput/lab3. Chưa cóvideoConsole, PRURL hoặc ba fixcommits; người dùngtựcommit/push. Storageproduction vẫnchưađạt do giữSpark; cầnphươngánđượcgiảngviênchấpnhận.
+
+Các mục bên dưới lưu mốc cũ; ưu tiên trạng thái mới này.
+
 ## Trạng thái hiện hành — tiếp tục tối 01/11/2026
 
 Các đoạn mốc cũ bên dưới là lịch sử, không phải danh sách việc còn thiếu hiện tại.
