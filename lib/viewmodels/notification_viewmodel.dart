@@ -38,6 +38,7 @@ final notificationControllerProvider = NotifierProvider.autoDispose
 class NotificationController extends Notifier<NotificationState> {
   NotificationController(this.uid);
   final String uid;
+  int _refreshGeneration = 0;
   bool get _valid =>
       ref.mounted && ref.read(sessionProvider).asData?.value?.uid == uid;
   @override
@@ -84,12 +85,13 @@ class NotificationController extends Notifier<NotificationState> {
 
   Future<void> refresh() async {
     if (!_valid) return;
+    final generation = ++_refreshGeneration;
     final service = ref.read(notificationServiceProvider);
     List<OfficeNotification> items;
     try {
       items = await service.load(uid);
     } catch (error, stack) {
-      if (!_valid) return;
+      if (!_valid || generation != _refreshGeneration) return;
       state = NotificationState(
         status: state.status,
         items: state.items,
@@ -103,7 +105,7 @@ class NotificationController extends Notifier<NotificationState> {
       );
       return;
     }
-    if (!_valid) return;
+    if (!_valid || generation != _refreshGeneration) return;
     state = NotificationState(
       status: NotificationStatus(
         enabled: state.status.enabled,
