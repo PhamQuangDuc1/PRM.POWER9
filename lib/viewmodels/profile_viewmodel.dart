@@ -18,9 +18,11 @@ class ProfileViewModel extends Notifier<AsyncValue<void>> {
     if (state.isLoading) return;
     state = const AsyncLoading();
     final telemetry = ref.read(telemetryProvider);
+    final uid = ref.read(sessionProvider).asData?.value?.uid;
+    final notifications = ref.read(notificationServiceProvider);
     try {
       try {
-        await ref.read(notificationServiceProvider).disable();
+        await notifications.disable();
       } catch (_) {
         /* Do not trap a user in a signed-in session. */
       }
@@ -29,6 +31,17 @@ class ProfileViewModel extends Notifier<AsyncValue<void>> {
       await telemetry.identify(null);
       if (ref.mounted) state = const AsyncData(null);
     } catch (error, stack) {
+      // Failed sign-out leaves the same session active. Restore its messaging
+      // binding rather than silently disabling notifications until app restart.
+      if (ref.mounted &&
+          uid != null &&
+          ref.read(sessionProvider).asData?.value?.uid == uid) {
+        try {
+          await notifications.restore(uid);
+        } catch (_) {
+          // Keep the sign-out error; messaging can be retried independently.
+        }
+      }
       if (ref.mounted) state = AsyncError(error, stack);
     }
   }
