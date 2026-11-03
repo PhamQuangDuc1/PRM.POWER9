@@ -1,3 +1,9 @@
+# PR hiện hành — OneD, 04/11/2026
+
+[PR #4: OneD → main](https://github.com/PhamQuangDuc1/PRM.POWER9/pull/4) thay PR #3. Tám commit cũ và thay đổi UI/bằng chứng/demo được giữ trên OneD; PR cũ đã đóng, nhánh review cũ đã xóa local/remote sau kiểm tra ancestry và bundle. Không merge main. Metadata: `evidence/code-review/lab3-pr.json`; audit: `evidence/git/2026-11-04/oned-pr-replacement.json`.
+
+Các chỉ dẫn bên dưới là lịch sử của PR #3.
+
 # Ba commit sửa lỗi và PR Lab 3
 
 Các sửa runtime đã hoàn tất và bộ Flutter cuối đạt 43/43, analyze sạch. Người dùng đã đổi lựa chọn ngày 02/11: yêu cầu trợ lý tự commit và tạo PR. Đã tạo nhánh codex/lab3-review-and-slides và [draft PR #3](https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3) vào main; không merge. Video được chủ động để cuối sau khi chốt hướng UI/UX.

@@ -5,7 +5,7 @@
 - DebugView đã nhận `view_activity`, mở Parameters thấy `activity_id=move-walk`. Bằng chứng server đã cắt bỏ thông tin riêng: `evidence/analytics/2026-11-04/server-receipt.json` và ảnh cùng thư mục. Video quay trước đó vẫn thể hiện trạng thái chờ tại thời điểm quay.
 - Người dùng nghe/vuốt và xác nhận cả ba phần TalkBack đạt, bổ sung nhánh timer sau “Ở lại” đã đạt trước đó. Phạm vi và giới hạn ở `evidence/accessibility/2026-11-04-manual-flows/result.json`. Đã khôi phục trợ năng và Analytics debug.
 - TC10[3] chạy lại thật nhưng chưa đạt: model báo hoàn tất sau 12 bước, app và Firestore vẫn chưa có giờ mới. Giữ trace failure; không tính native thành ARTEMIS. Tổng vẫn 32/33, budget đã dùng 50/50. Không gọi thêm trước khi được tăng trần rõ ràng.
-- Đã chuyển toàn bộ 8 commit và thay đổi đang làm sang OneD, bảo toàn cây làm việc và có Git bundle dự phòng. Chưa push/tạo PR thay thế; nhánh cũ và PR #3 vẫn được giữ cho đến khi PR OneD được xác minh.
+- Đã chuyển toàn bộ 8 commit và thay đổi đang làm sang OneD, bảo toàn cây làm việc và có Git bundle dự phòng. Đã commit/push và tạo PR #4 OneD → main: https://github.com/PhamQuangDuc1/PRM.POWER9/pull/4. Đã xác minh PR mới, đóng PR #3 và xóa nhánh codex/lab3-review-and-slides local/remote sau khi kiểm tra ancestry/bundle. Audit: `evidence/git/2026-11-04/oned-pr-replacement.json`. Không merge main.
 - Spark/billing tắt và upload=false giữ nguyên theo yêu cầu không phát sinh chi phí.
 
 ## Mốc hiện hành — đã tiếp tục và hoàn tất video/slide 04/11/2026

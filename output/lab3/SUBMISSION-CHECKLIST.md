@@ -19,7 +19,7 @@
 - [x] TalkBack: người dùng xác nhận ba phần nhãn/trạng thái, validation, dialog, PDF và đường quay lại; phạm vi ở evidence/accessibility/2026-11-04-manual-flows/result.json. Bộ chọn Google không thuộc lượt này.
 - [x] Video app + Firebase Console thật, Login/Home, lời đọc Hoài My, phụ đề 64 mục; decode hình/tiếng và rà bố cục/quyền riêng tư đạt.
 - [ ] Đồng bộ báo cáo PDF mốc cũ nếu dùng báo cáo đó để nộp với số liệu mới.
-- [ ] Commit/push thay đổi hiện hành và kiểm tra các link nộp bài; không merge PR khi chưa có chỉ đạo.
+- [x] Commit/push trên OneD, tạo [PR #4](https://github.com/PhamQuangDuc1/PRM.POWER9/pull/4) vào main; PR #3 đóng và nhánh review cũ đã xóa an toàn. Chưa merge.
 
 ## Bỏ khỏi phạm vi triển khai vì chi phí
 

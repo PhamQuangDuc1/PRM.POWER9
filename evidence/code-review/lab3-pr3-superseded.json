@@ -1,0 +1,21 @@
+{
+  "number": 3,
+  "url": "https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3",
+  "base": "main",
+  "head": "codex/lab3-review-and-slides",
+  "draft": true,
+  "state": "closed",
+  "runtimeFixCommits": [
+    "ac4b35b",
+    "38b52bc",
+    "e595956"
+  ],
+  "merged": false,
+  "tokenSaved": false,
+  "evidenceCommit": "f45500f",
+  "presentationFile": "output/lab3/Power9_Lab3_Designer.pptx",
+  "presentationSlides": 15,
+  "videoDeferredByUser": true,
+  "supersededBy": 4,
+  "headBranchDeleted": true
+}

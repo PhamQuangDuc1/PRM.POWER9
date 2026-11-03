@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-04",
+  "currentBranch": "OneD",
+  "replacementPr": 4,
+  "replacementUrl": "https://github.com/PhamQuangDuc1/PRM.POWER9/pull/4",
+  "base": "main",
+  "oldPr": 3,
+  "oldPrClosed": true,
+  "oldPrMerged": false,
+  "oldBranch": "codex/lab3-review-and-slides",
+  "oldHead": "8fbf31478a32f04147df68edc5bf4a3f6205d5cd",
+  "allOldCommitsReachableFromOneD": true,
+  "backupBundleVerified": true,
+  "remoteOldBranchDeleted": true,
+  "localOldBranchDeleted": true,
+  "mainMerged": false,
+  "credentialSaved": false
+}

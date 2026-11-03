@@ -122,4 +122,4 @@ Nếu trình bày đầy đủ checklist, bổ sung các nhánh Góc làm việc
 - Hoàn tác/xóa đúng dữ liệu vừa tạo; giữ dữ liệu có trước. Trả mạng, quyền, cấu hình và TalkBack về trạng thái ban đầu.
 - Đăng nhập lại tài khoản kiểm thử ban đầu; trả app về Hôm nay.
 - Nêu rõ Storage production và ARTEMIS/Pro theo trạng thái bằng chứng hiện hành. Không dùng phần demo native này để cộng thêm run ARTEMIS.
-- Mã và review: https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3 .
+- Mã và review: https://github.com/PhamQuangDuc1/PRM.POWER9/pull/4 .

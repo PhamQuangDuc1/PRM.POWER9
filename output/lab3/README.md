@@ -26,4 +26,4 @@ Video có Login thật và Home sau khi người dùng tự chọn lại tài kh
 
 Các bảng và biểu đồ slide vẫn chỉnh sửa được. Đợt cập nhật mới chỉ thay hình slide 8, 12, 15; 12 slide khác giống từng pixel với bản trước. Notes và nguồn được đồng bộ. Raw footage, định danh và các lượt công cụ lỗi giữ trong .build, không đưa vào gói công khai.
 
-Nhánh bàn giao là OneD; PR hiện hành được ghi tại evidence/code-review/lab3-pr.json. PR cũ #3 được thay thế sau khi bảo toàn toàn bộ commit. Không merge vào main. APK/video và narration giữ cục bộ, không nằm trong Git PR; PPTX/PDF và bằng chứng đã lọc được đưa vào PR. Kịch bản demo Android Emulator và helper chuẩn bị máy ảo có trong docs/scripts, chưa diễn tập trên AVD.
+Nhánh bàn giao là OneD; [PR #4 OneD → main](https://github.com/PhamQuangDuc1/PRM.POWER9/pull/4) là PR hiện hành. PR #3 đã đóng và nhánh cũ đã xóa sau khi bảo toàn toàn bộ commit và kiểm tra bundle dự phòng. Không merge vào main. APK/video và narration giữ cục bộ, không nằm trong Git PR; PPTX/PDF và bằng chứng đã lọc được đưa vào PR. Kịch bản demo Android Emulator và helper chuẩn bị máy ảo có trong docs/scripts, chưa diễn tập trên AVD.
