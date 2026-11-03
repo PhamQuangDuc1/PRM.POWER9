@@ -1,0 +1,15 @@
+{
+  "source": "Supplementary review of device observations and hashed inbox item sets from A -> B -> A",
+  "accountIdentifiersExported": false,
+  "aInboxEmptyBefore": true,
+  "bVisibleNotificationItemCount": 6,
+  "bNotificationItemHashesSeenAfterReturnToA": 0,
+  "aInboxEmptyAfter": true,
+  "nonemptyInboxIsolationObservedDirection": "Existing B notification items were not displayed in A",
+  "nonemptyInboxIsolationObserved": true,
+  "newNotificationSent": false,
+  "scopeLimit": "Device observation of existing B items and A empty inbox; not an authenticated Storage Rules test or proof for every possible notification delivery race",
+  "earlierSummaryCorrection": "B was not empty. Initial script conservatively marked inbox unverified because A was empty; the nonempty B-to-A observation provides positive separation evidence.",
+  "references": ["verify-b.json", "roundtrip.json"],
+  "modelCalls": 0
+}

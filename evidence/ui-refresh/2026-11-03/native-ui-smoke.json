@@ -1,0 +1,55 @@
+{
+  "scope": "native read-only UI smoke on final artwork APK",
+  "modelCalls": 0,
+  "dataWriteActions": 0,
+  "screens": [
+    {
+      "screen": "today",
+      "expectedLabel": "Khám phá hoạt động",
+      "observed": true
+    },
+    {
+      "screen": "food",
+      "expectedLabel": "Sắp xếp bữa trưa văn phòng",
+      "observed": true
+    },
+    {
+      "screen": "relax",
+      "expectedLabel": "Bắt đầu 3 phút",
+      "observed": true
+    },
+    {
+      "screen": "connection",
+      "expectedLabel": "Trò chuyện giờ nghỉ",
+      "observed": true
+    },
+    {
+      "screen": "discover",
+      "expectedLabel": "Tìm hoạt động",
+      "observed": true
+    },
+    {
+      "screen": "activity-detail",
+      "expectedLabel": "Chi tiết hoạt động",
+      "observed": true
+    },
+    {
+      "screen": "workspace",
+      "expectedLabel": "Góc làm việc",
+      "observed": true
+    },
+    {
+      "screen": "recovery",
+      "expectedLabel": "Ngủ & phục hồi",
+      "observed": true
+    },
+    {
+      "screen": "final-home",
+      "expectedLabel": "Khám phá hoạt động",
+      "observed": true
+    }
+  ],
+  "returnedHome": true,
+  "talkBackSpeechAssessed": false,
+  "artemisRunsAdded": 0
+}

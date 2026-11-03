@@ -1,0 +1,14 @@
+{
+  "differentAccountBVerified": true,
+  "originalAccountARestored": true,
+  "aScheduleAndHistoryRestoredOnDevice": true,
+  "aSentinelServerTimestampsUnchanged": true,
+  "scheduleHistoryIsolationPassed": true,
+  "aInboxEmptyBefore": true,
+  "bInboxEmpty": false,
+  "aInboxEmptyAfter": true,
+  "inboxIsolationWithNonemptyDataVerified": false,
+  "inboxLimitation": "No nonempty inbox sentinel; empty-state observations alone are insufficient",
+  "modelCalls": 0,
+  "cleanupComplete": true
+}

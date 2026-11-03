@@ -1,0 +1,13 @@
+00:00 +0: loading D:/PRM393/PRM.POWER9/test/auth_gate_test.dart
+00:00 +0: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: sign-out removes pushed private routes as well as Home
+00:00 +1: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: sign-out removes pushed private routes as well as Home
+00:00 +2: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: sign-out removes pushed private routes as well as Home
+00:00 +3: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: sign-out removes pushed private routes as well as Home
+00:00 +4: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: sign-out removes pushed private routes as well as Home
+00:00 +5: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: sign-out removes pushed private routes as well as Home
+00:00 +6: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: sign-out removes pushed private routes as well as Home
+00:00 +7: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: sign-out removes pushed private routes as well as Home
+00:01 +8: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: Signed-out sessions cannot see account details
+00:01 +9: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: Login remains usable at width 360.0 with enlarged text
+00:01 +10: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: Login remains usable at width 412.0 with enlarged text
+00:01 +11: All tests passed!

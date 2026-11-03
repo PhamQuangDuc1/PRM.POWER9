@@ -1,0 +1,6 @@
+{
+  "package": "vn.power9.power9_office_routine",
+  "processAbsentBeforeSend": true,
+  "method": "HOME; am kill left process running; app-owned SIGTERM then confirmed absent (not force-stop)",
+  "device": "Sony Xperia SOV41"
+}

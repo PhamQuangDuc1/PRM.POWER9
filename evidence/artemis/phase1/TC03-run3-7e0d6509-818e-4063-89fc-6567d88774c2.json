@@ -1,0 +1,21 @@
+{
+  "case": "TC03",
+  "repetition": 3,
+  "traceId": "7e0d6509-818e-4063-89fc-6567d88774c2",
+  "status": "completed",
+  "elapsedSeconds": 33.88,
+  "outputSource": "ARTEMIS recorded terminal report_task_status.args.explanation JSON (bounded commit wait)",
+  "output": {
+    "empty_message": "Không tìm thấy hoạt động phù hợp.",
+    "search_cleared": true,
+    "restored_activity_title": "Đi bộ giữa giờ"
+  },
+  "assertionsPassed": true,
+  "nativeTraceObservations": {
+    "searchQuerySeen": true,
+    "emptyMessageSeen": true,
+    "missingTimeErrorSeen": false,
+    "timePickerSeen": false,
+    "nativeTimePickerSeen": false
+  }
+}

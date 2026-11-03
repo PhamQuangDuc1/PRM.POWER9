@@ -1,0 +1,39 @@
+{
+  "default": {
+    "provider": "google",
+    "model": "gemini-3.5-flash-lite",
+    "timeout": 30,
+    "fallback": {
+      "provider": "google",
+      "model": "gemini-3.1-flash-lite"
+    }
+  },
+  "nodes": {
+    "object_detector": {
+      "provider": "google",
+      "model": "gemini-robotics-er-2-preview",
+      "fallback": {
+        "provider": "google",
+        "model": "gemini-robotics-er-2-preview"
+      }
+    },
+    "hopper": {
+      "provider": "google",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "log_analyzer": {
+      "enable_grounding": false
+    },
+    "diagnoser_expert": {
+      "enable_grounding": false
+    }
+  },
+  "agent": {
+    "flash": {
+      "max_turns": 24,
+      "step_summarizer": {
+        "enabled": false
+      }
+    }
+  }
+}

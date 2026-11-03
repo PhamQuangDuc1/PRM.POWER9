@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-04",
+  "nativeRehearsalOnly": true,
+  "artemisPassClaimed": false,
+  "inputHelpHasMetaOption": false,
+  "hourObserved": "11",
+  "minuteObserved": "00",
+  "formTimeObserved": "11:00",
+  "formCancelled": true,
+  "returnedHome": true,
+  "modelCalls": 0,
+  "serverStateNotYetRechecked": true
+}

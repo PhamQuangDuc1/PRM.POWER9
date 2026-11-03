@@ -1,0 +1,18 @@
+{
+  "dateLocal": "2026-11-01",
+  "source": "read-only Firestore API shared activities catalog",
+  "publishedActivityCount": 10,
+  "activityIds": [
+    "balance-review",
+    "eat-lunch",
+    "move-walk",
+    "posture-check",
+    "purpose-note",
+    "sleep-prepare",
+    "social-chat",
+    "social-walk",
+    "space-desk",
+    "stress-break"
+  ],
+  "privateUserCollectionsRead": false
+}

@@ -1,0 +1,54 @@
+{
+  "source": "native FA-SVC Logcat (cross-process)",
+  "matching_event_lines": [
+    {
+      "events": [
+        "activity_completed"
+      ],
+      "power9_package_on_same_line": false
+    },
+    {
+      "events": [
+        "activity_completed"
+      ],
+      "power9_package_on_same_line": false
+    },
+    {
+      "events": [
+        "completion_undone"
+      ],
+      "power9_package_on_same_line": false
+    },
+    {
+      "events": [
+        "completion_undone"
+      ],
+      "power9_package_on_same_line": false
+    },
+    {
+      "events": [
+        "search"
+      ],
+      "power9_package_on_same_line": false
+    },
+    {
+      "events": [
+        "search"
+      ],
+      "power9_package_on_same_line": false
+    },
+    {
+      "events": [
+        "config_refreshed"
+      ],
+      "power9_package_on_same_line": false
+    },
+    {
+      "events": [
+        "config_refreshed"
+      ],
+      "power9_package_on_same_line": false
+    }
+  ],
+  "native_line_count": 586
+}

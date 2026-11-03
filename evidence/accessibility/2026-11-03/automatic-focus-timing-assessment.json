@@ -1,0 +1,15 @@
+{
+  "dateLocal": "2026-11-03",
+  "sourceResult": "automatic-focus-timing-attempt.json",
+  "assessment": "Strict focus snapshot assertion remains failed; functional accessibility observations summarized separately, not rewritten as a full pass",
+  "functionalChecksPassed": 17,
+  "functionalChecksTotal": 17,
+  "focusRequestsAccepted": 22,
+  "clickRequestsAccepted": 22,
+  "actionsTotal": 22,
+  "focusedSnapshots": 20,
+  "strictFocusStabilityPassed": false,
+  "humanGesturesAndSpeechAssessed": false,
+  "originalAccessibilitySettingsRestored": true,
+  "modelCalls": 0
+}

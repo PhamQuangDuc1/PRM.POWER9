@@ -1,0 +1,20 @@
+{
+  "dateLocal": "2026-11-04",
+  "source": "Firebase Console DebugView; user screenshot and direct visual review",
+  "event": "view_activity",
+  "parameters": {
+    "activity_id": "move-walk"
+  },
+  "serverReceiptVerified": true,
+  "eventObservedInServerTimeline": true,
+  "parameterExpandedAndValueObserved": true,
+  "debugDeviceCounterDisplayed": 0,
+  "counterDoesNotOverrideVisibleEventAndParameterEvidence": true,
+  "screenshot": "evidence/analytics/2026-11-04/debugview-view-activity-params.png",
+  "screenshotSha256": "f832ce1d36c11f11644c214c376805a283661989a3a4c85208e60211d44233d2",
+  "privacyRedaction": "Regional crop excludes browser tabs, profile/avatar and all user-properties panels/UID values",
+  "rawScreenshotPublished": false,
+  "dartAppChanged": false,
+  "modelCalls": 0,
+  "note": "Debug mode enabled temporarily; app emitted real activity views. Original waiting state and video remain historical, not reclassified."
+}

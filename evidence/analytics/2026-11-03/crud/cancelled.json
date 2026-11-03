@@ -1,0 +1,14 @@
+{
+  "phase": "cancelled",
+  "dateKey": "2026-11-03",
+  "source": "read-only Firestore API, exact current test-user document paths",
+  "scheduleExists": true,
+  "completionExists": false,
+  "minuteOfDay": "630",
+  "createdAt": "2026-11-02T17:54:30.985Z",
+  "updatedAt": "2026-11-02T17:54:45.060Z",
+  "completionSource": null,
+  "durationSeconds": null,
+  "ownerUidExported": false,
+  "credentialsExported": false
+}

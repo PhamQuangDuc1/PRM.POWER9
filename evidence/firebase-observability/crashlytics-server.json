@@ -1,0 +1,57 @@
+{
+  "verifiedAt": "2026-10-31T20:31:25.489Z",
+  "source": "Crashlytics reporting API via firebase-tools 15.33.0",
+  "groupCount": 2,
+  "groups": [
+    {
+      "issue": {
+        "id": "ece9690113b884780b157ecd849ebd37",
+        "title": "io.flutter.plugins.firebase.crashlytics.FlutterFirebaseCrashlyticsPlugin.crash$lambda$0",
+        "subtitle": "io.flutter.plugins.firebase.crashlytics.FirebaseCrashlyticsTestCrash - This is a test crash caused by calling .crash() in Dart.",
+        "errorType": "FATAL"
+      },
+      "metrics": [
+        {
+          "startTime": "2026-10-24T00:00:00Z",
+          "endTime": "2026-10-31T23:59:59Z",
+          "eventsCount": "1",
+          "impactedUsersCount": "1",
+          "sessionsCount": "1",
+          "impactedSessionsCount": "1",
+          "totalUsersCount": "1",
+          "totalSessionsCount": "2",
+          "crashFreeSessionsPercentage": 50
+        }
+      ],
+      "keys": [
+        "metrics",
+        "issue"
+      ]
+    },
+    {
+      "issue": {
+        "id": "f0e63da543d0a24750947241cfa9c7ea",
+        "title": "package:cloud_firestore_platform_interface/src/pigeon/messages.pigeon.dart - ._extractReplyValueOrThrow",
+        "subtitle": "io.flutter.plugins.firebase.crashlytics.FlutterError - Bad state: completion_write failed (unavailable). Error thrown completion_write.",
+        "errorType": "NON_FATAL"
+      },
+      "metrics": [
+        {
+          "startTime": "2026-10-24T00:00:00Z",
+          "endTime": "2026-10-31T23:59:59Z",
+          "eventsCount": "1",
+          "impactedUsersCount": "1",
+          "sessionsCount": "1",
+          "impactedSessionsCount": "1",
+          "totalUsersCount": "1",
+          "totalSessionsCount": "2",
+          "crashFreeSessionsPercentage": 50
+        }
+      ],
+      "keys": [
+        "metrics",
+        "issue"
+      ]
+    }
+  ]
+}

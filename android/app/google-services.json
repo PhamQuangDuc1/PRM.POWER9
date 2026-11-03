@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "613232000873",
+    "project_id": "power9-office-se180724",
+    "storage_bucket": "power9-office-se180724.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613232000873:android:f65f6f74ecdc93e31407f8",
+        "android_client_info": {
+          "package_name": "vn.power9.power9_office_routine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613232000873-ha1m7kqvfi9v6uilujhu08s7a7i71cif.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.power9.power9_office_routine",
+            "certificate_hash": "c76afc436f75ca118fe10bc909d4006a6073db31"
+          }
+        },
+        {
+          "client_id": "613232000873-9tjf17s8817fvgkvf613lqf9hetn3k4p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkZDLLNxZUajLFLmY_EVz4lFezuAD8BXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613232000873-9tjf17s8817fvgkvf613lqf9hetn3k4p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

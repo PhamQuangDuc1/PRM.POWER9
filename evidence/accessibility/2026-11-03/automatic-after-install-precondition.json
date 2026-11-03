@@ -1,0 +1,15 @@
+{
+  "dateLocal": "2026-11-03",
+  "source": "real Android accessibility node focus/click actions while TalkBack bound; FLAG_DONT_SUPPRESS_ACCESSIBILITY_SERVICES",
+  "modelCalls": 0,
+  "humanGesturesAndSpeechAssessed": false,
+  "automaticChecksPassed": false,
+  "actions": [],
+  "checks": [
+    {
+      "name": "TalkBack service bound",
+      "passed": true
+    }
+  ],
+  "originalAccessibilitySettingsRestored": true
+}

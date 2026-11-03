@@ -1,0 +1,11 @@
+{
+  "dateLocal": "2026-11-02",
+  "source": "local UIAutomator2 on Xperia; no model calls",
+  "modelDataSent": false,
+  "accountStringsExported": false,
+  "assertionsPassed": false,
+  "logoutReturnedLogin": true,
+  "privateHomeAbsentAfterLogout": true,
+  "backDidNotRestorePrivateRoute": false,
+  "returnedHome": false
+}

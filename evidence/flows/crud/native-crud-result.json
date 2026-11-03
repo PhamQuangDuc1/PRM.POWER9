@@ -1,0 +1,16 @@
+{
+  "source": "native UIAutomator2 on real Xperia + exact test-user Firestore document reads",
+  "modelCalls": 0,
+  "assertionsPassed": true,
+  "steps": [
+    "Create via schedule form, read on Home and Firestore",
+    "Update to 10:30 via form; same document/createdAt",
+    "Cancel delete: schedule and updatedAt unchanged",
+    "Confirm delete: schedule removed, own test completion retained",
+    "Undo only this run’s completion; baseline restored"
+  ],
+  "privateIdentifiersExported": false,
+  "deviceDate": "2026-11-02",
+  "baselineRestored": true,
+  "returnedHome": true
+}

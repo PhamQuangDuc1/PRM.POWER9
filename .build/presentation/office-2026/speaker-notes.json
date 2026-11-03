@@ -6,7 +6,7 @@
     "sources": [
       [
         "Hướng dẫn trình bày, mục 2",
-        "sources/guidelines/PRM323_Lab2_HuongDan_Slide_Presentation_Demo.docx"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/output/presentation/Power9_Office_Lab2/sources/guidelines/PRM323_Lab2_HuongDan_Slide_Presentation_Demo.docx"
       ],
       [
         "Figma hiện hành",
@@ -25,11 +25,11 @@
     "sources": [
       [
         "Ba persona và nhu cầu",
-        "sources/ux/persona.md"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/ux/persona.md"
       ],
       [
-        "Phạm vi và tiêu chí Lab 2",
-        "sources/guidelines/PRM323_Lab2_HuongDan_Slide_Presentation_Demo.docx"
+        "Phạm vi thiết kế Office",
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/design/DESIGN.md"
       ]
     ]
   },
@@ -40,7 +40,7 @@
     "sources": [
       [
         "IA và mapping flow",
-        "sources/ux/user-flow.md"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/ux/user-flow.md"
       ],
       [
         "Figma 01 User Flow",
@@ -55,7 +55,7 @@
     "sources": [
       [
         "Đặc tả ba flow",
-        "sources/ux/user-flow.md"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/ux/user-flow.md"
       ],
       [
         "Figma 06 Prototype",
@@ -66,15 +66,15 @@
   {
     "n": 5,
     "title": "Tạo UI bằng Google Stitch",
-    "note": "Bên trái là trích nguyên văn từ bản prompt được lưu trong dự án. Toàn văn có ở nguồn và cuối notes. Prompt mô tả ba persona, nhiệm vụ Android, mười wireframe, phong cách xanh biển và ràng buộc về chữ, kích thước, điều hướng. Bên phải là output Stitch thật đã được cung cấp. Cần phân biệt bản prompt lưu với log chat đã gửi: hiện chưa có đầy đủ log chat để đối chiếu 100 phần trăm bản thực gửi. Nhóm không tự gán tên model nền của Stitch hoặc dùng lời báo hoàn thành của AI thay cho kiểm tra thiết kế.\n\nTOÀN VĂN PROMPT LƯU\n# UI01 — từ wireframe Office đã chốt\n\nTrạng thái: prompt chuẩn bị, chưa gửi/chưa có output. Chọn đúng 10 wireframe đã xuất ZIP, đính kèm logo gốc. Nếu có thể, kèm ảnh UI xanh biển cũ để tham chiếu phong cách. Chỉ gửi khối dưới.\n\n```text\nTừ đúng 10 wireframe Power9 Office Routine đang chọn, tạo 1 bộ UI hoàn chỉnh đầu tiên gồm 10 màn tương ứng. Giữ nguyên bộ wireframe để đối chiếu. Bộ UI mới đặt tên OFFICE-UI01-S01 đến OFFICE-UI01-S10 trên canvas, không ghi mã trong giao diện.\n\nĐÂY LÀ GIAI ĐOẠN UI, KHÔNG PHẢI LÀM LẠI WIREFRAME.\nGiữ nhiệm vụ, thứ tự nội dung chính, điều hướng và dữ liệu mẫu đã chốt. Không tự thêm login, onboarding, tài khoản, chuông, chat, HR hoặc màn chức năng khác. Không tạo bảng style riêng ở lượt này.\n\nSẢN PHẨM\n3 persona chính ngang nhau: Huy 28 (vận động/tư thế/góc làm việc/lịch linh hoạt), Mai 24 (ăn uống/giảm căng thẳng/kết nối), Linh 39 (phục hồi/mục tiêu/cân bằng). Không chọn persona trong app. Giữ đủ 9 nhóm văn phòng qua Khám phá; không đổi về 9 tên nguyên tắc Blue Zones gốc; không ép 9/9 mỗi ngày. Số lượng, thứ tự và thời lượng dùng chữ số.\n\nPHONG CÁCH UI\nKế thừa phong cách xanh biển bình tĩnh của UI tham chiếu tôi cung cấp. Nếu không có ảnh tham chiếu, theo chính xác bảng màu và thông số dưới, không tự nhận đã xem UI cũ.\n- Nền #F5F8FD, surface/card #FFFFFF.\n- Chữ chính #152C46, chữ phụ #4C627A.\n- Nút/action chính #1E5AA8, chữ trên nút #FFFFFF.\n- Nền selected #EAF2FC, viền điều khiển #71839A.\n- Đỏ #A7332A chỉ khi có lỗi, đi cùng nhãn; chưa tạo error state ở lượt này.\n- Font Be Vietnam Pro, Roboto fallback; title 24/32, heading 20/28, body 16/24, label/navigation/trợ giúp tối thiểu 14/20.\n- Spacing 4/8/12/16/24/32; lề 16.\n- Radius input 8, button 12, card 16. Bóng nhẹ khi cần phân cấp, không lạm dụng card lồng nhau.\n- Không gradient neon, glow, ảnh nền lớn hoặc dashboard dày thông tin. Không tự thêm ảnh trang trí vào các màn.\n- Không mang quy tắc góc vuông/grayscale của low-fi sang UI: có thể bo góc và dùng màu theo token trên, nhưng không đổi cấu trúc nhiệm vụ.\n\nLOGO\nDùng nguyên ảnh power9-logo-3d.png tôi đính kèm do tôi tự thiết kế. Đặt vùng 40×40 tại header Home, giữ tỉ lệ và màu, cạnh tên Power9 Office Routine. Bỏ dòng Hệ thống đồng hành và v1.0 nếu còn trong wireframe. Không vẽ lại/recolor/crop logo, không dùng gradient logo làm nền toàn UI. Nếu không chèn đúng asset, giữ placeholder rồi báo rõ để thay file thật trong Figma; không tạo logo gần giống.\n\n10 MÀN VÀ ĐIỀU HƯỚNG\nS01 Hôm nay: giữ 3 việc/giờ, 1/3 hoàn thành, Khám phá/Tiến độ; check-in tách với chạm tên mở chi tiết. Không cào bằng nhu cầu 3 persona bằng cách tạo 3 hồ sơ trên Home.\nS02 Ăn uống: bữa trưa có chú ý, 3 bước ngắn, Đã thực hiện, Xem tiến độ.\nS03 Thư giãn: Nghỉ sau cuộc họp, timer 03:00 và Bắt đầu; chưa bắt đầu thì chưa hoàn thành.\nS04 Kết nối: 2 hoạt động đồng nghiệp tự nguyện, chọn hoạt động tới Chi tiết; không tự gửi lời mời.\nS05 Khám phá: đủ 9 nhóm, tìm kiếm/filter thời lượng áp dụng hoạt động, mở nhóm Kết nối với 2 hoạt động, danh mục cuộn.\nS06 Chi tiết thói quen: Rủ đồng nghiệp đi bộ, 5 phút, mục đích/3 bước, tự nguyện, Chọn lịch thực hiện. Trạng thái chưa thêm, không Đổi lịch hoặc Hoàn thành trên màn này.\nS07 Lịch thói quen: đúng tên hoạt động, ngày 26/10/2026, nhắc bật 12:00, giờ yên lặng 18:00–08:00 hôm sau, Lưu lịch/Hủy. Giờ 24h. Tắt nhắc không bắt giờ; lưu không đồng nghĩa hoàn thành; không tự dời giờ nhắc vào lúc khác.\nS08 Tiến độ: khớp Home 1/3 và đúng tên/giờ 3 hoạt động; riêng tư, không ranking/điểm tuổi thọ.\nS09 Góc làm việc: checklist 3 mục và Đã kiểm tra; đây là 1 hoạt động, không tự tính 2 nhóm hoàn thành. Không cảm biến/chẩn đoán.\nS10 Ngủ & phục hồi: Chuẩn bị nghỉ tối, 2 gợi ý, Chọn giờ nhắc tới S07 với đúng dữ liệu. Không đo giấc ngủ hoặc xác nhận Đã ngủ đủ.\n\nChỉ S01–S04 có 4 tab Hôm nay/Ăn uống/Thư giãn/Kết nối; chọn đúng tab bằng icon, nhãn và chỉ báo ngoài màu.\nS05–S10 có Back và đúng tên chức năng, không bottom navigation. Back trở về đúng nguồn, giữ nhóm/bộ lọc khi cần; Hủy không lưu. S06/S07 là template dùng chung theo dữ liệu hoạt động; chưa tạo thêm frame biến thể.\n\nCHUẨN HÓA TỪ KIỂM TRA ZIP\n- Frame gốc 360×800 cho cả 10, không desktop wrapper có khoảng trắng 2 bên; kiểm tra thêm rộng 412.\n- Nội dung dài cuộn trong vùng giữa app bar và footer/navigation, không cắt CTA ở S05/S07/S10 hoặc thu nhỏ chữ để ép vừa.\n- Tất cả chữ nhãn/trợ giúp/navigation ≥14, sửa các chữ 11–13 còn sót từ nguồn. Body ưu tiên 16.\n- Vùng chạm thật ≥48×48 cho Back, checkbox, switch, filter và link phụ; hình icon có thể nhỏ hơn nhưng hit area phải đủ.\n- Text thông thường tương phản ≥4.5:1; chữ lớn/điều khiển theo yêu cầu ≥3:1. Không chỉ dựa màu truyền đạt trạng thái.\n- Không đưa mã S01–S10 vào app bar, nội dung hoặc nút. Tên frame bên ngoài ví dụ OFFICE-UI01-S07 — Lịch thói quen; bên trong chỉ Lịch thói quen.\n\nĐẦU RA\nĐúng 10 màn UI mặc định trong 1 bộ riêng, xếp 2 hàng × 5 màn theo S01–S10. Giữ wireframe gốc. Chưa tạo empty/loading/error/dialog hoặc màn chức năng khác trong lượt này. Chưa coi prototype hoặc accessibility đã đạt nếu chưa kiểm tra thật.\nDừng sau bộ UI đầu tiên để tôi chụp và phản biện tổng thể trước các vòng cải tiến.\n```\n",
+    "note": "Nhóm dùng Google Stitch để tạo UI từ mười wireframe Office đã chốt. Prompt quy định ba persona, Android, chín nhóm nội dung, màu xanh biển, font Be Vietnam Pro và hai chiều rộng 360, 412. Người dùng đã xác nhận gửi nguyên văn 100% các prompt Office do trợ lý cung cấp trên dự án Stitch mới. Bên phải là ảnh output Stitch thật. Toàn văn prompt giữ trong notes và nguồn GitHub. Codex hỗ trợ phân tích, phản biện, kiểm tra và biên soạn tài liệu. Nhóm quyết định giữ, sửa hoặc loại đề xuất dựa trên nhiệm vụ và bằng chứng.\n\nTOÀN VĂN PROMPT LƯU\nTừ đúng 10 wireframe Power9 Office Routine đang chọn, tạo 1 bộ UI hoàn chỉnh đầu tiên gồm 10 màn tương ứng. Giữ nguyên bộ wireframe để đối chiếu. Bộ UI mới đặt tên OFFICE-UI01-S01 đến OFFICE-UI01-S10 trên canvas, không ghi mã trong giao diện.\r\n\r\nĐÂY LÀ GIAI ĐOẠN UI, KHÔNG PHẢI LÀM LẠI WIREFRAME.\r\nGiữ nhiệm vụ, thứ tự nội dung chính, điều hướng và dữ liệu mẫu đã chốt. Không tự thêm login, onboarding, tài khoản, chuông, chat, HR hoặc màn chức năng khác. Không tạo bảng style riêng ở lượt này.\r\n\r\nSẢN PHẨM\r\n3 persona chính ngang nhau: Huy 28 (vận động/tư thế/góc làm việc/lịch linh hoạt), Mai 24 (ăn uống/giảm căng thẳng/kết nối), Linh 39 (phục hồi/mục tiêu/cân bằng). Không chọn persona trong app. Giữ đủ 9 nhóm văn phòng qua Khám phá; không đổi về 9 tên nguyên tắc Blue Zones gốc; không ép 9/9 mỗi ngày. Số lượng, thứ tự và thời lượng dùng chữ số.\r\n\r\nPHONG CÁCH UI\r\nKế thừa phong cách xanh biển bình tĩnh của UI tham chiếu tôi cung cấp. Nếu không có ảnh tham chiếu, theo chính xác bảng màu và thông số dưới, không tự nhận đã xem UI cũ.\r\n- Nền #F5F8FD, surface/card #FFFFFF.\r\n- Chữ chính #152C46, chữ phụ #4C627A.\r\n- Nút/action chính #1E5AA8, chữ trên nút #FFFFFF.\r\n- Nền selected #EAF2FC, viền điều khiển #71839A.\r\n- Đỏ #A7332A chỉ khi có lỗi, đi cùng nhãn; chưa tạo error state ở lượt này.\r\n- Font Be Vietnam Pro, Roboto fallback; title 24/32, heading 20/28, body 16/24, label/navigation/trợ giúp tối thiểu 14/20.\r\n- Spacing 4/8/12/16/24/32; lề 16.\r\n- Radius input 8, button 12, card 16. Bóng nhẹ khi cần phân cấp, không lạm dụng card lồng nhau.\r\n- Không gradient neon, glow, ảnh nền lớn hoặc dashboard dày thông tin. Không tự thêm ảnh trang trí vào các màn.\r\n- Không mang quy tắc góc vuông/grayscale của low-fi sang UI: có thể bo góc và dùng màu theo token trên, nhưng không đổi cấu trúc nhiệm vụ.\r\n\r\nLOGO\r\nDùng nguyên ảnh power9-logo-3d.png tôi đính kèm do tôi tự thiết kế. Đặt vùng 40×40 tại header Home, giữ tỉ lệ và màu, cạnh tên Power9 Office Routine. Bỏ dòng Hệ thống đồng hành và v1.0 nếu còn trong wireframe. Không vẽ lại/recolor/crop logo, không dùng gradient logo làm nền toàn UI. Nếu không chèn đúng asset, giữ placeholder rồi báo rõ để thay file thật trong Figma; không tạo logo gần giống.\r\n\r\n10 MÀN VÀ ĐIỀU HƯỚNG\r\nS01 Hôm nay: giữ 3 việc/giờ, 1/3 hoàn thành, Khám phá/Tiến độ; check-in tách với chạm tên mở chi tiết. Không cào bằng nhu cầu 3 persona bằng cách tạo 3 hồ sơ trên Home.\r\nS02 Ăn uống: bữa trưa có chú ý, 3 bước ngắn, Đã thực hiện, Xem tiến độ.\r\nS03 Thư giãn: Nghỉ sau cuộc họp, timer 03:00 và Bắt đầu; chưa bắt đầu thì chưa hoàn thành.\r\nS04 Kết nối: 2 hoạt động đồng nghiệp tự nguyện, chọn hoạt động tới Chi tiết; không tự gửi lời mời.\r\nS05 Khám phá: đủ 9 nhóm, tìm kiếm/filter thời lượng áp dụng hoạt động, mở nhóm Kết nối với 2 hoạt động, danh mục cuộn.\r\nS06 Chi tiết thói quen: Rủ đồng nghiệp đi bộ, 5 phút, mục đích/3 bước, tự nguyện, Chọn lịch thực hiện. Trạng thái chưa thêm, không Đổi lịch hoặc Hoàn thành trên màn này.\r\nS07 Lịch thói quen: đúng tên hoạt động, ngày 26/10/2026, nhắc bật 12:00, giờ yên lặng 18:00–08:00 hôm sau, Lưu lịch/Hủy. Giờ 24h. Tắt nhắc không bắt giờ; lưu không đồng nghĩa hoàn thành; không tự dời giờ nhắc vào lúc khác.\r\nS08 Tiến độ: khớp Home 1/3 và đúng tên/giờ 3 hoạt động; riêng tư, không ranking/điểm tuổi thọ.\r\nS09 Góc làm việc: checklist 3 mục và Đã kiểm tra; đây là 1 hoạt động, không tự tính 2 nhóm hoàn thành. Không cảm biến/chẩn đoán.\r\nS10 Ngủ & phục hồi: Chuẩn bị nghỉ tối, 2 gợi ý, Chọn giờ nhắc tới S07 với đúng dữ liệu. Không đo giấc ngủ hoặc xác nhận Đã ngủ đủ.\r\n\r\nChỉ S01–S04 có 4 tab Hôm nay/Ăn uống/Thư giãn/Kết nối; chọn đúng tab bằng icon, nhãn và chỉ báo ngoài màu.\r\nS05–S10 có Back và đúng tên chức năng, không bottom navigation. Back trở về đúng nguồn, giữ nhóm/bộ lọc khi cần; Hủy không lưu. S06/S07 là template dùng chung theo dữ liệu hoạt động; chưa tạo thêm frame biến thể.\r\n\r\nCHUẨN HÓA TỪ KIỂM TRA ZIP\r\n- Frame gốc 360×800 cho cả 10, không desktop wrapper có khoảng trắng 2 bên; kiểm tra thêm rộng 412.\r\n- Nội dung dài cuộn trong vùng giữa app bar và footer/navigation, không cắt CTA ở S05/S07/S10 hoặc thu nhỏ chữ để ép vừa.\r\n- Tất cả chữ nhãn/trợ giúp/navigation ≥14, sửa các chữ 11–13 còn sót từ nguồn. Body ưu tiên 16.\r\n- Vùng chạm thật ≥48×48 cho Back, checkbox, switch, filter và link phụ; hình icon có thể nhỏ hơn nhưng hit area phải đủ.\r\n- Text thông thường tương phản ≥4.5:1; chữ lớn/điều khiển theo yêu cầu ≥3:1. Không chỉ dựa màu truyền đạt trạng thái.\r\n- Không đưa mã S01–S10 vào app bar, nội dung hoặc nút. Tên frame bên ngoài ví dụ OFFICE-UI01-S07 — Lịch thói quen; bên trong chỉ Lịch thói quen.\r\n\r\nĐẦU RA\r\nĐúng 10 màn UI mặc định trong 1 bộ riêng, xếp 2 hàng × 5 màn theo S01–S10. Giữ wireframe gốc. Chưa tạo empty/loading/error/dialog hoặc màn chức năng khác trong lượt này. Chưa coi prototype hoặc accessibility đã đạt nếu chưa kiểm tra thật.\r\nDừng sau bộ UI đầu tiên để tôi chụp và phản biện tổng thể trước các vòng cải tiến.\r\n",
     "sources": [
       [
         "Prompt UI01 lưu trong dự án",
-        "sources/ai/prompts/OFFICE-UI01-from-final-wireframe.md"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/ai/prompts/OFFICE-UI01-from-final-wireframe.md"
       ],
       [
         "Brief và AI log",
-        "sources/ai/ai-design-log.md"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/ai/ai-design-log.md"
       ],
       [
         "Dự án Stitch",
@@ -89,30 +89,26 @@
     "sources": [
       [
         "3 vòng và bộ ảnh nguồn",
-        "sources/docs/SLIDE-3-VONG-PHAN-BIEN.md"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/docs/SLIDE-3-VONG-PHAN-BIEN.md"
       ],
       [
         "Phản biện C01–C03",
-        "sources/ai/critiques/OFFICE-3-MAIN-CRITIQUES.md"
-      ],
-      [
-        "Nielsen heuristics",
-        "https://www.nngroup.com/articles/ten-usability-heuristics/"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/ai/critiques/OFFICE-3-MAIN-CRITIQUES.md"
       ]
     ]
   },
   {
     "n": 7,
     "title": "Phản biện UX và quyết định thiết kế",
-    "note": "Nhóm chấp nhận sửa font để giao diện thống nhất với design system. Nhóm chấp nhận bỏ banner ngoài nhiệm vụ, vì người dùng cần xử lý một việc ngắn. Với state lỗi, nhóm điều chỉnh output AI: tên hoạt động, ngày và giờ phải được giữ nguyên. Metric như nhịp tim ước tính hoặc điểm sức khỏe bị loại vì không có nguồn dữ liệu hay tính năng đo tương ứng. Sau góp ý về nhóm 07, nhóm bổ sung mở và thu gọn cho cả chín nhóm. Quyết định dựa trên persona, tính nhất quán, khả năng kiểm soát và phục hồi lỗi.",
+    "note": "Nhóm chấp nhận sửa font theo Nielsen 4 về tính nhất quán. Nhóm chấp nhận giảm banner và hiện đủ tên để Mai tìm hoạt động trong giờ nghỉ. Với lỗi lưu, nhóm điều chỉnh output AI để Linh không mất tên hoạt động, ngày và giờ khi bị ngắt quãng. Nhóm từ chối nhịp tim và điểm sức khỏe vì chưa có dữ liệu đo. Nhóm sửa mở và thu gọn cho cả chín nhóm Khám phá theo quyền kiểm soát và tính nhất quán. Năm phát hiện, quyết định và lý do đều có ngay trên slide.",
     "sources": [
       [
         "Quyết định và lý do",
-        "sources/design/design-decisions.md"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/design/design-decisions.md"
       ],
       [
         "Review trạng thái OI03",
-        "sources/ai/critiques/OFFICE-OI03-expanded-review.md"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/ai/critiques/OFFICE-OI03-expanded-review.md"
       ],
       [
         "Figma UI hiện hành",
@@ -127,7 +123,7 @@
     "sources": [
       [
         "Wireframe nguồn Stitch S07",
-        "sources/evidence/WIREFRAME-S07.png"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/output/presentation/Power9_Office_Lab2/sources/evidence/WIREFRAME-S07.png"
       ],
       [
         "Figma 03 Final UI",
@@ -135,7 +131,7 @@
       ],
       [
         "Nguồn ảnh và node",
-        "sources/evidence-provenance.json"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/output/presentation/Power9_Office_Lab2/sources/evidence-provenance.json"
       ]
     ]
   },
@@ -154,7 +150,7 @@
       ],
       [
         "Audit thư viện và accordion",
-        "sources/assets/figma/office-checkpoint.json"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/assets/figma/office-checkpoint.json"
       ]
     ]
   },
@@ -173,7 +169,7 @@
       ],
       [
         "Audit 360 / 412",
-        "sources/assets/figma/office-six-page-audit.json"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/assets/figma/office-six-page-audit.json"
       ]
     ]
   },
@@ -188,30 +184,30 @@
       ],
       [
         "Kiểm tra dữ liệu flow",
-        "sources/assets/figma/office-behavior-audit.json"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/assets/figma/office-behavior-audit.json"
       ],
       [
         "Kiểm tra accordion",
-        "sources/assets/figma/office-accordion-audit.json"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/assets/figma/office-accordion-audit.json"
       ]
     ]
   },
   {
     "n": 12,
     "title": "Flutter handoff và kết luận",
-    "note": "Handoff Office có đủ sáu mục mỗi màn: layout, component, state, tương tác, điều hướng và ràng buộc UI. Hai bảng mapping mô tả token sang Flutter và component sang widget. Lập trình viên cần triển khai elapsed time thật, form tạm tách khỏi dữ liệu đã lưu và ghi nhận không trùng. Thiết kế và prototype đã sẵn sàng để trình bày. Trước buổi chấm cần tập demo, xác nhận toàn văn prompt thực gửi và kiểm tra quyền xem link bằng cửa sổ chưa đăng nhập. Nhóm chưa khảo sát persona, chưa có user test và chưa viết Flutter hoặc backend.",
+    "note": "Handoff Office có sáu mục cho mỗi màn: bố cục, component, trạng thái, tương tác, điều hướng và ràng buộc UI. Hai bảng mapping nối token sang Flutter và component sang widget. Ví dụ màu dùng ColorScheme, chữ dùng TextTheme và accordion dùng ExpansionTile hoặc widget tùy chỉnh. Lập trình viên cần triển khai thời gian thực, draft riêng dữ liệu đã lưu và chống ghi nhận trùng. Nhóm bàn giao thiết kế, chưa có ứng dụng Flutter hoặc backend. Trước buổi trình bày cần mở thử quyền Figma và tập ba flow. Tiếp theo là kiểm thử với người dùng, TalkBack và chữ phóng lớn.",
     "sources": [
       [
         "Handoff 10 màn, 6 mục/màn",
-        "sources/handoff/flutter-handoff.md"
+        "https://github.com/PhamQuangDuc1/PRM.POWER9/blob/aed77f1ccd9b8721816932cc7471992fbb7b7be8/handoff/flutter-handoff.md"
       ],
       [
         "Flutter ThemeData",
         "https://docs.flutter.dev/cookbook/design/themes"
       ],
       [
-        "Repo và Figma",
-        "sources/README.md"
+        "GitHub dự án",
+        "https://github.com/PhamQuangDuc1/PRM.POWER9"
       ]
     ]
   }

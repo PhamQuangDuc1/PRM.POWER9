@@ -1,0 +1,8 @@
+{
+  "projectId": "power9-office-se180724",
+  "billingEnabled": false,
+  "dateLocal": "2026-11-01",
+  "source": "read-only Cloud Billing API via Firebase CLI 15.33.0",
+  "credentialExported": false,
+  "helper": "e2e_test/check_model_billing.cjs"
+}

@@ -1,0 +1,30 @@
+{
+  "dateLocal": "2026-11-02",
+  "checks": {
+    "adbDeviceConnected": true,
+    "deviceAwakeAndUnlocked": true,
+    "power9Foreground": true,
+    "homeConfirmedAfterUserRestoredGoogleSession": true,
+    "firebaseBillingApiAccessible": true,
+    "billingEnabled": false,
+    "analyticsLinked": true,
+    "remoteConfigReadable": true,
+    "remoteConfigParameterNames": [
+      "discover_max_minutes",
+      "connection_checkin_enabled",
+      "report_upload_enabled"
+    ],
+    "githubRemoteAccessible": true,
+    "githubOneDHead": "616f83e9cb4cad43aa5c172220cda690858b04c2",
+    "committedOrPushedByAssistant": false,
+    "artemisResumeBlockedByAutomaticApprovalReview": true,
+    "newModelTasksIssued": 0
+  },
+  "privacy": {
+    "deviceSerialExported": false,
+    "emailOrUidExported": false,
+    "modelCredentialsExported": false,
+    "rawPrivateHierarchyExported": false
+  },
+  "source": "Actual read-only ADB/Power9 hierarchy, Firebase CLI API and git ls-remote checks. Local native permission/Auth smoke evidence is stored separately; no new ARTEMIS results are implied."
+}

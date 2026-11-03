@@ -1,0 +1,5 @@
+{
+  "processAbsentBeforeSend": true,
+  "method": "HOME then app-owned SIGTERM; not force-stop",
+  "device": "Sony Xperia SOV41"
+}

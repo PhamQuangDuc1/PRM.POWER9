@@ -1,0 +1,15 @@
+{
+  "case": "TC11",
+  "repetition": 1,
+  "traceId": "dd9f214e-304a-4e90-9c30-8b08341872cb",
+  "status": "completed",
+  "elapsedSeconds": 34.22,
+  "outputSource": "ARTEMIS recorded terminal report_task_status.args.explanation JSON",
+  "output": {
+    "food_title": "Sắp xếp bữa trưa văn phòng",
+    "relax_title": "Nghỉ sau họp",
+    "connection_heading": "Kết nối",
+    "returned_today": true
+  },
+  "assertionsPassed": false
+}

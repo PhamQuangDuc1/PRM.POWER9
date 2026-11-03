@@ -1,0 +1,16 @@
+[
+  {
+    "file": "vietnamese-timer-fixture.pdf",
+    "pages": 1,
+    "bytes": 83956,
+    "text_inside_pages": true,
+    "source": "Dart unit-test fixture, not production user data"
+  },
+  {
+    "file": "multipage-fixture.pdf",
+    "pages": 10,
+    "bytes": 106084,
+    "text_inside_pages": true,
+    "source": "Dart unit-test fixture, not production user data"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "profile": "pro",
+  "traceId": "c967f5fe-aa85-49cd-b05d-79c106f46008",
+  "startedAtUtc": "2026-11-03T16:54:08.703017+00:00",
+  "elapsedSeconds": 189.02,
+  "status": "completed",
+  "wallClockWithinTimeWindow": false,
+  "durationRequirementMet": false,
+  "activeExplorationNeedsTraceReview": true,
+  "issuesVerified": false,
+  "note": "Review original Pro trace locally before exporting issue text. No artificial sleep or duration padding. A completed task shorter than 15 minutes does not meet the exploratory requirement."
+}

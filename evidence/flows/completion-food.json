@@ -1,0 +1,25 @@
+{
+  "projectId": "power9-office-se180724",
+  "verifiedAt": "2026-10-31T16:50:10.724Z",
+  "phase": "food",
+  "completionCount": 2,
+  "scheduleCount": 1,
+  "completions": [
+    {
+      "activityId": "eat-lunch",
+      "title": "Sắp xếp bữa trưa văn phòng",
+      "dateKey": "2026-10-31",
+      "source": "checkin",
+      "durationSeconds": null,
+      "createdAt": "2026-10-31T16:50:08.908Z"
+    },
+    {
+      "activityId": "stress-break",
+      "title": "Nghỉ sau họp",
+      "dateKey": "2026-10-31",
+      "source": "timer",
+      "durationSeconds": "180",
+      "createdAt": "2026-10-31T16:48:35.891Z"
+    }
+  ]
+}

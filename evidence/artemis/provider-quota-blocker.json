@@ -1,0 +1,19 @@
+{
+  "dateLocal": "2026-11-01",
+  "model": "gemini-3.5-flash-lite",
+  "providerStatus": "RESOURCE_EXHAUSTED",
+  "quotaValue": 500,
+  "retryDelaySecondsObserved": [
+    58252,
+    58249,
+    58243,
+    58234
+  ],
+  "quotaFields": {
+    "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+    "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  },
+  "proTraceId": "48e5a802-0626-4291-979a-c1f320d916bf",
+  "recordedUiSteps": 0,
+  "action": "Stopped local Pro task; no further model requests, model/key switching or billing enablement."
+}

@@ -1,0 +1,35 @@
+{
+  "case": "TC16",
+  "repetition": 2,
+  "traceId": "10b6b2a3-d8a4-4f6c-b73f-34f1f7b95f8b",
+  "status": "completed",
+  "elapsedSeconds": 58.46,
+  "outputSource": "ARTEMIS recorded terminal observations object or legacy explanation JSON (bounded commit wait)",
+  "output": {
+    "instructions_visible": true,
+    "activity_title": "Đi bộ giữa giờ"
+  },
+  "assertionsPassed": true,
+  "nativeTraceObservations": {
+    "searchQuerySeen": false,
+    "emptyMessageSeen": false,
+    "missingTimeErrorSeen": false,
+    "timePickerSeen": false,
+    "nativeTimePickerSeen": false,
+    "androidPrintPreviewSeen": false,
+    "timerPausedSeen": false,
+    "leaveSessionDialogSeen": false,
+    "completionDeleteDialogSeen": false,
+    "pdfGeneratedSeen": false
+  },
+  "terminalTraceError": null,
+  "analyticsObservation": {
+    "source": "native FA-SVC SDK log filtered by unique Power9 debug build marker and task time",
+    "event": "view_activity",
+    "activityId": "move-walk",
+    "observed": true,
+    "matchingLineCount": 1,
+    "rawLogsExported": false,
+    "syntheticBuildMarker": "p9_20261103_ui_a84d2c0e"
+  }
+}

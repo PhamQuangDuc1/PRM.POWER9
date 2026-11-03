@@ -1,0 +1,17 @@
+{
+  "projectId": "power9-office-se180724",
+  "verifiedAt": "2026-10-31T16:40:21.357Z",
+  "phase": "checkin",
+  "completionCount": 1,
+  "scheduleCount": 1,
+  "completions": [
+    {
+      "activityId": "move-walk",
+      "title": "Đi bộ giữa giờ",
+      "dateKey": "2026-10-31",
+      "source": "checkin",
+      "durationSeconds": null,
+      "createdAt": "2026-10-31T16:40:11.939Z"
+    }
+  ]
+}

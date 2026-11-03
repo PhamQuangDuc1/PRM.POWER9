@@ -1,0 +1,16 @@
+{
+  "dateLocal": "2026-11-02",
+  "source": "local native UIAutomator2; follow-up after delayed Activity resume",
+  "modelDataSent": false,
+  "accountStringsExported": false,
+  "backDidNotRestorePrivateRouteAfterBoundedResume": true,
+  "assertionsPassed": true,
+  "nativeGooglePickerSeen": true,
+  "cancelErrorVisible": true,
+  "retryButtonAvailable": true,
+  "privateHomeAbsentAfterCancel": true,
+  "retryOpenedNativePicker": true,
+  "sessionRestoreRequiresUser": false,
+  "originalSessionRestoredByUser": true,
+  "returnedHome": true
+}

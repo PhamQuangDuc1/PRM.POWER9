@@ -1,0 +1,526 @@
+{
+  "dateLocal": "2026-11-03",
+  "source": "real Android accessibility node focus/click actions while TalkBack bound; FLAG_DONT_SUPPRESS_ACCESSIBILITY_SERVICES",
+  "modelCalls": 0,
+  "humanGesturesAndSpeechAssessed": false,
+  "automaticChecksPassed": false,
+  "actions": [
+    {
+      "label": "Khám phá hoạt động",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Khám phá hoạt động",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "≤ 5 phút",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "≤ 5 phút",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Đi bộ giữa giờ",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Đi bộ giữa giờ\nVận động · 3 phút",
+        "class": "android.view.View",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Chọn lịch hoạt động",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Chọn lịch hoạt động",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Nhắc hoạt động",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Nhắc hoạt động\nGiờ yên lặng: 18:00–08:00",
+        "class": "android.widget.Switch",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": true,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Lưu lịch",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Lưu lịch",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Hủy",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Hủy",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Quay lại",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Quay lại",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Quay lại",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Quay lại",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Thư giãn",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Thư giãn\nTab 3 trong tổng số 4",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Bắt đầu",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Bắt đầu 3 phút",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Tạm dừng",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Tạm dừng",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Hôm nay",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Hôm nay\nTab 1 trong tổng số 4",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Ở lại",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Ở lại",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Hôm nay",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Hôm nay\nTab 1 trong tổng số 4",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": false,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": false,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Bỏ phiên",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Bỏ phiên",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Xem tiến độ",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Xem tiến độ",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Xuất báo cáo PDF",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Xuất báo cáo PDF",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Tạo PDF",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Tạo PDF",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Quay lại",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Quay lại",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Quay lại",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Quay lại",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "TalkBack service bound",
+      "passed": true
+    },
+    {
+      "name": "Home main actions exposed",
+      "passed": true
+    },
+    {
+      "name": "Notification control has product label",
+      "passed": true
+    },
+    {
+      "name": "Search field labelled",
+      "passed": true
+    },
+    {
+      "name": "Filter exposes selection",
+      "passed": true
+    },
+    {
+      "name": "Activity instructions readable",
+      "passed": true
+    },
+    {
+      "name": "Schedule controls labelled",
+      "passed": true
+    },
+    {
+      "name": "Validation error exposed as live region",
+      "passed": true
+    },
+    {
+      "name": "Cancel restores Home",
+      "passed": true
+    },
+    {
+      "name": "Timer has accessible name",
+      "passed": true
+    },
+    {
+      "name": "Paused controls available",
+      "passed": true
+    },
+    {
+      "name": "Leave dialog choices labelled",
+      "passed": true
+    },
+    {
+      "name": "Stay preserves paused timer",
+      "passed": true
+    },
+    {
+      "name": "Discard returns Home",
+      "passed": true
+    },
+    {
+      "name": "Progress date and PDF exposed",
+      "passed": true
+    },
+    {
+      "name": "Report controls and disabled cloud action",
+      "passed": true
+    },
+    {
+      "name": "Returned Home without removing food record",
+      "passed": true
+    },
+    {
+      "name": "Every tested action accepted accessibility focus",
+      "passed": false
+    }
+  ],
+  "setupActions": [],
+  "originalAccessibilitySettingsRestored": true
+}

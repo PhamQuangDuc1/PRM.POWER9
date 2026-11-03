@@ -1,0 +1,50 @@
+Quay lại [11,74][137,200] true
+Góc làm việc [189,100][492,173] false
+Tư thế [42,252][1038,305] false
+Kiểm tra tư thế [42,336][1038,420] false
+Quan sát và điều chỉnh chỗ ngồi để phù hợp hơn với công việc hiện tại. [42,462][1038,567] false
+Thả lỏng vai và tìm tư thế ngồi thoải mái. [53,620][1028,788] true
+Kiểm tra vị trí màn hình, bàn phím và chỗ đặt chân. [53,809][1028,977] true
+Thay đổi tư thế hoặc đứng lên một lát nếu phù hợp. [53,998][1028,1166] true
+Đã kiểm tra 0/3 mục [42,1218][1038,1271] false
+Đã thực hiện [42,1302][1038,1439] false
+Đây là hoạt động tự kiểm tra, không phải hướng dẫn chẩn đoán hoặc điều trị. [42,1481][1038,1586] false
+
+Tapped: Thả lỏng vai
+
+Tapped: Kiểm tra vị trí màn hình
+
+Tapped: Thay đổi tư thế
+
+Tapped: Đã thực hiện
+
+PASS: offline failure retains 3/3 selections and exposes retry
+Quay lại [11,74][137,200] true
+Góc làm việc [189,100][492,173] false
+Tư thế [42,252][1038,305] false
+Kiểm tra tư thế [42,336][1038,420] false
+Quan sát và điều chỉnh chỗ ngồi để phù hợp hơn với công việc hiện tại. [42,462][1038,567] false
+Thả lỏng vai và tìm tư thế ngồi thoải mái. [53,620][1028,788] true
+Kiểm tra vị trí màn hình, bàn phím và chỗ đặt chân. [53,809][1028,977] true
+Thay đổi tư thế hoặc đứng lên một lát nếu phù hợp. [53,998][1028,1166] true
+Đã kiểm tra 3/3 mục [42,1218][1038,1271] false
+Chưa lưu được thay đổi. Bạn có thể thử lại. [42,1302][1038,1512] false
+Thử lưu lại [42,1302][1038,1439] true
+Đây là hoạt động tự kiểm tra, không phải hướng dẫn chẩn đoán hoặc điều trị. [42,1554][1038,1659] false
+
+Tapped: Thử lưu lại
+
+PASS: online retry opens Progress with posture completion
+Quay lại [11,74][137,200] true
+Tiến độ [189,100][369,173] false
+2026-11-01 [356,252][724,378] true
+100, 1/1 hoạt động đã hoàn thành
+Tiến độ: 1 trên 1 hoạt động đã chọn
+Tiến độ riêng tư của bạn. Không cần hoàn thành cả 9 nhóm mỗi ngày. [42,462][1038,819] false
+Đã hoàn thành [42,882][1038,956] false
+Kiểm tra tư thế
+Đã ghi nhận [42,987][1038,1355] false
+Hoàn tác [95,1176][386,1302] true
+Xóa bản ghi [407,1176][746,1302] true
+Khám phá hoạt động [42,1418][1038,1544] true
+Đã ghi nhận hoạt động. [0,2352][1080,2478] false

@@ -1,0 +1,13 @@
+{
+  "dateLocal": "2026-11-03",
+  "source": "native UIAutomator2 on Xperia, no model",
+  "modelCalls": 0,
+  "accountStringsExported": false,
+  "assertionsPassed": false,
+  "logoutReturnedLogin": true,
+  "backAndReopenKeptPrivateRoutesClosed": true,
+  "networkDisabledForTest": false,
+  "networkSettingsRestored": true,
+  "originalSessionRestored": false,
+  "requiresOnlineRetry": true
+}

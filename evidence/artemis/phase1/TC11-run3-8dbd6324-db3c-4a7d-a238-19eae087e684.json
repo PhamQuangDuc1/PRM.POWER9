@@ -1,0 +1,24 @@
+{
+  "case": "TC11",
+  "repetition": 3,
+  "traceId": "8dbd6324-db3c-4a7d-a238-19eae087e684",
+  "status": "completed",
+  "elapsedSeconds": 36.32,
+  "outputSource": "ARTEMIS recorded terminal report_task_status.args.explanation JSON",
+  "output": {
+    "food_title": "Sắp xếp bữa trưa văn phòng",
+    "relax_title": "Nghỉ sau họp",
+    "connection_heading": "Kết nối",
+    "returned_today": true
+  },
+  "assertionsPassed": true,
+  "retrospectiveNativeAudit": {
+    "verified": true,
+    "observations": {
+      "searchQuerySeen": false,
+      "emptyMessageSeen": false,
+      "missingTimeErrorSeen": false,
+      "nativeTimePickerSeen": false
+    }
+  }
+}

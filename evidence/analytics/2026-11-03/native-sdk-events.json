@@ -1,0 +1,95 @@
+{
+  "dateLocal": "2026-11-03",
+  "source": "native FA-SVC SDK lines filtered on device by Power9 synthetic build marker and test start time",
+  "modelCalls": 0,
+  "rawLogsExported": false,
+  "privateIdentifiersExported": false,
+  "debugViewServerReceiptClaimed": false,
+  "events": {
+    "search": {
+      "observed": true,
+      "matchingSdkLines": 2,
+      "parameters": {
+        "max_minutes": "60",
+        "query_length": "6",
+        "has_query": "1"
+      }
+    },
+    "config_refreshed": {
+      "observed": true,
+      "matchingSdkLines": 2,
+      "parameters": {}
+    },
+    "view_activity": {
+      "observed": true,
+      "matchingSdkLines": 3,
+      "parameters": {
+        "activity_id": "move-walk",
+        "group_id": "move"
+      }
+    },
+    "schedule_created": {
+      "observed": true,
+      "matchingSdkLines": 2,
+      "parameters": {
+        "activity_id": "move-walk",
+        "group_id": "move"
+      }
+    },
+    "schedule_updated": {
+      "observed": true,
+      "matchingSdkLines": 2,
+      "parameters": {
+        "activity_id": "move-walk",
+        "group_id": "move"
+      }
+    },
+    "activity_completed": {
+      "observed": true,
+      "matchingSdkLines": 2,
+      "parameters": {
+        "activity_id": "eat-lunch",
+        "group_id": "eat",
+        "source": "checkin"
+      }
+    },
+    "report_generated": {
+      "observed": true,
+      "matchingSdkLines": 2,
+      "parameters": {
+        "item_count": "1",
+        "file_size_kb": "84"
+      }
+    },
+    "logout": {
+      "observed": true,
+      "matchingSdkLines": 2,
+      "parameters": {}
+    },
+    "login": {
+      "observed": true,
+      "matchingSdkLines": 2,
+      "parameters": {
+        "method": "google"
+      }
+    },
+    "schedule_deleted": {
+      "observed": true,
+      "matchingSdkLines": 2,
+      "parameters": {
+        "activity_id": "move-walk"
+      }
+    },
+    "completion_undone": {
+      "observed": true,
+      "matchingSdkLines": 2,
+      "parameters": {
+        "activity_id": "move-walk"
+      }
+    }
+  },
+  "notObserved": [
+    "export_report"
+  ],
+  "captureNote": "Accumulated sanitized marker-scoped SDK observations; line counts are not unique events."
+}

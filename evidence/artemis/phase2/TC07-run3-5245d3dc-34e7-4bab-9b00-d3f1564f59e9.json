@@ -1,0 +1,37 @@
+{
+  "case": "TC07",
+  "repetition": 3,
+  "traceId": "5245d3dc-34e7-4bab-9b00-d3f1564f59e9",
+  "status": "completed",
+  "elapsedSeconds": 188.37,
+  "outputSource": "ARTEMIS recorded terminal observations object or legacy explanation JSON (bounded commit wait)",
+  "output": {
+    "paused_timer": "02:49",
+    "idle_again": false,
+    "no_record_created": true,
+    "timer_after_stay": "02:49",
+    "discarded": true,
+    "paused_after_stay": true
+  },
+  "assertionsPassed": false,
+  "nativeTraceObservations": {
+    "searchQuerySeen": false,
+    "emptyMessageSeen": false,
+    "missingTimeErrorSeen": false,
+    "timePickerSeen": false,
+    "nativeTimePickerSeen": false,
+    "androidPrintPreviewSeen": false,
+    "timerPausedSeen": true,
+    "leaveSessionDialogSeen": true,
+    "completionDeleteDialogSeen": false,
+    "pdfGeneratedSeen": false
+  },
+  "terminalTraceError": null,
+  "failureDiagnosis": {
+    "category": "model_observation_mismatch",
+    "reportedIdleAgain": false,
+    "recordedIdleStartVisibleAfterDiscard": true,
+    "postActionStep": 9,
+    "note": "Read-only inspection of same trace. Original pytest failure kept; do not count as a pass."
+  }
+}

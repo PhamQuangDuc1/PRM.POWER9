@@ -1,0 +1,14 @@
+{
+  "profile": "pro",
+  "traceId": "48e5a802-0626-4291-979a-c1f320d916bf",
+  "startedAtUtc": "2026-11-01T15:37:11.102777+00:00",
+  "elapsedSeconds": 926.82,
+  "status": "cancelled",
+  "issuesVerified": false,
+  "note": "926.82 seconds was wall-clock waiting, not 15 minutes of exploration: quota errors prevented UI actions. The task was cancelled with zero recorded UI steps. Do not treat this as completed exploratory testing or evidence that the app has no bugs. No new model tasks after authorized run 45.",
+  "wallClockWithinTimeWindow": true,
+  "durationRequirementMet": false,
+  "activeExploratoryRequirementMet": false,
+  "recordedUiSteps": 0,
+  "providerBlocker": "Gemini RESOURCE_EXHAUSTED: GenerateRequestsPerDayPerProjectPerModel-FreeTier quota500; retry delay ~16hours."
+}

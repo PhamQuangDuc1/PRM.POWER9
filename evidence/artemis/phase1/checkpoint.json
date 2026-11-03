@@ -1,0 +1,84 @@
+{
+  "state": "phase1_verified_with_one_trace_audit_full_lab3_incomplete",
+  "dateLocal": "2026-11-01",
+  "plannedRuns": 9,
+  "verifiedRuns": 9,
+  "pytestPassedVerifiedRuns": 8,
+  "traceAuditedAdditionalRuns": 1,
+  "passed": [
+    {
+      "case": "TC03",
+      "repetition": 1,
+      "traceId": "dc7bc0e4-83f1-406d-95e0-ba40ceef6c69",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC03",
+      "repetition": 2,
+      "traceId": "9236e5ec-4494-414f-9467-f55ff65fb7f4",
+      "pytestPassed": false,
+      "verified": true,
+      "delayedTerminalAudit": true
+    },
+    {
+      "case": "TC03",
+      "repetition": 3,
+      "traceId": "7e0d6509-818e-4063-89fc-6567d88774c2",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC04",
+      "repetition": 1,
+      "traceId": "67640119-96b7-4c9e-90ed-ead468de0536",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC04",
+      "repetition": 2,
+      "traceId": "c0766dc6-f3cc-4889-b27e-12d48697f5a3",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC04",
+      "repetition": 3,
+      "traceId": "3454c3ff-c758-4983-8dc0-ced34d8058df",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC11",
+      "repetition": 1,
+      "traceId": "26f5bbe8-296a-4479-832b-13d7d179ac36",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC11",
+      "repetition": 2,
+      "traceId": "d8da098c-4298-4541-a588-eb3103e04c64",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    },
+    {
+      "case": "TC11",
+      "repetition": 3,
+      "traceId": "8dbd6324-db3c-4a7d-a238-19eae087e684",
+      "pytestPassed": true,
+      "verified": true,
+      "delayedTerminalAudit": false
+    }
+  ],
+  "remaining": [],
+  "note": "Scope is partial TC04/TC11 as documented. Original failures retained; full Lab3/pro quota status in ../lab3-summary.json and ../pro-exploratory.json."
+}

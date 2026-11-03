@@ -1,0 +1,82 @@
+--------- beginning of main
+I/FirebaseCrashlytics(22358): Initializing Firebase Crashlytics 21.0.1 for vn.power9.power9_office_routine
+D/FirebaseCrashlytics(22358): Crashlytics automatic data collection ENABLED by global Firebase setting.
+D/FirebaseCrashlytics(22358): AnalyticsConnector now available.
+D/FirebaseCrashlytics(22358): Registered Firebase Analytics listener.
+D/FirebaseCrashlytics(22358): Could not find resources: 0 0 0
+D/FirebaseCrashlytics(22358): Mapping file ID is: [REDACTED_ID]
+D/FirebaseCrashlytics(22358): Checking for cached settings...
+D/FirebaseCrashlytics(22358): No cached settings data found.
+D/FirebaseCrashlytics(22358): Registering RemoteConfig Rollouts subscriber
+D/FirebaseCrashlytics(22358): Crashlytics automatic data collection ENABLED by global Firebase setting.
+D/FirebaseCrashlytics(22358): Successfully configured exception handler.
+D/FirebaseCrashlytics(22358): Initializing Crashlytics blocked main for 248 ms
+D/FirebaseCrashlytics(22358): Opening a new session with ID [REDACTED_ID]
+D/FirebaseCrashlytics(22358): Crashlytics automatic data collection ENABLED by global Firebase setting.
+D/FirebaseCrashlytics(22358): Requesting settings from https://firebase-settings.crashlytics.com/spi/v2/platforms/android/gmp/1:613232000873:android:f65f6f74ecdc93e31407f8/settings
+D/FirebaseCrashlytics(22358): App Quality Sessions session changed: SessionDetails(sessionId=[REDACTED_ID])
+D/FirebaseCrashlytics(22358): Registered Firebase Analytics event receiver for breadcrumbs
+D/FirebaseCrashlytics(22358): Read version control info from string resource
+I/FirebaseCrashlytics(22358): Saved version control info
+V/FA      (22358): onActivityCreated
+V/FA      (22358): sdkVersion bundled with app, dynamiteVersion: 192000, 217
+V/FA      (22358): App measurement collection enabled
+V/FA      (22358): App measurement enabled for app package, google app id: vn.power9.power9_office_routine, 1:613232000873:android:f65f6f74ecdc93e31407f8
+I/FA      (22358): App measurement initialized, version: 193007
+I/FA      (22358): To enable debug logging run: adb shell setprop log.tag.FA VERBOSE
+I/FA      (22358): Faster debug mode event logging enabled. To disable, run:
+I/FA      (22358):   adb shell setprop debug.firebase.analytics.app .none.
+D/FA      (22358): Debug-level message logging enabled
+D/FA      (22358): TCF client enabled.
+D/FA      (22358): Register tcfPrefChangeListener.
+V/FA      (22358): Default prefs file: vn.power9.power9_office_routine_preferences
+D/FA      (22358): Handle tcf update.
+V/FA      (22358): Tcf preferences read
+V/FA      (22358): Persisting first open: 1793478237782
+V/FA      (22358): App measurement setting deferred collection: false
+V/FA      (22358): Checking service availability
+V/FA      (22358): Service available
+V/FA      (22358): Connecting to remote service
+V/FA      (22358): Connection attempt already in progress
+V/FA      (22358): Connection attempt already in progress
+D/FirebaseCrashlytics(22358): Loaded settings: {"settings_version":3,"cache_duration":158905,"features":{"collect_logged_exceptions":true,"collect_reports":true,"collect_analytics":false,"prompt_enabled":false,"push_enabled":false,"[REDACTED_ID]":false,"collect_anrs":true,"collect_metric_kit":false,"collect_build_ids":true},"app":{"status":"activated","update_required":false,"report_upload_variant":2,"[REDACTED_ID]":2},"fabric":{"org_id":"6ae64e5e19038fa8a85c91e1","bundle_id":"vn.power9.power9_office_routine"},"on_demand_upload_rate_per_minute":10,"on_demand_backoff_base":1.2,"on_demand_backoff_step_duration_seconds":60,"app_quality":{"sessions_enabled":true,"sampling_rate":1,"session_timeout_seconds":1800},"on_demand_thread_recording_suspension_enabled":true,"expires_at":1793637145310}
+V/FA      (22358): Activity resumed, time: 18959246
+V/FA      (22358): Connection attempt already in progress
+V/FA      (22358): Session started, time: 18959257
+D/FirebaseCrashlytics(22358): Crashlytics automatic data collection ENABLED by global Firebase setting.
+D/FirebaseCrashlytics(22358): Crashlytics automatic data collection ENABLED by global Firebase setting.
+D/FirebaseCrashlytics(22358): App Quality Sessions session changed: SessionDetails(sessionId=[REDACTED_ID])
+V/FA      (22358): Connection attempt already in progress
+I/FA      (22358): Tag Manager is not found and thus will not be used
+V/FA      (22358): Connection attempt already in progress
+V/FA      (22358): Connection attempt already in progress
+V/FA      (22358): Connection attempt already in progress
+V/FA      (22358): Recording user engagement, ms: 3833
+V/FA      (22358): Connection attempt already in progress
+V/FA      (22358): Connection attempt already in progress
+V/FA      (22358): Activity paused, time: 18963079
+D/FirebaseCrashlytics(22358): Crashlytics automatic data collection ENABLED by API.
+V/FA      (22358): Activity resumed, time: 18963150
+V/FA      (22358): Connection attempt already in progress
+V/FA      (22358): Connection attempt already in progress
+D/FA      (22358): Connected to remote service
+V/FA      (22358): Processing queued up service tasks: 12
+D/FirebaseCrashlytics(22358): Crashlytics automatic data collection ENABLED by API.
+V/FA      (22358): Logging telemetry for logEvent from database
+V/FA      (22358): Logging telemetry for logEvent from database
+D/FA      (22358): Setting app measurement enabled (FE): true
+D/FA      (22358): Updating Scion state (FE)
+D/FirebaseCrashlytics(22358): Updated Crashlytics Rollout State
+V/FA      (22358): Logging telemetry for logEvent from database
+V/FA      (22358): Inactivity, disconnecting from the service
+V/FA      (22358): Connecting to remote service
+D/FA      (22358): Connected to remote service
+V/FA      (22358): Processing queued up service tasks: 1
+D/FirebaseCrashlytics(22358): Updated Crashlytics Rollout State
+V/FA      (22358): Logging telemetry for logEvent from database
+V/FA      (22358): Inactivity, disconnecting from the service
+V/FA      (22358): Connecting to remote service
+D/FA      (22358): Connected to remote service
+V/FA      (22358): Processing queued up service tasks: 1
+V/FA      (22358): Logging telemetry for logEvent from database
+V/FA      (22358): Inactivity, disconnecting from the service

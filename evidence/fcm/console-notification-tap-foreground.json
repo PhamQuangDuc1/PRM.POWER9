@@ -1,0 +1,8 @@
+{
+  "testMode": "foreground",
+  "nativeNotificationTitle": "Power9 - Console foreground",
+  "source": "Android SystemUI hierarchy",
+  "observed": true,
+  "clicked": true,
+  "noOtherNotificationContentExported": true
+}

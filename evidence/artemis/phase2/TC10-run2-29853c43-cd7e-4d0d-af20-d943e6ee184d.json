@@ -1,0 +1,29 @@
+{
+  "case": "TC10",
+  "repetition": 2,
+  "traceId": "29853c43-cd7e-4d0d-af20-d943e6ee184d",
+  "status": "completed",
+  "elapsedSeconds": 83.15,
+  "outputSource": "ARTEMIS recorded terminal observations object or legacy explanation JSON (bounded commit wait)",
+  "output": {
+    "total_after": 2,
+    "original_time": "Chưa chọn giờ",
+    "total_before": 2,
+    "cancel_kept_original": true,
+    "new_time": "09:11"
+  },
+  "assertionsPassed": false,
+  "nativeTraceObservations": {
+    "searchQuerySeen": false,
+    "emptyMessageSeen": false,
+    "missingTimeErrorSeen": false,
+    "timePickerSeen": true,
+    "nativeTimePickerSeen": false,
+    "androidPrintPreviewSeen": false,
+    "timerPausedSeen": false,
+    "leaveSessionDialogSeen": false,
+    "completionDeleteDialogSeen": false,
+    "pdfGeneratedSeen": false
+  },
+  "terminalTraceError": null
+}

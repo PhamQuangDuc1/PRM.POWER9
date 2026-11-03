@@ -1,0 +1,17 @@
+{
+  "projectId": "power9-office-se180724",
+  "verifiedAt": "2026-10-31T16:48:38.182Z",
+  "phase": "timer-full",
+  "completionCount": 1,
+  "scheduleCount": 1,
+  "completions": [
+    {
+      "activityId": "stress-break",
+      "title": "Nghỉ sau họp",
+      "dateKey": "2026-10-31",
+      "source": "timer",
+      "durationSeconds": "180",
+      "createdAt": "2026-10-31T16:48:35.891Z"
+    }
+  ]
+}

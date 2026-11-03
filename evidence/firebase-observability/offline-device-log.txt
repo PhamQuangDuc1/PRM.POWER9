@@ -1,0 +1,53 @@
+Quay lại [11,74][137,200] true
+Góc làm việc [189,100][492,173] false
+Không gian [42,252][1038,305] false
+Sắp xếp góc làm việc [42,336][1038,420] false
+Dành một ít thời gian kiểm tra bàn làm việc và lối đi quanh bạn. [42,462][1038,567] false
+Kiểm tra vị trí màn hình và ánh sáng phù hợp. [53,620][1028,788] true
+Sắp xếp vật dụng cần dùng trong tầm với thoải mái. [53,809][1028,977] true
+Dọn gọn mặt bàn và lối đi, tránh gây cản trở. [53,998][1028,1166] true
+Đã kiểm tra 0/3 mục [42,1218][1038,1271] false
+Đã thực hiện [42,1302][1038,1439] false
+Một lần tự kiểm tra được ghi nhận là một hoạt động, không tính thành nhiều nhóm. [42,1481][1038,1586] false
+
+Tapped: Kiểm tra vị trí màn hình
+
+Tapped: Sắp xếp vật dụng
+
+Tapped: Dọn gọn mặt bàn
+
+Tapped: Đã thực hiện
+
+PASS: offline failure retains 3/3 selections and exposes retry
+Quay lại [11,74][137,200] true
+Góc làm việc [189,100][492,173] false
+Không gian [42,252][1038,305] false
+Sắp xếp góc làm việc [42,336][1038,420] false
+Dành một ít thời gian kiểm tra bàn làm việc và lối đi quanh bạn. [42,462][1038,567] false
+Kiểm tra vị trí màn hình và ánh sáng phù hợp. [53,620][1028,788] true
+Sắp xếp vật dụng cần dùng trong tầm với thoải mái. [53,809][1028,977] true
+Dọn gọn mặt bàn và lối đi, tránh gây cản trở. [53,998][1028,1166] true
+Đã kiểm tra 3/3 mục [42,1218][1038,1271] false
+Chưa lưu được thay đổi. Bạn có thể thử lại. [42,1302][1038,1512] false
+Thử lưu lại [42,1302][1038,1439] true
+Một lần tự kiểm tra được ghi nhận là một hoạt động, không tính thành nhiều nhóm. [42,1554][1038,1659] false
+
+Tapped: Thử lưu lại
+
+PASS: online retry opens Progress with posture completion
+Quay lại [11,74][137,200] true
+Tiến độ [189,100][369,173] false
+2026-11-01 [356,252][724,378] true
+50, 1/2 hoạt động đã hoàn thành
+Tiến độ: 1 trên 2 hoạt động đã chọn
+Tiến độ riêng tư của bạn. Không cần hoàn thành cả 9 nhóm mỗi ngày. [42,462][1038,819] false
+Đã hoàn thành [42,882][1038,956] false
+Sắp xếp góc làm việc
+Đã ghi nhận [42,987][1038,1355] false
+Hoàn tác [95,1176][386,1302] true
+Xóa bản ghi [407,1176][746,1302] true
+Chưa hoàn thành [42,1418][1038,1491] false
+Chuẩn bị nghỉ tối
+21:30 [42,1491][1038,1680] false
+Khám phá hoạt động [42,1743][1038,1869] true
+Đã ghi nhận hoạt động. [0,2352][1080,2478] false

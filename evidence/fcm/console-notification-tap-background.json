@@ -1,0 +1,8 @@
+{
+  "testMode": "background",
+  "nativeNotificationTitle": "Power9 - Console background",
+  "source": "Android SystemUI hierarchy",
+  "observed": true,
+  "clicked": true,
+  "noOtherNotificationContentExported": true
+}

@@ -1,0 +1,18 @@
+{
+  "text": "Đây là Power Nine Office Routine. Ứng dụng hỗ trợ những hoạt động ngắn trong ngày làm việc. Tôi sẽ tạo lịch, kiểm tra tiến độ và xuất báo cáo. Dự án giữ gói miễn phí và không bật thanh toán.",
+  "samples": [
+    {
+      "voice": "Google Translate Vietnamese",
+      "file": "voice-google-vi-sample.mp3",
+      "success": true
+    },
+    {
+      "voice": "Microsoft HoaiMy Neural Vietnamese",
+      "file": "voice-hoaimy-neural-sample.mp3",
+      "success": true
+    }
+  ],
+  "personalDataIncluded": false,
+  "paidApiOrBillingEnabled": false,
+  "artemisTasksConsumed": 0
+}

@@ -1,0 +1,199 @@
+import 'dart:async';
+import 'dart:io';
+import 'dart:typed_data';
+
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:power9_office_routine/models/activity_report.dart';
+import 'package:power9_office_routine/models/app_user.dart';
+import 'package:power9_office_routine/models/completion.dart';
+import 'package:power9_office_routine/models/today_overview.dart';
+import 'package:power9_office_routine/services/pdf_report_generator.dart';
+import 'package:power9_office_routine/services/report_service.dart';
+import 'package:power9_office_routine/viewmodels/app_providers.dart';
+import 'package:power9_office_routine/viewmodels/completion_providers.dart';
+import 'package:power9_office_routine/viewmodels/report_viewmodel.dart';
+import 'package:power9_office_routine/viewmodels/observability_providers.dart';
+import 'package:power9_office_routine/models/app_config.dart';
+
+class CloudEnabledTestConfig extends AppConfigViewModel {
+  @override
+  ConfigState build() =>
+      const ConfigState(value: AppConfig(reportUploadEnabled: true));
+}
+
+class StubGenerator implements ReportGenerator {
+  @override
+  Future<GeneratedReport> generate(ReportSnapshot snapshot) async =>
+      GeneratedReport(
+        ownerUid: snapshot.ownerUid,
+        dateKey: snapshot.dateKey,
+        bytes: Uint8List.fromList([37, 80, 68, 70]),
+        digest: 'a' * 64,
+        itemCount: snapshot.overview.total,
+      );
+}
+
+class RetryUploader implements ReportUploadService {
+  final seen = <GeneratedReport>[];
+  Completer<UploadedReport>? pending;
+  @override
+  Future<UploadedReport> upload(
+    GeneratedReport report,
+    void Function(double) onProgress,
+  ) async {
+    seen.add(report);
+    onProgress(.5);
+    if (pending != null) return pending!.future;
+    if (seen.length == 1) throw Exception('offline');
+    return const UploadedReport(
+      path: 'test-only',
+      url: 'https://example.invalid/test.pdf',
+    );
+  }
+}
+
+void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+  const day = '2026-11-01';
+  test(
+    'disabled cloud feature never calls uploader and keeps local PDF',
+    () async {
+      final uploader = RetryUploader();
+      final container = ProviderContainer(
+        overrides: [
+          sessionProvider.overrideWith(
+            (ref) => Stream.value(const AppUser(uid: 'alice')),
+          ),
+          todayOverviewProvider(day)
+              .overrideWith((ref) => const AsyncData(TodayOverview([]))),
+          reportGeneratorProvider.overrideWithValue(StubGenerator()),
+          reportUploadProvider.overrideWithValue(uploader),
+        ],
+      );
+      addTearDown(container.dispose);
+      container.listen(sessionProvider, (_, _) {});
+      await container.read(sessionProvider.future);
+      container.listen(reportControllerProvider(day), (_, _) {});
+      final vm = container.read(reportControllerProvider(day).notifier);
+      await vm.generate();
+      await vm.upload();
+      expect(uploader.seen, isEmpty);
+      expect(container.read(reportControllerProvider(day)).report, isNotNull);
+      expect(container.read(reportControllerProvider(day)).uploaded, isNull);
+    },
+  );
+  test('PDF embeds Vietnamese and measured duration; long table paginates', () async {
+    final generator = PdfReportGenerator(
+      loadAsset: (path) async =>
+          ByteData.sublistView(await File(path).readAsBytes()),
+    );
+    const record = Completion(
+      id: 'stress-break_$day',
+      activityId: 'stress-break',
+      title: 'Nghỉ sau họp',
+      groupId: 'stress',
+      dateKey: day,
+      source: CompletionSource.timer,
+      durationSeconds: 72,
+    );
+    final overview = buildOverview([], [record]);
+    final snapshot = ReportSnapshot(
+      ownerUid: 'test-only-never-in-pdf',
+      dateKey: day,
+      overview: overview,
+      generatedAt: DateTime(2026, 11, 1, 9),
+    );
+    final result = await generator.generate(snapshot);
+    expect(String.fromCharCodes(result.bytes.take(4)), '%PDF');
+    expect(result.itemCount, 1);
+    final dir = Directory('.build/pdf-verification')
+      ..createSync(recursive: true);
+    await File('${dir.path}/vietnamese-timer-fixture.pdf')
+        .writeAsBytes(result.bytes);
+    final long = await generator.generate(
+      ReportSnapshot(
+        ownerUid: 'test-only',
+        dateKey: day,
+        generatedAt: DateTime(2026, 11, 1),
+        overview: TodayOverview(
+          List.generate(
+            120,
+            (index) => TodayItem(
+              activityId: 'fixture-$index',
+              title:
+                  'Dữ liệu kiểm thử bố cục $index: Sắp xếp góc làm việc và kết nối cùng đồng nghiệp',
+              groupId: 'space',
+            ),
+          ),
+        ),
+      ),
+    );
+    await File('${dir.path}/multipage-fixture.pdf').writeAsBytes(long.bytes);
+  });
+
+  test('failed upload keeps exact generated bytes for retry', () async {
+    final uploader = RetryUploader();
+    final container = ProviderContainer(
+      overrides: [
+        appConfigProvider.overrideWith(CloudEnabledTestConfig.new),
+        sessionProvider.overrideWith(
+          (ref) => Stream.value(const AppUser(uid: 'alice')),
+        ),
+        todayOverviewProvider(day)
+            .overrideWith((ref) => const AsyncData(TodayOverview([]))),
+        reportGeneratorProvider.overrideWithValue(StubGenerator()),
+        reportUploadProvider.overrideWithValue(uploader),
+      ],
+    );
+    addTearDown(container.dispose);
+    container.listen(sessionProvider, (_, _) {});
+    await container.read(sessionProvider.future);
+    container.listen(reportControllerProvider(day), (_, _) {});
+    final vm = container.read(reportControllerProvider(day).notifier);
+    await vm.generate();
+    await vm.upload();
+    expect(container.read(reportControllerProvider(day)).error, isNotNull);
+    expect(container.read(reportControllerProvider(day)).uploaded, isNull);
+    await vm.upload();
+    expect(identical(uploader.seen[0], uploader.seen[1]), true);
+    expect(container.read(reportControllerProvider(day)).uploaded, isNotNull);
+  });
+
+  test('logout clears report and ignores a late upload result', () async {
+    final auth = StreamController<AppUser?>();
+    final uploader = RetryUploader()..pending = Completer<UploadedReport>();
+    final container = ProviderContainer(
+      overrides: [
+        sessionProvider.overrideWith((ref) => auth.stream),
+        appConfigProvider.overrideWith(CloudEnabledTestConfig.new),
+        todayOverviewProvider(day)
+            .overrideWith((ref) => const AsyncData(TodayOverview([]))),
+        reportGeneratorProvider.overrideWithValue(StubGenerator()),
+        reportUploadProvider.overrideWithValue(uploader),
+      ],
+    );
+    addTearDown(() async {
+      container.dispose();
+      await auth.close();
+    });
+    container.listen(sessionProvider, (_, _) {});
+    auth.add(const AppUser(uid: 'alice'));
+    await container.read(sessionProvider.future);
+    container.listen(reportControllerProvider(day), (_, _) {});
+    final vm = container.read(reportControllerProvider(day).notifier);
+    await vm.generate();
+    final upload = vm.upload();
+    auth.add(null);
+    await Future<void>.delayed(Duration.zero);
+    uploader.pending!.complete(
+      const UploadedReport(
+        path: 'test-only',
+        url: 'https://example.invalid/private.pdf',
+      ),
+    );
+    await upload;
+    expect(container.read(reportControllerProvider(day)).report, isNull);
+    expect(container.read(reportControllerProvider(day)).uploaded, isNull);
+  });
+}

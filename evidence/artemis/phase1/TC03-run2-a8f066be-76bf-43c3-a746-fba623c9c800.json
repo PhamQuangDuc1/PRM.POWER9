@@ -1,0 +1,14 @@
+{
+  "case": "TC03",
+  "repetition": 2,
+  "traceId": "a8f066be-76bf-43c3-a746-fba623c9c800",
+  "status": "completed",
+  "elapsedSeconds": 64.15,
+  "outputSource": "ARTEMIS recorded terminal report_task_status.args.explanation JSON",
+  "output": {
+    "empty_message": "Không tìm thấy hoạt động nào phù hợp",
+    "search_cleared": true,
+    "restored_activity_title": "Đi bộ giữa giờ"
+  },
+  "assertionsPassed": false
+}

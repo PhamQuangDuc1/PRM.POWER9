@@ -1,0 +1,92 @@
+i  emulators: Starting emulators: firestore
+i  emulators: Detected demo project ID "demo-power9", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail.
+i  firestore: downloading cloud-firestore-emulator-v1.22.0.jar...
+
+i  firestore: Firestore Emulator logging to firestore-debug.log
++  firestore: Firestore Emulator was started in standard edition.
++  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: node firebase/tests/firestore-rules.test.cjs
+TAP version 13
+# Subtest: owner can create, read, update and delete their own schedule
+ok 1 - owner can create, read, update and delete their own schedule
+  ---
+  duration_ms: 1677.2481
+  type: 'test'
+  ...
+[2026-10-31T15:49:58.795Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x69da4853 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L25, false for 'create' @ L31, false for 'update' @ L26, false for 'update' @ L31
+[2026-10-31T15:49:58.820Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x69da4854 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'delete' @ L24, false for 'delete' @ L31
+# Subtest: another user cannot read, write or delete the owner schedule
+ok 2 - another user cannot read, write or delete the owner schedule
+  ---
+  duration_ms: 222.4658
+  type: 'test'
+  ...
+[2026-10-31T15:49:58.931Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x69da4857 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L25, false for 'create' @ L31, false for 'update' @ L26, false for 'update' @ L31
+# Subtest: signed-out clients cannot access catalog or schedules
+ok 3 - signed-out clients cannot access catalog or schedules
+  ---
+  duration_ms: 110.8374
+  type: 'test'
+  ...
+[2026-10-31T15:49:59.073Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x69da485a error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L7, false for 'create' @ L31, false for 'update' @ L7, false for 'update' @ L31
+# Subtest: catalog query requires published filter and client cannot change catalog
+ok 4 - catalog query requires published filter and client cannot change catalog
+  ---
+  duration_ms: 163.2577
+  type: 'test'
+  ...
+[2026-10-31T15:49:59.158Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x69da485c error. Code: 7 Message: 7 PERMISSION_DENIED: 
+evaluation error at L25:24 for 'create' @ L25, false for 'create' @ L31, evaluation error at L26:24 for 'update' @ L26, false for 'update' @ L31, false for 'create' @ L25, false for 'create' @ L31
+[2026-10-31T15:49:59.180Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x69da485d error. Code: 7 Message: 7 PERMISSION_DENIED: 
+evaluation error at L25:24 for 'create' @ L25, false for 'create' @ L31, evaluation error at L26:24 for 'update' @ L26, false for 'update' @ L31, false for 'create' @ L25, false for 'create' @ L31
+[2026-10-31T15:49:59.205Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x69da485e error. Code: 7 Message: 7 PERMISSION_DENIED: 
+evaluation error at L25:24 for 'create' @ L25, false for 'create' @ L31, evaluation error at L26:24 for 'update' @ L26, false for 'update' @ L31, false for 'create' @ L25, false for 'create' @ L31
+# Subtest: reminder without time, wrong type or unknown field is denied
+ok 5 - reminder without time, wrong type or unknown field is denied
+  ---
+  duration_ms: 111.0511
+  type: 'test'
+  ...
+# Subtest: no-reminder schedule permits no time
+ok 6 - no-reminder schedule permits no time
+  ---
+  duration_ms: 71.3773
+  type: 'test'
+  ...
+[2026-10-31T15:49:59.339Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x69da4862 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+evaluation error at L25:24 for 'create' @ L25, false for 'create' @ L31, evaluation error at L26:24 for 'update' @ L26, false for 'update' @ L31, false for 'create' @ L25, false for 'create' @ L31
+# Subtest: random document ID cannot bypass one activity per day
+ok 7 - random document ID cannot bypass one activity per day
+  ---
+  duration_ms: 61.4649
+  type: 'test'
+  ...
+[2026-10-31T15:49:59.399Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x69da4864 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+evaluation error at L25:24 for 'create' @ L25, false for 'create' @ L31, evaluation error at L26:24 for 'update' @ L26, false for 'update' @ L31, false for 'create' @ L25, false for 'create' @ L31
+[2026-10-31T15:49:59.440Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x69da4865 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+evaluation error at L26:24 for 'update' @ L26, false for 'update' @ L31, false for 'update' @ L26, false for 'update' @ L31
+# Subtest: owner cannot forge catalog title or rewrite creation time
+ok 8 - owner cannot forge catalog title or rewrite creation time
+  ---
+  duration_ms: 100.8255
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2541.011
++  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+!  Firestore Emulator has exited upon receiving signal: SIGINT
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator

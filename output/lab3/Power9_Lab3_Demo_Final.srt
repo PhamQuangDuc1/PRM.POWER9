@@ -1,0 +1,255 @@
+1
+00:00:01,200 --> 00:00:07,220
+Đây là Power Nine Office Routine, ứng dụng hỗ trợ những hoạt động ngắn trong ngày làm việc.
+
+2
+00:00:07,220 --> 00:00:12,980
+Bản demo sử dụng Flutter, kiến trúc M V V M và Firebase.
+
+3
+00:00:12,980 --> 00:00:17,590
+Người dùng đăng nhập bằng Google để lưu lịch và xem tiến độ riêng.
+
+4
+00:00:17,590 --> 00:00:21,090
+Máy hiện đã đăng nhập vào tài khoản kiểm thử.
+
+5
+00:00:21,090 --> 00:00:25,650
+Tôi bắt đầu tại màn Hôm nay với dữ liệu thật của ngày đang chọn.
+
+6
+00:00:25,650 --> 00:00:30,140
+Các thao tác tiếp theo được ghi trực tiếp trên điện thoại Xperia.
+
+7
+00:00:35,200 --> 00:00:38,820
+Từ màn Hôm nay, tôi mở danh mục hoạt động.
+
+8
+00:00:38,820 --> 00:00:44,680
+Tìm kiếm một nội dung không khớp sẽ hiển thị trạng thái rỗng, thay vì tạo dữ liệu giả.
+
+9
+00:00:44,680 --> 00:00:49,940
+Sau khi xóa tìm kiếm, tôi chọn hoạt động Đi bộ giữa giờ rồi mở form lịch.
+
+10
+00:00:49,940 --> 00:00:55,290
+Khi bật nhắc mà chưa chọn giờ, form báo lỗi và giữ lại thông tin để sửa.
+
+11
+00:00:55,290 --> 00:00:57,760
+Tôi tắt nhắc rồi lưu lịch.
+
+12
+00:00:57,760 --> 00:01:02,700
+Sau khi lưu thành công, hoạt động xuất hiện ở đúng ngày trên màn Hôm nay.
+
+13
+00:01:02,700 --> 00:01:06,200
+Một hoạt động có tối đa một lịch trong một ngày.
+
+14
+00:01:06,200 --> 00:01:11,500
+Giờ nhắc hiện chỉ được lưu vào lịch, ứng dụng chưa tự phát thông báo theo giờ này.
+
+15
+00:01:15,200 --> 00:01:18,870
+Tôi mở lịch vừa tạo để kiểm tra hai nhánh sửa.
+
+16
+00:01:18,870 --> 00:01:23,190
+Ở nhánh đầu, tôi thay đổi giờ trên form rồi chọn hủy.
+
+17
+00:01:23,190 --> 00:01:26,650
+Khi trở lại, lịch vẫn giữ giờ cũ.
+
+18
+00:01:26,650 --> 00:01:30,300
+Ở nhánh sau, tôi chọn giờ mới và lưu.
+
+19
+00:01:30,300 --> 00:01:35,480
+Màn Hôm nay hiển thị giờ đã cập nhật, trong khi tổng số lịch vẫn không tăng.
+
+20
+00:01:35,480 --> 00:01:39,560
+Đây là sửa lịch hiện có, không phải tạo thêm một lịch.
+
+21
+00:01:39,560 --> 00:01:46,660
+Lượt thao tác trực tiếp trong video được ghi riêng với kiểm thử Artemis; nó không thay cho run kiểm thử còn thiếu.
+
+22
+00:01:58,200 --> 00:02:03,140
+Lịch là hoạt động đã chọn, còn bản ghi hoàn thành là việc đã thực hiện.
+
+23
+00:02:03,140 --> 00:02:06,670
+Tôi chọn Đã thực hiện trên lịch của lượt demo.
+
+24
+00:02:06,670 --> 00:02:09,810
+Tiến độ tăng sau khi thao tác thành công.
+
+25
+00:02:09,810 --> 00:02:14,920
+Sau đó, tôi hoàn tác đúng bản ghi vừa tạo và kiểm tra lịch vẫn còn.
+
+26
+00:02:14,920 --> 00:02:22,940
+Với check in, ứng dụng không đo thời gian nên thời lượng được để trống, không lấy số phút gợi ý trong danh mục làm thời gian thực tế.
+
+27
+00:02:30,200 --> 00:02:34,040
+Tại màn Thư giãn, tôi bắt đầu một phiên mới.
+
+28
+00:02:34,040 --> 00:02:36,800
+Timer đếm theo thời gian thực.
+
+29
+00:02:36,800 --> 00:02:40,900
+Khi tạm dừng, thời gian chờ không được cộng vào phiên.
+
+30
+00:02:40,900 --> 00:02:45,270
+Nếu chọn tab Hôm nay, dialog hỏi trước khi rời phiên.
+
+31
+00:02:45,270 --> 00:02:50,650
+Tôi chọn Ở lại để giữ trạng thái tạm dừng, rồi tiếp tục và kết thúc sớm.
+
+32
+00:02:50,650 --> 00:02:55,550
+Sau khi ghi nhận, màn tiến độ hiển thị thời lượng thực đã thực hiện.
+
+33
+00:02:55,550 --> 00:03:01,260
+Nhánh TalkBack sau Ở lại đã được người dùng nghe tên tab, vuốt tới và kích hoạt thành công.
+
+34
+00:03:01,260 --> 00:03:07,480
+Điều này chỉ xác nhận nhánh đã kiểm tra, chưa đại diện cho toàn bộ trải nghiệm TalkBack của ứng dụng.
+
+35
+00:03:17,200 --> 00:03:22,360
+Tôi ghi nhận lại hoạt động đi bộ của lượt demo, rồi mở thao tác xóa lịch.
+
+36
+00:03:22,360 --> 00:03:26,130
+Dialog có lựa chọn Giữ lịch để tránh xóa nhầm.
+
+37
+00:03:26,130 --> 00:03:29,350
+Khi chọn giữ, lịch không thay đổi.
+
+38
+00:03:29,350 --> 00:03:35,610
+Sau khi xác nhận xóa, lịch được bỏ khỏi Hôm nay nhưng bản ghi đã thực hiện vẫn còn trong tiến độ.
+
+39
+00:03:35,610 --> 00:03:39,690
+Hai loại dữ liệu được lưu riêng vì có mục đích khác nhau.
+
+40
+00:03:39,690 --> 00:03:46,480
+Sau video, chỉ các bản ghi do lượt quay này tạo mới được dọn; dữ liệu có trước được giữ nguyên.
+
+41
+00:03:53,200 --> 00:03:58,140
+Từ tiến độ của đúng ngày, tôi mở báo cáo và tạo P D F.
+
+42
+00:03:58,140 --> 00:04:04,120
+Báo cáo là ảnh chụp dữ liệu tại thời điểm tạo, gồm hoạt động và thời lượng đã ghi nhận.
+
+43
+00:04:04,120 --> 00:04:08,010
+Khi dữ liệu thay đổi, cần tạo lại báo cáo.
+
+44
+00:04:08,010 --> 00:04:12,520
+Tôi mở bản xem trước thật của Android để kiểm tra nội dung.
+
+45
+00:04:12,520 --> 00:04:20,370
+Dự án chủ động giữ gói Spark để tránh phát sinh phí, nên Cloud Storage production chưa được kích hoạt và nút tải lên đang tắt.
+
+46
+00:04:20,370 --> 00:04:25,820
+Tệp P D F trên điện thoại không được dùng để khẳng định đã tải lên Firebase thành công.
+
+47
+00:04:30,200 --> 00:04:34,060
+Phần này chuyển sang Firebase Console của dự án thật.
+
+48
+00:04:34,060 --> 00:04:38,720
+Firestore lưu danh mục hoạt động, lịch và lịch sử theo tài khoản.
+
+49
+00:04:44,200 --> 00:04:52,260
+Với Analytics, thao tác trong app tạo sự kiện và các tham số đã cho phép; việc đối chiếu cần đúng sự kiện và đúng thời điểm.
+
+50
+00:04:52,260 --> 00:04:56,510
+Log trên thiết bị và dữ liệu server được phân biệt rõ.
+
+51
+00:05:02,200 --> 00:05:08,610
+Crashlytics lưu các lỗi đã kiểm thử ở những lượt trước; các bằng chứng lịch sử cần giữ đúng ngày của chúng.
+
+52
+00:05:16,200 --> 00:05:21,790
+Remote Config có các tham số để thay đổi hành vi mà không cần xây dựng lại ứng dụng.
+
+53
+00:05:21,790 --> 00:05:24,980
+Tải báo cáo lên đám mây vẫn được tắt.
+
+54
+00:05:30,200 --> 00:05:36,150
+F C M là luồng thông báo riêng và có bằng chứng nhận ở các trạng thái ứng dụng khác nhau.
+
+55
+00:05:36,150 --> 00:05:41,260
+Chỉ trình bày một lượt gửi là hiện tại nếu thực sự gửi và nhận trong lúc quay.
+
+56
+00:05:41,260 --> 00:05:45,240
+Không đưa mã thiết bị hoặc mã truy cập vào video.
+
+57
+00:05:48,200 --> 00:05:54,990
+Bản giao diện mới có tám ảnh minh họa, bốn mươi chín kiểm thử Flutter đạt và không có lỗi phân tích mã.
+
+58
+00:05:54,990 --> 00:05:59,770
+Mười lăm màn hình đã được kiểm tra ở hai chiều rộng với cỡ chữ lớn.
+
+59
+00:05:59,770 --> 00:06:05,840
+Lượt đổi hai tài khoản A sang B rồi về A đã đối chiếu lịch, lịch sử và hộp thư.
+
+60
+00:06:05,840 --> 00:06:10,350
+Artemis hiện xác minh ba mươi hai trên ba mươi ba run I D.
+
+61
+00:06:10,350 --> 00:06:16,040
+T C mười lượt ba chưa đạt; phiên Pro trước kết thúc sớm nên chưa đủ thời lượng.
+
+62
+00:06:16,040 --> 00:06:21,420
+TalkBack sau Ở lại đã có xác nhận trực tiếp, các luồng khác còn cần kiểm tra.
+
+63
+00:06:21,420 --> 00:06:26,240
+Dự án giữ gói miễn phí, chưa kích hoạt Storage production.
+
+64
+00:06:26,240 --> 00:06:32,260
+Những giới hạn này được ghi trong hồ sơ nộp bài, không trình bày là hoàn thành toàn bộ tiêu chí.

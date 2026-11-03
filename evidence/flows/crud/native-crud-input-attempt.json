@@ -1,0 +1,11 @@
+{
+  "source": "native UIAutomator2 on real Xperia + exact test-user Firestore document reads",
+  "modelCalls": 0,
+  "assertionsPassed": false,
+  "steps": [
+    "Create via schedule form, read on Home and Firestore"
+  ],
+  "privateIdentifiersExported": false,
+  "deviceDate": "2026-11-02",
+  "harnessFailure": "Clipboard did not change time fields; no incorrect time was saved. Corrected with native ADB key input and observed 10/30 fields before OK."
+}

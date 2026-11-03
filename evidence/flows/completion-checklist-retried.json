@@ -1,0 +1,25 @@
+{
+  "projectId": "power9-office-se180724",
+  "verifiedAt": "2026-10-31T17:25:41.747Z",
+  "phase": "checklist-retried",
+  "completionCount": 2,
+  "scheduleCount": 1,
+  "completions": [
+    {
+      "activityId": "posture-check",
+      "title": "Kiểm tra tư thế",
+      "dateKey": "2026-11-01",
+      "source": "checklist",
+      "durationSeconds": null,
+      "createdAt": "2026-10-31T17:25:25.018Z"
+    },
+    {
+      "activityId": "stress-break",
+      "title": "Nghỉ sau họp",
+      "dateKey": "2026-10-31",
+      "source": "timer",
+      "durationSeconds": "180",
+      "createdAt": "2026-10-31T16:48:35.891Z"
+    }
+  ]
+}

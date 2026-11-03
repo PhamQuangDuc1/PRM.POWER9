@@ -1,0 +1,48 @@
+# Local build files and tool state
+/.build/
+/.codex-finalizer/
+/.chart-data-*/
+/.presentation-finalizer-*/
+
+# Office temporary lock files
+~$*
+
+# Local credentials
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+**/service-account*.json
+
+# Flutter and Android generated files
+.dart_tool/
+.flutter-plugins-dependencies
+/build/
+/coverage/
+.idea/
+*.iml
+android/local.properties
+android/.gradle/
+android/.kotlin/
+android/app/debug/
+android/app/profile/
+android/app/release/
+firebase-debug.log
+firebase-debug.*.log
+node_modules/
+firestore-debug.log
+ui-debug.log
+
+# Python E2E runner generated files
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Lab 3 binary delivery stays local; publish separately from source control.
+/output/lab3/*.apk
+/output/lab3/*.mp4
+/output/lab3/**/*.mp4
+/output/lab3/video-*/narration/*.mp3
+/output/lab3/video-*/narration/*.wav
+/output/lab3/*Bundle*.zip

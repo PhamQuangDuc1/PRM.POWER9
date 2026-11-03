@@ -1,0 +1,169 @@
+[
+  {
+    "slide": 1,
+    "title": "",
+    "notes": "Power9 Office Routine là ứng dụng Android cho các khoảng nghỉ ngắn trong ngày làm việc. Lab3 kế thừa ba flow Lab2. Ảnh Home chụp thật trên Xperia sau khi cài APK UI mới ngày03/11. Ảnh minh họa trong app tạo bằng image_gen; không phải ảnh chụp người thật. Video 04/11 dài khoảng 6 phút 35 giây, ghi app và Firebase Console thật, có lời đọc tổng hợp Hoài My và phụ đề. Màn chọn Google không ghi hình; người dùng tự chọn lại A và đã đối chiếu tài khoản trước khi ghi Home.",
+    "sources": [
+      "assets/brand/README.md",
+      "evidence/ui-refresh/2026-11-03/native-ui-smoke.json",
+      "docs/ui-refresh-2026-11-03.md"
+    ]
+  },
+  {
+    "slide": 2,
+    "title": "Khoảng nghỉ ngắn, lịch làm việc thay đổi",
+    "notes": "Huy, Mai và Linh là ba persona giả định ngang nhau. Nhóm chưa tiến hành khảo sát hoặc đo thời gian hoàn thành tác vụ. Một ứng dụng chung, không có bước chọn persona. Các hoạt động là tự nguyện và không phải lời khuyên sức khỏe.",
+    "sources": [
+      "ux/persona.md",
+      "ux/user-flow.md"
+    ]
+  },
+  {
+    "slide": 3,
+    "title": "Ba luồng cốt lõi",
+    "notes": "F01 kiểm tra thiếu giờ khi bật nhắc và chỉ cập nhật Home sau ghi thành công. F02 timer ghi thời gian thật, ví dụ 72 giây trong ảnh ngày 31/10; Undo không xóa schedule. F03 hủy giữ dữ liệu, lưu đổi giờ không tạo lịch thứ hai. Ba ảnh là bằng chứng các mốc trước, không khẳng định đã quay lại ngày 02/11.",
+    "sources": [
+      "evidence/flows/schedule-validation-xperia.png",
+      "evidence/f02/progress-early-end-xperia.png",
+      "evidence/flows/home-schedule-xperia.png",
+      "docs/test-report.md"
+    ]
+  },
+  {
+    "slide": 4,
+    "title": "MVVM và luồng dữ liệu",
+    "notes": "Riverpod kết nối View và ViewModel. Firebase SDK không nằm trong các màn nghiệp vụ. Service xác nhận ghi rồi ViewModel mới đưa success về UI. Stream dữ liệu cập nhật lại các màn; các mũi tên ở đây biểu diễn hướng phụ thuộc, không phải thứ tự đồng bộ của mọi request.",
+    "sources": [
+      "docs/architecture.md",
+      "lib/viewmodels/app_providers.dart",
+      "lib/services"
+    ]
+  },
+  {
+    "slide": 5,
+    "title": "Authentication",
+    "notes": "Hình Login là render Flutter bằng fixture local để giới thiệu UI mới, không phải bằng chứng đăng nhập. Auth offline/retry/logout/Back đã kiểm chứng trên Xperia ngày 03/11. Hai tài khoản thật A → B → A do người dùng tự chọn Google: lịch và completion của A không sang B; về A timestamp không đổi; đã dọn đúng dữ liệu thử. Inbox B có 6 mục không xuất hiện ở A; A rỗng trước và sau. Định danh chỉ so sánh cục bộ, không xuất email, UID hoặc ảnh bộ chọn tài khoản.",
+    "sources": [
+      "output/ui-refresh/previews/login.png",
+      "docs/lab3-verification-2026-11-03.md",
+      "docs/account-isolation-2026-11-03.md",
+      "evidence/auth/2026-11-03-ui-isolation/roundtrip.json",
+      "evidence/auth/2026-11-03-ui-isolation/inbox-observation-audit.json",
+      "lib/app.dart"
+    ]
+  },
+  {
+    "slide": 6,
+    "title": "Cloud Firestore",
+    "notes": "Dữ liệu riêng nằm dưới users/{uid}; catalog chung chỉ đọc các hoạt động published. Logical ID theo hoạt động/ngày bảo vệ một occurrence. Rules deny-by-default, ownership, schema và immutable fields. 18 Rules tests là mốc trước gồm 16 Firestore và 2 Storage emulator, không phải 18 production tests.",
+    "sources": [
+      "firebase/firestore.rules",
+      "evidence/flows/firestore-server-verification.json",
+      "evidence/flows/completion-deleted.json",
+      "evidence/flows/crud/native-crud-result.json",
+      "firebase/tests/firestore-rules.test.cjs"
+    ]
+  },
+  {
+    "slide": 7,
+    "title": "Firebase Cloud Messaging",
+    "notes": "Firebase Console Test message đã được người dùng gửi và xác minh foreground, background và terminated ngày 01/11. Terminated có process vắng, không phải Force stop. Notification-only công khai mở Home, payload scope hợp lệ có thể mở Progress. Ngày 02/11 local smoke tắt riêng quyền notification Android 11, xác minh lỗi/retry và restore đúng trạng thái cũ. Không thay cho runtime permission Android 13. Ảnh là inbox ngày 01/11.",
+    "sources": [
+      "evidence/fcm/console-three-states-inbox-xperia.png",
+      "docs/fcm-pdf-storage.md",
+      "evidence/fcm/permission-denied-xperia-2026-11-02.json"
+    ]
+  },
+  {
+    "slide": 8,
+    "title": "Google Analytics",
+    "notes": "Có 12 AppEvent: login, logout, search, view_activity, schedule_created, schedule_updated, activity_completed, completion_undone, config_refreshed, report_generated, export_report, schedule_deleted. Bảng chọn bảy loại tiêu biểu, không phải danh sách toàn bộ. DebugView trong buổi quay 04/11 có Debug Device=0, chưa nhận event. Log SDK không thay bằng chứng server; TC16[1] xác minh view_activity(activity_id=move-walk) bằng native SDK log được lọc build marker và thời điểm task. Kết quả từng lượtTC16 đọc từ evidence hiện hành; mỗi lượt cần trace và nativeSDKlog độc lập. export_report từ Storage production chưa xác minh vì upload tắt. Không dùng log tự in của Dart để thay SDK evidence.",
+    "sources": [
+      "docs/analytics-plan.md",
+      "docs/firebase-observability.md",
+      "evidence/artemis/phase2",
+      "lib/services/telemetry_service.dart"
+    ]
+  },
+  {
+    "slide": 9,
+    "title": "Firebase Crashlytics",
+    "notes": "Reporting API xác nhận một FATAL test crash và một NON_FATAL completion_write/unavailable từ mất mạng thật. Metadata cho thấy user identifier và custom keys; public evidence chỉ xuất boolean, không xuất giá trị định danh. Native test crash có xác nhận và chỉ có trong debug. Không coi việc gọi SDK hoặc log local là dashboard evidence.",
+    "sources": [
+      "evidence/firebase-observability/crashlytics-server.json",
+      "evidence/firebase-observability/crashlytics-event-metadata.json",
+      "docs/firebase-observability.md"
+    ]
+  },
+  {
+    "slide": 10,
+    "title": "Firebase Remote Config",
+    "notes": "discover_max_minutes 60→5 giới hạn catalog; connection_checkin_enabled true→false ẩn check-in nhanh ở social. Sau demo đã đưa về 60/true và fetch lại. Ảnh là snapshot 5/false ngày 01/11, không phải cấu hình hiện tại. Fetch lỗi giữ cache/default. report_upload_enabled là cờ bổ sung đang false.",
+    "sources": [
+      "evidence/remote-config/demo-xperia.png",
+      "evidence/remote-config/published-demo.json",
+      "evidence/remote-config/published-defaults.json",
+      "docs/firebase-observability.md"
+    ]
+  },
+  {
+    "slide": 11,
+    "title": "PDF và Cloud Storage",
+    "notes": "Ảnh PDF thật ngày 01/11: 0/2, lịch nghỉ tối 21:30; không UID/email. PDF lưu local qua Android Save as PDF đã kiểm chứng. Uploader/Rules có code, progress, timeout, SHA256 path và metadata sau Storage xác nhận. Production upload chưa có; billing tắt và report_upload_enabled=false. Firebase yêu cầu Blaze cho Cloud Storage; không đổi dịch vụ hay bật billing trong công việc này.",
+    "sources": [
+      "evidence/pdf/Power9-2026-11-01-xperia.pdf",
+      "docs/fcm-pdf-storage.md",
+      "lib/services/firebase_report_upload_service.dart",
+      "https://firebase.google.com/docs/storage/faqs-storage-changes-announced-sept-2024"
+    ]
+  },
+  {
+    "slide": 12,
+    "title": "UI/UX sau nâng cấp",
+    "notes": "Bộ 8 ảnh minh họa image_gen đã tích hợp vào app; hai ảnh ở đây là screenshot Xperia thật ngày 03/11. Kiểm tra 15 widget màn ở 360/412 dp, chữ 1,5 lần, nhãn và vùng chạm Android đạt; toàn bộ 49 Flutter tests đạt. Timer và nút thao tác đứng trước hướng dẫn; ảnh ẩn khi phiên đang hoạt động. Lượt native khi TalkBack hoạt động giữ 02:56 sau Ở lại và Hôm nay vẫn kích hoạt được; snapshot focus sau Ở lại vẫn false. Ngày04/11 người dùng xác nhận nghe được Hôm nay sau Ở lại, vuốt tới và chạm hai lần mở lại dialog. Chỉ nhánh này được kiểm chứng bằng người thật, các luồng TalkBack khác chưa kiểm tra hết. Snapshot tự động lịch sử vẫn giữ false. Không đồng bộ Figma theo yêu cầu người dùng.",
+    "sources": [
+      "docs/ui-refresh-2026-11-03.md",
+      "evidence/flutter/ui-imagery-final-responsive-2026-11-03.txt",
+      "docs/timer-focus-recheck-2026-11-03.md",
+      "evidence/accessibility/2026-11-04-manual-focus/result.json",
+      "assets/illustrations/generation-manifest.json",
+      "evidence/ui-refresh/2026-11-03/native-ui-smoke.json"
+    ]
+  },
+  {
+    "slide": 13,
+    "title": "Kiểm thử ARTEMIS",
+    "notes": "32/33runID xác minh, gồm 31 pytestpass và 1 auditterminal. 62attempts giữ lại. Còn: TC10[3]. Pro hiện 189,02 giây và 9 bước được ghi, chưa đủ 900 giây; một lần mở Profile trái giới hạn. Khung có dữ liệu riêng không xuất công khai. Thời gian chờ hoặc trạng thái completed không tự đóng yêu cầu. Biểu đồ theo runID, không phải passrate từngattempt. Native smoke không cộngARTEMIS.",
+    "sources": [
+      "evidence/artemis/lab3-summary.json",
+      "docs/lab3-e2e-results.md",
+      "evidence/artemis/pro-exploratory.json",
+      "evidence/artemis/pro-exploratory-ui-audit.json"
+    ]
+  },
+  {
+    "slide": 14,
+    "title": "AI code review và ba sửa lỗi",
+    "notes": "Baseline review 616f83e. R01 defensive robustness, chưa khẳng định sự cố production; R02 async correctness; R03 session recovery. R04/R05 gia cố runner. PR thật https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3, draft để giữ rõ các tiêu chí production còn thiếu. Ba fix commits ac4b35b, 38b52bc, e595956. Local Codex review và disposition được đưa vào PR body; không có human approval hoặc merge được giả định.",
+    "sources": [
+      "ai/code-review/lab3-review.md",
+      "https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3",
+      "test/notification_payload_regression_test.dart",
+      "test/notification_refresh_regression_test.dart",
+      "test/profile_signout_regression_test.dart"
+    ]
+  },
+  {
+    "slide": 15,
+    "title": "Bản bàn giao và bước tiếp theo",
+    "notes": "UI mới đã cài trên Xperia, 49 Flutter tests đạt và analyzer sạch. Hai tài khoản A → B → A: lịch và lịch sử A không sang B; B có 6 thông báo không thấy ở A. Đã dọn đúng dữ liệu thử. TalkBack sau Ở lại đã được người dùng nghe/vuốt/kích hoạt xác nhận; các luồng khác chưa kiểm tra hết. Snapshot tự động lịch sử giữ nguyên. ARTEMIS đạt 32/33 run ID. Pro chỉ 189,02 giây và mở Profile trái giới hạn nên chưa đạt. Người dùng chọn giữ Spark để tránh phí; Storage production được loại khỏi phạm vi thực hiện, không đánh dấu đạt yêu cầu. Video cuối 6 phút 35 giây đã ghi Login/Home, các luồng app và Console thật, giọng Hoài My, có SRT. DebugView buổi quay chưa nhận sự kiện; không coi log SDK là server receipt. Messaging hiển thị chiến dịch cũ, không gửi mới. Đã dọn đúng dữ liệu thử và khôi phục debug. PR đang draft, chưa merge. Không khẳng định hoàn thành 100% khi còn các tiêu chí thiếu.",
+    "sources": [
+      "https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3",
+      "docs/ui-refresh-2026-11-03.md",
+      "docs/account-isolation-2026-11-03.md",
+      "docs/timer-focus-recheck-2026-11-03.md",
+      "output/lab3/DEMO-RUNBOOK.md",
+      "output/lab3/video-20261104/video-manifest.json"
+    ]
+  }
+]

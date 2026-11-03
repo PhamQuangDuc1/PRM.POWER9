@@ -1,0 +1,26 @@
+{
+  "case": "TC16",
+  "repetition": 3,
+  "traceId": "491437b1-4636-4315-867b-b177c324ef14",
+  "status": "completed",
+  "elapsedSeconds": 19.84,
+  "outputSource": "ARTEMIS recorded terminal observations object or legacy explanation JSON (bounded commit wait)",
+  "output": {
+    "activity_title": "Chi tiết hoạt động",
+    "instructions_visible": true
+  },
+  "assertionsPassed": false,
+  "nativeTraceObservations": {
+    "searchQuerySeen": false,
+    "emptyMessageSeen": false,
+    "missingTimeErrorSeen": false,
+    "timePickerSeen": false,
+    "nativeTimePickerSeen": false,
+    "androidPrintPreviewSeen": false,
+    "timerPausedSeen": false,
+    "leaveSessionDialogSeen": false,
+    "completionDeleteDialogSeen": false,
+    "pdfGeneratedSeen": false
+  },
+  "terminalTraceError": null
+}

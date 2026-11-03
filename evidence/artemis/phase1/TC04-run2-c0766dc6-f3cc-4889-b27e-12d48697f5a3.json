@@ -1,0 +1,28 @@
+{
+  "case": "TC04",
+  "repetition": 2,
+  "traceId": "c0766dc6-f3cc-4889-b27e-12d48697f5a3",
+  "status": "completed",
+  "elapsedSeconds": 82.5,
+  "outputSource": "ARTEMIS recorded terminal observations object or legacy explanation JSON (bounded commit wait)",
+  "output": {
+    "time_unselected": true,
+    "time_picker_seen": true,
+    "picker_cancelled": true,
+    "validation_message": "Chọn giờ khi bật nhắc hoạt động."
+  },
+  "assertionsPassed": true,
+  "nativeTraceObservations": {
+    "searchQuerySeen": false,
+    "emptyMessageSeen": false,
+    "missingTimeErrorSeen": true,
+    "timePickerSeen": true,
+    "nativeTimePickerSeen": false,
+    "androidPrintPreviewSeen": false,
+    "timerPausedSeen": false,
+    "leaveSessionDialogSeen": false,
+    "completionDeleteDialogSeen": false,
+    "pdfGeneratedSeen": false
+  },
+  "terminalTraceError": null
+}

@@ -1,0 +1,95 @@
+{
+  "verifiedAt": "2026-10-31T20:36:53.845Z",
+  "eventCount": 2,
+  "records": [
+    {
+      "errorType": "FATAL",
+      "userFields": [
+        "id"
+      ],
+      "hasUserIdentifier": true,
+      "customKeys": {
+        "app_name": "Power9 Office Routine",
+        "platform": "flutter_android",
+        "test_crash": "true"
+      },
+      "breadcrumbEvents": [
+        {
+          "event": "config_refreshed",
+          "parameters": {}
+        },
+        {
+          "event": "config_refreshed",
+          "parameters": {}
+        },
+        {
+          "event": "view_activity",
+          "parameters": {
+            "group_id": "social",
+            "activity_id": "social-chat"
+          }
+        },
+        {
+          "event": "view_activity",
+          "parameters": {
+            "group_id": "space",
+            "activity_id": "space-desk"
+          }
+        },
+        {
+          "event": "activity_completed",
+          "parameters": {
+            "group_id": "space",
+            "activity_id": "space-desk",
+            "source": "checklist"
+          }
+        },
+        {
+          "event": "completion_undone",
+          "parameters": {
+            "activity_id": "space-desk"
+          }
+        },
+        {
+          "event": "config_refreshed",
+          "parameters": {}
+        }
+      ]
+    },
+    {
+      "errorType": "NON_FATAL",
+      "userFields": [
+        "id"
+      ],
+      "hasUserIdentifier": true,
+      "customKeys": {
+        "app_name": "Power9 Office Routine",
+        "platform": "flutter_android"
+      },
+      "breadcrumbEvents": [
+        {
+          "event": "config_refreshed",
+          "parameters": {}
+        },
+        {
+          "event": "config_refreshed",
+          "parameters": {}
+        },
+        {
+          "event": "view_activity",
+          "parameters": {
+            "group_id": "social",
+            "activity_id": "social-chat"
+          }
+        },
+        {
+          "event": "view_activity",
+          "parameters": {
+            "group_id": "space",
+            "activity_id": "space-desk"
+          }
+        }
+      ]
+    }
+  ]
+}

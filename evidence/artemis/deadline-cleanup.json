@@ -1,0 +1,12 @@
+{
+  "homeReady": true,
+  "debugFlags": {
+    "log.tag.FA": "",
+    "log.tag.FA-SVC": "",
+    "debug.firebase.analytics.app": ".none."
+  },
+  "daemonShutdownHttp": 202,
+  "modelRunLimit": 45,
+  "modelRunsUsed": 45,
+  "newModelRequestsAllowedInThisRun": false
+}

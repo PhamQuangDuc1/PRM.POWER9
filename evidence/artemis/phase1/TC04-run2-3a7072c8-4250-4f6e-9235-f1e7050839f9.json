@@ -1,0 +1,17 @@
+{
+  "case": "TC04",
+  "repetition": 2,
+  "traceId": "3a7072c8-4250-4f6e-9235-f1e7050839f9",
+  "status": "failed",
+  "elapsedSeconds": 73.14,
+  "outputSource": "ARTEMIS recorded terminal report_task_status.args.explanation JSON (bounded commit wait)",
+  "output": null,
+  "assertionsPassed": false,
+  "nativeTraceObservations": {
+    "searchQuerySeen": false,
+    "emptyMessageSeen": false,
+    "missingTimeErrorSeen": true,
+    "timePickerSeen": true,
+    "nativeTimePickerSeen": false
+  }
+}

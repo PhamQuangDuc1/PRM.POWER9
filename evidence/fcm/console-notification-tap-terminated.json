@@ -1,0 +1,8 @@
+{
+  "testMode": "terminated",
+  "nativeNotificationTitle": "Power9 - Console terminated",
+  "source": "Android SystemUI hierarchy",
+  "observed": true,
+  "clicked": true,
+  "noOtherNotificationContentExported": true
+}

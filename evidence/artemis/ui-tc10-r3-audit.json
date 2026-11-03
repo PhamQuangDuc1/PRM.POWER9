@@ -1,0 +1,24 @@
+{
+  "case": "TC10",
+  "repetition": 3,
+  "traceId": "e0877c09-385d-43b1-afe9-e05ff0f75e09",
+  "pytestPassed": false,
+  "verified": false,
+  "modelReportedNewTime": "11:00",
+  "modelReportedCancelKeptOriginal": true,
+  "originalTraceRecordedSteps": 24,
+  "originalTraceObservation": "Steps 1-23 repeatedly target the Home walk card; step 24 reports completion. No cancel/edit/save sequence is established by these actions.",
+  "serverObservation": {
+    "minuteOfDay": null,
+    "createdAtEqualsUpdatedAt": true,
+    "scheduleExists": true,
+    "completionExists": false
+  },
+  "conclusion": "Unsupported model success report; final UI assertion correctly failed. Keep TC10[3] unverified.",
+  "additionalModelRunUsedForAudit": false,
+  "nativeSmokeCountedAsArtemis": false,
+  "references": [
+    "phase2/TC10-run3-e0877c09-385d-43b1-afe9-e05ff0f75e09.json",
+    "../auth/2026-11-03-ui-isolation/a-artemis-case-after.json"
+  ]
+}

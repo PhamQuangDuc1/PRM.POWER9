@@ -1,0 +1,17 @@
+{
+  "dateLocal": "2026-11-03",
+  "source": "native UIAutomator2 on Xperia, no model",
+  "modelCalls": 0,
+  "accountStringsExported": false,
+  "assertionsPassed": true,
+  "logoutReturnedLogin": true,
+  "backAndReopenKeptPrivateRoutesClosed": true,
+  "networkDisabledForTest": true,
+  "offlinePrecondition": "Wi-Fi disabled and Android connectivity reports no active default network; global mobile_data is not a reliable indicator on this device",
+  "offlineErrorVisible": true,
+  "noPrivateHomeOnOfflineFailure": true,
+  "retryControlEnabled": true,
+  "networkSettingsRestored": true,
+  "originalSessionRestored": true,
+  "requiresOnlineRetry": false
+}
