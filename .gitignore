@@ -42,4 +42,7 @@ __pycache__/
 # Lab 3 binary delivery stays local; publish separately from source control.
 /output/lab3/*.apk
 /output/lab3/*.mp4
+/output/lab3/**/*.mp4
+/output/lab3/video-*/narration/*.mp3
+/output/lab3/video-*/narration/*.wav
 /output/lab3/*Bundle*.zip

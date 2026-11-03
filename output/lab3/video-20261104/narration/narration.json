@@ -1,0 +1,82 @@
+{
+  "voice": "vi-VN-HoaiMyNeural",
+  "rate": "-5%",
+  "userSelected": true,
+  "source": "Microsoft Edge online TTS",
+  "paidApiUsed": false,
+  "artemisTasksConsumed": 0,
+  "scenes": [
+    {
+      "id": "01-intro",
+      "title": "Giới thiệu và tài khoản",
+      "text": "Đây là Power Nine Office Routine, ứng dụng hỗ trợ những hoạt động ngắn trong ngày làm việc. Bản demo sử dụng Flutter, kiến trúc M V V M và Firebase. Người dùng đăng nhập bằng Google để lưu lịch và xem tiến độ riêng. Máy hiện đã đăng nhập vào tài khoản kiểm thử. Tôi bắt đầu tại màn Hôm nay với dữ liệu thật của ngày đang chọn. Các thao tác tiếp theo được ghi trực tiếp trên điện thoại Xperia.",
+      "audio": "01-intro.mp3",
+      "status": "generated",
+      "requiresFootageReview": true
+    },
+    {
+      "id": "02-discover",
+      "title": "Khám phá, validation và tạo lịch",
+      "text": "Từ màn Hôm nay, tôi mở danh mục hoạt động. Tìm kiếm một nội dung không khớp sẽ hiển thị trạng thái rỗng, thay vì tạo dữ liệu giả. Sau khi xóa tìm kiếm, tôi chọn hoạt động Đi bộ giữa giờ rồi mở form lịch. Khi bật nhắc mà chưa chọn giờ, form báo lỗi và giữ lại thông tin để sửa. Tôi tắt nhắc rồi lưu lịch. Sau khi lưu thành công, hoạt động xuất hiện ở đúng ngày trên màn Hôm nay. Một hoạt động có tối đa một lịch trong một ngày. Giờ nhắc hiện chỉ được lưu vào lịch, ứng dụng chưa tự phát thông báo theo giờ này.",
+      "audio": "02-discover.mp3",
+      "status": "generated",
+      "requiresFootageReview": true
+    },
+    {
+      "id": "03-edit",
+      "title": "Hủy và lưu sửa lịch",
+      "text": "Tôi mở lịch vừa tạo để kiểm tra hai nhánh sửa. Ở nhánh đầu, tôi thay đổi giờ trên form rồi chọn hủy. Khi trở lại, lịch vẫn giữ giờ cũ. Ở nhánh sau, tôi chọn giờ mới và lưu. Màn Hôm nay hiển thị giờ đã cập nhật, trong khi tổng số lịch vẫn không tăng. Đây là sửa lịch hiện có, không phải tạo thêm một lịch. Lượt thao tác trực tiếp trong video được ghi riêng với kiểm thử Artemis; nó không thay cho run kiểm thử còn thiếu.",
+      "audio": "03-edit.mp3",
+      "status": "generated",
+      "requiresFootageReview": true
+    },
+    {
+      "id": "04-checkin",
+      "title": "Check-in và hoàn tác",
+      "text": "Lịch là hoạt động đã chọn, còn bản ghi hoàn thành là việc đã thực hiện. Tôi chọn Đã thực hiện trên lịch của lượt demo. Tiến độ tăng sau khi thao tác thành công. Sau đó, tôi hoàn tác đúng bản ghi vừa tạo và kiểm tra lịch vẫn còn. Với check in, ứng dụng không đo thời gian nên thời lượng được để trống, không lấy số phút gợi ý trong danh mục làm thời gian thực tế.",
+      "audio": "04-checkin.mp3",
+      "status": "generated",
+      "requiresFootageReview": true
+    },
+    {
+      "id": "05-timer",
+      "title": "Timer và dialog ở lại",
+      "text": "Tại màn Thư giãn, tôi bắt đầu một phiên mới. Timer đếm theo thời gian thực. Khi tạm dừng, thời gian chờ không được cộng vào phiên. Nếu chọn tab Hôm nay, dialog hỏi trước khi rời phiên. Tôi chọn Ở lại để giữ trạng thái tạm dừng, rồi tiếp tục và kết thúc sớm. Sau khi ghi nhận, màn tiến độ hiển thị thời lượng thực đã thực hiện. Nhánh TalkBack sau Ở lại đã được người dùng nghe tên tab, vuốt tới và kích hoạt thành công. Điều này chỉ xác nhận nhánh đã kiểm tra, chưa đại diện cho toàn bộ trải nghiệm TalkBack của ứng dụng.",
+      "audio": "05-timer.mp3",
+      "status": "generated",
+      "requiresFootageReview": true
+    },
+    {
+      "id": "06-delete",
+      "title": "Xóa lịch, giữ lịch sử",
+      "text": "Tôi ghi nhận lại hoạt động đi bộ của lượt demo, rồi mở thao tác xóa lịch. Dialog có lựa chọn Giữ lịch để tránh xóa nhầm. Khi chọn giữ, lịch không thay đổi. Sau khi xác nhận xóa, lịch được bỏ khỏi Hôm nay nhưng bản ghi đã thực hiện vẫn còn trong tiến độ. Hai loại dữ liệu được lưu riêng vì có mục đích khác nhau. Sau video, chỉ các bản ghi do lượt quay này tạo mới được dọn; dữ liệu có trước được giữ nguyên.",
+      "audio": "06-delete.mp3",
+      "status": "generated",
+      "requiresFootageReview": true
+    },
+    {
+      "id": "07-pdf",
+      "title": "Báo cáo PDF và giới hạn Storage",
+      "text": "Từ tiến độ của đúng ngày, tôi mở báo cáo và tạo P D F. Báo cáo là ảnh chụp dữ liệu tại thời điểm tạo, gồm hoạt động và thời lượng đã ghi nhận. Khi dữ liệu thay đổi, cần tạo lại báo cáo. Tôi mở bản xem trước thật của Android để kiểm tra nội dung. Dự án chủ động giữ gói Spark để tránh phát sinh phí, nên Cloud Storage production chưa được kích hoạt và nút tải lên đang tắt. Tệp P D F trên điện thoại không được dùng để khẳng định đã tải lên Firebase thành công.",
+      "audio": "07-pdf.mp3",
+      "status": "generated",
+      "requiresFootageReview": true
+    },
+    {
+      "id": "08-console",
+      "title": "Firebase Console",
+      "text": "Phần này chuyển sang Firebase Console của dự án thật. Firestore lưu danh mục hoạt động, lịch và lịch sử theo tài khoản. Với Analytics, thao tác trong app tạo sự kiện và các tham số đã cho phép; việc đối chiếu cần đúng sự kiện và đúng thời điểm. Log trên thiết bị và dữ liệu server được phân biệt rõ. Crashlytics lưu các lỗi đã kiểm thử ở những lượt trước; các bằng chứng lịch sử cần giữ đúng ngày của chúng. Remote Config có các tham số để thay đổi hành vi mà không cần xây dựng lại ứng dụng. Tải báo cáo lên đám mây vẫn được tắt. F C M là luồng thông báo riêng và có bằng chứng nhận ở các trạng thái ứng dụng khác nhau. Chỉ trình bày một lượt gửi là hiện tại nếu thực sự gửi và nhận trong lúc quay. Không đưa mã thiết bị hoặc mã truy cập vào video.",
+      "audio": "08-console.mp3",
+      "status": "generated",
+      "requiresFootageReview": true
+    },
+    {
+      "id": "09-results",
+      "title": "Kết quả và giới hạn",
+      "text": "Bản giao diện mới có tám ảnh minh họa, bốn mươi chín kiểm thử Flutter đạt và không có lỗi phân tích mã. Mười lăm màn hình đã được kiểm tra ở hai chiều rộng với cỡ chữ lớn. Lượt đổi hai tài khoản A sang B rồi về A đã đối chiếu lịch, lịch sử và hộp thư. Artemis hiện xác minh ba mươi hai trên ba mươi ba run I D. T C mười lượt ba chưa đạt; phiên Pro trước kết thúc sớm nên chưa đủ thời lượng. TalkBack sau Ở lại đã có xác nhận trực tiếp, các luồng khác còn cần kiểm tra. Dự án giữ gói miễn phí, chưa kích hoạt Storage production. Những giới hạn này được ghi trong hồ sơ nộp bài, không trình bày là hoàn thành toàn bộ tiêu chí.",
+      "audio": "09-results.mp3",
+      "status": "generated",
+      "requiresFootageReview": true
+    }
+  ]
+}

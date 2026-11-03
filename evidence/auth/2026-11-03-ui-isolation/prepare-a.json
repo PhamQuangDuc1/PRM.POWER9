@@ -1,0 +1,14 @@
+{
+  "accountACapturedLocally": true,
+  "accountIdentifiersExported": false,
+  "day": "2026-11-03",
+  "activityId": "move-walk",
+  "scheduleCreatedInApp": true,
+  "completionCreatedInApp": true,
+  "aInboxEmpty": true,
+  "aInboxVisibleItemHashes": [],
+  "isolationPassed": false,
+  "awaitingAccountB": true,
+  "modelCalls": 0,
+  "firstCheckinAttemptUnconfirmed": true
+}

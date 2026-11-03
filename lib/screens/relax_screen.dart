@@ -8,6 +8,7 @@ import '../viewmodels/completion_providers.dart';
 import '../viewmodels/session_viewmodel.dart';
 import '../widgets/p9_async_content.dart';
 import '../widgets/p9_button.dart';
+import '../widgets/p9_scene.dart';
 import 'progress_screen.dart';
 
 class RelaxScreen extends ConsumerStatefulWidget {
@@ -91,12 +92,6 @@ class _SessionBody extends ConsumerWidget {
         Text(activity.title, style: Theme.of(context).textTheme.titleLarge),
         const SizedBox(height: P9Space.md),
         Text(activity.purpose, style: Theme.of(context).textTheme.bodyLarge),
-        const SizedBox(height: P9Space.xl),
-        for (final (index, step) in activity.steps.indexed)
-          Padding(
-            padding: const EdgeInsets.only(bottom: P9Space.md),
-            child: Text('${index + 1}. $step'),
-          ),
         const SizedBox(height: P9Space.xl),
         Semantics(
           label: 'Thời gian còn lại',
@@ -187,6 +182,15 @@ class _SessionBody extends ConsumerWidget {
           ),
         ],
         const SizedBox(height: P9Space.xl),
+        if (state.phase == SessionPhase.idle || state.saved) ...[
+          const P9SceneBanner(asset: P9Scenes.relax, height: 136),
+          const SizedBox(height: P9Space.xl),
+        ],
+        Text('Cách thực hiện', style: Theme.of(context).textTheme.titleLarge),
+        const SizedBox(height: P9Space.md),
+        for (final (index, step) in activity.steps.indexed)
+          P9InstructionStep(number: index + 1, text: step),
+        const SizedBox(height: P9Space.md),
         Text(activity.note),
         const SizedBox(height: P9Space.md),
         const Text(

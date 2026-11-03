@@ -1,0 +1,13 @@
+{
+  "humanReportedTodayLabelAudibleAfterStay": true,
+  "humanReportedSwipeReachedTodayAfterStay": true,
+  "humanReportedDoubleTapOpenedLeaveDialogAgain": true,
+  "humanObservationSource": "Explicit user reply on 2026-11-04",
+  "focusAfterStayHumanVerified": true,
+  "allScreensManualTalkBackVerified": false,
+  "originalPausedTimer": "02:56",
+  "modelCalls": 0,
+  "returnedHome": true,
+  "ownUnrecordedSessionDiscarded": true,
+  "originalSettingsRestored": true
+}

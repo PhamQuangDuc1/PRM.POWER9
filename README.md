@@ -2,11 +2,11 @@
 
 ## Lab 3 — ứng dụng đã tích hợp, đang hoàn thiện kiểm chứng
 
-CRUD lịch đã hoàn thiện qua app và demo Firestore/Xperia: thêm, xem, sửa và xóa; xóa lịch giữ lịch sử đã làm. [Bằng chứng](evidence/flows/crud/native-crud-result.json). Flutter48/48 và analyzer sạch; video/trao đổi thầy để sau, không đồng bộ Figma theo yêu cầu mới.
+Mốc 04/11/2026: UI có 8 ảnh minh họa, 49 Flutter tests đạt và analyzer sạch. CRUD lịch đã demo Firestore/Xperia: thêm, xem, sửa và xóa, giữ lịch sử đã làm. Hai tài khoản A sang B rồi về A đã đối chiếu dữ liệu. TalkBack sau “Ở lại” có xác nhận nghe/vuốt trực tiếp; các luồng khác chưa kiểm tra hết.
 
-Đã tạo [draft PR #3](https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3) với ba fix commits riêng. [Deck mới 15 trang, PowerPoint chỉnh sửa được](output/lab3/Power9_Lab3_Designer.pptx) · [PDF trình chiếu](output/lab3/Power9_Lab3_Slides.pdf). Video được để cuối sau khi chốt hướng UI/UX.
+Đã có [video cuối 6 phút 35 giây](output/lab3/Power9_Lab3_Demo_Final.mp4), giọng Hoài My, 1080p, app và Firebase Console thật, kèm [SRT](output/lab3/Power9_Lab3_Demo_Final.srt). [Slide PowerPoint 15 trang](output/lab3/Power9_Lab3_Designer.pptx) và [PDF trình chiếu](output/lab3/Power9_Lab3_Slides.pdf) đã đồng bộ theo buổi quay. Nhánh bàn giao là **OneD**; [metadata PR hiện hành](evidence/code-review/lab3-pr.json) ghi đường dẫn và trạng thái PR. Ba fix commits riêng được bảo toàn, chưa merge.
 
-Cập nhật 02/11: kết nối Xperia/Firebase/GitHub đã kiểm tra; 43/43 Flutter tests và analyzer sạch, bổ sung kiểm tra nhãn/vùng chạm Android. Smoke quyền thông báo và logout/Back/hủy đăng nhập/retry có bằng chứng thật. [Mốc mới nhất](docs/lab3-resume-2026-11-02.md), [checklist nộp](output/lab3/SUBMISSION-CHECKLIST.md). Vẫn còn ARTEMIS/Pro, Storage production, PR/commit và video Console; chưa đạt 100%.
+[Mốc mới nhất](docs/CONTINUE.md), [gói bàn giao](output/lab3/README.md), [checklist nộp](output/lab3/SUBMISSION-CHECKLIST.md). ARTEMIS 32/33, TC10[3] và Pro chưa đạt; DebugView server đã xác minh `view_activity/activity_id=move-walk` sau buổi quay. Checklist TalkBack thủ công ba phần đã được người dùng xác nhận đạt. Giữ Spark/billing tắt, loại Storage production khỏi phạm vi thực hiện theo quyết định chi phí; không coi tiêu chí upload đã đạt. Video/APK giữ cục bộ theo chính sách gói bàn giao; không merge PR hoặc đồng bộ Figma.
 
 Tên Android: **Power9 Office Routine**. Icon dùng logo P9 gốc trên nền trắng. App kế thừa thiết kế Lab 2 ở các mục bên dưới; chưa hoàn thành toàn bộ Lab 3.
 
@@ -16,7 +16,7 @@ Tên Android: **Power9 Office Routine**. Icon dùng logo P9 gốc trên nền tr
 - Cách chạy: `flutter pub get`, `flutter run -d <device-id>`; kiểm tra: `flutter analyze lib test`, `flutter test`.
 - Xem [kiến trúc](docs/architecture.md), [truy vết Lab 2](docs/design-traceability.md), [kế hoạch hoàn thiện](docs/lab3-completion-plan.md), [Analytics plan](docs/analytics-plan.md).
 - Đã chạy trên Sony SOV41 Android 11: đăng nhập, thêm/đổi/hủy lịch, check-in/undo, timer thật pause/resume/background, ghi nhận sớm/đủ phiên và xóa completion giữ schedule; S04 Kết nối, S09 checklist/offline retry, S10 nghỉ tối/đổi giờ đã có flow thật.
-- Analytics đã có sự kiện trên DebugView, Crashlytics server có fatal test crash và non-fatal lỗi mất mạng, Remote Config hai tham số đã đổi hành vi không rebuild. Xem [bằng chứng ba dịch vụ](docs/firebase-observability.md). Tài khoản → Kiểm thử Firebase chỉ hiện trong bản debug; test crash cần xác nhận và sẽ đóng app.
+- Analytics có bằng chứng SDK cho 11/12 loại event; DebugView trong buổi quay 04/11 chưa nhận event, không dùng log SDK để thay server. Crashlytics server có fatal test crash và non-fatal lỗi mất mạng, Remote Config hai tham số đã đổi hành vi không rebuild ở lượt kiểm chứng trước. Xem [bằng chứng](docs/lab3-verification-2026-11-03.md). Tài khoản → Kiểm thử Firebase chỉ hiện trong bản debug; test crash cần xác nhận và sẽ đóng app.
 - Kiểm tra ngày 01/11: analyze sạch, chạy lại 43/43 Flutter tests đạt; 18 Rules tests đạt ở mốc FCM/PDF (chưa chạy lại). FCM Console đã kiểm chứng foreground/background/terminated; PDF đã xuất trên Xperia. Storage production chưa đạt vì giữ Spark và khóa upload. ARTEMIS đã có suite mở rộng, đang xác minh đủ >=10 ca ×3; review PR và video demo còn cần đóng. Xem [tiến độ](docs/lab3-status.md), [test report](docs/test-report.md), [FCM/PDF/Storage](docs/fcm-pdf-storage.md).
 - `pubspec.lock` giữ dependency đã resolve. CLI: FlutterFire 1.4.1. Các lệnh Firebase cần đăng nhập tài khoản có quyền dự án. Không commit token/credential đăng nhập CLI.
 

@@ -1,12 +1,12 @@
 {
-  "pytestVerifiedUniqueRunIds": 29,
+  "pytestVerifiedUniqueRunIds": 31,
   "auditOnlyUniqueRunIds": 1,
   "plannedCases": 11,
   "plannedRunIds": 33,
   "attemptedUniqueRunIds": 33,
-  "verifiedUniqueRunIds": 30,
-  "fullyVerifiedCases": 9,
-  "attemptsWithEvidence": 59,
+  "verifiedUniqueRunIds": 32,
+  "fullyVerifiedCases": 10,
+  "attemptsWithEvidence": 63,
   "cases": [
     {
       "case": "TC02",
@@ -141,9 +141,9 @@
       "remaining": [
         3
       ],
-      "attempts": 7,
-      "meanAttemptSeconds": 121.28,
-      "attemptPytestPassRate": 0.2857
+      "attempts": 9,
+      "meanAttemptSeconds": 121.89,
+      "attemptPytestPassRate": 0.2222
     },
     {
       "case": "TC11",
@@ -187,15 +187,14 @@
         3
       ],
       "verifiedRepetitions": [
-        1
-      ],
-      "remaining": [
+        1,
         2,
         3
       ],
-      "attempts": 6,
-      "meanAttemptSeconds": 85.0,
-      "attemptPytestPassRate": 0.1667
+      "remaining": [],
+      "attempts": 8,
+      "meanAttemptSeconds": 103.97,
+      "attemptPytestPassRate": 0.375
     }
   ],
   "attempts": [
@@ -708,6 +707,17 @@
     {
       "case": "TC10",
       "repetition": 3,
+      "traceId": "12695700-ce45-408a-adf9-cbdd0cd5d3c6",
+      "status": "completed",
+      "elapsedSeconds": 91.74,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC10-run3-12695700-ce45-408a-adf9-cbdd0cd5d3c6.json"
+    },
+    {
+      "case": "TC10",
+      "repetition": 3,
       "traceId": "20769aba-aa24-48ac-9d9a-e21c5720c0fa",
       "status": "completed",
       "elapsedSeconds": 110.92,
@@ -715,6 +725,17 @@
       "verified": false,
       "auditOnly": false,
       "evidence": "evidence/artemis/phase2/TC10-run3-20769aba-aa24-48ac-9d9a-e21c5720c0fa.json"
+    },
+    {
+      "case": "TC10",
+      "repetition": 3,
+      "traceId": "e0877c09-385d-43b1-afe9-e05ff0f75e09",
+      "status": "completed",
+      "elapsedSeconds": 156.33,
+      "pytestPassed": false,
+      "verified": false,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC10-run3-e0877c09-385d-43b1-afe9-e05ff0f75e09.json"
     },
     {
       "case": "TC13",
@@ -807,6 +828,17 @@
     {
       "case": "TC16",
       "repetition": 2,
+      "traceId": "10b6b2a3-d8a4-4f6c-b73f-34f1f7b95f8b",
+      "status": "completed",
+      "elapsedSeconds": 58.46,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC16-run2-10b6b2a3-d8a4-4f6c-b73f-34f1f7b95f8b.json"
+    },
+    {
+      "case": "TC16",
+      "repetition": 2,
       "traceId": "1e5d7e94-81fe-4f10-bb07-b2caae9e6f95",
       "status": "completed",
       "elapsedSeconds": 23.93,
@@ -836,6 +868,17 @@
       "verified": false,
       "auditOnly": false,
       "evidence": "evidence/artemis/phase2/TC16-run3-491437b1-4636-4315-867b-b177c324ef14.json"
+    },
+    {
+      "case": "TC16",
+      "repetition": 3,
+      "traceId": "9bd3602d-1b3c-4211-9ebb-f0f18e6e1879",
+      "status": "completed",
+      "elapsedSeconds": 263.33,
+      "pytestPassed": true,
+      "verified": true,
+      "auditOnly": false,
+      "evidence": "evidence/artemis/phase2/TC16-run3-9bd3602d-1b3c-4211-9ebb-f0f18e6e1879.json"
     },
     {
       "case": "TC16",

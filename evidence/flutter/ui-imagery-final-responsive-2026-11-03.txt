@@ -1,0 +1,4 @@
+00:00 +0: loading D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart
+00:00 +0: main screens fit 360 dp with 1.5 text scaling
+00:02 +1: main screens fit 412 dp with 1.5 text scaling
+00:02 +2: All tests passed!

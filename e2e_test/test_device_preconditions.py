@@ -44,6 +44,18 @@ def test_missing_app_hierarchy_fails_closed():
     assert ui.dump_hierarchy.call_count == 12
 
 
+def test_empty_flutter_semantics_waits_for_readable_product_tree():
+    device = Device('offline-test')
+    ui = Mock()
+    ui.dump_hierarchy.side_effect = [
+        '<hierarchy><node package="vn.power9.power9_office_routine"/></hierarchy>',
+        '<hierarchy><node package="vn.power9.power9_office_routine" text="Hôm nay"/></hierarchy>',
+    ]
+    with patch('uiautomator2.connect', return_value=ui), patch('conftest.time.sleep'):
+        assert device.labels() == ['Hôm nay']
+    assert ui.dump_hierarchy.call_count == 2
+
+
 def test_home_cancels_known_picker_before_appbar_back():
     device = Device('offline-test')
     device.require_unlocked = Mock()

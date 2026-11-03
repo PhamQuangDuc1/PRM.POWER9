@@ -1,33 +1,31 @@
-# Chốt Lab 3 trước khi nộp
+# Checklist hiện hành — 04/11/2026
 
-Không đánh dấu toàn bộ bài đạt khi thiếu bằng chứng bên dưới. Bản ZIP hiện tại là snapshot trung thực, chưa phải xác nhận đạt 100% rubric.
+## Đã chuẩn bị
 
-## Ưu tiên 1: ba fix commits và PR review
+- [x] APK UI mới với 8 ảnh minh họa, main APK và build-config khớp nhau.
+- [x] 49 Flutter tests, analyzer sạch; kiểm tra 15 màn ở 360/412 dp, chữ 1,5 lần.
+- [x] Auth offline/retry/logout/Back và A → B → A; dọn đúng dữ liệu thử.
+- [x] ARTEMIS TC16[2] và TC16[3] có trace/log Analytics độc lập; tổng 32/33 run ID.
+- [x] Slide 15 trang cập nhật, ghi chú/nguồn, bảng và biểu đồ chỉnh sửa được; PPTX/PDF mở trong PowerPoint.
+- [x] Timeline và lời đọc cho video cuối 6 phút 35 giây, giữ Spark.
+- [x] Giữ billing tắt, khôi phục Analytics debug, tắt daemon và UIAutomator sau lượt chạy.
+- [x] TalkBack nhánh sau “Ở lại”: người dùng nghe tên Hôm nay, vuốt tới và chạm hai lần mở lại dialog; đã dọn phiên thử và khôi phục cài đặt.
 
-**Đã thực hiện theo yêu cầu mới:** R01 ac4b35b, R02 38b52bc, R03 e595956; draft PR #3 https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3 có năm findings/dispositions trong body. Không tạo lại các commits này. PR chưa merge; chưa có human approval. Đoạn hướng dẫn bên dưới là kế hoạch trước khi người dùng chuyển quyền Git cho trợ lý.
+## Chưa đạt hoặc chưa thực hiện
 
-Người dùng tiếp tục chọn tự commit/push. Thực hiện ba cặp source/test theo `docs/lab3-commit-and-pr-guide.md`; xem diff trước từng commit để không lẫn thay đổi khác. Sau đó commit phần telemetry/test/tài liệu/evidence còn lại, push nhánh OneD và tạo PR tới nhánh nhóm chọn. Đính kèm năm findings từ `ai/code-review/lab3-review.md`, quyết định xử lý và ba SHA thực tế trên PR. Chỉ thêm URL/SHA sau khi chúng tồn tại. Không push APK/MP4/ZIP lớn; đã có ignore.
+- [x] DebugView server: ảnh bổ sung 04/11 xác minh view_activity và activity_id=move-walk. Video buổi quay trước đó vẫn giữ trạng thái chờ lịch sử.
+- [ ] TC10[3]: final UI assertion thất bại; trace/server không chứng minh giờ 11:00.
+- [ ] Pro chủ động 15–30 phút: lượt mới 3 phút 9 giây và mở Profile trái giới hạn. Không tự retry vượt 4 lượt vừa được đồng ý.
+- [x] TalkBack: người dùng xác nhận ba phần nhãn/trạng thái, validation, dialog, PDF và đường quay lại; phạm vi ở evidence/accessibility/2026-11-04-manual-flows/result.json. Bộ chọn Google không thuộc lượt này.
+- [x] Video app + Firebase Console thật, Login/Home, lời đọc Hoài My, phụ đề 64 mục; decode hình/tiếng và rà bố cục/quyền riêng tư đạt.
+- [ ] Đồng bộ báo cáo PDF mốc cũ nếu dùng báo cáo đó để nộp với số liệu mới.
+- [ ] Commit/push thay đổi hiện hành và kiểm tra các link nộp bài; không merge PR khi chưa có chỉ đạo.
 
-## Ưu tiên 2: video thật 5–10 phút
+## Bỏ khỏi phạm vi triển khai vì chi phí
 
-**Được người dùng chủ động để cuối**, sau khi chốt hướng nâng cấp UI/UX; không quay video cuối trên giao diện sắp thay đổi.
+- Storage production/Blaze: người dùng yêu cầu không bật. Giữ report_upload_enabled=false. Đây là ngoại lệ phạm vi do chủ dự án chọn, không tự coi tiêu chí upload trong đề đã đạt.
+- Không dùng model/key trả phí, không đổi key/model để né quota, không kích hoạt dịch vụ trả phí khác.
 
-Đã có footage app E2E 6 phút 02 giây nhưng chưa có lời thuyết minh/Console. Quay theo `DEMO-RUNBOOK.md`: app, dữ liệu đúng ngày, FCM, Analytics, Crashlytics và Remote Config. Có thể dùng footage cũ nếu nói rõ ngày quay và không giả là lần thao tác hiện tại. Không quay mật khẩu, API key, token, UID hoặc tài khoản riêng. Tải video lên, lấy URL thật và kiểm tra quyền xem bằng tài khoản khác. Chỉ có file footage không đáp ứng đủ tiêu chí này.
+Bản slide hiện hành: `Power9_Lab3_Final_Video_20261104.pptx` và PDF cùng tên. Kịch bản: `docs/video-script-spark-2026-11-04.md`. Không đưa raw Profile/debug, email, UID, token hoặc model key vào gói công khai.
 
-## Ưu tiên 3: đóng ARTEMIS bằng kết quả thật
-
-30/33 run ID xác minh; thiếu TC10[3], TC16[2], TC16[3] và Pro chủ động đủ thời lượng. Người dùng đã đồng ý tổng 50 lượt, nhưng automatic approval review vẫn chặn việc thay lệnh dừng 45 cũ. Chưa có model task mới. Không chạy đường vòng, đổi key/model/billing hoặc tính smoke cục bộ thành ARTEMIS. Nếu được gỡ chặn thì giữ used=45, cùng key/model, kiểm tra billing trước từng task và dừng ngay khi daily quota mới xuất hiện. Ngày 02/11 Home không có lịch: phải chuẩn bị đúng tiền điều kiện hôm nay trước TC10. Không dùng ảnh lịch 01/11 làm bằng chứng mới.
-
-## Storage và các mục còn giới hạn
-
-Cloud Storage for Firebase yêu cầu Blaze; dự án đang giữ billing tắt. Có mã uploader/Rules và emulator tests, chưa có upload production. Cần giảng viên chấp nhận phương án hiện tại hoặc một quyết định mới của chủ dự án; không tự thay Storage bằng PDF local/dịch vụ khác. Nguồn chính thức: https://firebase.google.com/docs/storage/faqs-storage-changes-announced-sept-2024 .
-
-Fidelity Figma, TalkBack, Auth mất mạng/chuyển hai tài khoản vẫn chưa được kiểm chứng đầy đủ. Ngày 02/11 đã có smoke logout/Back/hủy login/retry và lỗi quyền thông báo trên Xperia, cùng kiểm tra tự động nhãn/vùng chạm ở 360/412 dp. Không diễn giải các kết quả đó thành toàn bộ accessibility hoặc error coverage đã đạt.
-
-## Kiểm tra lần cuối
-
-- Đúng tên/MSSV/nhóm và đề Lab 3 Cloud-Enabled của lớp.
-- Repository có các commit mới; PR có review và SHA ba fixes.
-- Báo cáo 10 trang, slide 15 trang, APK arm64, bằng chứng và manifest mở được.
-- Link repo/Figma/video xem được từ tài khoản khác; ZIP/APK tải được qua kênh nộp của lớp.
-- Đọc đúng pass/fail/audit; khai báo các mục chưa đạt, không ghi 100% khi còn thiếu.
+Video chính: `Power9_Lab3_Demo_Final.mp4` và SRT cùng tên. Đã dọn dữ liệu thử, khôi phục debug và về Home A. Chưa upload hoặc thay quyền xem.

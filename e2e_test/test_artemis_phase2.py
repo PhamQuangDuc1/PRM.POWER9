@@ -94,15 +94,26 @@ def test_tc02_save_future_schedule(artemis_run, repetition):
 
 
 @pytest.mark.parametrize('repetition', [1, 2, 3])
-def test_tc10_edit_cancel_then_save_no_duplicate(artemis_run, repetition):
+def test_tc10_edit_cancel_then_save_no_duplicate(artemis_run, repetition, request):
     # Use visible clock ticks for the two retries; keep the first verified target.
     # Earlier attempts at 09:12/09:13 remain recorded failures, never reclassified.
     time_value = {1: '09:11', 2: '10:30', 3: '11:00'}[repetition]
     out, device = artemis_run('TC10', repetition,
-        f'On Home inspect the existing Đi bộ giữa giờ schedule for TODAY and report original_time exactly (Chưa chọn giờ if unset) and total_before integer. Open its detail then Đổi lịch. Select time {time_value} in the Flutter time picker using the visible hour and minute ticks and confirm OK. Read the schedule FORM to verify it actually displays {time_value}; correct the picker if needed. Then Hủy the schedule FORM. Return Home and verify unchanged original_time (cancel_kept_original). Reopen the same Home schedule → Đổi lịch, select {time_value}, confirm picker OK, verify the form really displays {time_value}, then Lưu lịch. Wait for Home to show new_time and report total_after integer. Do not report success for a different time or while a picker is still open. Keep reminder OFF; do not create any completion or a second schedule. Stay Home.',
+        f'On Home FIRST read the initial completed/total summary. Then SCROLL THE CONTENT so the entire Đi bộ giữa giờ card is above the bottom navigation before tapping it. Report original_time exactly (Chưa chọn giờ if unset) and total_before integer. Confirm that Chi tiết hoạt động actually opens; if a tap leaves Home unchanged, reobserve and scroll instead of repeatedly tapping the same coordinate. STOP with unobserved fields omitted if detail cannot be opened. Open Đổi lịch. Select time {time_value} in the Flutter time picker: switch to text entry (Chuyển sang chế độ nhập văn bản), focus the hour field and replace its text with the target hour, then focus the minute field and replace its text with the target minutes. Read BOTH fields before OK; do not drag the clock dial. Confirm OK. Read the FORM to verify {time_value}. Then Hủy the FORM. Return Home, scroll to the same card and observe unchanged original_time (cancel_kept_original). Reopen that schedule → Đổi lịch, choose {time_value} using the same text entry method, read both fields, confirm OK, verify the form, then Lưu lịch. Do not report completion until this second edit/save has actually happened. Wait for Home, scroll until the whole card is visible, read new_time, and report total_after from the Home summary (scroll back if needed). Never claim cancel/save for unperformed actions. Keep reminder OFF; do not create a completion or second schedule. Stay Home.',
         'original_time: string copied from the initial Home activity card BEFORE editing, cancel_kept_original: boolean, new_time: string, total_before: integer DENOMINATOR of the INITIAL Home done/total ratio not the completed numerator, total_after: integer DENOMINATOR of the FINAL Home done/total ratio', extended=True)
     truth(out, 'cancel_kept_original')
     assert out.get('new_time') == time_value
     assert type(out.get('total_before')) is int and out.get('total_after') == out['total_before']
-    home_visible(device)
+    assert device.is_today_home(), 'Expected Today Home, not a different tab or detail route'
+    device.reveal(time_value)
     assert any(time_value in label for label in device.labels())
+    if repetition == 3:
+        from pathlib import Path
+        from trace_observations import observed_edit_sequence
+        assert out.get('original_time') == 'Chưa chọn giờ', 'Final rerun requires the verified unset-time fixture'
+        assert out['total_before'] == 1, 'Final fixture contains exactly one schedule'
+        path, record = request.node.artemis_evidence
+        record['nativeEditSequence'] = observed_edit_sequence(
+            Path(__file__).resolve().parents[1] / '.build/artemis-run/traces/data_engine.db',
+            record['traceId'], out['original_time'], time_value)
+        assert record['nativeEditSequence']['verified'], 'Trace must show edit/cancel/original/edit/save with one schedule'

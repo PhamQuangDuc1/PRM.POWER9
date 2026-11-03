@@ -1,0 +1,92 @@
+{
+  "file": "Power9_Lab3_Demo_HoaiMy_20261104.mp4",
+  "plannedDurationSeconds": 395,
+  "sha256": "fac5f7b341026a8a58536eff5f5d703cb3fda98bdb9598a06fddd495ec1c4b64",
+  "bytes": 14782034,
+  "resolution": "1920x1080",
+  "videoCodec": "H.264",
+  "audioCodec": "AAC",
+  "voice": "vi-VN-HoaiMyNeural",
+  "chapters": [
+    {
+      "id": "01-intro",
+      "seconds": 34,
+      "sourceType": "real native phone recording",
+      "speed": 1,
+      "startSeconds": 0
+    },
+    {
+      "id": "02-discover",
+      "seconds": 40,
+      "sourceType": "real native phone recording",
+      "speed": 1,
+      "startSeconds": 34
+    },
+    {
+      "id": "03-edit",
+      "seconds": 43,
+      "sourceType": "real native phone recording",
+      "speed": 1,
+      "startSeconds": 74
+    },
+    {
+      "id": "04-checkin",
+      "seconds": 32,
+      "sourceType": "real native phone recording",
+      "speed": 1,
+      "startSeconds": 117
+    },
+    {
+      "id": "05-timer",
+      "seconds": 47,
+      "sourceType": "real native phone recording",
+      "speed": 1,
+      "startSeconds": 149
+    },
+    {
+      "id": "06-delete",
+      "seconds": 36,
+      "sourceType": "real native phone recording",
+      "speed": 1,
+      "startSeconds": 196
+    },
+    {
+      "id": "07-pdf",
+      "seconds": 37,
+      "sourceType": "real native phone recording",
+      "speed": 1,
+      "startSeconds": 232
+    },
+    {
+      "id": "08-console",
+      "seconds": 78,
+      "sourceType": "real Firebase Console window recordings",
+      "speed": 1,
+      "startSeconds": 269
+    },
+    {
+      "id": "09-results",
+      "seconds": 48,
+      "sourceType": "current results title card; no simulated app or Console",
+      "startSeconds": 347
+    }
+  ],
+  "billingEnabled": false,
+  "storageProductionUploadDemonstrated": false,
+  "analyticsDebugViewReceivedDuringRecording": false,
+  "newFcmMessageSent": false,
+  "artemisVerifiedRunIds": 32,
+  "artemisTasksConsumed": 0,
+  "publicSignInFlowRecorded": true,
+  "googleAccountPickerRecorded": false,
+  "sameAccountRestoredAfterSignIn": true,
+  "finalPlaybackAndPrivacyReviewComplete": true,
+  "automatedFullDecodePassed": true,
+  "representativeFramesReviewed": 18,
+  "humanListenedToEntireFinalMovie": false,
+  "actualDurationSeconds": 395.04,
+  "primaryFile": "output/lab3/Power9_Lab3_Demo_Final.mp4",
+  "subtitleFile": "output/lab3/Power9_Lab3_Demo_Final.srt",
+  "subtitlesCheckedAgainstSceneBoundaries": true,
+  "demoDataCleanupServerVerified": true
+}

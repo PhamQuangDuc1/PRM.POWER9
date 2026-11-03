@@ -5,6 +5,7 @@ import '../models/activity.dart';
 import '../theme/p9_theme.dart';
 import '../widgets/p9_button.dart';
 import '../widgets/p9_async_content.dart';
+import '../widgets/p9_scene.dart';
 import '../viewmodels/activity_providers.dart';
 import 'schedule_screen.dart';
 
@@ -17,6 +18,8 @@ class RecoveryScreen extends ConsumerWidget {
     body: ListView(
       padding: const EdgeInsets.all(P9Space.lg),
       children: [
+        const P9SceneBanner(asset: P9Scenes.recovery),
+        const SizedBox(height: P9Space.xl),
         Text(activity.title, style: Theme.of(context).textTheme.headlineSmall),
         const SizedBox(height: P9Space.lg),
         Text(activity.purpose),

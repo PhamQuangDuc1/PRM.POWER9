@@ -6,6 +6,7 @@ import '../viewmodels/activity_providers.dart';
 import '../viewmodels/completion_providers.dart';
 import '../widgets/p9_async_content.dart';
 import '../widgets/p9_completion_button.dart';
+import '../widgets/p9_scene.dart';
 import 'progress_screen.dart';
 
 class FoodScreen extends ConsumerWidget {
@@ -35,6 +36,8 @@ class FoodScreen extends ConsumerWidget {
                     style: Theme.of(context).textTheme.headlineSmall,
                   ),
                   const SizedBox(height: P9Space.lg),
+                  const P9SceneBanner(asset: P9Scenes.food),
+                  const SizedBox(height: P9Space.xl),
                   Text(
                     activity.title,
                     style: Theme.of(context).textTheme.titleLarge,
@@ -43,10 +46,7 @@ class FoodScreen extends ConsumerWidget {
                   Text(activity.purpose),
                   const SizedBox(height: P9Space.xl),
                   for (final (index, step) in activity.steps.indexed)
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: P9Space.lg),
-                      child: Text('${index + 1}. $step'),
-                    ),
+                    P9InstructionStep(number: index + 1, text: step),
                   const SizedBox(height: P9Space.lg),
                   P9CompletionButton(
                     activity: activity,

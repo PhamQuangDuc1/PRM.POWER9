@@ -10,6 +10,7 @@ import '../viewmodels/completion_action_viewmodel.dart';
 import '../viewmodels/completion_providers.dart';
 import '../widgets/p9_async_content.dart';
 import '../widgets/p9_completion_button.dart';
+import '../widgets/p9_scene.dart';
 import 'progress_screen.dart';
 
 class WorkspaceScreen extends ConsumerWidget {
@@ -46,6 +47,8 @@ class WorkspaceScreen extends ConsumerWidget {
           return ListView(
             padding: const EdgeInsets.all(P9Space.lg),
             children: [
+              const P9SceneBanner(asset: P9Scenes.workspace),
+              const SizedBox(height: P9Space.xl),
               Text(
                 activity.groupName,
                 style: Theme.of(context).textTheme.labelLarge,

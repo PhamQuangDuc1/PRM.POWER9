@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/activity.dart';
 import '../theme/p9_theme.dart';
+import 'p9_scene.dart';
 
 class P9ActivityCard extends StatelessWidget {
   const P9ActivityCard({
@@ -19,6 +20,7 @@ class P9ActivityCard extends StatelessWidget {
       elevation: 0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(P9Size.cardRadius),
+        side: const BorderSide(color: P9Colors.surfaceContainer),
       ),
       child: InkWell(
         onTap: onTap,
@@ -27,7 +29,19 @@ class P9ActivityCard extends StatelessWidget {
           padding: const EdgeInsets.all(P9Space.lg),
           child: Row(
             children: [
-              const Icon(Icons.spa_outlined, color: P9Colors.primary),
+              ExcludeSemantics(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(P9Size.controlRadius),
+                  child: Image.asset(
+                    P9Scenes.forActivity(activity),
+                    width: 64,
+                    height: 72,
+                    fit: BoxFit.cover,
+                    cacheWidth: 192,
+                    excludeFromSemantics: true,
+                  ),
+                ),
+              ),
               const SizedBox(width: P9Space.md),
               Expanded(
                 child: Column(

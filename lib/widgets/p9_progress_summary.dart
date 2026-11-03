@@ -15,6 +15,24 @@ class P9ProgressSummary extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          const Row(
+            children: [
+              Icon(Icons.insights_rounded, color: P9Colors.primary, size: 20),
+              SizedBox(width: P9Space.sm),
+              Expanded(
+                child: Text(
+                  'NHỊP ĐỘ CỦA BẠN',
+                  style: TextStyle(
+                    color: P9Colors.primaryStrong,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 1,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: P9Space.md),
           Text(
             overview.total == 0
                 ? 'Bắt đầu từ một việc nhỏ'

@@ -1,0 +1,53 @@
+{
+  "generator": "Built-in image_gen",
+  "selectedAssets": ["login-office-v1.png", "today-morning-v1.png", "movement-walk-v1.png", "nutrition-lunch-v1.png", "relax-breathe-v2.png", "connection-colleagues-v2.png", "workspace-ergonomic-v2.png", "recovery-evening-v1.png"],
+  "date": "2026-11-03",
+  "refinedAssets": [
+  {
+    "file": "relax-breathe-v2.png",
+    "prompt": "Create a NEW standalone landscape 3:2 HAND-PAINTED EDITORIAL GOUACHE ILLUSTRATION, matching the two supplied reference images' clearly painted watercolor paper texture, simplified illustrated facial features, blue/offwhite palette and soft light EXACTLY. Reference images are style references only, do not duplicate their scenes. IMPORTANT: flat illustrated painted finish, NOT a photograph, NOT photorealistic, NOT a realistic 3D render. undefined Scene: Relaxation scene: a seated Asian office worker taking a gentle breathing break beside a large office window, feet resting on floor, relaxed hands on thighs, eyes softly closed, natural upright posture, one leafy plant, quiet midday light. No lotus yoga pose, no timer, no mystical effects. No text, no logos, no watermarks, no UI. Center subject with safe margins for mobile banner crops. Entire output horizontal 3:2."
+  },
+  {
+    "file": "connection-colleagues-v2.png",
+    "prompt": "Create a NEW standalone landscape 3:2 HAND-PAINTED EDITORIAL GOUACHE ILLUSTRATION, matching the two supplied reference images' clearly painted watercolor paper texture, simplified illustrated facial features, blue/offwhite palette and soft light EXACTLY. Reference images are style references only, do not duplicate their scenes. IMPORTANT: flat illustrated painted finish, NOT a photograph, NOT photorealistic, NOT a realistic 3D render. undefined Scene: Connection scene: three Asian adult office colleagues having a friendly relaxed conversation around a small breakroom table with cups of tea, open inclusive body language, a leafy plant and simple sunlit office background. Natural hands and expressions, no meeting presentation or charts. No text, no logos, no watermarks, no UI. Center subject with safe margins for mobile banner crops. Entire output horizontal 3:2."
+  },
+  {
+    "file": "workspace-ergonomic-v2.png",
+    "prompt": "Create a NEW standalone landscape 3:2 HAND-PAINTED EDITORIAL GOUACHE ILLUSTRATION, matching the two supplied reference images' clearly painted watercolor paper texture, simplified illustrated facial features, blue/offwhite palette and soft light EXACTLY. Reference images are style references only, do not duplicate their scenes. IMPORTANT: flat illustrated painted finish, NOT a photograph, NOT photorealistic, NOT a realistic 3D render. undefined Scene: Workspace scene: clear side three-quarter view of a tidy ergonomic desk setup, monitor at comfortable eye level, separate keyboard and mouse, adjustable blue office chair, small plant, soft daylight. No people, no letters on monitor, no instructional arrows. Calm useful workspace rather than luxury showroom. No text, no logos, no watermarks, no UI. Center subject with safe margins for mobile banner crops. Entire output horizontal 3:2."
+  }
+],
+  "assets": [
+    {
+      "file": "login-office-v1.png",
+      "prompt": "Use case: illustration-story. Create ONE standalone landscape 3:2 raster illustration asset for Power9 Office Routine, a Vietnamese office wellbeing mobile app. Premium calm editorial illustration, sophisticated softly shaded gouache with restrained fine grain, simplified realistic adult proportions, elegant shapes, NOT childish cartoon, NOT 3D plastic, NOT a photo. Unified palette: cobalt #1E5AA8, deep navy #004287, pale blue #E5EEFF, offwhite #F8F9FF, small sage and warm apricot accents. Modern Vietnamese office context and Asian adults where relevant. Quiet composition readable as a small mobile banner, meaningful subject in central 70 percent, generous safe margins for wide crop, minimal background detail, natural anatomy. Full bleed image with opaque pale background. No typography, letters, numbers, logo, watermark, phone frame, UI controls, collage or multiple panels. Welcoming login scene: a sunlit, airy modern office corner with a tidy blue ergonomic chair, a small desk, closed laptop, leafy plant, large window with gentle morning light. A sense of balance and invitation; no people, no charts."
+    },
+    {
+      "file": "today-morning-v1.png",
+      "prompt": "Use case: illustration-story. Create ONE standalone landscape 3:2 raster illustration asset for Power9 Office Routine, a Vietnamese office wellbeing mobile app. Premium calm editorial illustration, sophisticated softly shaded gouache with restrained fine grain, simplified realistic adult proportions, elegant shapes, NOT childish cartoon, NOT 3D plastic, NOT a photo. Unified palette: cobalt #1E5AA8, deep navy #004287, pale blue #E5EEFF, offwhite #F8F9FF, small sage and warm apricot accents. Modern Vietnamese office context and Asian adults where relevant. Quiet composition readable as a small mobile banner, meaningful subject in central 70 percent, generous safe margins for wide crop, minimal background detail, natural anatomy. Full bleed image with opaque pale background. No typography, letters, numbers, logo, watermark, phone frame, UI controls, collage or multiple panels. Today screen scene: one Asian office worker in pale blue shirt calmly preparing the workday at a tidy desk, setting a cup beside a closed notebook, relaxed upright posture, soft morning sunlight and one small plant. Quiet readiness and achievable daily routines, no charts."
+    },
+    {
+      "file": "movement-walk-v1.png",
+      "prompt": "Use case: illustration-story. Create ONE standalone landscape 3:2 raster illustration asset for Power9 Office Routine, a Vietnamese office wellbeing mobile app. Premium calm editorial illustration, sophisticated softly shaded gouache with restrained fine grain, simplified realistic adult proportions, elegant shapes, NOT childish cartoon, NOT 3D plastic, NOT a photo. Unified palette: cobalt #1E5AA8, deep navy #004287, pale blue #E5EEFF, offwhite #F8F9FF, small sage and warm apricot accents. Modern Vietnamese office context and Asian adults where relevant. Quiet composition readable as a small mobile banner, meaningful subject in central 70 percent, generous safe margins for wide crop, minimal background detail, natural anatomy. Full bleed image with opaque pale background. No typography, letters, numbers, logo, watermark, phone frame, UI controls, collage or multiple panels. Movement and discovery activity scene: two Asian office colleagues taking a relaxed short walk on a leafy outdoor path beside their modern office at midday, full bodies including feet clearly visible, comfortable office casual clothing, one in cobalt and one in warm offwhite. Natural walking poses, no fitness gear or running."
+    },
+    {
+      "file": "nutrition-lunch-v1.png",
+      "prompt": "Use case: illustration-story. Create ONE standalone landscape 3:2 raster illustration asset for Power9 Office Routine, a Vietnamese office wellbeing mobile app. Premium calm editorial illustration, sophisticated softly shaded gouache with restrained fine grain, simplified realistic adult proportions, elegant shapes, NOT childish cartoon, NOT 3D plastic, NOT a photo. Unified palette: cobalt #1E5AA8, deep navy #004287, pale blue #E5EEFF, offwhite #F8F9FF, small sage and warm apricot accents. Modern Vietnamese office context and Asian adults where relevant. Quiet composition readable as a small mobile banner, meaningful subject in central 70 percent, generous safe margins for wide crop, minimal background detail, natural anatomy. Full bleed image with opaque pale background. No typography, letters, numbers, logo, watermark, phone frame, UI controls, collage or multiple panels. Nutrition scene: beautifully composed slightly overhead view of a balanced office lunch on a pale blue desk, one ceramic bowl with rice, greens, vegetables and a modest protein portion, a clear glass of water and neatly placed utensils, a discreet closed laptop edge. Appetizing natural food colors, calm uncluttered still life. No people."
+    },
+    {
+      "file": "relax-breathe-v1.png",
+      "prompt": "undefinedRelaxation scene: a seated Asian office worker taking a gentle breathing break beside a large office window, feet resting on floor, relaxed hands on thighs, eyes softly closed, natural upright posture, one leafy plant, quiet midday light. No lotus yoga pose, no timer, no mystical effects."
+    },
+    {
+      "file": "connection-colleagues-v1.png",
+      "prompt": "undefinedConnection scene: three Asian adult office colleagues having a friendly relaxed conversation around a small breakroom table with cups of tea, open inclusive body language, a leafy plant and simple sunlit office background. Natural hands and expressions, no meeting presentation or charts."
+    },
+    {
+      "file": "workspace-ergonomic-v1.png",
+      "prompt": "undefinedWorkspace scene: clear side three-quarter view of a tidy ergonomic desk setup, monitor at comfortable eye level, separate keyboard and mouse, adjustable blue office chair, small plant, soft daylight. No people, no letters on monitor, no instructional arrows. Calm useful workspace rather than luxury showroom."
+    },
+    {
+      "file": "recovery-evening-v1.png",
+      "prompt": "undefinedSleep and recovery scene: a tranquil bedroom corner at dusk, comfortable bed with pale blue linen, warm bedside lamp, small plant, navy evening sky through window, closed book on bedside table. No people, no phone or computer, no stars or moon characters. Restful and minimal, same editorial illustration style."
+    }
+  ]
+}

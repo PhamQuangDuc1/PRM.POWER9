@@ -1,9 +1,18 @@
+param(
+    [string]$PptxPath,
+    [string]$PdfPath,
+    [string]$PreviewDirectory
+)
 $ErrorActionPreference = 'Stop'
 $lab3Workspace = (Resolve-Path (Join-Path $PSScriptRoot '../..')).Path
 $lab3Pptx = Join-Path $lab3Workspace 'output/lab3/Power9_Lab3_Designer.pptx'
 $lab3Pdf = Join-Path $lab3Workspace 'output/lab3/Power9_Lab3_Slides.pdf'
 $lab3Previews = Join-Path $lab3Workspace '.build/lab3-design/powerpoint-render'
+if ($PptxPath) { $lab3Pptx = [System.IO.Path]::GetFullPath($PptxPath) }
+if ($PdfPath) { $lab3Pdf = [System.IO.Path]::GetFullPath($PdfPath) }
+if ($PreviewDirectory) { $lab3Previews = [System.IO.Path]::GetFullPath($PreviewDirectory) }
 New-Item -ItemType Directory -Path $lab3Previews -Force | Out-Null
+$lab3HadPowerPoint = @(Get-Process POWERPNT -ErrorAction SilentlyContinue).Count -gt 0
 $lab3PowerPoint = New-Object -ComObject PowerPoint.Application
 $lab3Presentation = $null
 try {
@@ -17,5 +26,5 @@ try {
     @{ slides = $lab3Presentation.Slides.Count; pdf = $lab3Pdf; previewDirectory = $lab3Previews; nativePowerPointOpened = $true } | ConvertTo-Json -Compress
 } finally {
     if ($null -ne $lab3Presentation) { $lab3Presentation.Close() }
-    $lab3PowerPoint.Quit()
+    if (-not $lab3HadPowerPoint) { $lab3PowerPoint.Quit() }
 }

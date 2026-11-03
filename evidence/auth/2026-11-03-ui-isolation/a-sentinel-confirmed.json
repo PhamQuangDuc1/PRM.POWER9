@@ -1,0 +1,15 @@
+{
+  "accountAlias": "A",
+  "phase": "sentinel-confirmed",
+  "dateKey": "2026-11-03",
+  "activityId": "move-walk",
+  "source": "read-only server API; exact selected account documents",
+  "scheduleExists": true,
+  "completionExists": true,
+  "minuteOfDay": null,
+  "scheduleCreatedAt": "2026-11-03T16:26:58.283Z",
+  "scheduleUpdatedAt": "2026-11-03T16:26:58.283Z",
+  "completionCreatedAt": "2026-11-03T16:28:26.722Z",
+  "completionSource": "checkin",
+  "ownerUidExported": false
+}

@@ -22,12 +22,17 @@ def main():
     os.environ['ARTEMIS_HIERARCHY_BACKEND'] = 'uiautomator'
     os.environ['POWER9_ARTEMIS_ASCII_INPUT'] = '1'
     os.environ['POWER9_ARTEMIS_STRUCTURED_REPORT'] = '1'
+    os.environ['POWER9_ARTEMIS_PRIVACY_GUARD'] = '1'
     runtime = str(Path(__file__).resolve().parent / 'runtime')
     os.environ['PYTHONPATH'] = runtime + os.pathsep + os.environ.get('PYTHONPATH', '')
     adb = os.environ.get('POWER9_ADB')
     if adb:
         os.environ['PATH'] = str(Path(adb).parent) + os.pathsep + os.environ['PATH']
     sys.path.insert(0, str(checkout))
+    sys.path.insert(0, runtime)
+    from privacy_guard import install_privacy_guard
+    from artemis.drivers.android.adb_driver import AndroidAdbDriver
+    install_privacy_guard(AndroidAdbDriver)
     from apps.admin_console.server import main as serve
     serve(['--host', '127.0.0.1', '--port', str(args.port)])
 

@@ -1,0 +1,40 @@
+{
+  "phase": "before-cleanup",
+  "dateKey": "2026-11-04",
+  "records": [
+    {
+      "activityId": "move-walk",
+      "collection": "schedules",
+      "exists": false,
+      "source": null,
+      "durationSeconds": null,
+      "createdAt": null
+    },
+    {
+      "activityId": "move-walk",
+      "collection": "completions",
+      "exists": true,
+      "source": "checkin",
+      "durationSeconds": null,
+      "createdAt": "2026-11-03T18:30:50.391Z"
+    },
+    {
+      "activityId": "stress-break",
+      "collection": "schedules",
+      "exists": false,
+      "source": null,
+      "durationSeconds": null,
+      "createdAt": null
+    },
+    {
+      "activityId": "stress-break",
+      "collection": "completions",
+      "exists": true,
+      "source": "timer",
+      "durationSeconds": "19",
+      "createdAt": "2026-11-03T18:29:29.738Z"
+    }
+  ],
+  "rawAccountIdentifiersExported": false,
+  "method": "read-only exact-document Firestore API; video evidence only, not ARTEMIS"
+}

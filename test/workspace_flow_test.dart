@@ -74,7 +74,7 @@ void main() {
         ),
       );
       await tester.pumpAndSettle();
-      await tester.ensureVisible(find.text('Đã thực hiện'));
+      await tester.scrollUntilVisible(find.text('Đã thực hiện'), 160);
       await tester.tap(find.text('Đã thực hiện'));
       await tester.pumpAndSettle();
       expect(service.calls, 0);

@@ -42,6 +42,68 @@ abstract final class P9Theme {
     // Lab 2 explicitly allows Roboto as a fallback.
     fontFamily: 'Roboto',
     scaffoldBackgroundColor: P9Colors.surface,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: P9Colors.surface,
+      foregroundColor: P9Colors.text,
+      surfaceTintColor: Colors.transparent,
+      elevation: 0,
+      scrolledUnderElevation: 0,
+      centerTitle: false,
+    ),
+    cardTheme: CardThemeData(
+      color: P9Colors.card,
+      surfaceTintColor: Colors.transparent,
+      elevation: 0,
+      margin: const EdgeInsets.only(bottom: P9Space.md),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(P9Size.cardRadius),
+        side: const BorderSide(color: P9Colors.surfaceContainer),
+      ),
+    ),
+    navigationBarTheme: NavigationBarThemeData(
+      backgroundColor: P9Colors.card,
+      indicatorColor: P9Colors.surfaceContainer,
+      elevation: 0,
+      labelTextStyle: WidgetStateProperty.resolveWith(
+        (states) => TextStyle(
+          color: states.contains(WidgetState.selected)
+              ? P9Colors.primaryStrong
+              : P9Colors.secondaryText,
+          fontWeight: states.contains(WidgetState.selected)
+              ? FontWeight.w700
+              : FontWeight.w500,
+          fontSize: 12,
+        ),
+      ),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: P9Colors.card,
+      contentPadding: const EdgeInsets.all(P9Space.lg),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(P9Size.controlRadius),
+        borderSide: const BorderSide(color: P9Colors.outline),
+      ),
+    ),
+    progressIndicatorTheme: const ProgressIndicatorThemeData(
+      color: P9Colors.primary,
+      linearTrackColor: P9Colors.surfaceContainer,
+      linearMinHeight: 8,
+      borderRadius: BorderRadius.all(Radius.circular(8)),
+    ),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        foregroundColor: P9Colors.primaryStrong,
+        minimumSize: const Size(48, P9Size.buttonHeight),
+        padding: const EdgeInsets.symmetric(
+          horizontal: P9Space.lg,
+          vertical: P9Space.md,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(P9Size.controlRadius),
+        ),
+      ),
+    ),
     colorScheme: const ColorScheme.light(
       primary: P9Colors.primary,
       onPrimary: P9Colors.card,

@@ -2,10 +2,11 @@
   {
     "slide": 1,
     "title": "",
-    "notes": "Power9 Office Routine là ứng dụng Android cho các khoảng nghỉ ngắn trong ngày làm việc. Đây là Lab 3 Cloud-Enabled, kế thừa ba flow Lab 2. Ảnh là app thật từ trace ngày 01/11, không phải đề xuất UI mới. Bản trình bày được làm lại ngày 02/11; video được để cuối theo quyết định người dùng.",
+    "notes": "Power9 Office Routine là ứng dụng Android cho các khoảng nghỉ ngắn trong ngày làm việc. Lab3 kế thừa ba flow Lab2. Ảnh Home chụp thật trên Xperia sau khi cài APK UI mới ngày03/11. Ảnh minh họa trong app tạo bằng image_gen; không phải ảnh chụp người thật. Video 04/11 dài khoảng 6 phút 35 giây, ghi app và Firebase Console thật, có lời đọc tổng hợp Hoài My và phụ đề. Màn chọn Google không ghi hình; người dùng tự chọn lại A và đã đối chiếu tài khoản trước khi ghi Home.",
     "sources": [
       "assets/brand/README.md",
-      "evidence/artemis/latest-home-trace-source.json"
+      "evidence/ui-refresh/2026-11-03/native-ui-smoke.json",
+      "docs/ui-refresh-2026-11-03.md"
     ]
   },
   {
@@ -41,11 +42,13 @@
   {
     "slide": 5,
     "title": "Authentication",
-    "notes": "Ảnh Login là mốc bootstrap, không dùng ảnh này riêng để chứng minh Google sign-in đã thành công. Ngày 02/11 đã logout về Login, Back/mở lại không lộ Home, hủy native Google picker thấy lỗi và retry mở picker. Lượt đầu kiểm tra Activity quá sớm bị fail, được giữ riêng. Người dùng đăng nhập lại, Home đã được xác nhận. Chưa đủ test chuyển hai tài khoản và login mất mạng.",
+    "notes": "Hình Login là render Flutter bằng fixture local để giới thiệu UI mới, không phải bằng chứng đăng nhập. Auth offline/retry/logout/Back đã kiểm chứng trên Xperia ngày 03/11. Hai tài khoản thật A → B → A do người dùng tự chọn Google: lịch và completion của A không sang B; về A timestamp không đổi; đã dọn đúng dữ liệu thử. Inbox B có 6 mục không xuất hiện ở A; A rỗng trước và sau. Định danh chỉ so sánh cục bộ, không xuất email, UID hoặc ảnh bộ chọn tài khoản.",
     "sources": [
-      "evidence/bootstrap/login-xperia.png",
-      "evidence/flows/auth-cancel-retry-xperia-2026-11-02.json",
-      "evidence/flows/auth-privacy-xperia-2026-11-02.json",
+      "output/ui-refresh/previews/login.png",
+      "docs/lab3-verification-2026-11-03.md",
+      "docs/account-isolation-2026-11-03.md",
+      "evidence/auth/2026-11-03-ui-isolation/roundtrip.json",
+      "evidence/auth/2026-11-03-ui-isolation/inbox-observation-audit.json",
       "lib/app.dart"
     ]
   },
@@ -74,7 +77,7 @@
   {
     "slide": 8,
     "title": "Google Analytics",
-    "notes": "Có 12 AppEvent: login, logout, search, view_activity, schedule_created, schedule_updated, activity_completed, completion_undone, config_refreshed, report_generated, export_report, schedule_deleted. Bảng chọn bảy loại tiêu biểu, không phải danh sách toàn bộ. DebugView đã có một phần event; TC16[1] xác minh view_activity(activity_id=move-walk) bằng native SDK log được lọc build marker và thời điểm task. Hai lượt TC16 chưa đạt. export_report từ Storage production chưa xác minh vì upload tắt. Không dùng log tự in của Dart để thay SDK evidence.",
+    "notes": "Có 12 AppEvent: login, logout, search, view_activity, schedule_created, schedule_updated, activity_completed, completion_undone, config_refreshed, report_generated, export_report, schedule_deleted. Bảng chọn bảy loại tiêu biểu, không phải danh sách toàn bộ. DebugView trong buổi quay 04/11 có Debug Device=0, chưa nhận event. Log SDK không thay bằng chứng server; TC16[1] xác minh view_activity(activity_id=move-walk) bằng native SDK log được lọc build marker và thời điểm task. Kết quả từng lượtTC16 đọc từ evidence hiện hành; mỗi lượt cần trace và nativeSDKlog độc lập. export_report từ Storage production chưa xác minh vì upload tắt. Không dùng log tự in của Dart để thay SDK evidence.",
     "sources": [
       "docs/analytics-plan.md",
       "docs/firebase-observability.md",
@@ -116,30 +119,32 @@
   },
   {
     "slide": 12,
-    "title": "Nền tảng UI/UX hiện tại",
-    "notes": "Hai widget tests render 14 widget màn ở 360/412dp và text scale 1,5; bổ sung androidTapTargetGuideline/labeledTapTargetGuideline, đều đạt. Các màn ban đầu có phần chồng lấn HomeShell/body; không thổi phồng số màn chức năng. Không thay cho TalkBack, contrast, mọi trạng thái cuộn/dialog hoặc fidelity Figma đầy đủ. Hình checklist lỗi giữ 3/3 và Progress empty là ảnh thật. Người dùng đang cân nhắc đổi toàn bộ UI/UX; deck trình bày baseline đã kiểm chứng, chưa giả định thiết kế mới đã được duyệt.",
+    "title": "UI/UX sau nâng cấp",
+    "notes": "Bộ 8 ảnh minh họa image_gen đã tích hợp vào app; hai ảnh ở đây là screenshot Xperia thật ngày 03/11. Kiểm tra 15 widget màn ở 360/412 dp, chữ 1,5 lần, nhãn và vùng chạm Android đạt; toàn bộ 49 Flutter tests đạt. Timer và nút thao tác đứng trước hướng dẫn; ảnh ẩn khi phiên đang hoạt động. Lượt native khi TalkBack hoạt động giữ 02:56 sau Ở lại và Hôm nay vẫn kích hoạt được; snapshot focus sau Ở lại vẫn false. Ngày04/11 người dùng xác nhận nghe được Hôm nay sau Ở lại, vuốt tới và chạm hai lần mở lại dialog. Chỉ nhánh này được kiểm chứng bằng người thật, các luồng TalkBack khác chưa kiểm tra hết. Snapshot tự động lịch sử vẫn giữ false. Không đồng bộ Figma theo yêu cầu người dùng.",
     "sources": [
-      "handoff/flutter-handoff.md",
-      "test/responsive_main_screens_test.dart",
-      "evidence/flutter/lab3-accessibility-2026-11-02.txt",
-      "evidence/workspace/checklist-offline-xperia.png",
-      "evidence/f02/progress-empty-xperia.png"
+      "docs/ui-refresh-2026-11-03.md",
+      "evidence/flutter/ui-imagery-final-responsive-2026-11-03.txt",
+      "docs/timer-focus-recheck-2026-11-03.md",
+      "evidence/accessibility/2026-11-04-manual-focus/result.json",
+      "assets/illustrations/generation-manifest.json",
+      "evidence/ui-refresh/2026-11-03/native-ui-smoke.json"
     ]
   },
   {
     "slide": 13,
     "title": "Kiểm thử ARTEMIS",
-    "notes": "30/33 unique run IDs xác minh: 29 valid pytest passes + 1 delayed-terminal audit TC03. Không phải 30 pytest passes. 59 retained attempts, 9 ca đủ 3/3. TC10[3], TC16[2], TC16[3] thiếu. Pro bị quota, 0 UI steps; 926,82 giây chờ không tính khám phá. Không tính local smoke như ARTEMIS. Biểu đồ thể hiện verified repetitions per case, không phải pass rate từng attempt.",
+    "notes": "32/33runID xác minh, gồm 31 pytestpass và 1 auditterminal. 62attempts giữ lại. Còn: TC10[3]. Pro hiện 189,02 giây và 9 bước được ghi, chưa đủ 900 giây; một lần mở Profile trái giới hạn. Khung có dữ liệu riêng không xuất công khai. Thời gian chờ hoặc trạng thái completed không tự đóng yêu cầu. Biểu đồ theo runID, không phải passrate từngattempt. Native smoke không cộngARTEMIS.",
     "sources": [
       "evidence/artemis/lab3-summary.json",
       "docs/lab3-e2e-results.md",
-      "evidence/artemis/pro-exploratory.json"
+      "evidence/artemis/pro-exploratory.json",
+      "evidence/artemis/pro-exploratory-ui-audit.json"
     ]
   },
   {
     "slide": 14,
     "title": "AI code review và ba sửa lỗi",
-    "notes": "Baseline review 616f83e. R01 defensive robustness, chưa khẳng định sự cố production; R02 async correctness; R03 session recovery. R04/R05 gia cố runner. PR thật https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3, draft để giữ rõ các tiêu chí còn thiếu và hướng UI chưa chốt. Ba fix commits ac4b35b, 38b52bc, e595956. Local Codex review và disposition được đưa vào PR body; không có human approval hoặc merge được giả định.",
+    "notes": "Baseline review 616f83e. R01 defensive robustness, chưa khẳng định sự cố production; R02 async correctness; R03 session recovery. R04/R05 gia cố runner. PR thật https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3, draft để giữ rõ các tiêu chí production còn thiếu. Ba fix commits ac4b35b, 38b52bc, e595956. Local Codex review và disposition được đưa vào PR body; không có human approval hoặc merge được giả định.",
     "sources": [
       "ai/code-review/lab3-review.md",
       "https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3",
@@ -151,12 +156,14 @@
   {
     "slide": 15,
     "title": "Bản bàn giao và bước tiếp theo",
-    "notes": "Không khẳng định bài đã đạt 100%. App48tests/analyzer, Firebase evidence, PDF và replay đã bàn giao. Còn TC10[3]/TC16[2–3], Pro, production Storage, TalkBack/fidelity và một số Auth error coverage. Video được người dùng chủ động để cuối sau khi hướng UI/UX ổn định. PR ở trạng thái draft, không merge. Sau các bước hoàn thiện, cập nhật số liệu từ evidence thực thay vì sửa slide thành pass.",
+    "notes": "UI mới đã cài trên Xperia, 49 Flutter tests đạt và analyzer sạch. Hai tài khoản A → B → A: lịch và lịch sử A không sang B; B có 6 thông báo không thấy ở A. Đã dọn đúng dữ liệu thử. TalkBack sau Ở lại đã được người dùng nghe/vuốt/kích hoạt xác nhận; các luồng khác chưa kiểm tra hết. Snapshot tự động lịch sử giữ nguyên. ARTEMIS đạt 32/33 run ID. Pro chỉ 189,02 giây và mở Profile trái giới hạn nên chưa đạt. Người dùng chọn giữ Spark để tránh phí; Storage production được loại khỏi phạm vi thực hiện, không đánh dấu đạt yêu cầu. Video cuối 6 phút 35 giây đã ghi Login/Home, các luồng app và Console thật, giọng Hoài My, có SRT. DebugView buổi quay chưa nhận sự kiện; không coi log SDK là server receipt. Messaging hiển thị chiến dịch cũ, không gửi mới. Đã dọn đúng dữ liệu thử và khôi phục debug. PR đang draft, chưa merge. Không khẳng định hoàn thành 100% khi còn các tiêu chí thiếu.",
     "sources": [
       "https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3",
-      "output/lab3/README.md",
+      "docs/ui-refresh-2026-11-03.md",
+      "docs/account-isolation-2026-11-03.md",
+      "docs/timer-focus-recheck-2026-11-03.md",
       "output/lab3/DEMO-RUNBOOK.md",
-      "docs/lab3-resume-2026-11-02.md"
+      "output/lab3/video-20261104/video-manifest.json"
     ]
   }
 ]

@@ -12,6 +12,7 @@ import xml.etree.ElementTree as ET
 
 import pytest
 from trace_observations import observed_states, terminal_output
+from ui_viewport import content_viewport, visible_target, is_today_home
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = 'vn.power9.power9_office_routine'
@@ -45,7 +46,9 @@ class Device:
             raw = device.dump_hierarchy()
             tree = ET.fromstring(raw)
             if any(n.get('package') == PACKAGE for n in tree.iter('node')):
-                return [n.get('text', '') or n.get('content-desc', '') for n in tree.iter('node') if n.get('package') == PACKAGE]
+                labels = [n.get('text', '') or n.get('content-desc', '') for n in tree.iter('node') if n.get('package') == PACKAGE]
+                if any(labels):
+                    return labels
             time.sleep(.5)
         raise AssertionError('No Power9 semantics after bounded wait; unlock/open app, then retry. No model task submitted.')
 
@@ -55,6 +58,29 @@ class Device:
         power = self.adb('shell', 'dumpsys', 'power').decode(errors='replace')
         assert not re.search(r'\bshowing=true\b', policy), 'Device locked; unlock Power9 before running ARTEMIS'
         assert 'mWakefulness=Awake' in power, 'Device asleep; wake/unlock Power9 before running ARTEMIS'
+
+    def is_today_home(self):
+        import uiautomator2
+        tree = ET.fromstring(uiautomator2.connect(self.serial).dump_hierarchy())
+        return is_today_home(tree)
+
+    def reveal(self, query, attempts=6):
+        """Read-only verification scroll inside the product body, never navbar."""
+        import uiautomator2
+        ui = uiautomator2.connect(self.serial)
+        for attempt in range(attempts):
+            tree = ET.fromstring(ui.dump_hierarchy())
+            if visible_target(tree, query):
+                return
+            if attempt + 1 == attempts:
+                break
+            left, top, right, bottom = content_viewport(tree)
+            x = (left + right) // 2
+            start = bottom - 24
+            end = max(top + 24, start - (bottom - top) // 3)
+            ui.swipe(x, start, x, end, duration=.35)
+            time.sleep(.4)
+        raise AssertionError('Requested product control not fully visible after bounded scroll')
 
     def home(self):
         # Only discard unsaved navigation/drafts. No app-data reset or backend writes.
@@ -83,10 +109,11 @@ class Device:
                 target.click()
             elif 'Quay lại' in labels:
                 uiautomator2.connect(self.serial)(description='Quay lại', packageName=PACKAGE).click()
-            elif 'Hôm nay' in labels:
+            elif any(label.split('\n')[0] == 'Hôm nay' for label in labels):
                 # A previous case may have ended on another root tab. Only tap
                 # a node from the app; never press Android Back into the launcher.
-                uiautomator2.connect(self.serial)(description='Hôm nay', packageName=PACKAGE).click()
+                today = next(label for label in labels if label.split('\n')[0] == 'Hôm nay')
+                uiautomator2.connect(self.serial)(description=today, packageName=PACKAGE).click()
             else:
                 raise AssertionError('No known safe app-bar Back target; keep current UI for inspection')
             time.sleep(1)

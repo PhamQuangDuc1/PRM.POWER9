@@ -1,0 +1,15 @@
+{
+  "accountAlias": "A",
+  "phase": "artemis-fixture-created",
+  "dateKey": "2026-11-03",
+  "activityId": "move-walk",
+  "source": "read-only server API; exact selected account documents",
+  "scheduleExists": true,
+  "completionExists": false,
+  "minuteOfDay": null,
+  "scheduleCreatedAt": "2026-11-03T16:38:32.777Z",
+  "scheduleUpdatedAt": "2026-11-03T16:38:32.777Z",
+  "completionCreatedAt": null,
+  "completionSource": null,
+  "ownerUidExported": false
+}

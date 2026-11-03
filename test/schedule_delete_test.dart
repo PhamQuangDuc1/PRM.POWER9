@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:power9_office_routine/app.dart';
+import 'package:power9_office_routine/screens/today_screen.dart';
 import 'package:power9_office_routine/models/app_user.dart';
 import 'package:power9_office_routine/models/completion.dart';
 import 'package:power9_office_routine/models/schedule.dart';
@@ -218,12 +219,16 @@ void main() {
         of: find.text(activity.title),
         matching: find.byType(ListTile),
       );
-      await tester.ensureVisible(tile);
+      await tester.scrollUntilVisible(
+        tile, 160,
+        scrollable: find.descendant(
+          of: find.byType(TodayScreen), matching: find.byType(Scrollable)),
+      );
       await tester.pumpAndSettle();
       await tester.tap(tile);
       await tester.pumpAndSettle();
       Future<void> openDelete() async {
-        await tester.ensureVisible(find.text('Xóa lịch hoạt động'));
+        await tester.scrollUntilVisible(find.text('Xóa lịch hoạt động'), 160);
         await tester.pumpAndSettle();
         await tester.tap(find.text('Xóa lịch hoạt động'));
         await tester.pumpAndSettle();

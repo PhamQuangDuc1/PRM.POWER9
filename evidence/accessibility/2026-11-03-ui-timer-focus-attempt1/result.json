@@ -1,0 +1,25 @@
+{
+  "scope": "timer pause -> Today -> Stay -> focus Today again",
+  "modelCalls": 0,
+  "humanGesturesAndSpeechAssessed": false,
+  "behaviorPassed": false,
+  "allActionFocusObserved": false,
+  "actions": [],
+  "checks": [
+    {
+      "name": "Device unlocked",
+      "passed": true
+    },
+    {
+      "name": "Start at Home",
+      "passed": true
+    },
+    {
+      "name": "TalkBack bound",
+      "passed": true
+    }
+  ],
+  "error": "CalledProcessError: Command '['adb', '-s', '[device]', 'shell', \"CLASSPATH=/data/local/tmp/p9-lab3-a11y.jar app_process /system/bin P9AccessibilityAudit activate 'Thư giãn'\"]' returned non-zero exit status 137.",
+  "originalAccessibilitySettingsRestored": true,
+  "unrecordedTestSessionRemains": false
+}

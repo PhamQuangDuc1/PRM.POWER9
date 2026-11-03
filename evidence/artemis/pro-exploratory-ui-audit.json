@@ -1,0 +1,23 @@
+{
+  "traceId": "c967f5fe-aa85-49cd-b05d-79c106f46008",
+  "profile": "pro",
+  "elapsedSeconds": 189.02,
+  "recordedTraceStepRows": 9,
+  "observedActions": "Navigation among product root tabs; one forbidden Profile visit; return to Home",
+  "statusReportedByRunner": "completed",
+  "minimumRequiredActiveSeconds": 900,
+  "durationRequirementMet": false,
+  "activeExploratoryRequirementMet": false,
+  "scopeRespected": false,
+  "privacyObservation": {
+    "profileOpenedDespiteGoalRestriction": true,
+    "framesContainingEmail": 1,
+    "rawPrivateFramesPublished": false,
+    "providerExposurePossible": true,
+    "additionalModelCallsAfterAudit": false
+  },
+  "issuesVerified": false,
+  "conclusion": "Does not close Pro exploratory requirement: too short and violated the no-Profile restriction. No artificial waiting or retry used.",
+  "modelTaskBudgetAfterBatch": {"used": 49, "limit": 50},
+  "references": ["pro-exploratory.json", "pro-exploratory-20261101-original.json"]
+}

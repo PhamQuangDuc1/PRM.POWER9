@@ -1,5 +1,36 @@
 # Lab 3 — mốc khởi tạo 31/10/2026
 
+## Trạng thái bàn giao trên OneD — 04/11/2026
+
+Nhánh hiện hành là OneD, bảo toàn tám commit từ nhánh review trước và toàn bộ thay đổi UI/bằng chứng/demo. Metadata PR thay thế ở `evidence/code-review/lab3-pr.json`; không merge vào main.
+
+DebugView server đã xác minh `view_activity` có `activity_id=move-walk` qua ảnh Console đã che thông tin riêng, ở `evidence/analytics/2026-11-04/server-receipt.json`. Người dùng đã nghe/vuốt cả ba phần TalkBack và xác nhận đạt; phạm vi cụ thể ở `evidence/accessibility/2026-11-04-manual-flows/result.json`, không bao gồm bộ chọn Google. Trợ năng và Analytics debug đã khôi phục.
+
+ARTEMIS vẫn 32/33 với 63 attempts giữ cả thất bại. TC10[3] mới nhất chưa đạt; Pro chưa đủ thời lượng. Budget 50/50, chưa có xác nhận tăng trần. Giữ Spark và upload=false. Kịch bản mới `docs/demo-android-emulator-2026-11-04.md` thay thiết bị trình bày bằng AVD, chưa diễn tập trên máy ảo. Các bản slide/video giữ đúng thời điểm kiểm chứng và có thể chứa trạng thái trước các xác nhận mới này.
+
+## Mốc video trước các xác nhận bổ sung — 04/11/2026
+
+TalkBack thủ công: người dùng đã xác nhận sau “Ở lại” nghe được Hôm nay, vuốt tới và chạm hai lần mở lại dialog. Nhánh này đạt kiểm tra người thật; toàn bộ màn hình chưa kiểm tra hết. Đã bỏ phiên chưa ghi nhận và khôi phục trợ năng. Bằng chứng: `evidence/accessibility/2026-11-04-manual-focus/result.json`. Các nhận định focus bên dưới là lịch sử trước xác nhận này.
+
+UI/ảnh hoàn thiện, 49 Flutter tests đạt và analyzer sạch. ARTEMIS32/33, TC10[3] còn failed, Pro chưa đạt thời lượng; giữ49/50. Video app/Console/Login đã hoàn tất tại `output/lab3/Power9_Lab3_Demo_Final.mp4`: 6 phút35giây,1080p,Hoài My,SRT64mục. Đã decode toàn bộ hình/tiếng, rà18frame và che thông tin riêng. Slide15trang cập nhật bằng chứng mới tại Final_Video_20261104; các tên chính Designer/Slides đã đồng bộ và mở/xuất PowerPoint thành công.
+
+DebugView buổi quay chưa nhận event, không coi logSDK là bằng chứng server. Crashlytics/FCM hiển thị lịch sử, không gửi/crash mới. Dữ liệu quay đã dọn và server xác minh, debug khôi phục, HomeA giữ nguyên. Billingtắt/Spark. Không ghi100%; còn TC10/Pro/TalkBack các luồng khác/DebugView, báo cáoPDFmốc cũ và việc nộp bài. Audit video: `evidence/video/2026-11-04/final-review.json`.
+
+
+## Billing — quyết định mới nhất
+
+Người dùng giữSpark sau khi được giải thích rủi ro tính phí/cảnh báo ngân sách. Không bậtbilling, không bật report_upload_enabled. Storageproduction vẫn chưa đạt; PDF local vẫn có thể demo. Không ghi100% hoặc dùng emulator/PDF local thay upload thật.
+
+## Hai tài khoản — đã kiểm chứng sau bản UI
+
+Đã điA→B→A với người dùng tự chọn Google: lịch/checkin thử củaA không sangB; vềA dữ liệu/timestamp giữ nguyên; đã dọn đúng hai document thử. InboxB có6mục, A rỗng trước/sau và không thấy mụcB. Không gửiFCM mới, không đụng dữ liệuB, không tăngARTEMIS. Xem [audit tài khoản](account-isolation-2026-11-03.md). TalkBack thủ công/focus vẫn chưa đóng; ARTEMIS/Pro/Storage/video/slide giữ trạng thái riêng.
+
+## UI và hình ảnh — cập nhật tối 03/11/2026
+
+Đã chạy lại nhánh timer bằng Android accessibility khi TalkBack bound: Ở lại giữ paused02:56; Hôm nay lần nữa kích hoạt/mở dialog được, nhưng snapshot focus vẫnfalse dù request được chấp nhận. 6/7 thao tác thấy focus, không đánh dấu TalkBack/focus hoàn tất. Đã bỏ phiên thử, vềHome và khôi phục trợ năng=null/0. Xem [kiểm tra lại focus](timer-focus-recheck-2026-11-03.md); không có model call hoặc completion mới.
+
+Đã tạo/tích hợp bộ 8 ảnh minh họa, thumbnail, thẻ hướng dẫn và theme thống nhất; đưa timer/nút lên trước hướng dẫn và sửa tràn chữ ở 360dp/1.5×. Flutter49/49 đạt, analyzer sạch, APK UI mới build/cài bằng install-r. Bản riêng: output/lab3/Power9-Lab3-UI-20261103-debug-arm64.apk; không dùng build-config.json cũ làm hash của bản này. Người dùng đã có tài khoản B và sẵn sàng TalkBack; hai lượt thủ công chưa được tính đạt. Tiếp theo: kiểm chứng còn thiếu → video → chốt slide; không đồng bộ Figma. Chi tiết: [UI refresh](ui-refresh-2026-11-03.md). Các mốc dưới là lịch sử.
+
 ## Kiểm chứng bổ sung 03/11/2026
 
 Auth offline/retry/logout/Back đạt trên Xperia; hai tài khoản chưa thử vì người dùng chỉ có một tài khoản. Analytics11/12 event có native SDK evidence, không đồng nhất DebugView server; export_report còn phụ thuộc Storage. Trợ năng17/17 hành vi đạt,21/21 request được chấp nhận nhưng20/21 snapshot thấy focus: còn Hôm nay sau Ở lại, strict check vẫn failed. Người dùng chọn tự động trước, nghe/vuốt thủ công để sau. Đã sửa nhãn chuông, Flutter49/49 đạt, analyzer sạch, APK mới build/cài và dữ liệu/mạng/TalkBack/debug đã khôi phục. Chi tiết: docs/lab3-verification-2026-11-03.md. Hướng dẫn demo đầy đủ: docs/lab3-demo-guide.md. Không gọi thêm ARTEMIS, không bật billing/đồng bộ Figma; video/thầy để sau.

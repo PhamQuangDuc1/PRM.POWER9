@@ -9,6 +9,7 @@ import '../widgets/p9_async_content.dart';
 import '../widgets/p9_button.dart';
 import '../widgets/p9_progress_summary.dart';
 import '../widgets/p9_completion_button.dart';
+import '../widgets/p9_scene.dart';
 import 'discover_screen.dart';
 import 'activity_detail_screen.dart';
 import 'progress_screen.dart';
@@ -39,6 +40,8 @@ class _TodayBody extends ConsumerWidget {
         Text('Hôm nay', style: Theme.of(context).textTheme.headlineSmall),
         const SizedBox(height: P9Space.sm),
         Text(date),
+        const SizedBox(height: P9Space.lg),
+        const P9SceneBanner(asset: P9Scenes.today, height: 128),
         const SizedBox(height: P9Space.xl),
         P9ProgressSummary(overview: overview),
         const SizedBox(height: P9Space.lg),

@@ -38,6 +38,14 @@ flutter:
   assets:
     - assets/brand/power9-logo-3d.png
     - assets/fonts/
+    - assets/illustrations/login-office-v1.png
+    - assets/illustrations/today-morning-v1.png
+    - assets/illustrations/movement-walk-v1.png
+    - assets/illustrations/nutrition-lunch-v1.png
+    - assets/illustrations/relax-breathe-v2.png
+    - assets/illustrations/connection-colleagues-v2.png
+    - assets/illustrations/workspace-ergonomic-v2.png
+    - assets/illustrations/recovery-evening-v1.png
 
 flutter_launcher_icons:
   android: true

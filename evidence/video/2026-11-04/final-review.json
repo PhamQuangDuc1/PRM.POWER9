@@ -1,0 +1,31 @@
+{
+  "durationSeconds": 395.04,
+  "fullVideoAndAudioDecodePassed": true,
+  "resolution": "1920x1080",
+  "meanVolumeDb": -20.3,
+  "peakVolumeDb": -4.5,
+  "subtitleCount": 64,
+  "visualReviewFrames": 15,
+  "sha256": "fac5f7b341026a8a58536eff5f5d703cb3fda98bdb9598a06fddd495ec1c4b64",
+  "rawFramesExported": false,
+  "humanListenedToEntireFinalMovie": false,
+  "visualPrivacyReviewPending": false,
+  "representativeFramesReviewed": 18,
+  "rawPersonalAccountPickerNeverRecorded": true,
+  "browserChromeAndFirebaseAvatarRemoved": true,
+  "remoteConfigPublisherColumnMasked": true,
+  "slidePptxSha256": "e37d1d0da013b7ddb04ab2b6b89783cfb572a38b150ed38271e1130d081a41e3",
+  "slidesChanged": [
+    8,
+    12,
+    15
+  ],
+  "otherTwelveSlidesPixelIdentical": true,
+  "nativePowerPointOpened": true,
+  "slideCount": 15,
+  "modelTasksConsumed": 0,
+  "modelTasksUsed": 49,
+  "modelTaskLimit": 50,
+  "demoDataCleanupServerVerified": true,
+  "billingEnabled": false
+}

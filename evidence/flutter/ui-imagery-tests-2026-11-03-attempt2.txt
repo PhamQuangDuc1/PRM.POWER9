@@ -1,0 +1,51 @@
+00:00 +0: loading D:/PRM393/PRM.POWER9/test/analytics_debug_marker_test.dart
+00:00 +0: D:/PRM393/PRM.POWER9/test/analytics_debug_marker_test.dart: native SDK correlation marker is opt-in and disabled outside debug
+00:00 +1: D:/PRM393/PRM.POWER9/test/analytics_debug_marker_test.dart: debug marker rejects free text and email-shaped values
+00:00 +2: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: leaving a paused session preserves it on Stay and discards without recording
+00:00 +3: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: leaving a paused session preserves it on Stay and discards without recording
+00:00 +4: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: leaving a paused session preserves it on Stay and discards without recording
+00:01 +5: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: leaving a paused session preserves it on Stay and discards without recording
+00:01 +6: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: leaving a paused session preserves it on Stay and discards without recording
+00:01 +7: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: leaving a paused session preserves it on Stay and discards without recording
+00:01 +8: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: leaving a paused session preserves it on Stay and discards without recording
+00:01 +9: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: leaving a paused session preserves it on Stay and discards without recording
+00:02 +10: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: leaving a paused session preserves it on Stay and discards without recording
+00:02 +11: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: leaving a paused session preserves it on Stay and discards without recording
+00:03 +12: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: leaving a paused session preserves it on Stay and discards without recording
+00:03 +13: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: leaving a paused session preserves it on Stay and discards without recording
+00:03 +14: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: leaving a paused session preserves it on Stay and discards without recording
+00:03 +15: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: leaving a paused session preserves it on Stay and discards without recording
+00:03 +16: D:/PRM393/PRM.POWER9/test/notification_accessibility_test.dart: unread badge retains a usable notification action label
+00:03 +17: D:/PRM393/PRM.POWER9/test/notification_accessibility_test.dart: unread badge retains a usable notification action label
+00:03 +18: D:/PRM393/PRM.POWER9/test/notification_accessibility_test.dart: unread badge retains a usable notification action label
+00:03 +19: D:/PRM393/PRM.POWER9/test/notification_accessibility_test.dart: unread badge retains a usable notification action label
+00:03 +20: D:/PRM393/PRM.POWER9/test/notification_accessibility_test.dart: unread badge retains a usable notification action label
+00:04 +21: D:/PRM393/PRM.POWER9/test/auth_gate_test.dart: sign-out removes pushed private routes as well as Home
+00:04 +22: D:/PRM393/PRM.POWER9/test/report_flow_test.dart: PDF embeds Vietnamese and measured duration; long table paginates
+00:04 +23: D:/PRM393/PRM.POWER9/test/report_flow_test.dart: PDF embeds Vietnamese and measured duration; long table paginates
+00:04 +24: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:04 +25: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:04 +26: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:04 +27: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:04 +28: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:04 +29: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:04 +30: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:04 +31: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:04 +32: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:04 +33: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:04 +34: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:04 +35: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:05 +36: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:05 +37: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:05 +38: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:05 +39: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:05 +40: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:05 +41: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:05 +42: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:05 +43: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:05 +44: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:07 +45: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:07 +46: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:07 +47: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 360 dp with 1.5 text scaling
+00:07 +48: D:/PRM393/PRM.POWER9/test/responsive_main_screens_test.dart: main screens fit 412 dp with 1.5 text scaling
+00:08 +49: All tests passed!

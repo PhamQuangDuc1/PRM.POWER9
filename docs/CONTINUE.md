@@ -1,5 +1,62 @@
 # Mốc tiếp tục Power9 Office Routine
 
+## Cập nhật mới nhất — Analytics, TalkBack và OneD, 04/11/2026
+
+- DebugView đã nhận `view_activity`, mở Parameters thấy `activity_id=move-walk`. Bằng chứng server đã cắt bỏ thông tin riêng: `evidence/analytics/2026-11-04/server-receipt.json` và ảnh cùng thư mục. Video quay trước đó vẫn thể hiện trạng thái chờ tại thời điểm quay.
+- Người dùng nghe/vuốt và xác nhận cả ba phần TalkBack đạt, bổ sung nhánh timer sau “Ở lại” đã đạt trước đó. Phạm vi và giới hạn ở `evidence/accessibility/2026-11-04-manual-flows/result.json`. Đã khôi phục trợ năng và Analytics debug.
+- TC10[3] chạy lại thật nhưng chưa đạt: model báo hoàn tất sau 12 bước, app và Firestore vẫn chưa có giờ mới. Giữ trace failure; không tính native thành ARTEMIS. Tổng vẫn 32/33, budget đã dùng 50/50. Không gọi thêm trước khi được tăng trần rõ ràng.
+- Đã chuyển toàn bộ 8 commit và thay đổi đang làm sang OneD, bảo toàn cây làm việc và có Git bundle dự phòng. Chưa push/tạo PR thay thế; nhánh cũ và PR #3 vẫn được giữ cho đến khi PR OneD được xác minh.
+- Spark/billing tắt và upload=false giữ nguyên theo yêu cầu không phát sinh chi phí.
+
+## Mốc hiện hành — đã tiếp tục và hoàn tất video/slide 04/11/2026
+
+Video `output/lab3/Power9_Lab3_Demo_Final.mp4` hoàn tất: 395,04 giây, 1080p, giọng Hoài My, SRT 64 mục. Có Login thật, lược bỏ bộ chọn Google, Home A sau đối chiếu, các luồng app và Console thật. Decode toàn bộ hình/tiếng đạt; rà 18 frame, che cột người xuất bản và cắt Chrome/profile/Google avatar. Audit: `evidence/video/2026-11-04/final-review.json`. Người thật chưa nghe/xem trọn bản cuối.
+
+Slide mới `Power9_Lab3_Final_Video_20261104.pptx/PDF`; primary Designer.pptx/Slides.pdf đồng bộ. Finalizer/layout/font/import đạt, PowerPoint mở/xuất đủ15trang. Chỉ slide8/12/15 thay hình,12trang khác pixel-identical. Notes cập nhật TalkBack/DebugView/video. Timeline thực ở `docs/video-script-spark-2026-11-04.md`.
+
+Đã dọn dữ liệu demo qua app và server kiểm tra bốn document không còn. Debug khôi phục, UIAutomator dừng, máy về Home A; không cần quay lại. DebugView buổi quay vẫn0thiết bị, FCM/Crashlytics ghi rõ lịch sử, không gửi mới/publish/bật billing. ARTEMIS32/33, TC10[3]/Pro/TalkBack các luồng khác còn thiếu. Budget49/50 giữ nguyên, không tự dùng lượt tiếp theo. Storageproduction bỏ theo yêu cầu giữSpark.
+
+Chưa upload/chia sẻ công khai hoặc tự commit/push/merge; nhánh codex/lab3-review-and-slides, OneD nguyên. Báo cáoPDFmốccũ chưa đồng bộ nếu dùng đểnộp. Checkpoint tạm dừng trong `docs/video-resume-2026-11-04.md` đã được xử lý; các mốc bên dưới là lịch sử.
+
+## Lịch sử trước buổi quay — 04/11/2026, đã chốt slide và kịch bản
+
+Bổ sung sau kiểm tra thủ công: người dùng xác nhận nghe được tab Hôm nay sau “Ở lại”, vuốt tới và chạm hai lần mở lại dialog. Đã dọn phiên chưa ghi nhận, về Home và khôi phục trợ năng; bằng chứng `evidence/accessibility/2026-11-04-manual-focus/result.json`. Chỉ đóng nhánh này, TalkBack các luồng khác vẫn cần kiểm tra. Không thay snapshot tự động lịch sử. Slide đã xuất trước kết quả này, cần đồng bộ ở lần xuất tiếp theo.
+
+Runner: 29 test offline đạt, gồm guard frame/tap riêng tư, khóa sau lỗi, startup worker thật và viewport TC10. Chưa smoke guard trên điện thoại/chưa gọi model; 49/50 và 32/33 giữ nguyên. Xem `docs/artemis-runner-hardening-2026-11-04.md`; trước lượt mới cần preflight thiết bị và phân bổ lượt còn lại (batch bốn task trước đã hết).
+
+Người dùng yêu cầu bỏ các phần phát sinh phí, giữ Spark/billing tắt/upload=false; sau đó chọn “Chưa tiện quay; hoàn thiện slide và kịch bản trước”. Không quay hoặc kích hoạt micro trong lượt này.
+
+- UI mới và APK đã có; primary APK đã đồng bộ với bản UI03/11, SHA-256 77955787ecb33e60305b3e49ca62894ba003ab335a39f85f064084c870eea41e. 49 Flutter tests đạt, analyzer sạch; 15 màn ở360/412dp, chữ1,5 lần.
+- A → B → A đã kiểm chứng và dọn dữ liệu thử. Lịch/lịch sử A không sang B; B có6mục inbox không xuất hiện ởA. Định danh chỉ lưu ignored.
+- Bốn lượt ARTEMIS đã dùng đủ theo xác nhận: TC16[2]/[3] đạt với log SDK độc lập; TC10[3] vẫn failed; Pro189,02giây,9bước, chưa đủ15phút. Tổng32/33 runID,31pytestpasses +1audit lịch sử;62attempts. Bộ đếm49/50; không tự dùng lượt thứ5.
+- Pro mở Tài khoản trái goal, có1khung chứa email có thể đã gửiGemini. Đã báo người dùng; rawframe không công khai, không đưa vào replay/slide; không gọi thêmmodel. Trước khi cân nhắc chạy Pro mới cần chặn bề mặt riêng tư bằng cơ chế thực thi, không chỉ prompt.
+- Đã dọn lịch fixture ARTEMIS đúng timestamp/updateTime; khôi phục Analyticsdebug; tắt daemon và UIAutomator, máy vềHomeA. BillingAPI vẫnfalse.
+- Slide cuối15trang: output/lab3/Power9_Lab3_Final_Spark_20261104.pptx vàPDF cùngtên. Finalizer/layout/font/chart/import đạt; mở PowerPoint và kiểm tra15trang; source notes được cập nhật rõ ràng. Primary Designer.pptx/Slides.pdf và preview đã đồng bộ; bản cũ giữ trong .build/lab3-before-ui.
+- Kịch bản quay8–9phút: docs/video-script-spark-2026-11-04.md. Video cuối chưa quay theo lựa chọn người dùng. Báo cáoPDF10trang mốc cũ chưa đồng bộ số liệu mới; checklist nêu rõ nếu dùng đểnộp.
+- Repo vẫn codex/lab3-review-and-slides; OneD giữ nguyên. Không commit/push/merge mới trong đợtUI này.
+
+Tiếp theo khi người dùng sẵn sàng: nghe/vuốt TalkBack ở các luồng còn lại; quay app + FirebaseConsole với giọng người dùng theo kịch bản; nếu nộp báo cáoPDF thì đồng bộ số liệu. Storage production bỏ khỏi phạm vi triển khai vì chi phí, không đánh dấu đạt rubric. Các mốc phía dưới là lịch sử.
+
+## Quyết định billing mới nhất — giữ Spark
+
+Sau khi được giải thích rằng Blaze/cảnh báo không bảo đảm chi phí0, người dùng nói rõ “nếu vậy đừng bật”. Giữ billing tắt/Spark và report_upload_enabled=false; không bật Blaze hoặc xin bật lại chỉ để đóng tiêu chí. Storageproduction tiếp tục chưa hoàn tất. Tiếp tục ARTEMIS trong4lượt đã được xác nhận, slide/video theo bằng chứng và giới hạn này.
+
+## Hai tài khoản đã kiểm chứng; người dùng xác nhận chạy lại4lượt ARTEMIS
+
+A→B→A hoàn tất: UID/email so sánh cục bộ xác nhận khác tài khoản; lịch/completionA không sangB, vềA giữ timestamp, đã hoàn tác/xóa đúng sentinel. InboxB có6mục không thấy ởA (A rỗng trước/sau); auditbổsung ở evidence/auth/2026-11-03-ui-isolation/inbox-observation-audit.json. Máy vềHomeA, UIAutomator dừng. Không còn sentinel của lượt cách ly.
+
+Người dùng vừa xác nhận mới rõ ràng: **đúng4lượt** TC10[3],TC16[2],TC16[3],Pro15–20phút; gửiảnh/câyPower9 sangGoogleGemini, giữused45 và tổngtrần50, khôngđổikey/model/bậtbilling. Xin duyệt lại theo xác nhận mới, không tự vượt nếu bị chặn. Preflight hiệnbillingEnabled=false. Chưa cộng pass hoặc quota khả dụng chỉ từ xác nhận.
+
+## Hai tài khoản — đang chờ người dùng chọn B
+
+Đã bắt đầu lượt thậtA→B→A theo yêu cầu tiếp tục. Tài khoản hiện hành được đặt aliasA và lưu định danh chỉ trong ignored `.build/isolation-ui-20261103`. Đã xác minh trước đó không có move-walk hômnay, tạo một schedule và completion checkin quaapp, đối chiếu exact-document server ở evidence/auth/2026-11-03-ui-isolation/a-sentinel-confirmed.json. Dữ liệu thử này chưa cleanup. InboxA rỗng nên chưa đủ bằng chứng cách ly inbox. Đã logoutA, mở bộ chọn Google và dừngUIAutomator; người dùng phải tự chọnB rồi báo vàoHome. Chưa chạy kiểm traB hoặc quayA. Đã chuẩn bị `.build/isolation-verify-b.py`, chỉ chạy sau xác nhận người dùng; script dừng ở bộ chọn để người dùng chọn lạiA. Chi tiết docs/account-isolation-2026-11-03.md. Không tăngARTEMIS, không gửiFCM hoặc bậtbilling.
+
+## UI và hình ảnh — tối 03/11/2026
+
+Tiếp theo đã thực hiện yêu cầu kiểm tra tự động nhánh TalkBack/timer: attempt3 đạt hành vi11/11, paused02:56 giữ sauỞlại; Hômnay sauỞlại click/mở dialog được nhưng focusedBeforeActivation=false (requestaccepted).6/7actionthấyfocus; vẫn cần người thật nghe/vuốt.Đã bỏphiên,khôi phục settingsnull/0 và vềHome. Chi tiết docs/timer-focus-recheck-2026-11-03.md. Không gọiARTEMIS/model, không ghi completion.
+
+Đã thực hiện yêu cầu nâng UI/UX với8ảnh image_gen, ảnh đầu màn/thumbnails, theme và thẻ hướng dẫn; timer/nút đứng trước hướng dẫn. Flutter49/49 đạt; analyzer sạch; APK riêng output/lab3/Power9-Lab3-UI-20261103-debug-arm64.apk đã build/cài, marker p9_20261103_ui_a84d2c0e. Xem docs/ui-refresh-2026-11-03.md cho hash/log/giới hạn. Người dùng xác nhận có thể thử TalkBack và đã có tài khoảnB, chưa tính hai mục này đạt. Tiếp tục cùng người dùng: TalkBack/focus, A→B→A, ARTEMIS/quota/duyệt trước Storage billing, quay video rồi chốt slide. Budget model vẫn45/45, không sửa used/limit hoặc gọi model trong đợtUI. Không đồng bộ Figma. Ưu tiên mốc này hơn các quyết định trì hoãn cũ bên dưới.
+
 ## Kiểm chứng bổ sung 03/11/2026
 
 Auth offline/retry/logout/Back đạt trên Xperia; hai tài khoản chưa thử vì người dùng chỉ có một tài khoản. Analytics11/12 event có native SDK evidence, không đồng nhất DebugView server; export_report còn phụ thuộc Storage. Trợ năng17/17 hành vi đạt,21/21 request được chấp nhận nhưng20/21 snapshot thấy focus: còn Hôm nay sau Ở lại, strict check vẫn failed. Người dùng chọn tự động trước, nghe/vuốt thủ công để sau. Đã sửa nhãn chuông, Flutter49/49 đạt, analyzer sạch, APK mới build/cài và dữ liệu/mạng/TalkBack/debug đã khôi phục. Chi tiết: docs/lab3-verification-2026-11-03.md. Hướng dẫn demo đầy đủ: docs/lab3-demo-guide.md. Không gọi thêm ARTEMIS, không bật billing/đồng bộ Figma; video/thầy để sau.

@@ -12,6 +12,7 @@ import 'package:power9_office_routine/screens/connection_screen.dart';
 import 'package:power9_office_routine/screens/discover_screen.dart';
 import 'package:power9_office_routine/screens/food_screen.dart';
 import 'package:power9_office_routine/screens/home_shell.dart';
+import 'package:power9_office_routine/screens/login_screen.dart';
 import 'package:power9_office_routine/screens/notification_screen.dart';
 import 'package:power9_office_routine/screens/profile_screen.dart';
 import 'package:power9_office_routine/screens/progress_screen.dart';
@@ -71,6 +72,7 @@ void main() {
         await notifications.dispose();
       });
       final screens = <Widget>[
+        const LoginScreen(),
         const HomeShell(user: AppUser(uid: 'layout-test')),
         const TodayScreen(),
         const FoodScreen(),
@@ -112,11 +114,13 @@ void main() {
             ),
           );
           await tester.pumpAndSettle();
+          final renderError = tester.takeException();
           expect(
-            tester.takeException(),
+            renderError,
             isNull,
             reason:
-                '${screen.runtimeType} overflow or render error at $width dp / 1.5 text',
+                '${screen.runtimeType} overflow or render error at $width dp / 1.5 text'
+                '${renderError is FlutterError ? renderError.diagnostics.map((d) => d.toStringDeep()).join() : ''}',
           );
           expect(find.byType(Scaffold), findsWidgets);
           await expectLater(

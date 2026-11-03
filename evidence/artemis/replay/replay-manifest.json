@@ -1884,17 +1884,17 @@
     {
       "case": "TC10",
       "repetition": 3,
-      "traceId": "0b6dc370-50a9-4ef2-9a4a-15a67b54becd",
+      "traceId": "e0877c09-385d-43b1-afe9-e05ff0f75e09",
       "status": "completed",
       "pytestPassed": false,
       "verified": false,
       "auditOnly": false,
       "publicOutput": {
-        "original_time": "Chưa chọn giờ",
         "new_time": "11:00",
-        "total_before": 0,
-        "total_after": 2,
-        "cancel_kept_original": true
+        "total_after": 1,
+        "total_before": 1,
+        "cancel_kept_original": true,
+        "original_time": "Chưa chọn giờ"
       },
       "failureDiagnosis": null,
       "analyticsObservation": null,
@@ -1904,98 +1904,63 @@
           "seconds": 0.0,
           "action": "click",
           "role": "pre",
-          "image": "images/cf822393bd3f41fe0ed3f8216ee73be55bc06c5e6bebe7029e0a355723706e12.jpg"
+          "image": "images/6da3e60931471c9f285c4a8b2909f195cd38ca7fc9b7fcda049a3bbc82d37cf5.jpg"
         },
         {
           "step": 1,
           "seconds": 0.0,
           "action": "click",
           "role": "post",
-          "image": "images/6d49632cd9ea12f8325f7c30a4ba38f33c754ee0b4b6cc88a97a434bb2c9c40e.jpg"
+          "image": "images/3852373ea65a820264dcfceb7777c4962eadd56b28a791ea165cac81218ecbe5.jpg"
         },
         {
           "step": 2,
-          "seconds": 4.84,
+          "seconds": 14.36,
           "action": "click",
           "role": "post",
-          "image": "images/6d218615454550be5052faa04f5a4c1d9efe4c4d5053aae00d7803a859ceadc2.jpg"
+          "image": "images/d4fc0c001d3e2934dc218809bffd19fec14fef7ea68c41c4f34c4d23cd8a7cbc.jpg"
         },
         {
           "step": 3,
-          "seconds": 10.23,
+          "seconds": 19.88,
           "action": "click",
           "role": "post",
-          "image": "images/6623e7b07c4e8515dd7f5bf0cf71d302148013d4a9be42ffada86685fba935b1.jpg"
-        },
-        {
-          "step": 4,
-          "seconds": 15.11,
-          "action": "click",
-          "role": "post",
-          "image": "images/ccbd31b7796d46be5034f0d58f208500cf468eb6eb40ea60100b4d1bacb1116d.jpg"
+          "image": "images/63419f5dbd859362a52c5906a7024cd36419473dea974e47c3a238ad0646547e.jpg"
         },
         {
           "step": 5,
-          "seconds": 19.22,
+          "seconds": 31.18,
           "action": "click",
           "role": "post",
-          "image": "images/4e945fa8fb61a8ba9cad56d06636dabb4d460e262c771dbd383d1d95af2bf4fb.jpg"
-        },
-        {
-          "step": 6,
-          "seconds": 23.22,
-          "action": "click",
-          "role": "post",
-          "image": "images/52917d7a0c4fb5bff312cb9e2d4f74459ac3191742410e3c636d1bd0a4028e69.jpg"
-        },
-        {
-          "step": 9,
-          "seconds": 35.72,
-          "action": "click",
-          "role": "post",
-          "image": "images/52488d01c659a3f5fac3bd2b88bd7df9faff03355e0aaacabc50c12927a2ddd0.jpg"
-        },
-        {
-          "step": 10,
-          "seconds": 40.59,
-          "action": "click",
-          "role": "post",
-          "image": "images/3b0511b7039a521fe413b7ea4afbdbda24919bff92163a16db0eebc8cdae758a.jpg"
+          "image": "images/97792ac551e0abd54f2cd9457c5cc25fdb5d5b64ff6ddfd0dc242cae185403fb.jpg"
         },
         {
           "step": 11,
-          "seconds": 45.38,
+          "seconds": 73.46,
           "action": "click",
           "role": "post",
-          "image": "images/1f73e3748bba5fc8549b07b2b7fc6d155f8e7210d37565611cd359f5ed4dd8c7.jpg"
+          "image": "images/e5186b3a3652cf96980bcf7f8309ba3dd52273bf132eccc485d93cdad06eafe0.jpg"
         },
         {
           "step": 12,
-          "seconds": 50.9,
+          "seconds": 78.26,
           "action": "click",
           "role": "post",
-          "image": "images/dfb4f0b7bd10dda2374eed21e8338546fc0115a6bb769fcf0c4ecac52ee27439.jpg"
+          "image": "images/242dc56652dd04a1a43c8ec64a7f07e3c53f87adb8742684f6a1fb7a4940343c.jpg"
         },
         {
-          "step": 13,
-          "seconds": 57.0,
+          "step": 17,
+          "seconds": 103.35,
           "action": "click",
           "role": "post",
-          "image": "images/84e83b0cc05e51ebed039e0440c2376e693bcb94212057ee2b7d7a4da191e4de.jpg"
+          "image": "images/50eddb30d43325b7f224783b46735e90eef6bfe8a47e318459dee984703fcaee.jpg"
         },
         {
-          "step": 14,
-          "seconds": 61.65,
+          "step": 22,
+          "seconds": 132.54,
           "action": "click",
           "role": "post",
-          "image": "images/80b8598b3b41561029931bdb71d0d891bb5a666413d01fadf262eb177995e5fd.jpg"
-        },
-        {
-          "step": 15,
-          "seconds": 66.47,
-          "action": "click",
-          "role": "post",
-          "image": "images/0784b75625004146b69ec7f54b423a8a69b336b753508ec12d3e9de9643d71ba.jpg"
+          "image": "images/23cd66491c43a1d8c4b89a0e65bcaab53a51aa3d4c44f6f63ba7aaa1f3df5b8f.jpg"
         }
       ]
     },
@@ -2417,69 +2382,120 @@
     {
       "case": "TC16",
       "repetition": 2,
-      "traceId": "1e5d7e94-81fe-4f10-bb07-b2caae9e6f95",
+      "traceId": "10b6b2a3-d8a4-4f6c-b73f-34f1f7b95f8b",
       "status": "completed",
-      "pytestPassed": false,
-      "verified": false,
+      "pytestPassed": true,
+      "verified": true,
       "auditOnly": false,
       "publicOutput": {
-        "activity_title": "Chi tiết hoạt động",
-        "instructions_visible": true
+        "instructions_visible": true,
+        "activity_title": "Đi bộ giữa giờ"
       },
       "failureDiagnosis": null,
-      "analyticsObservation": null,
+      "analyticsObservation": {
+        "source": "native FA-SVC SDK log filtered by unique Power9 debug build marker and task time",
+        "event": "view_activity",
+        "activityId": "move-walk",
+        "observed": true,
+        "matchingLineCount": 1,
+        "rawLogsExported": false,
+        "syntheticBuildMarker": "p9_20261103_ui_a84d2c0e"
+      },
       "frames": [
         {
           "step": 1,
           "seconds": 0.0,
           "action": "click",
           "role": "pre",
-          "image": "images/e83656fbaa7647950ab8e4f9b9fb88e585f8c223ca5ead441e4ced9d7b36a8f8.jpg"
+          "image": "images/6eaa4f33b5d1d3b4e53b68b4ad9ff6e3821a6008c5d1dce89f235951c0170cf7.jpg"
         },
         {
           "step": 1,
           "seconds": 0.0,
           "action": "click",
           "role": "post",
-          "image": "images/94897203dc4bb9cfbca6275605bf6b35f3ff0c2b241f88b50be53b90060ef710.jpg"
+          "image": "images/dfff2ddcb7c21e87c832ff599dd24d1c90261abe569d0674635ab17279d9d2c3.jpg"
         },
         {
           "step": 2,
-          "seconds": 5.29,
+          "seconds": 4.76,
           "action": "click",
           "role": "post",
-          "image": "images/46a3d74e8624c6d81f91c54b10c3ffd159a689f345051262d2e961cc9882a04c.jpg"
+          "image": "images/1ccf262c84bd7761f74c75a723c356eefc10511383a227151a72f45fa87e7bad.jpg"
+        },
+        {
+          "step": 4,
+          "seconds": 17.54,
+          "action": "click",
+          "role": "post",
+          "image": "images/36a271b3085019eaaac036784705816c01164ff44cee1e74a3b451157702f20b.jpg"
+        },
+        {
+          "step": 5,
+          "seconds": 22.73,
+          "action": "click",
+          "role": "post",
+          "image": "images/fab1c55246dd05207e7da091e1316bb6389600650c7771d5df5655893d578ed0.jpg"
+        },
+        {
+          "step": 6,
+          "seconds": 35.64,
+          "action": "click",
+          "role": "post",
+          "image": "images/a4c98753ff924cfa316808a8d3ed33c45a95961a0b15cfd9e76db57989eaa817.jpg"
         }
       ]
     },
     {
       "case": "TC16",
       "repetition": 3,
-      "traceId": "491437b1-4636-4315-867b-b177c324ef14",
+      "traceId": "9bd3602d-1b3c-4211-9ebb-f0f18e6e1879",
       "status": "completed",
-      "pytestPassed": false,
-      "verified": false,
+      "pytestPassed": true,
+      "verified": true,
       "auditOnly": false,
       "publicOutput": {
-        "activity_title": "Chi tiết hoạt động",
+        "activity_title": "Đi bộ giữa giờ",
         "instructions_visible": true
       },
       "failureDiagnosis": null,
-      "analyticsObservation": null,
+      "analyticsObservation": {
+        "source": "native FA-SVC SDK log filtered by unique Power9 debug build marker and task time",
+        "event": "view_activity",
+        "activityId": "move-walk",
+        "observed": true,
+        "matchingLineCount": 1,
+        "rawLogsExported": false,
+        "syntheticBuildMarker": "p9_20261103_ui_a84d2c0e"
+      },
       "frames": [
         {
           "step": 1,
           "seconds": 0.0,
           "action": "click",
           "role": "pre",
-          "image": "images/8b063a74add9bfb5190886eaf892149af861db14ee3613d786d33dd3ca10e1c2.jpg"
+          "image": "images/3554984ee5af77d54d4e9539cf2948d11d4ae83d290becf026e66cfcd23b4b40.jpg"
         },
         {
-          "step": 1,
-          "seconds": 0.0,
+          "step": 2,
+          "seconds": 40.46,
           "action": "click",
           "role": "post",
-          "image": "images/4f4fe2952159b743e41667f830bce40a7a729073876839bd16ebfbd7f2ca4084.jpg"
+          "image": "images/2d39f2d73976f22dd59830fb11b159d658f633ec3c75ade4724870673841e5e5.jpg"
+        },
+        {
+          "step": 5,
+          "seconds": 97.81,
+          "action": "click",
+          "role": "post",
+          "image": "images/d6504b3cd90569e3902b45377306bb8aeebe876f5ece2e2b9a4fe5900a87748c.jpg"
+        },
+        {
+          "step": 6,
+          "seconds": 204.77,
+          "action": "click",
+          "role": "post",
+          "image": "images/485b984e4f98b3a2c9b457f5c728f8dfa1d8617ce839343445f4c86fa4899ee1.jpg"
         }
       ]
     }

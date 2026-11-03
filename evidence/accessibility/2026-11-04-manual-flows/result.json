@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-04",
+  "method": "Human listened and swiped TalkBack on Xperia; explicit user replies",
+  "parts": [
+    {
+      "part": 1,
+      "coverage": [
+        "home_tab_and_notification_labels",
+        "discover_duration_filter_selected_state",
+        "schedule_missing_time_validation_and_cancel",
+        "delete_confirmation_keep_schedule_and_return"
+      ],
+      "humanReply": "Đã thử đủ, nghe rõ và thao tác được",
+      "passed": true
+    },
+    {
+      "part": 2,
+      "coverage": [
+        "food_instructions_checklist_toggle_and_revert",
+        "connection_activity_labels_and_back",
+        "notification_inbox_and_back",
+        "progress_pdf_creation_controls_cloud_upload_disabled_and_back"
+      ],
+      "humanReply": "Đã thử đủ, nghe rõ và thao tác được",
+      "passed": true
+    },
+    {
+      "part": 3,
+      "coverage": [
+        "workspace_instructions_checklist_toggle_and_revert",
+        "recovery_instructions_checklist_toggle_and_revert",
+        "account_menu_labels_and_return_home"
+      ],
+      "humanReply": "Đã thử đủ, nghe rõ và thao tác được",
+      "passed": true
+    }
+  ],
+  "definedThreePartChecklistPassed": true,
+  "allPossibleAppStatesVerified": false,
+  "loginAccountPickerIncluded": false,
+  "destructiveConfirmationRequested": false,
+  "newCompletionRequested": false,
+  "cloudUploadEnabled": false,
+  "modelCalls": 0,
+  "automaticHistoricalFailuresPreserved": true,
+  "priorTimerFocusEvidence": "evidence/accessibility/2026-11-04-manual-focus/result.json",
+  "settingsRestored": true,
+  "analyticsDebugRestored": true
+}

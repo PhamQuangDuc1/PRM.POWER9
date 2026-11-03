@@ -4,7 +4,7 @@ from unittest.mock import patch
 
 import pytest
 
-from trace_observations import terminal_output
+from trace_observations import terminal_output, edit_sequence_from_labels
 
 
 def database(tmp_path):
@@ -45,3 +45,12 @@ def test_native_observations_are_read_verbatim(tmp_path):
     with sqlite3.connect(path) as db:
         db.execute('INSERT INTO steps VALUES (?,1,?)',('target',payload))
     assert terminal_output(path,'target',timeout=0)=={'seen':False,'count':0}
+
+
+def test_edit_sequence_requires_real_cancel_state_between_both_forms():
+    form = ['Đổi lịch hoạt động', '11:00']
+    old = ['Đi bộ giữa giờ', 'Chưa chọn giờ']
+    home = ['Power9 Office Routine', 'Đi bộ giữa giờ\n11:00', 'Hoạt động hôm nay · 1']
+    assert edit_sequence_from_labels([form,old,form,home], 'Chưa chọn giờ','11:00')['verified']
+    assert not edit_sequence_from_labels([form,home], 'Chưa chọn giờ','11:00')['verified']
+    assert not edit_sequence_from_labels([form,old,form,home[:-1]+['Hoạt động hôm nay · 2']], 'Chưa chọn giờ','11:00')['verified']

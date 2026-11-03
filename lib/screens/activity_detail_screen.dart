@@ -5,6 +5,7 @@ import '../models/activity.dart';
 import '../models/schedule.dart';
 import '../theme/p9_theme.dart';
 import '../widgets/p9_button.dart';
+import '../widgets/p9_scene.dart';
 import '../viewmodels/activity_providers.dart';
 import '../viewmodels/completion_providers.dart';
 import '../widgets/p9_async_content.dart';
@@ -40,6 +41,8 @@ class ActivityDetailScreen extends ConsumerWidget {
       body: ListView(
         padding: const EdgeInsets.all(P9Space.lg),
         children: [
+          P9SceneBanner(asset: P9Scenes.forActivity(activity)),
+          const SizedBox(height: P9Space.xl),
           Text(
             activity.groupName,
             style: Theme.of(context).textTheme.labelLarge,
@@ -59,13 +62,7 @@ class ActivityDetailScreen extends ConsumerWidget {
           const SizedBox(height: P9Space.xl),
           Text('Cách thực hiện', style: Theme.of(context).textTheme.titleLarge),
           for (final (index, step) in activity.steps.indexed)
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: P9Space.md),
-              child: Text(
-                '${index + 1}. $step',
-                style: Theme.of(context).textTheme.bodyLarge,
-              ),
-            ),
+            P9InstructionStep(number: index + 1, text: step),
           const SizedBox(height: P9Space.lg),
           Text(activity.note, style: Theme.of(context).textTheme.bodyMedium),
           const SizedBox(height: P9Space.xl),

@@ -1,3 +1,21 @@
+# Demo trực tiếp trên máy tính — Android Emulator
+
+Khi không mang Xperia, dùng [kịch bản demo Android Emulator 8–10 phút](../../docs/demo-android-emulator-2026-11-04.md). Có hướng dẫn chuẩn bị APK x86_64, lời nói từng cảnh và phương án dự phòng. Kịch bản chưa được diễn tập trên AVD; bằng chứng Xperia vẫn ghi đúng thiết bị nguồn. Kết quả mới: DebugView server đã xác minh `view_activity/activity_id=move-walk` và người dùng xác nhận ba phần TalkBack thủ công. Video dưới đây giữ nguyên nội dung tại thời điểm quay.
+
+# Video và slide hiện hành — 04/11/2026
+
+Đã có `Power9_Lab3_Demo_Final.mp4` (6 phút 35 giây, Hoài My, 1080p) và SRT cùng tên. Slide chính Designer.pptx/Slides.pdf đã đồng bộ bản Final_Video_20261104. Xem [timeline và lời đọc thực](../../docs/video-script-spark-2026-11-04.md) và README của gói.
+
+DebugView chưa nhận event trong buổi quay; FCM/Crashlytics lịch sử được ghi rõ; Storage production tắt. Dữ liệu thử đã dọn và debug khôi phục. Các chỉ dẫn bên dưới là tư liệu chuẩn bị/lịch sử, không thay metadata video hiện hành.
+
+---
+
+# Kịch bản hiện hành — giữ Spark
+
+Ưu tiên [kịch bản ngày 04/11/2026](../../docs/video-script-spark-2026-11-04.md): UI mới, hai tài khoản đã kiểm chứng, ARTEMIS32/33, Pro189,02giây chưa đạt; không bật billing/upload production. Người dùng chọn chưa tiện quay, hoàn thiện slide và kịch bản trước. Các đoạn bên dưới là runbook mốc cũ.
+
+---
+
 # Demo và hướng dẫn sử dụng Power9
 
 Hướng dẫn thao tác hiện hành: [Sử dụng app và demo từng luồng](../../docs/lab3-demo-guide.md).

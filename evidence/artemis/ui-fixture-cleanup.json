@@ -1,0 +1,10 @@
+{
+  "dateKey": "2026-11-03",
+  "activityId": "move-walk",
+  "ownFixtureDeleted": true,
+  "guardedByCreatedAtAndUpdatedAt": true,
+  "deleteUsedUpdateTimePrecondition": true,
+  "completionAbsent": true,
+  "method": "exact-document authenticated server cleanup of own fixture; not an app or ARTEMIS test",
+  "identifiersExported": false
+}

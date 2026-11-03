@@ -1,54 +1,29 @@
-# Gói Lab 3 Power9 Office Routine
+# Gói Lab 3 Power9 — 04/11/2026
 
-Hướng dẫn demo hiện hành: [sử dụng app và các flow](../../docs/lab3-demo-guide.md). Kiểm chứng bổ sung ngày03/11: [Analytics/Auth/trợ năng](../../docs/lab3-verification-2026-11-03.md); Auth offline/retry đạt; hai tài khoản chưa thử vì chỉ có một tài khoản. Đã sửa nhãn chuông, Flutter49/49 đạt và APK mới đã cài. Trợ năng17/17 hành vi đạt; còn một focus snapshot sau Ở lại chưa đóng, chưa kiểm tra nghe/vuốt thủ công. PDF/slide lưu mốc02/11; đọc checkpoint03/11 cho tiến độ bổ sung. Không gọi thêm ARTEMIS.
+Video và slide đã hoàn thiện theo bằng chứng hiện có, giữ Spark và billing tắt. Các tiêu chí kiểm thử còn thiếu được nêu riêng, không ghi toàn bộ Lab 3 đạt 100%.
 
-Đóng gói 03/11/2026; bằng chứng kiểm thử đến 03/11/2026. Đây là snapshot mã, bản cài và bằng chứng thật; các tiêu chí còn thiếu được khai báo riêng.
+## File dùng để nộp hoặc xem lại
 
-## Bản trình bày hiện hành
+- [Video cuối](Power9_Lab3_Demo_Final.mp4): 6 phút 35 giây, 1920×1080, H.264/AAC, giọng nữ Hoài My tổng hợp.
+- [Phụ đề tiếng Việt](Power9_Lab3_Demo_Final.srt): 64 mục; để cạnh video với cùng tên để trình phát tự nhận.
+- [Slide PowerPoint](Power9_Lab3_Designer.pptx) và [PDF slide](Power9_Lab3_Slides.pdf): 15 trang, đã mở/xuất bằng PowerPoint. Bản định danh mới là Power9_Lab3_Final_Video_20261104.pptx/PDF, cùng nội dung với các tên chính.
+- [APK hiện hành](Power9-Lab3-debug-arm64.apk): UI mới có 8 ảnh minh họa. Hash APK và metadata tại build-config.json.
+- [Timeline và lời đọc](../../docs/video-script-spark-2026-11-04.md).
+- [Metadata video](video-20261104/video-manifest.json) và [kết quả kiểm tra](../../evidence/video/2026-11-04/final-review.json).
 
-- **Power9_Lab3_Designer.pptx**: deck 15 slide để thuyết trình và chỉnh sửa; thay bố cục cũ.
-- **Power9_Lab3_Slides.pdf**: bản đọc xuất trực tiếp từ PowerPoint.
-- **Power9_Lab3_Designer_preview.png**: ảnh bìa từ PowerPoint.
-- **designer-slide-notes.json** và **slide-content.json**: nội dung/nguồn/giới hạn theo từng slide.
-- **Power9_Lab3_Report.pdf**: báo cáo 10 trang đã cập nhật PR và ba fix commits.
+Video có Login thật và Home sau khi người dùng tự chọn lại tài khoản A. Màn chọn Google không ghi hình. Các luồng app chạy thật trên Xperia, giữ tốc độ thực, có cắt nối được ghi rõ. Console gồm Firestore, DebugView, Crashlytics, Remote Config và Messaging. Đã cắt Chrome tab/address/profile, avatar Firebase và che tên người xuất bản cấu hình.
 
-Deck giữ logo gốc và ảnh app thật, có notes và nguồn theo slide; bảng, biểu đồ ARTEMIS và sơ đồ kiến trúc chỉnh sửa được. Ảnh giữ ngày ghi trong notes, chưa phải bản nâng cấp UI/UX tương lai. Đã mở deck và xem đủ 15 slide xuất từ PowerPoint. Chi tiết tái tạo ở docs/lab3-presentation-design.md.
+Đã giải mã toàn bộ hình/tiếng, kiểm tra thời lượng, âm lượng và rà 18 khung hình theo các cảnh. Chưa có lượt người thật nghe/xem trọn bản cuối. Dữ liệu demo đã dọn qua app và đối chiếu server; Analytics debug khôi phục, máy về Home A.
 
-## Git và review
+## Kết quả và giới hạn
 
-[Draft PR #3](https://github.com/PhamQuangDuc1/PRM.POWER9/pull/3), nhánh codex/lab3-review-and-slides vào main. Theo yêu cầu mới, trợ lý đã tự commit/push và tạo PR; không merge.
+- 49 Flutter tests đạt, analyzer sạch. Responsive 15 màn ở 360/412 dp với chữ 1,5 lần. Hai tài khoản A sang B rồi về A đã đối chiếu lịch, lịch sử và inbox.
+- TalkBack sau “Ở lại” đã có người dùng nghe/vuốt/kích hoạt xác nhận. Ba phần kiểm tra thủ công bổ sung đã được người dùng xác nhận đạt; phạm vi ở evidence/accessibility/2026-11-04-manual-flows/result.json. Snapshot tự động lịch sử giữ nguyên.
+- ARTEMIS 32/33 run ID, TC10[3] còn failed. Native demo sửa giờ 11:00 trong video không thay lượt ARTEMIS này. Pro mới nhất 189,02 giây, chưa đạt thời lượng. Budget đã dùng 50/50, không tự gọi thêm lượt.
+- DebugView server đã nhận view_activity/activity_id=move-walk ở bằng chứng bổ sung 04/11 trong evidence/analytics/2026-11-04. DebugView trong buổi quay trước đó có Debug Device=0, chưa nhận event. Log SDK là bằng chứng riêng, không thay xác nhận server. Crashlytics hiển thị issue test crash cũ 31/10, Messaging hiển thị chiến dịch 01/11; không gửi FCM hoặc gây crash mới trong buổi quay.
+- Storage production bỏ khỏi phạm vi theo quyết định chi phí. Giữ billing tắt và report_upload_enabled=false; PDF local không được tính là upload production.
+- Power9_Lab3_Report.pdf là báo cáo mốc trước, chưa đồng bộ số liệu mới. Footage cũ Power9_Lab3_E2E_Footage.mp4 và các bản Final_Spark/UI_Update là tư liệu lịch sử.
 
-- R01 ac4b35b: date payload sai kiểu fallback an toàn.
-- R02 38b52bc: bỏ kết quả inbox refresh đến muộn.
-- R03 e595956: khôi phục messaging khi sign-out lỗi và phiên còn nguyên.
-- f45500f: runner/E2E evidence, Analytics debug marker và kiểm tra responsive/trợ năng.
+Các bảng và biểu đồ slide vẫn chỉnh sửa được. Đợt cập nhật mới chỉ thay hình slide 8, 12, 15; 12 slide khác giống từng pixel với bản trước. Notes và nguồn được đồng bộ. Raw footage, định danh và các lượt công cụ lỗi giữ trong .build, không đưa vào gói công khai.
 
-Năm findings/dispositions có trong PR body và ai/code-review/lab3-review.md. Không giả định human approval hoặc merge.
-
-## CRUD lịch đã hoàn thiện
-
-Đã demo thêm/xem/sửa/xóa lịch trên Xperia và đối chiếu Firestore: sửa10:30 giữ ID/createdAt, hủy dialog không ghi, xóa lịch giữ history. Chỉ cleanup dữ liệu do smoke tạo. Bằng chứng: evidence/flows/crud/native-crud-result.json. Không gọi model, không cộng vào ARTEMIS. Source tái hiện opt-in: scripts/lab3/smoke_schedule_crud.py --run-device-writes, cần POWER9_CRUD_TEST_ACCOUNT_FILE trỏ tới JSON ignored chứa projectId/recipientUid và biến thiết bị. Không đồng bộ Figma theo yêu cầu; deviation đã ghi trong docs/design-traceability.md.
-
-## Kết quả kiểm chứng
-
-48/48 Flutter tests đạt, analyzer sạch, APK debug arm64 cuối đã build/cài. Hai tests render 14 widget màn ở 360/412 dp, chữ 1,5× và kiểm tra nhãn/vùng chạm Android; không thay TalkBack hoặc fidelity Figma. 18 Rules tests là mốc trước, không phải chạy lại ngày 02/11.
-
-ARTEMIS có 11 ca ×3 run ID; 30/33 xác minh =29 pytest pass hợp lệ +1 delayed-terminal audit. Giữ 59 attempts, gồm failures. TC10[3] và TC16[2–3] chưa đạt. Pro cũ bị quota, 0 bước UI; 926,82 giây chờ không tính là khám phá. Người dùng cho phép tổng 50 lượt nhưng auto-review chặn resume theo lệnh dừng cũ; chưa có model task mới. Không đổi key/model hoặc billing.
-
-Native smoke ngày 02/11 xác minh quyền thông báo Android 11 bị tắt → lỗi/retry → khôi phục; logout/Back/hủy Google picker/retry và người dùng đăng nhập lại. Không xuất tài khoản/picker, không tính các smoke này thành ARTEMIS.
-
-## APK, video và bằng chứng
-
-Power9-Lab3-debug-arm64.apk là bản cài arm64, có marker tổng hợp debug để lọc đúng SDK log, không có model API key. Build config ghi ở build-config.json. APK/MP4/ZIP lớn được ignore, không push vào Git.
-
-Power9_Lab3_E2E_Footage.mp4 dài 6 phút 02 giây, không audio/Console, chỉ là footage bổ sung. Quay trước khi bổ sung Analytics marker; footage-metadata.json ghi SHA APK ở thời điểm quay. **Video cuối được người dùng chủ động để sau khi chốt hướng UI/UX.** Kịch bản ở DEMO-RUNBOOK.md; chưa có URL video đã công bố.
-
-Mở evidence/artemis/replay/index.html sau giải nén: viewer offline 33 runs/257 ảnh gốc đã lọc. Raw prompt/UI dump/SQLite/model credential không có trong gói. manifest.json chứa SHA256 các tệp. Chi tiết ở docs/lab3-e2e-results.md.
-
-## Còn thiếu trước khi tuyên bố 100%
-
-Ba run ID ARTEMIS, Pro chủ động đủ thời lượng, upload Storage production, video app/Console có thuyết minh, TalkBack/fidelity và một số Auth error coverage. Storage vẫn khóa report_upload_enabled=false theo lựa chọn billing-off; PDF local/emulator không thay upload thật. Không tự đổi dịch vụ hoặc bật billing.
-
-Repository: https://github.com/PhamQuangDuc1/PRM.POWER9
-
-Figma: https://www.figma.com/design/MTv5qJbn065VYJQIXausoq
+Nhánh bàn giao là OneD; PR hiện hành được ghi tại evidence/code-review/lab3-pr.json. PR cũ #3 được thay thế sau khi bảo toàn toàn bộ commit. Không merge vào main. APK/video và narration giữ cục bộ, không nằm trong Git PR; PPTX/PDF và bằng chứng đã lọc được đưa vào PR. Kịch bản demo Android Emulator và helper chuẩn bị máy ảo có trong docs/scripts, chưa diễn tập trên AVD.

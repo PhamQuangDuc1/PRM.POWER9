@@ -6,6 +6,45 @@ import time
 PACKAGE = 'vn.power9.power9_office_routine'
 
 
+def edit_sequence_from_labels(frames, original, target):
+    """Require two edited forms separated by an observed unchanged saved value."""
+    phase = 0
+    for labels in frames:
+        form = 'Đổi lịch hoạt động' in labels
+        body = any('Đi bộ giữa giờ' in value for value in labels)
+        target_seen = any(target in value for value in labels)
+        original_seen = any(original in value for value in labels)
+        home = 'Power9 Office Routine' in labels
+        if phase == 0 and form and target_seen:
+            phase = 1
+        elif phase == 1 and not form and body and original_seen and not target_seen:
+            phase = 2
+        elif phase == 2 and form and target_seen:
+            phase = 3
+        elif phase == 3 and home and body and target_seen and 'Hoạt động hôm nay · 1' in labels:
+            phase = 4
+    return {'firstEditedFormSeen': phase >= 1, 'cancelPreservedOriginalSeen': phase >= 2,
+            'secondEditedFormSeen': phase >= 3, 'savedHomeWithOneScheduleSeen': phase >= 4,
+            'verified': phase == 4}
+
+
+def observed_edit_sequence(database, session_id, original, target):
+    with sqlite3.connect(database.as_uri() + '?mode=ro', uri=True) as db:
+        rows = db.execute('''SELECT i.ui_tree FROM steps s JOIN images i
+            ON i.image_name=s.pre_image_name OR i.image_name=s.post_image_name
+            WHERE s.session_id=? ORDER BY s.step_number,
+            CASE WHEN i.image_name=s.pre_image_name THEN 0 ELSE 1 END''', (session_id,)).fetchall()
+    frames = []
+    for (raw,) in rows:
+        nodes = json.loads(raw or '[]')
+        if not isinstance(nodes, list):
+            continue
+        frames.append([str(node.get(key, '')) for node in nodes
+                       if isinstance(node, dict) and node.get('package') == PACKAGE
+                       for key in ('text', 'content-desc')])
+    return edit_sequence_from_labels(frames, original, target)
+
+
 def terminal_output(database, session_id, timeout=10):
     """Wait for the terminal trace commit, which can lag HTTP completion."""
     deadline = time.monotonic() + timeout

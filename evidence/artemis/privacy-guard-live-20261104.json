@@ -1,0 +1,9 @@
+{
+  "realAndroidDriverUsed": true,
+  "publicHomeObservationAllowed": true,
+  "privateNavigationBlockedBeforeInput": true,
+  "stopLatched": true,
+  "profileOpened": false,
+  "screenshotsExported": false,
+  "modelCalls": 0
+}

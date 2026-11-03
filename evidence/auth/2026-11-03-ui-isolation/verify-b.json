@@ -1,0 +1,15 @@
+{
+  "accountBIsDifferentGoogleAccount": true,
+  "accountIdentifiersExported": false,
+  "aSentinelAbsentFromBServerPaths": true,
+  "aSentinelAbsentFromBHome": true,
+  "aSentinelAbsentFromBProgress": true,
+  "progressDate": "2026-11-03",
+  "aInboxEmpty": true,
+  "bInboxEmpty": false,
+  "aInboxVisibleHashesInB": 0,
+  "inboxCrossAccountIsolationVerified": false,
+  "inboxLimitation": "A inbox empty; requires a scoped test notification before claiming inbox isolation",
+  "modelCalls": 0,
+  "awaitingReturnToA": true
+}

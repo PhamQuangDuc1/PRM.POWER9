@@ -1,0 +1,211 @@
+{
+  "scope": "timer pause -> Today -> Stay -> focus Today again",
+  "modelCalls": 0,
+  "humanGesturesAndSpeechAssessed": false,
+  "behaviorPassed": true,
+  "allActionFocusObserved": false,
+  "actions": [
+    {
+      "label": "Thư giãn",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Thư giãn\nTab 3 trong tổng số 4",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Bắt đầu 3 phút",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Bắt đầu 3 phút",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Tạm dừng",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Tạm dừng",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Hôm nay",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Hôm nay\nTab 1 trong tổng số 4",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Ở lại",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Ở lại",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Hôm nay",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Hôm nay\nTab 1 trong tổng số 4",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": false,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": false,
+      "clickActionAccepted": true
+    },
+    {
+      "label": "Bỏ phiên",
+      "target": {
+        "text": "",
+        "hint": "",
+        "description": "Bỏ phiên",
+        "class": "android.widget.Button",
+        "clickable": true,
+        "enabled": true,
+        "selected": false,
+        "accessibilityFocused": true,
+        "heading": false,
+        "focusable": true,
+        "checkable": false,
+        "checked": false,
+        "liveRegion": 0
+      },
+      "focusActionAccepted": true,
+      "focusedBeforeActivation": true,
+      "clickActionAccepted": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "Device unlocked",
+      "passed": true
+    },
+    {
+      "name": "Start at Home",
+      "passed": true
+    },
+    {
+      "name": "TalkBack bound",
+      "passed": true
+    },
+    {
+      "name": "Power9 foreground after TalkBack startup",
+      "passed": true
+    },
+    {
+      "name": "Timer idle; no existing session altered",
+      "passed": true
+    },
+    {
+      "name": "Timer paused",
+      "passed": true
+    },
+    {
+      "name": "Leave dialog opens",
+      "passed": true
+    },
+    {
+      "name": "Stay retains paused value",
+      "passed": true
+    },
+    {
+      "name": "Today still activates after Stay",
+      "passed": true
+    },
+    {
+      "name": "Returned Home",
+      "passed": true
+    },
+    {
+      "name": "TalkBack remained bound",
+      "passed": true
+    }
+  ],
+  "pausedTimer": "02:56",
+  "timerAfterStay": "02:56",
+  "todayAfterStay": {
+    "focusActionAccepted": true,
+    "focusedBeforeActivation": false,
+    "clickActionAccepted": true
+  },
+  "originalAccessibilitySettingsRestored": true,
+  "unrecordedTestSessionRemains": false
+}

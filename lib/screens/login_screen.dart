@@ -5,6 +5,7 @@ import '../theme/p9_theme.dart';
 import '../viewmodels/login_viewmodel.dart';
 import '../widgets/p9_button.dart';
 import '../widgets/p9_logo.dart';
+import '../widgets/p9_scene.dart';
 
 class LoginScreen extends ConsumerWidget {
   const LoginScreen({super.key});
@@ -33,7 +34,9 @@ class LoginScreen extends ConsumerWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      const Center(child: P9Logo()),
+                      const P9SceneBanner(asset: P9Scenes.login, height: 176),
+                      const SizedBox(height: P9Space.xl),
+                      const Center(child: P9Logo(size: 64)),
                       const SizedBox(height: P9Space.xl),
                       Text(
                         'Power9 Office Routine',

@@ -6,6 +6,7 @@ import '../viewmodels/activity_providers.dart';
 import '../viewmodels/discover_viewmodel.dart';
 import '../widgets/p9_activity_card.dart';
 import '../widgets/p9_async_content.dart';
+import '../widgets/p9_scene.dart';
 import 'activity_detail_screen.dart';
 import '../viewmodels/observability_providers.dart';
 
@@ -88,6 +89,11 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
                   : ListView(
                       padding: const EdgeInsets.all(P9Space.lg),
                       children: [
+                        const P9SceneBanner(
+                          asset: P9Scenes.movement,
+                          height: 128,
+                        ),
+                        const SizedBox(height: P9Space.lg),
                         Text(
                           'Chọn hoạt động phù hợp với bạn',
                           style: Theme.of(context).textTheme.titleLarge,
