@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../theme/p9_theme.dart';
+import '../widgets/p9_page_layout.dart';
 import '../viewmodels/observability_providers.dart';
 import '../viewmodels/firebase_demo_viewmodel.dart';
 import '../widgets/p9_button.dart';
@@ -19,7 +20,7 @@ class FirebaseDemoScreen extends ConsumerWidget {
     if (!kDebugMode) return const SizedBox.shrink();
     final config = ref.watch(appConfigProvider);
     final crash = ref.watch(firebaseDemoProvider);
-    return Scaffold(
+    return P9PageScaffold(
       appBar: AppBar(title: const Text('Kiểm thử Firebase')),
       body: ListView(
         padding: const EdgeInsets.all(P9Space.lg),
@@ -84,6 +85,7 @@ class FirebaseDemoScreen extends ConsumerWidget {
                     final confirmed = await showDialog<bool>(
                       context: context,
                       builder: (context) => AlertDialog(
+                        scrollable: true,
                         title: const Text('Tạo test crash?'),
                         content: const Text(
                           'Ứng dụng sẽ đóng để kiểm thử Crashlytics. Mở lại app sau đó để gửi báo cáo. Lịch đã lưu không bị xóa.',

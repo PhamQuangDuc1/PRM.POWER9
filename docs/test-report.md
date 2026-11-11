@@ -97,3 +97,29 @@ ARTEMIS >=10 ca, >=3 lượt mỗi ca, error/native interaction, analytics asser
 Unit tests mới kiểm tra background gap, pause exclusion, cap 180 giây, failed save giữ 45 giây để retry, chặn subsecond fake record, stale response sau logout, union denominator và leave-dialog. Case 45 giây là fake-clock unit test; case máy thật kết thúc sớm là 72 giây, không trộn hai bằng chứng.
 
 Widget test từng phát hiện semanticsValue của Progress không đúng kiểu số; đã bỏ override sai, dùng label mô tả và giá trị mặc định của Flutter. Bộ cuối đạt 21 tests. Rules cuối đạt 14 tests, bao gồm immutable completion, owner/cross-user, duration bounds và delete giữ schedule.
+
+## Kiểm thử Admin Web — Firebase Emulator
+
+Môi trường: Edge với phiên trình duyệt riêng, Firebase Auth và Firestore Emulator project `demo-power9`, Android Emulator API 35. Tài khoản, hoạt động và thông báo dùng trong bài test là dữ liệu thử.
+
+- Google Sign-In qua Auth Emulator. Admin vào được dashboard và tài khoản thử không có role Admin bị chặn. [Đăng nhập](../evidence/assignment/web-emulator/01-sign-in.png) · [Chặn sai role](../evidence/assignment/web-emulator/10-role-denied.png)
+- Dashboard đọc các truy vấn tổng hợp Firestore và hiển thị biểu đồ theo trạng thái. Mô phỏng lỗi truy vấn và xác nhận nút Thử lại tải được số liệu. [Dashboard](../evidence/assignment/web-emulator/02-dashboard.png) · [Lỗi truy vấn](../evidence/assignment/web-emulator/07-dashboard-error.png)
+- Danh mục kiểm tra form trống, tạo, tìm, sửa, lưu trữ và khôi phục. [Danh mục](../evidence/assignment/web-emulator/03-catalog.png) · [Tìm không có kết quả](../evidence/assignment/web-emulator/04-empty-search.png)
+- Hai đề xuất gửi từ Android. Admin duyệt một đề xuất, xuất bản và từ chối đề xuất còn lại. Android hiển thị trạng thái và lý do. Hoạt động đã xuất bản xuất hiện trong Khám phá. [Hàng đợi sau xử lý](../evidence/assignment/web-emulator/05-review.png) · [Kết quả trên Android](../evidence/assignment/web-emulator/08-android-review.png) · [Danh mục Android](../evidence/assignment/web-emulator/13-android-published.png)
+- Form thông báo kiểm tra dữ liệu trống và gửi tin vào Firestore. Android đọc được tin trong inbox. [Web gửi](../evidence/assignment/web-emulator/06-announcement.png) · [Android nhận](../evidence/assignment/web-emulator/09-android-inbox.png)
+- 22 Firestore Rules tests và 53 Flutter tests đạt. Phân tích tĩnh mobile và web đạt.
+
+Web đã được deploy lên Firebase Hosting và màn đăng nhập mở được trong phiên trình duyệt riêng. Kiểm thử thao tác Admin dùng tài khoản Emulator theo lựa chọn của nhóm. App Check enforcement và các lượt xuyên vai trò trên bản deploy vẫn cần kiểm tra với tài khoản thật. [Màn đăng nhập Hosting](../evidence/assignment/web-emulator/15-hosted-login.png)
+
+### Review bằng AI cho phần web
+
+- Dashboard từng tải toàn bộ đề xuất để đếm. Chuyển sang truy vấn `count()` của Firestore theo từng trạng thái và kiểm tra trên web.
+- Lưu trữ hoạt động được mở trực tiếp từ tab Ăn uống hoặc Thư giãn có thể làm tab mất nội dung. Giữ hai mục đó hiển thị bằng Rules và vô hiệu hóa nút lưu trữ tương ứng. Rules test kiểm tra Admin bị từ chối khi lưu trữ mục cố định.
+- Sự kiện gửi thông báo lặp có thể tạo nhiều document trước lần render kế tiếp. Thêm điều kiện kiểm tra `_sending` ngay ở đầu hàm gửi, bên cạnh việc vô hiệu hóa nút trong lúc chờ.
+
+### Nghiệm thu bổ sung ASM
+
+- Firebase Hosting đã cập nhật bản responsive. Edge trong phiên mới mở được trang và popup Google OAuth.
+- APK Assignment trên Android Emulator tạo PDF, mở được các thao tác xem/lưu và chia sẻ. Firestore Emulator có metadata khớp tên file với `storagePath: null`. Phiên Auth Emulator cũ hết hiệu lực sau khi Emulator khởi động lại. Đăng xuất và vào lại bằng User thử nghiệm rồi chạy lại thành công. [Màn PDF](../evidence/assignment/web-emulator/16-android-pdf.png)
+- 56 bài test Flutter và 23 bài test Firestore Rules đạt. Bộ test AI kiểm tra lọc ID theo ứng viên, bỏ ID trùng và xử lý JSON sai.
+- Ba lượt gọi Gemini Developer API qua Firebase AI Logic thành công trên Android Emulator với App Check debug. App xử lý lỗi khi token chưa đăng ký. Khi Remote Config tắt cờ, panel Gemini ẩn và danh mục vẫn hoạt động. [Đầu vào, đầu ra và ảnh](ai-feature.md)

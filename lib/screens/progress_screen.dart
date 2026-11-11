@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/schedule.dart';
 import '../models/today_overview.dart';
 import '../theme/p9_theme.dart';
+import '../widgets/p9_page_layout.dart';
 import '../viewmodels/activity_providers.dart';
 import '../viewmodels/completion_providers.dart';
 import '../viewmodels/completion_action_viewmodel.dart';
@@ -29,7 +30,7 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen> {
   }
 
   @override
-  Widget build(BuildContext context) => Scaffold(
+  Widget build(BuildContext context) => P9PageScaffold(
     appBar: AppBar(
       title: const Text('Tiến độ'),
       actions: [
@@ -196,6 +197,7 @@ class _CompletionCard extends ConsumerWidget {
                           final confirm = await showDialog<bool>(
                             context: context,
                             builder: (dialogContext) => AlertDialog(
+                              scrollable: true,
                               title: const Text('Xóa bản ghi này?'),
                               content: Text(
                                 'Xóa ghi nhận “${item.title}”. Lịch hoạt động vẫn được giữ.',

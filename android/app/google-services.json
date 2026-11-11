@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "613232000873-nvoleadtkukpg1cr71ik28fe07sd3594.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.power9.power9_office_routine",
+            "certificate_hash": "a49d5a2984383f73353b5d8b206d3048e08647d0"
+          }
+        },
+        {
           "client_id": "613232000873-9tjf17s8817fvgkvf613lqf9hetn3k4p.apps.googleusercontent.com",
           "client_type": 3
         }

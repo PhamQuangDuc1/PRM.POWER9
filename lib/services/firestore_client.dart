@@ -1,3 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-FirebaseFirestore createFirestoreClient() => FirebaseFirestore.instance;
+import 'assignment_emulator.dart';
+
+FirebaseFirestore createFirestoreClient() => assignmentEmulatorEnabled
+    ? assignmentEmulatorFirestore()
+    : FirebaseFirestore.instance;

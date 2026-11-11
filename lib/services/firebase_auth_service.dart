@@ -56,7 +56,7 @@ class FirebaseAuthService implements AuthService {
     } on GoogleSignInException catch (error) {
       throw AuthFailure(
         error.code == GoogleSignInExceptionCode.canceled
-            ? 'Bạn đã hủy đăng nhập. Có thể thử lại khi sẵn sàng.'
+            ? 'Đăng nhập Google chưa hoàn tất. Bạn có thể thử lại.'
             : 'Chưa thể kết nối đăng nhập Google. Vui lòng thử lại sau.',
       );
     } on FirebaseAuthException catch (error) {

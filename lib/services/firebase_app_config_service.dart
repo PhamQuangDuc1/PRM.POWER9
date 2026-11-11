@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 
 import '../models/app_config.dart';
 import 'app_config_service.dart';
+import 'assignment_emulator.dart';
 
 class FirebaseAppConfigService extends AppConfigService {
   Future<void> _prepare() async {
@@ -26,19 +27,26 @@ class FirebaseAppConfigService extends AppConfigService {
       config.getInt('discover_max_minutes'),
       config.getBool('connection_checkin_enabled'),
       reportUploadEnabled: config.getBool('report_upload_enabled'),
+      aiEnabled: config.getBool('discover_ai_enabled'),
+      aiModel: config.getString('discover_ai_model'),
+      aiPrompt: config.getString('discover_ai_prompt'),
     );
   }
 
   @override
   Future<AppConfig> cached() async {
-    if (Firebase.apps.isEmpty) return const AppConfig();
+    if (assignmentEmulatorEnabled || Firebase.apps.isEmpty) {
+      return const AppConfig();
+    }
     await _prepare();
     return _read();
   }
 
   @override
   Future<AppConfig> fetch() async {
-    if (Firebase.apps.isEmpty) return const AppConfig();
+    if (assignmentEmulatorEnabled || Firebase.apps.isEmpty) {
+      return const AppConfig();
+    }
     await _prepare();
     final config = FirebaseRemoteConfig.instance;
     await config.fetchAndActivate();

@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 
+import 'assignment_emulator.dart';
 import 'telemetry_service.dart';
 
 // Synthetic build marker lets E2E attribute native shared-service logs to this
@@ -47,7 +48,7 @@ Map<String, Object> safeEventParameters(Map<String, Object> parameters) => {
 };
 
 class FirebaseTelemetryService implements TelemetryService {
-  bool get _ready => Firebase.apps.isNotEmpty;
+  bool get _ready => !assignmentEmulatorEnabled && Firebase.apps.isNotEmpty;
   Future<void> _bestEffort(Future<void> Function() action) async {
     if (!_ready) return;
     try {

@@ -32,6 +32,7 @@ class _P9DeleteScheduleButtonState
       final confirmed = await showDialog<bool>(
         context: context,
         builder: (dialogContext) => AlertDialog(
+          scrollable: true,
           title: const Text('Xóa lịch hoạt động này?'),
           content: Text(
             'Xóa lịch “${schedule.title}” ngày ${schedule.dateKey}. '

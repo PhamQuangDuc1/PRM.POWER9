@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../models/activity_report.dart';
+import 'report_metadata.dart';
 import 'report_service.dart';
 
 class FirebaseReportUploadService implements ReportUploadService {
@@ -41,28 +41,7 @@ class FirebaseReportUploadService implements ReportUploadService {
       if (FirebaseAuth.instance.currentUser?.uid != report.ownerUid) {
         throw StateError('Report owner changed');
       }
-      final metadata = FirebaseFirestore.instance
-          .collection('users')
-          .doc(report.ownerUid)
-          .collection('reports')
-          .doc(report.digest);
-      await FirebaseFirestore.instance.runTransaction(
-        (transaction) async {
-          final existing = await transaction.get(metadata);
-          if (!existing.exists) {
-            transaction.set(metadata, {
-              'dateKey': report.dateKey,
-              'fileName': report.fileName,
-              'storagePath': path,
-              'byteLength': report.bytes.length,
-              'sha256': report.digest,
-              'createdAt': FieldValue.serverTimestamp(),
-            });
-          }
-        },
-        timeout: const Duration(seconds: 20),
-        maxAttempts: 3,
-      );
+      await saveReportMetadata(report, path);
       final url = await reference.getDownloadURL().timeout(
         const Duration(seconds: 15),
       );

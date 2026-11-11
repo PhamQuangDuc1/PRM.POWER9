@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../theme/p9_theme.dart';
+import '../services/assignment_emulator.dart';
 import '../viewmodels/login_viewmodel.dart';
 import '../widgets/p9_button.dart';
 import '../widgets/p9_logo.dart';
@@ -69,7 +70,9 @@ class LoginScreen extends ConsumerWidget {
                             ),
                             const SizedBox(height: P9Space.xl),
                             P9Button(
-                              label: 'Đăng nhập với Google',
+                              label: assignmentEmulatorEnabled
+                                  ? 'Vào bằng User thử nghiệm'
+                                  : 'Đăng nhập với Google',
                               icon: Icons.login_rounded,
                               loading: state.loading,
                               onPressed: () => ref

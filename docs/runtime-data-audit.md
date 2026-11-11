@@ -21,7 +21,7 @@ Không tìm thấy mock service, fixture hay fallback danh sách mẫu được 
 
 ## Vấn đề cần xử lý khi nâng cấp
 
-1. Ưu tiên cao: ScheduleScreen vẫn cho bật Nhắc hoạt động và ghi Giờ yên lặng 18:00–08:00; ScheduleViewModel/FirestoreScheduleService chỉ lưu reminderEnabled. Không tìm thấy scheduler hoặc logic thực thi giờ yên lặng. FCM gửi thử không tự biến thành nhắc theo lịch. NotificationScreen có nói rõ giới hạn nhưng màn đặt lịch chưa rõ. Cần triển khai nhắc giờ thực hoặc khóa/đổi mô tả ngay tại màn đặt lịch trước khi quảng bá tính năng.
+1. Màn đặt lịch ghi rõ tùy chọn Nhắc hoạt động chỉ được lưu và Power9 chưa gửi thông báo theo giờ đã chọn. ScheduleViewModel và FirestoreScheduleService vẫn giữ dữ liệu `reminderEnabled` và yêu cầu chọn giờ khi bật tùy chọn. FCM nhận tin do Console hoặc API gửi.
 2. Route/chọn nội dung phụ thuộc ID: FoodScreen cố định eat-lunch, RelaxScreen cố định stress-break; ActivityDetailScreen rẽ nhánh space-desk/posture-check/sleep-prepare. Không phải mock, nhưng thêm hoạt động mới trên cloud chưa đủ để tự có kiểu màn tương ứng. Nên bổ sung loại tương tác vào model/catalog khi mở rộng, kèm migration và Rules.
 3. Nội dung số phút và hướng dẫn hiện là nội dung biên soạn sẵn, chưa có hệ thống cá nhân hóa. Khi thiết kế UI, không gắn nhãn đề xuất AI, số bước, calo hoặc giấc ngủ đo được nếu chưa có nguồn dữ liệu đó.
 4. Draft checklist/timer/PDF chưa lưu bền qua process death. Inbox chỉ local. Cần quyết định rõ khôi phục phiên và đồng bộ nhiều máy trước khi thiết kế trải nghiệm tương ứng.

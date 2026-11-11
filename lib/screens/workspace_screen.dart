@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/activity.dart';
 import '../models/completion.dart';
 import '../theme/p9_theme.dart';
+import '../widgets/p9_page_layout.dart';
 import '../viewmodels/activity_providers.dart';
 import '../viewmodels/checklist_viewmodel.dart';
 import '../viewmodels/completion_action_viewmodel.dart';
@@ -18,7 +19,7 @@ class WorkspaceScreen extends ConsumerWidget {
   final Activity activity;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) => Scaffold(
+  Widget build(BuildContext context, WidgetRef ref) => P9PageScaffold(
     appBar: AppBar(title: const Text('Góc làm việc')),
     body: P9AsyncContent(
       value: ref.watch(currentDayProvider),

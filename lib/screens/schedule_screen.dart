@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/activity.dart';
 import '../models/schedule.dart';
 import '../theme/p9_theme.dart';
+import '../widgets/p9_page_layout.dart';
 import '../viewmodels/schedule_viewmodel.dart';
 import '../widgets/p9_button.dart';
 
@@ -47,7 +48,7 @@ class ScheduleScreen extends ConsumerWidget {
         : '${(time ~/ 60).toString().padLeft(2, '0')}:${(time % 60).toString().padLeft(2, '0')}';
     return PopScope(
       canPop: !state.saving,
-      child: Scaffold(
+      child: P9PageScaffold(
         appBar: AppBar(
           title: Text(editing ? 'Đổi lịch hoạt động' : 'Lịch hoạt động'),
         ),
@@ -86,7 +87,9 @@ class ScheduleScreen extends ConsumerWidget {
             SwitchListTile(
               contentPadding: EdgeInsets.zero,
               title: const Text('Nhắc hoạt động'),
-              subtitle: const Text('Giờ yên lặng: 18:00–08:00'),
+              subtitle: const Text(
+                'Chỉ lưu tùy chọn vào lịch. Power9 chưa gửi thông báo theo giờ đã chọn.',
+              ),
               value: state.reminderEnabled,
               onChanged: state.saving
                   ? null
@@ -118,7 +121,7 @@ class ScheduleScreen extends ConsumerWidget {
             ),
             const SizedBox(height: P9Space.md),
             Text(
-              'Bạn vẫn có thể lưu lịch ngoài giờ yên lặng. Lưu lịch chưa phải là hoàn thành hoạt động.',
+              'Bạn có thể lưu lịch vào bất kỳ giờ nào. Sau khi thực hiện, hãy ghi nhận hoạt động.',
               style: Theme.of(context).textTheme.bodyMedium,
             ),
             const SizedBox(height: P9Space.xl),

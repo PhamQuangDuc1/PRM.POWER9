@@ -1,0 +1,8 @@
+name: power9_core
+publish_to: none
+environment:
+  sdk: ^3.13.3
+dependencies:
+  cloud_firestore: 7.1.0
+  flutter:
+    sdk: flutter

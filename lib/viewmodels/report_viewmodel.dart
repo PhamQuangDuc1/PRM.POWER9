@@ -1,10 +1,14 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/activity_report.dart';
+import '../services/assignment_emulator.dart';
 import '../services/report_service.dart';
+import '../services/report_metadata.dart';
 import '../services/pdf_report_generator.dart';
 import '../services/printing_report_service.dart';
 import '../services/firebase_report_upload_service.dart';
+import '../services/cloudinary_report_upload_service.dart';
 import '../services/telemetry_service.dart';
 import 'app_providers.dart';
 import 'completion_providers.dart';
@@ -13,8 +17,18 @@ import 'observability_providers.dart';
 final reportGeneratorProvider = Provider<ReportGenerator>(
   (ref) => PdfReportGenerator(),
 );
-final reportUploadProvider = Provider<ReportUploadService>(
-  (ref) => FirebaseReportUploadService(),
+final reportUploadProvider = Provider<ReportUploadService>((ref) {
+  final endpoint = cloudinaryReportEndpoint;
+  return endpoint == null
+      ? FirebaseReportUploadService()
+      : CloudinaryReportUploadService(endpoint);
+});
+
+final reportUploadEnabledProvider = Provider<bool>(
+  (ref) =>
+      !assignmentEmulatorEnabled &&
+      ((kDebugMode && cloudinaryReportEndpoint?.host == '127.0.0.1') ||
+          ref.watch(appConfigProvider).value.reportUploadEnabled),
 );
 final reportPresentationProvider = Provider<ReportPresentationService>(
   (ref) => PrintingReportService(),
@@ -73,7 +87,23 @@ class ReportController extends Notifier<ReportState> {
             ),
           );
       if (!ref.mounted || generation != _generation) return;
-      state = ReportState(report: report);
+      var metadataFailed = false;
+      // Upload writes the final metadata. A local record would be immutable.
+      if (const bool.fromEnvironment('POWER9_ASSIGNMENT') &&
+          !ref.read(reportUploadEnabledProvider)) {
+        try {
+          await saveReportMetadata(report, null);
+        } catch (_) {
+          metadataFailed = true;
+        }
+      }
+      if (!ref.mounted || generation != _generation) return;
+      state = ReportState(
+        report: report,
+        error: metadataFailed
+            ? 'Đã tạo PDF. Chưa đồng bộ được thông tin báo cáo, bạn vẫn có thể lưu hoặc chia sẻ file.'
+            : null,
+      );
       await ref.read(telemetryProvider).event(AppEvent.reportGenerated, {
         'item_count': report.itemCount,
         'file_size_kb': (report.bytes.length / 1024).ceil(),
@@ -125,7 +155,7 @@ class ReportController extends Notifier<ReportState> {
   Future<void> upload() async {
     final report = state.report;
     if (state.busy || report == null) return;
-    if (!ref.read(appConfigProvider).value.reportUploadEnabled) {
+    if (!ref.read(reportUploadEnabledProvider)) {
       state = ReportState(
         report: report,
         error: 'Lưu đám mây chưa được kích hoạt. Bạn vẫn có thể lưu hoặc chia sẻ PDF trên thiết bị.',
@@ -157,7 +187,7 @@ class ReportController extends Notifier<ReportState> {
       if (!ref.mounted || generation != _generation) return;
       state = ReportState(
         report: report,
-        error: 'Chưa lưu được lên đám mây. Kiểm tra mạng và cấu hình Storage rồi thử lại. Bạn vẫn có thể lưu hoặc chia sẻ PDF trên thiết bị.',
+        error: 'Chưa lưu được lên đám mây. Kiểm tra kết nối và thử lại. Bạn vẫn có thể lưu hoặc chia sẻ PDF trên thiết bị.',
       );
       await ref
           .read(telemetryProvider)

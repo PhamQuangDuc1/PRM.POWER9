@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../theme/p9_theme.dart';
+import '../widgets/activity_suggestion_panel.dart';
+import '../widgets/p9_page_layout.dart';
 import '../viewmodels/activity_providers.dart';
 import '../viewmodels/discover_viewmodel.dart';
 import '../widgets/p9_activity_card.dart';
 import '../widgets/p9_async_content.dart';
 import '../widgets/p9_scene.dart';
 import 'activity_detail_screen.dart';
+import 'proposal_screen.dart';
 import '../viewmodels/observability_providers.dart';
 
 class DiscoverScreen extends ConsumerStatefulWidget {
@@ -33,9 +36,9 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
       ref.read(discoverFilterProvider.notifier).reset();
     }
 
-    return Scaffold(
+    return P9PageScaffold(
       appBar: AppBar(title: const Text('Khám phá')),
-      body: Column(
+      body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.all(P9Space.lg),
@@ -75,19 +78,31 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
             ),
           ),
           const SizedBox(height: P9Space.sm),
-          Expanded(
-            child: P9AsyncContent(
-              value: groups,
-              retry: () => ref.invalidate(activitiesProvider),
-              builder: (data) => data.isEmpty
-                  ? P9Empty(
-                      message: 'Không tìm thấy hoạt động phù hợp.',
-                      icon: Icons.search_off,
-                      actionLabel: 'Xóa bộ lọc',
-                      action: reset,
-                    )
-                  : ListView(
-                      padding: const EdgeInsets.all(P9Space.lg),
+          if (const bool.fromEnvironment('POWER9_ASSIGNMENT') &&
+              ref.watch(appConfigProvider).value.aiEnabled)
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: P9Space.lg),
+              child: ActivitySuggestionPanel(),
+            ),
+          if (const bool.fromEnvironment('POWER9_ASSIGNMENT'))
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: P9Space.lg),
+              child: _OpenProposalsButton(),
+            ),
+          P9AsyncContent(
+            value: groups,
+            retry: () => ref.invalidate(activitiesProvider),
+            builder: (data) => data.isEmpty
+                ? P9Empty(
+                    message: 'Không tìm thấy hoạt động phù hợp.',
+                    icon: Icons.search_off,
+                    actionLabel: 'Xóa bộ lọc',
+                    action: reset,
+                  )
+                : Padding(
+                    padding: const EdgeInsets.all(P9Space.lg),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         const P9SceneBanner(
                           asset: P9Scenes.movement,
@@ -136,10 +151,26 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
                           ),
                       ],
                     ),
-            ),
+                  ),
           ),
         ],
       ),
     );
   }
+}
+
+class _OpenProposalsButton extends StatelessWidget {
+  const _OpenProposalsButton();
+
+  @override
+  Widget build(BuildContext context) => Align(
+    alignment: Alignment.centerLeft,
+    child: TextButton.icon(
+      icon: const Icon(Icons.add_comment_outlined),
+      label: const Text('Đề xuất hoạt động'),
+      onPressed: () => Navigator.of(
+        context,
+      ).push(MaterialPageRoute<void>(builder: (_) => const ProposalScreen())),
+    ),
+  );
 }

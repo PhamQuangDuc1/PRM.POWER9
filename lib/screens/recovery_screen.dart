@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/activity.dart';
 import '../theme/p9_theme.dart';
+import '../widgets/p9_page_layout.dart';
 import '../widgets/p9_button.dart';
 import '../widgets/p9_async_content.dart';
 import '../widgets/p9_scene.dart';
@@ -13,7 +14,7 @@ class RecoveryScreen extends ConsumerWidget {
   const RecoveryScreen({super.key, required this.activity});
   final Activity activity;
   @override
-  Widget build(BuildContext context, WidgetRef ref) => Scaffold(
+  Widget build(BuildContext context, WidgetRef ref) => P9PageScaffold(
     appBar: AppBar(title: const Text('Ngủ & phục hồi')),
     body: ListView(
       padding: const EdgeInsets.all(P9Space.lg),

@@ -96,11 +96,11 @@ void main() {
         ),
       );
       await tester.pumpAndSettle();
+      final navigation = find.byWidgetPredicate(
+        (widget) => widget is NavigationBar || widget is NavigationRail,
+      );
       await tester.tap(
-        find.descendant(
-          of: find.byType(NavigationBar),
-          matching: find.text('Thư giãn'),
-        ),
+        find.descendant(of: navigation, matching: find.text('Thư giãn')),
       );
       await tester.pumpAndSettle();
       await tester.ensureVisible(find.text('Bắt đầu 3 phút'));
@@ -110,10 +110,7 @@ void main() {
       await tester.tap(find.text('Tạm dừng'));
       await tester.pumpAndSettle();
       await tester.tap(
-        find.descendant(
-          of: find.byType(NavigationBar),
-          matching: find.text('Hôm nay'),
-        ),
+        find.descendant(of: navigation, matching: find.text('Hôm nay')),
       );
       await tester.pumpAndSettle();
       expect(find.text('Rời phiên thư giãn?'), findsOneWidget);
@@ -125,10 +122,7 @@ void main() {
       );
       expect(find.text('Tiếp tục'), findsOneWidget);
       await tester.tap(
-        find.descendant(
-          of: find.byType(NavigationBar),
-          matching: find.text('Hôm nay'),
-        ),
+        find.descendant(of: navigation, matching: find.text('Hôm nay')),
       );
       await tester.pumpAndSettle();
       await tester.tap(find.text('Bỏ phiên'));

@@ -6,6 +6,7 @@ import '../theme/p9_theme.dart';
 import '../viewmodels/session_viewmodel.dart';
 import '../widgets/p9_leave_session_dialog.dart';
 import '../widgets/p9_logo.dart';
+import '../widgets/p9_page_layout.dart';
 import 'today_screen.dart';
 import 'profile_screen.dart';
 import 'connection_screen.dart';
@@ -24,6 +25,28 @@ class HomeShell extends ConsumerStatefulWidget {
 
 class _HomeShellState extends ConsumerState<HomeShell>
     with WidgetsBindingObserver {
+  static const _destinations = [
+    NavigationDestination(
+      icon: Icon(Icons.today_outlined),
+      selectedIcon: Icon(Icons.today),
+      label: 'Hôm nay',
+    ),
+    NavigationDestination(
+      icon: Icon(Icons.restaurant_outlined),
+      selectedIcon: Icon(Icons.restaurant),
+      label: 'Ăn uống',
+    ),
+    NavigationDestination(
+      icon: Icon(Icons.self_improvement),
+      label: 'Thư giãn',
+    ),
+    NavigationDestination(
+      icon: Icon(Icons.people_outline),
+      selectedIcon: Icon(Icons.people),
+      label: 'Kết nối',
+    ),
+  ];
+
   int _index = 0;
   bool _handlingNotification = false;
   @override
@@ -98,6 +121,10 @@ class _HomeShellState extends ConsumerState<HomeShell>
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.sizeOf(context).width;
+    final useRail = width >= 600;
+    final compactLabels =
+        width < 360 || MediaQuery.textScalerOf(context).scale(12) > 18;
     final notifications = ref.watch(
       notificationControllerProvider(widget.user.uid),
     );
@@ -167,42 +194,54 @@ class _HomeShellState extends ConsumerState<HomeShell>
           ],
         ),
         body: SafeArea(
-          child: IndexedStack(
-            index: _index,
+          top: false,
+          child: Row(
             children: [
-              const TodayScreen(),
-              const FoodScreen(),
-              RelaxScreen(onRecorded: () => setState(() => _index = 0)),
-              const ConnectionScreen(),
+              if (useRail)
+                NavigationRail(
+                  backgroundColor: P9Colors.card,
+                  indicatorColor: P9Colors.surfaceContainer,
+                  scrollable: true,
+                  labelType: NavigationRailLabelType.all,
+                  selectedIndex: _index,
+                  onDestinationSelected: _changeIndex,
+                  destinations: [
+                    for (final destination in _destinations)
+                      NavigationRailDestination(
+                        icon: destination.icon,
+                        selectedIcon: destination.selectedIcon,
+                        label: Text(destination.label),
+                      ),
+                  ],
+                ),
+              Expanded(
+                key: const ValueKey('home-content'),
+                child: P9PageBody(
+                  child: IndexedStack(
+                    index: _index,
+                    children: [
+                      const TodayScreen(),
+                      const FoodScreen(),
+                      RelaxScreen(onRecorded: () => setState(() => _index = 0)),
+                      const ConnectionScreen(),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
-        bottomNavigationBar: NavigationBar(
-          height: P9Size.navigationHeight,
-          selectedIndex: _index,
-          onDestinationSelected: _changeIndex,
-          destinations: const [
-            NavigationDestination(
-              icon: Icon(Icons.today_outlined),
-              selectedIcon: Icon(Icons.today),
-              label: 'Hôm nay',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.restaurant_outlined),
-              selectedIcon: Icon(Icons.restaurant),
-              label: 'Ăn uống',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.self_improvement),
-              label: 'Thư giãn',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.people_outline),
-              selectedIcon: Icon(Icons.people),
-              label: 'Kết nối',
-            ),
-          ],
-        ),
+        bottomNavigationBar: useRail
+            ? null
+            : NavigationBar(
+                height: P9Size.navigationHeight,
+                labelBehavior: compactLabels
+                    ? NavigationDestinationLabelBehavior.onlyShowSelected
+                    : NavigationDestinationLabelBehavior.alwaysShow,
+                selectedIndex: _index,
+                onDestinationSelected: _changeIndex,
+                destinations: _destinations,
+              ),
       ),
     );
   }

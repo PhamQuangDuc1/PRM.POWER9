@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:power9_core/power9_core.dart';
 
+import '../services/firestore_client.dart';
 import '../theme/p9_theme.dart';
+import '../widgets/p9_page_layout.dart';
 import '../viewmodels/app_providers.dart';
 import '../viewmodels/notification_viewmodel.dart';
 import '../widgets/p9_button.dart';
+
+final _announcementsProvider = StreamProvider.autoDispose(
+  (ref) => AnnouncementStore(createFirestoreClient()).watchLatest(),
+);
 
 class NotificationScreen extends ConsumerWidget {
   const NotificationScreen({super.key});
@@ -14,7 +21,7 @@ class NotificationScreen extends ConsumerWidget {
     if (uid == null) return const SizedBox.shrink();
     final state = ref.watch(notificationControllerProvider(uid));
     final vm = ref.read(notificationControllerProvider(uid).notifier);
-    return Scaffold(
+    return P9PageScaffold(
       appBar: AppBar(title: const Text('Thông báo')),
       body: RefreshIndicator(
         onRefresh: vm.refresh,
@@ -22,6 +29,38 @@ class NotificationScreen extends ConsumerWidget {
           physics: const AlwaysScrollableScrollPhysics(),
           padding: const EdgeInsets.all(P9Space.lg),
           children: [
+            if (const bool.fromEnvironment('POWER9_ASSIGNMENT')) ...[
+              Text(
+                'Thông báo từ Admin',
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              const SizedBox(height: P9Space.md),
+              ...ref
+                  .watch(_announcementsProvider)
+                  .when(
+                    loading: () => const [
+                      Center(child: CircularProgressIndicator()),
+                    ],
+                    error: (_, _) => [
+                      TextButton(
+                        onPressed: () => ref.invalidate(_announcementsProvider),
+                        child: const Text('Chưa tải được thông báo. Thử lại'),
+                      ),
+                    ],
+                    data: (items) => [
+                      if (items.isEmpty)
+                        const Text('Chưa có thông báo từ Admin.'),
+                      for (final item in items)
+                        Card(
+                          child: ListTile(
+                            title: Text(item.title),
+                            subtitle: Text(item.body),
+                          ),
+                        ),
+                    ],
+                  ),
+              const SizedBox(height: P9Space.xl),
+            ],
             Text(
               state.status.enabled
                   ? 'Đã bật thông báo Power9'

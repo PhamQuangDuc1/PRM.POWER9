@@ -22,7 +22,21 @@
     "rules": "firebase/firestore.rules",
     "indexes": "firebase/firestore.indexes.json"
   },
+  "hosting": {
+    "public": "web/build/hosting",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "headers": [
+      {
+        "source": "/{,index.html,flutter_bootstrap.js,flutter_service_worker.js,main.dart.js}",
+        "headers": [{"key": "Cache-Control", "value": "no-cache"}]
+      }
+    ],
+    "rewrites": [{"source": "**", "destination": "/index.html"}]
+  },
   "emulators": {
+    "auth": {
+      "port": 9099
+    },
     "storage": {
       "port": 9199
     },

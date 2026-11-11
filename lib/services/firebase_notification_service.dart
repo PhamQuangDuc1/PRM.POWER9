@@ -7,6 +7,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 import '../firebase_options.dart';
 import '../models/office_notification.dart';
+import 'assignment_emulator.dart';
 import 'notification_service.dart';
 import 'notification_store.dart';
 
@@ -63,7 +64,7 @@ class FirebaseNotificationService implements NotificationService {
   Completer<String>? _registration;
   @override
   String? get currentToken => _token;
-  bool get _ready => Firebase.apps.isNotEmpty;
+  bool get _ready => !assignmentEmulatorEnabled && Firebase.apps.isNotEmpty;
   static const channel = AndroidNotificationChannel(
     'power9_updates',
     'Thông báo Power9',

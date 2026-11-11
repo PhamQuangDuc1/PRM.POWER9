@@ -11,6 +11,9 @@ enum AppEvent {
   configRefreshed,
   reportGenerated,
   exportReport,
+  aiRequest,
+  aiResultAccepted,
+  aiError,
 }
 
 String eventName(AppEvent event) => switch (event) {
@@ -23,6 +26,9 @@ String eventName(AppEvent event) => switch (event) {
   AppEvent.configRefreshed => 'config_refreshed',
   AppEvent.reportGenerated => 'report_generated',
   AppEvent.exportReport => 'export_report',
+  AppEvent.aiRequest => 'ai_request',
+  AppEvent.aiResultAccepted => 'ai_result_accepted',
+  AppEvent.aiError => 'ai_error',
   _ => event.name,
 };
 

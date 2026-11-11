@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/activity.dart';
 import '../models/schedule.dart';
 import '../theme/p9_theme.dart';
+import '../widgets/p9_page_layout.dart';
 import '../widgets/p9_button.dart';
 import '../widgets/p9_scene.dart';
 import '../viewmodels/activity_providers.dart';
@@ -36,7 +37,7 @@ class ActivityDetailScreen extends ConsumerWidget {
     if (existing == null && activity.id == 'sleep-prepare') {
       return RecoveryScreen(activity: activity);
     }
-    return Scaffold(
+    return P9PageScaffold(
       appBar: AppBar(title: const Text('Chi tiết hoạt động')),
       body: ListView(
         padding: const EdgeInsets.all(P9Space.lg),

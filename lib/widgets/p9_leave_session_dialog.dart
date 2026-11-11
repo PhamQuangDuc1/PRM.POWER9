@@ -4,6 +4,7 @@ Future<bool> showLeaveSessionDialog(BuildContext context) async =>
     await showDialog<bool>(
       context: context,
       builder: (dialogContext) => AlertDialog(
+        scrollable: true,
         title: const Text('Rời phiên thư giãn?'),
         content: const Text(
           'Phiên này chưa được ghi nhận. Bỏ phiên sẽ không tạo bản ghi hoàn thành.',

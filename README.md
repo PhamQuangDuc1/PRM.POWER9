@@ -1,5 +1,15 @@
 # Power9 Office Routine
 
+## Final Assignment
+
+- [Web Admin trên Firebase Hosting](https://power9-office-se180724.web.app/). User gửi đề xuất trên Android. Admin duyệt, xuất bản và gửi thông báo trên web.
+- [Cách chạy web và Android với Firebase Emulator](web/README.md). Tài khoản web demo là `admin@power9.test`. Android dùng nút **Vào bằng User thử nghiệm**.
+- Báo cáo, slide, video và APK demo được đóng gói riêng.
+- [Luồng xuyên vai trò](docs/cross-role-flow.md), [kết quả Gemini](docs/ai-feature.md) và [báo cáo kiểm thử](docs/test-report.md).
+
+- [Kịch bản chấm Lab 3 trên Android thật và nội dung giải thích công nghệ](docs/lab3-grading-runbook.md)
+- [AI code review Lab 3 và các commit sửa](docs/code-review.md)
+
 ## Lab 3 — ứng dụng đã tích hợp, đang hoàn thiện kiểm chứng
 
 Mốc 04/11/2026: UI có 8 ảnh minh họa, 49 Flutter tests đạt và analyzer sạch. CRUD lịch đã demo Firestore/Xperia: thêm, xem, sửa và xóa, giữ lịch sử đã làm. Hai tài khoản A sang B rồi về A đã đối chiếu dữ liệu. TalkBack sau “Ở lại” có xác nhận nghe/vuốt trực tiếp; các luồng khác chưa kiểm tra hết.

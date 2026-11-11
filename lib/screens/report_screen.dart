@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../theme/p9_theme.dart';
+import '../widgets/p9_page_layout.dart';
 import '../viewmodels/activity_providers.dart';
 import '../viewmodels/completion_providers.dart';
 import '../viewmodels/report_viewmodel.dart';
 import '../widgets/p9_async_content.dart';
 import '../widgets/p9_button.dart';
-import '../viewmodels/observability_providers.dart';
 
 class ReportScreen extends ConsumerWidget {
   const ReportScreen({super.key, required this.day});
@@ -16,8 +17,8 @@ class ReportScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(reportControllerProvider(day));
     final vm = ref.read(reportControllerProvider(day).notifier);
-    final cloudEnabled = ref.watch(appConfigProvider).value.reportUploadEnabled;
-    return Scaffold(
+    final cloudEnabled = ref.watch(reportUploadEnabledProvider);
+    return P9PageScaffold(
       appBar: AppBar(title: const Text('Báo cáo PDF')),
       body: P9AsyncContent(
         value: ref.watch(todayOverviewProvider(day)),
@@ -95,6 +96,20 @@ class ReportScreen extends ConsumerWidget {
                 'Ai có liên kết này có thể mở PDF. Chỉ chia sẻ với người bạn muốn.',
               ),
               SelectableText(uploaded.url),
+              OutlinedButton.icon(
+                icon: const Icon(Icons.copy),
+                label: const Text('Sao chép liên kết PDF'),
+                onPressed: () async {
+                  await Clipboard.setData(ClipboardData(text: uploaded.url));
+                  if (context.mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Đã sao chép liên kết PDF.'),
+                      ),
+                    );
+                  }
+                },
+              ),
             ],
           ],
         ),
